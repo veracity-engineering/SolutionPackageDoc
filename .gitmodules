@@ -6,3 +6,7 @@
 	path = docs/articles
 	url = https://github.com/veracity-engineering/SolutionPackageDoc.wiki.git
 	branch = master
+[submodule "src"]
+	path = src
+	url = https://github.com/veracity-engineering/SolutionPackage.git
+	branch = master

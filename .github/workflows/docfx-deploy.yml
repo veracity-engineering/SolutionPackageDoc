@@ -28,7 +28,9 @@ jobs:
         echo '{"sdk":{"version": "6.0.406"}}' > global.json
         
         echo "::debug::Restore nuget packages"
-        dotnet restore src/DNVGL.SolutionPackage.sln
+        pushd src
+        dotnet restore
+        popd
         
         echo "::debug::Update docfx"
         dotnet tool update -g docfx
