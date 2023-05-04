@@ -8,7 +8,7 @@ on:
 
 jobs:
   publish-docs:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -45,9 +45,9 @@ jobs:
         git add .
         
         echo "::debug::Commit changes to git"
-        git config user.email "github-actions-bot@dnv.com"
-        git config user.name "github actions boot"
+        git config user.email "actions-bot@users.noreply.github.com"
+        git config user.name "github actions bot"
         git commit -m "Update docs" || echo "No change to commit"
         
         echo "::debug::Push commit to remote"
-        git push https://bot:${{ secrets.GITHUB_TOKEN }}@github.com/veracity-engineering/SolutionPackage.git HEAD:gh-pages
+        git push https://bot:${{ secrets.GITHUB_TOKEN }}@github.com/veracity-engineering/SolutionPackageDoc.git HEAD:gh-pages
