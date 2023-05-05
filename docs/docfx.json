@@ -18,10 +18,15 @@
 		],
 		"resource": [
 			{
-				"files": ["articles/images/**"]
+				"files": ["favicon.png", "articles/images/**"]
 			}
 		],
 		"dest": "_site",
+		"globalMetadata": {
+			"_appFooter": "godspeed",
+			"_appFaviconPath": "favicon.png",
+			"_enableSearch": true
+		  },
 		"globalMetadataFiles": [],
 		"fileMetadataFiles": [],
 		"template": ["default"],
