@@ -22,7 +22,7 @@ jobs:
       run: |
         git clone -b master --single-branch --depth 1 https://github.com/veracity-engineering/SolutionPackageDoc.wiki.git docs/articles
         git clone -b gh-pages --single-branch --depth 1 https://github.com/veracity-engineering/SolutionPackageDoc.git docs/_site
-        git clone -b master --single-branch --depth 1 https://git:${{ secrets.SRC_TOKEN }}@github.com/veracity-engineering/SolutionPackage.git docs/src
+        git clone -b master --single-branch --depth 1 https://git:${{ secrets.SRC_TOKEN }}@github.com/veracity-engineering/SolutionPackage.git src
         ls src
       
     - name: Generate docs
