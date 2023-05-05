@@ -7,6 +7,14 @@
 					"src": "../src/src"
 				}
 			],
+			"exclude": [
+				"**/bin/**",
+				"**/obj/**",
+				"*/tests/**",
+				"*.Test/**",
+				"*.Tests/**",
+				"*.Demo/**"
+			],
 			"dest": "api"
 		}
 	],
