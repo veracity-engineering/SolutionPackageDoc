@@ -4,6 +4,14 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/DNV.Application.Abstractions.Extensions.ApplicationExtensions.yml",
       "output": {
@@ -3289,6 +3297,16 @@
       "output": {
         ".html": {
           "relative_path": "articles/userManagement/swagger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.png"
         }
       },
       "version": ""
