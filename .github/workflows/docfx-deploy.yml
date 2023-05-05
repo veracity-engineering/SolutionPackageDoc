@@ -54,7 +54,7 @@ jobs:
         
         echo "::debug::Generate docfx files"
         echo '{"sdk":{"version": ${{ env.DOTNET_VER }}}}' > global.json
-        docfx build docs/docfx.json
+        docfx docs/docfx.json
         
     - name: Publish gh-pages
       run: |
