@@ -53,8 +53,6 @@ jobs:
         dotnet tool update -g docfx
         
         echo "::debug::Generate docfx files"
-        echo '{"sdk":{"version": ${{ env.DOTNET_VER }}}}' > global.json
-        cat global.json
         #docfx docs/docfx.json
         
     - name: Publish gh-pages
