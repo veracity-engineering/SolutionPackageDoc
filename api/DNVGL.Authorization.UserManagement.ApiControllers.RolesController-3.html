@@ -1,0 +1,1653 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class RolesController&lt;TCompany, TRole, TUser&gt;
+ </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class RolesController&lt;TCompany, TRole, TUser&gt;
+ ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3">
+
+
+
+  <h1 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3" class="text-break">Class RolesController&lt;TCompany, TRole, TUser&gt;
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase">ControllerBase</a></div>
+    <div class="level2"><a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.html">UserManagementBaseController</a>&lt;TUser&gt;</div>
+    <div class="level3"><span class="xref">RolesController&lt;TCompany, TRole, TUser&gt;</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.html#DNVGL_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetCurrentUser">UserManagementBaseController&lt;TUser&gt;.GetCurrentUser()</a>
+    </div>
+    <div>
+      <a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.html#DNVGL_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_IsCompanyAccessible_System_String_">UserManagementBaseController&lt;TUser&gt;.IsCompanyAccessible(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.html#DNVGL_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_FetchRole__1_System_String_DNVGL_Authorization_Web_Abstraction_IPermissionRepository_DNVGL_Authorization_UserManagement_Abstraction_IRole___0__">UserManagementBaseController&lt;TUser&gt;.FetchRole&lt;TRole&gt;(string, IPermissionRepository, IRole&lt;TRole&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.html#DNVGL_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PruneUserInfo_DNVGL_Authorization_UserManagement_ApiControllers_DTO_UserViewModel_System_String_">UserManagementBaseController&lt;TUser&gt;.PruneUserInfo(UserViewModel, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.html#DNVGL_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PruneUserCompanyInfo_DNVGL_Authorization_UserManagement_ApiControllers_DTO_UserViewModel_System_String_">UserManagementBaseController&lt;TUser&gt;.PruneUserCompanyInfo(UserViewModel, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.html#DNVGL_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PopulateUserRoleInfo__0_DNVGL_Authorization_UserManagement_ApiControllers_DTO_UserViewModel_System_Collections_Generic_IEnumerable_DNVGL_Authorization_Web_Abstraction_PermissionEntity__">UserManagementBaseController&lt;TUser&gt;.PopulateUserRoleInfo(TUser, UserViewModel, IEnumerable&lt;PermissionEntity&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.html#DNVGL_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetAllUsers_DNVGL_Authorization_UserManagement_Abstraction_IUser__0__DNVGL_Authorization_Web_Abstraction_IPermissionRepository_DNVGL_Common_Core_Pagination_PageParam_">UserManagementBaseController&lt;TUser&gt;.GetAllUsers(IUser&lt;TUser&gt;, IPermissionRepository, PageParam)</a>
+    </div>
+    <div>
+      <a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.html#DNVGL_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetAllRoles__1_DNVGL_Authorization_UserManagement_Abstraction_IRole___0__DNVGL_Authorization_Web_Abstraction_IPermissionRepository_">UserManagementBaseController&lt;TUser&gt;.GetAllRoles&lt;TRole&gt;(IRole&lt;TRole&gt;, IPermissionRepository)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.statuscode#microsoft-aspnetcore-mvc-controllerbase-statuscode(system-int32)">ControllerBase.StatusCode(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.statuscode#microsoft-aspnetcore-mvc-controllerbase-statuscode(system-int32-system-object)">ControllerBase.StatusCode(int, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string)">ControllerBase.Content(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string-system-string)">ControllerBase.Content(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string-system-string-system-text-encoding)">ControllerBase.Content(string, string, Encoding)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string-microsoft-net-http-headers-mediatypeheadervalue)">ControllerBase.Content(string, MediaTypeHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.nocontent">ControllerBase.NoContent()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.ok#microsoft-aspnetcore-mvc-controllerbase-ok">ControllerBase.Ok()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.ok#microsoft-aspnetcore-mvc-controllerbase-ok(system-object)">ControllerBase.Ok(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirect">ControllerBase.Redirect(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpermanent">ControllerBase.RedirectPermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpreservemethod">ControllerBase.RedirectPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpermanentpreservemethod">ControllerBase.RedirectPermanentPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirect">ControllerBase.LocalRedirect(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpermanent">ControllerBase.LocalRedirectPermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpreservemethod">ControllerBase.LocalRedirectPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpermanentpreservemethod">ControllerBase.LocalRedirectPermanentPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction">ControllerBase.RedirectToAction()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string)">ControllerBase.RedirectToAction(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-object)">ControllerBase.RedirectToAction(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string)">ControllerBase.RedirectToAction(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string-system-object)">ControllerBase.RedirectToAction(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string-system-string)">ControllerBase.RedirectToAction(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToAction(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpreservemethod">ControllerBase.RedirectToActionPreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string)">ControllerBase.RedirectToActionPermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-object)">ControllerBase.RedirectToActionPermanent(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string)">ControllerBase.RedirectToActionPermanent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string-system-string)">ControllerBase.RedirectToActionPermanent(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string-system-object)">ControllerBase.RedirectToActionPermanent(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToActionPermanent(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanentpreservemethod">ControllerBase.RedirectToActionPermanentPreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string)">ControllerBase.RedirectToRoute(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-object)">ControllerBase.RedirectToRoute(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string-system-object)">ControllerBase.RedirectToRoute(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string-system-string)">ControllerBase.RedirectToRoute(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string-system-object-system-string)">ControllerBase.RedirectToRoute(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepreservemethod">ControllerBase.RedirectToRoutePreserveMethod(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string)">ControllerBase.RedirectToRoutePermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-object)">ControllerBase.RedirectToRoutePermanent(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string-system-object)">ControllerBase.RedirectToRoutePermanent(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string-system-string)">ControllerBase.RedirectToRoutePermanent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string-system-object-system-string)">ControllerBase.RedirectToRoutePermanent(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanentpreservemethod">ControllerBase.RedirectToRoutePermanentPreserveMethod(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string)">ControllerBase.RedirectToPage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-object)">ControllerBase.RedirectToPage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string)">ControllerBase.RedirectToPage(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string-system-object)">ControllerBase.RedirectToPage(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string-system-string)">ControllerBase.RedirectToPage(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToPage(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string)">ControllerBase.RedirectToPagePermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-object)">ControllerBase.RedirectToPagePermanent(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-string)">ControllerBase.RedirectToPagePermanent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-string-system-string)">ControllerBase.RedirectToPagePermanent(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToPagePermanent(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepreservemethod">ControllerBase.RedirectToPagePreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanentpreservemethod">ControllerBase.RedirectToPagePermanentPreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string)">ControllerBase.File(byte[], string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-boolean)">ControllerBase.File(byte[], string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string)">ControllerBase.File(byte[], string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string-system-boolean)">ControllerBase.File(byte[], string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(byte[], string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(byte[], string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(byte[], string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(byte[], string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string)">ControllerBase.File(Stream, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-boolean)">ControllerBase.File(Stream, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string)">ControllerBase.File(Stream, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string-system-boolean)">ControllerBase.File(Stream, string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(Stream, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(Stream, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(Stream, string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(Stream, string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string)">ControllerBase.File(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-boolean)">ControllerBase.File(string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string)">ControllerBase.File(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string-system-boolean)">ControllerBase.File(string, string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(string, string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(string, string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string)">ControllerBase.PhysicalFile(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-boolean)">ControllerBase.PhysicalFile(string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string)">ControllerBase.PhysicalFile(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string-system-boolean)">ControllerBase.PhysicalFile(string, string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.PhysicalFile(string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.PhysicalFile(string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.PhysicalFile(string, string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.PhysicalFile(string, string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unauthorized#microsoft-aspnetcore-mvc-controllerbase-unauthorized">ControllerBase.Unauthorized()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unauthorized#microsoft-aspnetcore-mvc-controllerbase-unauthorized(system-object)">ControllerBase.Unauthorized(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.notfound#microsoft-aspnetcore-mvc-controllerbase-notfound">ControllerBase.NotFound()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.notfound#microsoft-aspnetcore-mvc-controllerbase-notfound(system-object)">ControllerBase.NotFound(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#microsoft-aspnetcore-mvc-controllerbase-badrequest">ControllerBase.BadRequest()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#microsoft-aspnetcore-mvc-controllerbase-badrequest(system-object)">ControllerBase.BadRequest(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#microsoft-aspnetcore-mvc-controllerbase-badrequest(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.BadRequest(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#microsoft-aspnetcore-mvc-controllerbase-unprocessableentity">ControllerBase.UnprocessableEntity()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#microsoft-aspnetcore-mvc-controllerbase-unprocessableentity(system-object)">ControllerBase.UnprocessableEntity(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#microsoft-aspnetcore-mvc-controllerbase-unprocessableentity(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.UnprocessableEntity(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#microsoft-aspnetcore-mvc-controllerbase-conflict">ControllerBase.Conflict()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#microsoft-aspnetcore-mvc-controllerbase-conflict(system-object)">ControllerBase.Conflict(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#microsoft-aspnetcore-mvc-controllerbase-conflict(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.Conflict(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem(microsoft-aspnetcore-mvc-validationproblemdetails)">ControllerBase.ValidationProblem(ValidationProblemDetails)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.ValidationProblem(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem">ControllerBase.ValidationProblem()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#microsoft-aspnetcore-mvc-controllerbase-created(system-string-system-object)">ControllerBase.Created(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#microsoft-aspnetcore-mvc-controllerbase-created(system-uri-system-object)">ControllerBase.Created(Uri, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#microsoft-aspnetcore-mvc-controllerbase-createdataction(system-string-system-object)">ControllerBase.CreatedAtAction(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#microsoft-aspnetcore-mvc-controllerbase-createdataction(system-string-system-object-system-object)">ControllerBase.CreatedAtAction(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#microsoft-aspnetcore-mvc-controllerbase-createdataction(system-string-system-string-system-object-system-object)">ControllerBase.CreatedAtAction(string, string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#microsoft-aspnetcore-mvc-controllerbase-createdatroute(system-string-system-object)">ControllerBase.CreatedAtRoute(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#microsoft-aspnetcore-mvc-controllerbase-createdatroute(system-object-system-object)">ControllerBase.CreatedAtRoute(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#microsoft-aspnetcore-mvc-controllerbase-createdatroute(system-string-system-object-system-object)">ControllerBase.CreatedAtRoute(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted">ControllerBase.Accepted()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-object)">ControllerBase.Accepted(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-uri)">ControllerBase.Accepted(Uri)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-string)">ControllerBase.Accepted(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-string-system-object)">ControllerBase.Accepted(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-uri-system-object)">ControllerBase.Accepted(Uri, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string)">ControllerBase.AcceptedAtAction(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-string)">ControllerBase.AcceptedAtAction(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-object)">ControllerBase.AcceptedAtAction(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-string-system-object)">ControllerBase.AcceptedAtAction(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-object-system-object)">ControllerBase.AcceptedAtAction(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-string-system-object-system-object)">ControllerBase.AcceptedAtAction(string, string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-object)">ControllerBase.AcceptedAtRoute(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-string)">ControllerBase.AcceptedAtRoute(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-string-system-object)">ControllerBase.AcceptedAtRoute(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-object-system-object)">ControllerBase.AcceptedAtRoute(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-string-system-object-system-object)">ControllerBase.AcceptedAtRoute(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge">ControllerBase.Challenge()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge(system-string())">ControllerBase.Challenge(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge(microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.Challenge(AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge(microsoft-aspnetcore-authentication-authenticationproperties-system-string())">ControllerBase.Challenge(AuthenticationProperties, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid">ControllerBase.Forbid()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid(system-string())">ControllerBase.Forbid(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid(microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.Forbid(AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid(microsoft-aspnetcore-authentication-authenticationproperties-system-string())">ControllerBase.Forbid(AuthenticationProperties, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal-system-string)">ControllerBase.SignIn(ClaimsPrincipal, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal-microsoft-aspnetcore-authentication-authenticationproperties-system-string)">ControllerBase.SignIn(ClaimsPrincipal, AuthenticationProperties, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout(system-string())">ControllerBase.SignOut(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout(microsoft-aspnetcore-authentication-authenticationproperties-system-string())">ControllerBase.SignOut(AuthenticationProperties, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0)">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string)">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider)">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, IValueProvider)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-system-linq-expressions-expression((system-func((-0-system-object))))())">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, params Expression&lt;Func&lt;TModel, object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-system-func((microsoft-aspnetcore-mvc-modelbinding-modelmetadata-system-boolean)))">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, Func&lt;ModelMetadata, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider-system-linq-expressions-expression((system-func((-0-system-object))))())">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, IValueProvider, params Expression&lt;Func&lt;TModel, object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider-system-func((microsoft-aspnetcore-mvc-modelbinding-modelmetadata-system-boolean)))">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, IValueProvider, Func&lt;ModelMetadata, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync(system-object-system-type-system-string)">ControllerBase.TryUpdateModelAsync(object, Type, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync(system-object-system-type-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider-system-func((microsoft-aspnetcore-mvc-modelbinding-modelmetadata-system-boolean)))">ControllerBase.TryUpdateModelAsync(object, Type, string, IValueProvider, Func&lt;ModelMetadata, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryvalidatemodel#microsoft-aspnetcore-mvc-controllerbase-tryvalidatemodel(system-object)">ControllerBase.TryValidateModel(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryvalidatemodel#microsoft-aspnetcore-mvc-controllerbase-tryvalidatemodel(system-object-system-string)">ControllerBase.TryValidateModel(object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.httpcontext">ControllerBase.HttpContext</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.request">ControllerBase.Request</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.response">ControllerBase.Response</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.routedata">ControllerBase.RouteData</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.modelstate">ControllerBase.ModelState</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.controllercontext">ControllerBase.ControllerContext</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.metadataprovider">ControllerBase.MetadataProvider</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.modelbinderfactory">ControllerBase.ModelBinderFactory</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.url">ControllerBase.Url</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.objectvalidator">ControllerBase.ObjectValidator</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.user">ControllerBase.User</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="DNVGL.html">DNVGL</a>.<a class="xref" href="DNVGL.Authorization.html">Authorization</a>.<a class="xref" href="DNVGL.Authorization.UserManagement.html">UserManagement</a>.<a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.html">ApiControllers</a></h6>
+  <h6><strong>Assembly</strong>: DNVGL.Authorization.UserManagement.ApiControllers.dll</h6>
+  <h5 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Authorize]
+[Produces(&quot;application/json&quot;, new string[] { })]
+[ApiController]
+[TypeFilter(typeof(ErrorCodeExceptionFilter))]
+[Route(&quot;api/company/{companyId}/roles&quot;)]
+[CompanyIdentityFieldNameFilter(&quot;companyId&quot;, &quot;&quot;, &quot;&quot;)]
+[ApiExplorerSettings(GroupName = &quot;UserManagement&#39;s Role APIs&quot;)]
+public class RolesController&lt;TCompany, TRole, TUser&gt; : UserManagementBaseController&lt;TUser&gt; where TCompany : Company, new() where TRole : Role, new() where TUser : User, new()</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TCompany</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TRole</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TUser</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3__ctor_DNVGL_Authorization_UserManagement_Abstraction_IUser__2__DNVGL_Authorization_UserManagement_Abstraction_IRole__1__DNVGL_Authorization_UserManagement_Abstraction_ICompany__0__DNVGL_Authorization_Web_Abstraction_IPermissionRepository_DNVGL_Authorization_Web_Abstraction_PermissionOptions_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.%23ctor(DNVGL.Authorization.UserManagement.Abstraction.IUser%7B%602%7D%2CDNVGL.Authorization.UserManagement.Abstraction.IRole%7B%601%7D%2CDNVGL.Authorization.UserManagement.Abstraction.ICompany%7B%600%7D%2CDNVGL.Authorization.Web.Abstraction.IPermissionRepository%2CDNVGL.Authorization.Web.Abstraction.PermissionOptions)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L32">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3__ctor_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.#ctor*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3__ctor_DNVGL_Authorization_UserManagement_Abstraction_IUser__2__DNVGL_Authorization_UserManagement_Abstraction_IRole__1__DNVGL_Authorization_UserManagement_Abstraction_ICompany__0__DNVGL_Authorization_Web_Abstraction_IPermissionRepository_DNVGL_Authorization_Web_Abstraction_PermissionOptions_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.#ctor(DNVGL.Authorization.UserManagement.Abstraction.IUser{`2},DNVGL.Authorization.UserManagement.Abstraction.IRole{`1},DNVGL.Authorization.UserManagement.Abstraction.ICompany{`0},DNVGL.Authorization.Web.Abstraction.IPermissionRepository,DNVGL.Authorization.Web.Abstraction.PermissionOptions)">RolesController(IUser&lt;TUser&gt;, IRole&lt;TRole&gt;, ICompany&lt;TCompany&gt;, IPermissionRepository, PermissionOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RolesController(IUser&lt;TUser&gt; userRepository, IRole&lt;TRole&gt; roleRepository, ICompany&lt;TCompany&gt; companyRepository, IPermissionRepository permissionRepository, PermissionOptions premissionOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DNVGL.Authorization.UserManagement.Abstraction.IUser-1.html">IUser</a>&lt;TUser&gt;</td>
+        <td><span class="parametername">userRepository</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DNVGL.Authorization.UserManagement.Abstraction.IRole-1.html">IRole</a>&lt;TRole&gt;</td>
+        <td><span class="parametername">roleRepository</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DNVGL.Authorization.UserManagement.Abstraction.ICompany-1.html">ICompany</a>&lt;TCompany&gt;</td>
+        <td><span class="parametername">companyRepository</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DNVGL.Authorization.Web.Abstraction.IPermissionRepository.html">IPermissionRepository</a></td>
+        <td><span class="parametername">permissionRepository</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DNVGL.Authorization.Web.Abstraction.PermissionOptions.html">PermissionOptions</a></td>
+        <td><span class="parametername">premissionOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateCrosscompanyRole_System_String_DNVGL_Authorization_UserManagement_ApiControllers_DTO_RoleEditModel_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.CreateCrosscompanyRole(System.String%2CDNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L343">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateCrosscompanyRole_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.CreateCrosscompanyRole*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateCrosscompanyRole_System_String_DNVGL_Authorization_UserManagement_ApiControllers_DTO_RoleEditModel_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.CreateCrosscompanyRole(System.String,DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel)">CreateCrosscompanyRole(string, RoleEditModel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost]
+[Route(&quot;~/api/crosscompany/{companyId}/roles&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ManageRole, PermissionMatrix.Premissions.ViewCompany })]
+[Obsolete(&quot;It&#39;s an obsoleted end point. not suggest to use.&quot;, true)]
+public Task&lt;string&gt; CreateCrosscompanyRole(string companyId, RoleEditModel model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">companyId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel.html">RoleEditModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateCrosscompanyRoleFromCustomModel__1_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.CreateCrosscompanyRoleFromCustomModel(%601)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L326">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateCrosscompanyRoleFromCustomModel_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.CreateCrosscompanyRoleFromCustomModel*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateCrosscompanyRoleFromCustomModel__1_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.CreateCrosscompanyRoleFromCustomModel(`1)">CreateCrosscompanyRoleFromCustomModel(TRole)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost]
+[Route(&quot;~/api/crosscompany/roles/custommodel&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ManageRole, PermissionMatrix.Premissions.ViewCompany })]
+[ApiExplorerSettings(GroupName = &quot;UserManagement&#39;s Role APIs - Custom Model&quot;)]
+[Obsolete(&quot;It&#39;s an obsoleted end point. not suggest to use.&quot;, true)]
+public Task&lt;string&gt; CreateCrosscompanyRoleFromCustomModel(TRole model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TRole</span></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateRole_System_String_DNVGL_Authorization_UserManagement_ApiControllers_DTO_RoleEditModel_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.CreateRole(System.String%2CDNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L150">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateRole_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.CreateRole*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateRole_System_String_DNVGL_Authorization_UserManagement_ApiControllers_DTO_RoleEditModel_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.CreateRole(System.String,DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel)">CreateRole(string, RoleEditModel)</h4>
+  <div class="markdown level1 summary"><p>Create a role</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost]
+[Route(&quot;&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ManageRole })]
+[AccessCrossCompanyPermissionFilter(new object[] { PermissionMatrix.Premissions.ViewCompany })]
+[AccessibleCompanyFilter]
+public Task&lt;string&gt; CreateRole(string companyId, RoleEditModel model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">companyId</span></td>
+        <td><p>Company Id</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel.html">RoleEditModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateRole_System_String_DNVGL_Authorization_UserManagement_ApiControllers_DTO_RoleEditModel__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ManageRole</p>
+<p>Required Permission for user not in this company: ManageRole,ViewCompany</p>
+<p>Sample request:</p>
+<pre><code>{
+   &quot;name&quot;: &quot;Item1&quot;,
+   &quot;description&quot;: &quot;&quot;,
+   &quot;active&quot;:true,
+   &quot;permissionKeys&quot;:[&quot;ReadWeather&quot;,&quot;ManageWeather&quot;]
+}
+</code></pre>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateRoleFromCustomModel_System_String__1_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.CreateRoleFromCustomModel(System.String%2C%601)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L112">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateRoleFromCustomModel_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.CreateRoleFromCustomModel*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateRoleFromCustomModel_System_String__1_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.CreateRoleFromCustomModel(System.String,`1)">CreateRoleFromCustomModel(string, TRole)</h4>
+  <div class="markdown level1 summary"><p>Create a role using custom model. Only if custom role model is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost]
+[Route(&quot;custommodel&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ManageRole })]
+[AccessCrossCompanyPermissionFilter(new object[] { PermissionMatrix.Premissions.ViewCompany })]
+[AccessibleCompanyFilter]
+[ApiExplorerSettings(GroupName = &quot;UserManagement&#39;s Role APIs - Custom Model&quot;)]
+public Task&lt;string&gt; CreateRoleFromCustomModel(string companyId, TRole model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">companyId</span></td>
+        <td><p>Company Id</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TRole</span></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_CreateRoleFromCustomModel_System_String__1__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ManageRole</p>
+<p>Required Permission for user not in this company: ManageRole,ViewCompany</p>
+<p>Sample request:</p>
+<pre><code>{
+   &quot;name&quot;: &quot;Item1&quot;,
+   &quot;description&quot;: &quot;&quot;,
+   &quot;active&quot;:true,
+   &quot;permissionKeys&quot;:[&quot;ReadWeather&quot;,&quot;ManageWeather&quot;]
+}
+</code></pre>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_DeleteCrosscompanyRole_System_String_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.DeleteCrosscompanyRole(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L400">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_DeleteCrosscompanyRole_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.DeleteCrosscompanyRole*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_DeleteCrosscompanyRole_System_String_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.DeleteCrosscompanyRole(System.String)">DeleteCrosscompanyRole(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpDelete]
+[Route(&quot;~/api/crosscompany/roles/{id}&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ManageRole, PermissionMatrix.Premissions.ViewCompany })]
+[Obsolete(&quot;It&#39;s an obsoleted end point. not suggest to use.&quot;, true)]
+public Task DeleteCrosscompanyRole(string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_DeleteRole_System_String_System_String_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.DeleteRole(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L276">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_DeleteRole_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.DeleteRole*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_DeleteRole_System_String_System_String_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.DeleteRole(System.String,System.String)">DeleteRole(string, string)</h4>
+  <div class="markdown level1 summary"><p>Delete Role</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpDelete]
+[Route(&quot;{id}&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ManageRole })]
+[AccessCrossCompanyPermissionFilter(new object[] { PermissionMatrix.Premissions.ViewCompany })]
+[AccessibleCompanyFilter]
+public Task DeleteRole(string companyId, string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">companyId</span></td>
+        <td><p>Company Id</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Role Id</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_DeleteRole_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ManageRole</p>
+<p>Required Permission for user not in this company: ManageRole,ViewCompany</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetCompanyRoles_System_String_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.GetCompanyRoles(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L50">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetCompanyRoles_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.GetCompanyRoles*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetCompanyRoles_System_String_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.GetCompanyRoles(System.String)">GetCompanyRoles(string)</h4>
+  <div class="markdown level1 summary"><p>Get all roles of a company.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet]
+[Route(&quot;&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ViewRole })]
+[AccessCrossCompanyPermissionFilter(new object[] { PermissionMatrix.Premissions.ViewCompany })]
+[AccessibleCompanyFilter]
+public Task&lt;IEnumerable&lt;RoleViewDto&gt;&gt; GetCompanyRoles(string companyId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">companyId</span></td>
+        <td><p>Company Id</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleViewDto.html">RoleViewDto</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetCompanyRoles_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ViewRole</p>
+<p>Required Permission for user not in this company: ViewRole,ViewCompany</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetCrossCompanyRoles_System_String_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.GetCrossCompanyRoles(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L307">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetCrossCompanyRoles_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.GetCrossCompanyRoles*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetCrossCompanyRoles_System_String_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.GetCrossCompanyRoles(System.String)">GetCrossCompanyRoles(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet]
+[Route(&quot;~/api/crosscompany/roles/{companyid}&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ViewRole, PermissionMatrix.Premissions.ViewCompany })]
+[Obsolete(&quot;It&#39;s an obsoleted end point. not suggest to use.&quot;, true)]
+public Task&lt;IEnumerable&lt;RoleViewDto&gt;&gt; GetCrossCompanyRoles(string companyid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">companyid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleViewDto.html">RoleViewDto</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetCrosscompanyRole_System_String_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.GetCrosscompanyRole(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L316">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetCrosscompanyRole_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.GetCrosscompanyRole*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetCrosscompanyRole_System_String_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.GetCrosscompanyRole(System.String)">GetCrosscompanyRole(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet]
+[Route(&quot;~/api/crosscompany/roles/{id}&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ViewRole, PermissionMatrix.Premissions.ViewCompany })]
+[Obsolete(&quot;It&#39;s an obsoleted end point. not suggest to use.&quot;, true)]
+public Task&lt;RoleViewDto&gt; GetCrosscompanyRole(string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleViewDto.html">RoleViewDto</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetRole_System_String_System_String_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.GetRole(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L72">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetRole_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.GetRole*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetRole_System_String_System_String_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.GetRole(System.String,System.String)">GetRole(string, string)</h4>
+  <div class="markdown level1 summary"><p>Get a role by its id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet]
+[Route(&quot;{id}&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ViewRole })]
+[AccessCrossCompanyPermissionFilter(new object[] { PermissionMatrix.Premissions.ViewCompany })]
+[AccessibleCompanyFilter]
+public Task&lt;RoleViewDto&gt; GetRole(string companyId, string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">companyId</span></td>
+        <td><p>Company Id</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Role Id</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleViewDto.html">RoleViewDto</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetRole_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ViewRole</p>
+<p>Required Permission for user not in this company: ViewRole,ViewCompany</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetRoles.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.GetRoles%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L299">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetRoles_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.GetRoles*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetRoles" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.GetRoles">GetRoles()</h4>
+  <div class="markdown level1 summary"><p>Get all roles</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet]
+[Route(&quot;~/api/roles&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ViewRole, PermissionMatrix.Premissions.ViewCompany })]
+public Task&lt;IEnumerable&lt;RoleViewDto&gt;&gt; GetRoles()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleViewDto.html">RoleViewDto</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_GetRoles_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required Permission: ViewRole, ViewCompany</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateCrosscompanyRole_System_String_System_String_DNVGL_Authorization_UserManagement_ApiControllers_DTO_RoleEditModel_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.UpdateCrosscompanyRole(System.String%2CSystem.String%2CDNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L381">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateCrosscompanyRole_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.UpdateCrosscompanyRole*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateCrosscompanyRole_System_String_System_String_DNVGL_Authorization_UserManagement_ApiControllers_DTO_RoleEditModel_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.UpdateCrosscompanyRole(System.String,System.String,DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel)">UpdateCrosscompanyRole(string, string, RoleEditModel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPut]
+[Route(&quot;~/api/crosscompany/{companyId}/roles/{id}&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ManageRole, PermissionMatrix.Premissions.ViewCompany })]
+[Obsolete(&quot;It&#39;s an obsoleted end point. not suggest to use.&quot;, true)]
+public Task UpdateCrosscompanyRole(string id, string companyId, RoleEditModel model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">companyId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel.html">RoleEditModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateCrosscompanyRoleFromCustomModel_System_String__1_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.UpdateCrosscompanyRoleFromCustomModel(System.String%2C%601)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L365">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateCrosscompanyRoleFromCustomModel_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.UpdateCrosscompanyRoleFromCustomModel*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateCrosscompanyRoleFromCustomModel_System_String__1_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.UpdateCrosscompanyRoleFromCustomModel(System.String,`1)">UpdateCrosscompanyRoleFromCustomModel(string, TRole)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPut]
+[Route(&quot;~/api/crosscompany/roles/custommodel/{id}&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ManageRole, PermissionMatrix.Premissions.ViewCompany })]
+[ApiExplorerSettings(GroupName = &quot;UserManagement&#39;s Role APIs - Custom Model&quot;)]
+[Obsolete(&quot;It&#39;s an obsoleted end point. not suggest to use.&quot;, true)]
+public Task UpdateCrosscompanyRoleFromCustomModel(string id, TRole model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TRole</span></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateRole_System_String_System_String_DNVGL_Authorization_UserManagement_ApiControllers_DTO_RoleEditModel_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.UpdateRole(System.String%2CSystem.String%2CDNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L240">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateRole_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.UpdateRole*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateRole_System_String_System_String_DNVGL_Authorization_UserManagement_ApiControllers_DTO_RoleEditModel_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.UpdateRole(System.String,System.String,DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel)">UpdateRole(string, string, RoleEditModel)</h4>
+  <div class="markdown level1 summary"><p>Update a role</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPut]
+[Route(&quot;{id}&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ManageRole })]
+[AccessCrossCompanyPermissionFilter(new object[] { PermissionMatrix.Premissions.ViewCompany })]
+[AccessibleCompanyFilter]
+public Task UpdateRole(string companyId, string id, RoleEditModel model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">companyId</span></td>
+        <td><p>Company Id</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Role Id</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel.html">RoleEditModel</a></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateRole_System_String_System_String_DNVGL_Authorization_UserManagement_ApiControllers_DTO_RoleEditModel__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ManageRole</p>
+<p>Required Permission for user not in this company: ManageRole,ViewCompany</p>
+<p>Sample request:</p>
+<pre><code>{
+   &quot;name&quot;: &quot;Item1&quot;,
+   &quot;description&quot;: &quot;&quot;,
+   &quot;active&quot;:true,
+   &quot;permissionKeys&quot;:[&quot;ReadWeather&quot;,&quot;ManageWeather&quot;]
+}
+</code></pre>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateRoleFromCustomModel_System_String_System_String__1_.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603.UpdateRoleFromCustomModel(System.String%2CSystem.String%2C%601)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L195">View Source</a>
+  </span>
+  <a id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateRoleFromCustomModel_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.UpdateRoleFromCustomModel*"></a>
+  <h4 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateRoleFromCustomModel_System_String_System_String__1_" data-uid="DNVGL.Authorization.UserManagement.ApiControllers.RolesController`3.UpdateRoleFromCustomModel(System.String,System.String,`1)">UpdateRoleFromCustomModel(string, string, TRole)</h4>
+  <div class="markdown level1 summary"><p>Update a role using custom model. Only if custom role model is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPut]
+[Route(&quot;custommodel/{id}&quot;)]
+[PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ManageRole })]
+[ApiExplorerSettings(GroupName = &quot;UserManagement&#39;s Role APIs - Custom Model&quot;)]
+[AccessCrossCompanyPermissionFilter(new object[] { PermissionMatrix.Premissions.ViewCompany })]
+[AccessibleCompanyFilter]
+public Task UpdateRoleFromCustomModel(string companyId, string id, TRole model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">companyId</span></td>
+        <td><p>Company Id</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Role Id</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TRole</span></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3_UpdateRoleFromCustomModel_System_String_System_String__1__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ManageRole</p>
+<p>Required Permission for user not in this company: ManageRole,ViewCompany</p>
+<p>Sample request:</p>
+<pre><code>{
+   &quot;name&quot;: &quot;Item1&quot;,
+   &quot;description&quot;: &quot;&quot;,
+   &quot;active&quot;:true,
+   &quot;permissionKeys&quot;:[&quot;ReadWeather&quot;,&quot;ManageWeather&quot;]
+}
+</code></pre>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNVGL_Authorization_UserManagement_ApiControllers_RolesController_3.md&amp;value=---%0Auid%3A%20DNVGL.Authorization.UserManagement.ApiControllers.RolesController%603%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/RolesController.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

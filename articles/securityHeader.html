@@ -1,0 +1,518 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>HTTP Response Security Header </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="HTTP Response Security Header ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="http-response-security-header">HTTP Response Security Header</h1>
+
+<p>DNVGL.Web.Security provides extension methods to setup http response headers for ASP.NET Core application.</p>
+<hr>
+<h1 id="package-install">Package Install</h1>
+<p>Ensure you have configured to package NuGet Package Source or find the instructions <a href="PackageInstall.html">here</a>.</p>
+<p>Package Manager Console</p>
+<pre><code>PM&gt; `Install-Package DNVGL.OAuth.Web`
+</code></pre>
+<h2 id="1-basic-example">1. Basic Example</h2>
+<pre><code class="lang-cs">    public class Startup
+    {
+        //...
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            //...
+            app.UseDefaultHeaders();
+            //...
+        }
+    }
+</code></pre>
+<ul>
+<li>The package set up below default http response headers.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-Xss-Protection</td>
+<td>1</td>
+</tr>
+<tr>
+<td>X-Frame-Options</td>
+<td>SAMEORIGIN</td>
+</tr>
+<tr>
+<td>X-Content-Type-Options</td>
+<td>no-referrer</td>
+</tr>
+<tr>
+<td>X-Permitted-Cross-Domain-Policies</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Expect-CT</td>
+<td>enforce, max-age=7776000</td>
+</tr>
+<tr>
+<td>Strict-Transport-Security</td>
+<td>max-age=15552000; includeSubDomains</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>If you have setup your own response headers before using the pacakge to setup default headers. You own reponse headers will be kept.</p>
+</blockquote>
+<ul>
+<li>The package set up below default csp rule in http response headers.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default-src</td>
+<td>'self'</td>
+</tr>
+<tr>
+<td>object-src</td>
+<td>'self'</td>
+</tr>
+<tr>
+<td>connect-src</td>
+<td>'self' <a href="https://dc.services.visualstudio.com">https://dc.services.visualstudio.com</a></td>
+</tr>
+<tr>
+<td>script-src</td>
+<td>'self' <a href="https://www.recaptcha.net">https://www.recaptcha.net</a> <a href="https://www.gstatic.com">https://www.gstatic.com</a> <a href="https://www.gstatic.cn">https://www.gstatic.cn</a></td>
+</tr>
+<tr>
+<td>font-src</td>
+<td>'self' data: <a href="https://onedesign.azureedge.net">https://onedesign.azureedge.net</a> <a href="https://veracitycdn.azureedge.net">https://veracitycdn.azureedge.net</a></td>
+</tr>
+<tr>
+<td>media-src</td>
+<td>'self'</td>
+</tr>
+<tr>
+<td>worker-src</td>
+<td>'self' blob:</td>
+</tr>
+<tr>
+<td>img-src</td>
+<td>'self' <a href="https://onedesign.azureedge.net">https://onedesign.azureedge.net</a> <a href="https://dnvglcom.azureedge.net">https://dnvglcom.azureedge.net</a> <a href="https://cdnveracity.azureedge.net">https://cdnveracity.azureedge.net</a></td>
+</tr>
+<tr>
+<td>frame-src</td>
+<td>'self' <a href="https://www.google.com">https://www.google.com</a> <a href="https://www.recaptcha.net/">https://www.recaptcha.net/</a></td>
+</tr>
+<tr>
+<td>style-src</td>
+<td>'self' <a href="https://onedesign.azureedge.net">https://onedesign.azureedge.net</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>If you have setup your own CSP before using the pacakge to setup default headers. You own CSP will be kept.</p>
+</blockquote>
+<h2 id="2-customize-response-header">2. Customize Response Header</h2>
+<p>The pacakge supports to overwrite the above default setting. This is a code sample to overwrite X-Frame-Options:</p>
+<pre><code class="lang-cs">    public class Startup
+    {
+        //...
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            //...
+            app.UseDefaultHeaders(h=&gt; h.Add(&quot;X-Frame-Options&quot;, &quot;DENNY&quot;));
+            //...
+        }
+    }
+</code></pre>
+<h2 id="3-customize-csp-in-response-header">3. Customize CSP in Response Header</h2>
+<p>The pacakge supports to overwrite the above default setting. This is a code sample to overwrite styleSrc:</p>
+<pre><code class="lang-cs">    public class Startup
+   {
+       //...
+       public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+       {
+           //...
+           app.UseDefaultHeaders(h=&gt; h.ReplaceDefaultContentSecurityPolicy(styleSrc: &quot;'self' 'nonce-123456789909876543ghjklkjvcvbnm'&quot;););
+           //...
+       }
+   }
+</code></pre>
+<p>Or extend the above default setting. This is a code sample to extend styleSrc:</p>
+<pre><code class="lang-cs">    public class Startup
+   {
+       //...
+       public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+       {
+           //...
+           app.UseDefaultHeaders(h=&gt; h.ExtendDefaultContentSecurityPolicy(styleSrc: &quot;'nonce-123456789909876543ghjklkjvcvbnm'&quot;););
+           //...
+       }
+   }
+</code></pre>
+<h2 id="4-skip-csp-in-response-header-for-specific-requests">4. Skip CSP in Response Header for specific requests.</h2>
+<p>By default, The package doesn't add csp into respsone for all http requests which url contain '/swagger/'.
+It supports to overwrite the default skip logic. This is a code sample to skip all request which url contains '/nocsprequired/'.</p>
+<pre><code class="lang-cs">    public class Startup
+    {
+        //...
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            //...
+            app.UseDefaultHeaders(h=&gt; h.SkipContentSecurityPolicyForRequests((req) =&gt; req.Path.ToString().ToLowerInvariant().Contains(&quot;/nocsprequired/&quot;)));
+            //...
+        }
+    }
+</code></pre>
+<h2 id="5-permissions-policy">5. Permissions Policy</h2>
+<p>Permissions Policy HTTP Header can be provided by your web server / web application in order to improve the security of your visitors and the data they may be accessing on your site.</p>
+<p><strong>Standardized Features</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accelerometer</td>
+<td>The Accelerometer interface of the Sensor APIs provides on each reading the acceleration applied to the device along all three axes.</td>
+</tr>
+<tr>
+<td>ambient-light-sensor</td>
+<td>The AmbientLightSensor interface of the Sensor APIs returns the current light level or illuminance of the ambient light around the hosting device.</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>Controls the ability to have Media (Audio or Video) elements begin playback without user interaction in the current document. When this policy is disabled and there were no user gestures, the Promise returned by HTMLMediaElement.play() will reject with a DOMException. The autoplay attribute on <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements will be ignored.</td>
+</tr>
+<tr>
+<td>battery</td>
+<td>The Battery Status API can be used to defer or scale back work when the device is not charging in or is low on battery.</td>
+</tr>
+<tr>
+<td>camera</td>
+<td>Manages access to Camera interfaces (physical and virtual).</td>
+</tr>
+<tr>
+<td>cross-origin-isolated</td>
+<td>Cross-origin isolation enables a web page to use powerful features such as SharedArrayBuffer, performance.measureUserAgentSpecificMemory(), high resolution timer with better precision, or the JS Self-Profiling API. This also impacts the &quot;document-domain&quot; permission when set (see below).</td>
+</tr>
+<tr>
+<td>display-capture</td>
+<td>A document's permissions policy determines whether any content in that document is allowed to use getDisplayMedia.</td>
+</tr>
+<tr>
+<td>document-domain</td>
+<td>Provides access to the deprecated &quot;document.domain[=domain]&quot; setter. When the &quot;document-domain&quot; feature is disabled, the setter will throw a &quot;SecurityError&quot; exception. In cases where crossOriginIsolated or originAgentCluster return true, the setter will do nothing. It is recommended to avoid using the document.domain setter, instead, use postMessage() or MessageChannel objects to communicate across origins in a safe manner.</td>
+</tr>
+<tr>
+<td>encrypted-media</td>
+<td>Encrypted Media Extensions provides an API that enables web applications to interact with content protection systems, to allow playback of encrypted audio and video. Provides access to the requestMediaKeySystemAccess() method, a part of the MediaKeys object.</td>
+</tr>
+<tr>
+<td>execution-while-not-rendered</td>
+<td>Controls if tasks should execute for nested browsing contexts (eg. iframes) when it has/is not being rendered.</td>
+</tr>
+<tr>
+<td>execution-while-out-of-viewport</td>
+<td>Controls if tasks should execute for nested browsing contexts (eg. iframes) when not within the current viewport.</td>
+</tr>
+<tr>
+<td>fullscreen</td>
+<td>Determines whether any content in a document is allowed to go fullscreen. If disabled in any document, no content in the document will be allowed to use fullscreen.</td>
+</tr>
+<tr>
+<td>geolocation</td>
+<td>The Geolocation API provides access to geographical location information associated with the host device.</td>
+</tr>
+<tr>
+<td>gyroscope</td>
+<td>Gyroscope sensor interface to monitor the rate of rotation around the three local primary axes of the device.</td>
+</tr>
+<tr>
+<td>keyboard-map</td>
+<td>Controls whether the getLayoutMap() method is exposed on the &quot;Keyboard&quot; interface.</td>
+</tr>
+<tr>
+<td>magnetometer</td>
+<td>Magnetometer sensor interface to measure a magnetic field in the X, Y and Z axis.</td>
+</tr>
+<tr>
+<td>microphone</td>
+<td>Manages access to Microphone interfaces (physical and virtual).</td>
+</tr>
+<tr>
+<td>midi</td>
+<td>Musical Instrument Digital Interface (MIDI) protocol enables electronic musical instruments, controllers and computers to communicate and synchronize with each other.</td>
+</tr>
+<tr>
+<td>navigation-override</td>
+<td>Enables the page author to take control over the behavior of spatial navigation, or to cancel it outright. Spatial navigation is the ability to move around the page directionally which can be useful for a web page built using a grid-like layout, or other predominantly non linear layouts. More often this is used in browsers on devices with limited input control, such as a TV.</td>
+</tr>
+<tr>
+<td>payment</td>
+<td>Allow merchants (i.e. web sites selling physical or digital goods) to utilise one or more payment methods with minimal integration.</td>
+</tr>
+<tr>
+<td>picture-in-picture</td>
+<td>Allow websites to create a floating video window always on top of other windows so that users may continue consuming media while they interact with other content sites, or applications on their device. This item controls whether the request Picture-in-Picture algorithm may return a SecurityError and whether pictureInPictureEnabled is true or false.</td>
+</tr>
+<tr>
+<td>publickey-credentials-get</td>
+<td>Determines whether any content in the allowed documents is allowed to successfully invoke the Web Authentication API. If disabled in any document, no content in the document will be allowed to use the foregoing methods, attempting to do so will return an error.</td>
+</tr>
+<tr>
+<td>screen-wake-lock</td>
+<td>A screen wake lock prevents the screen from turning off. Only visible documents can acquire the screen wake lock.</td>
+</tr>
+<tr>
+<td>sync-xhr</td>
+<td>The sync-xhr policy controls whether synchronous requests can be made through the XMLHttpRequest API. If disallowed in a document, then calls to send() on XMLHttpRequest objects with the synchronous flag set will fail, causing a NetworkError DOMException to be thrown.</td>
+</tr>
+<tr>
+<td>usb</td>
+<td>The WebUSB API provides a way to safely expose USB device services to the web. Controls whether the usb attribute is exposed on the Navigator object.</td>
+</tr>
+<tr>
+<td>web-share</td>
+<td>Exposes the navigator.share() API where supported, which shares the current URL via user agent provided share to locations.</td>
+</tr>
+<tr>
+<td>xr-spatial-tracking</td>
+<td>The WebXR Device API provides the interfaces necessary to enable developers to build compelling, comfortable, and safe immersive applications on the web across a wide variety of hardware form factors.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Proposed Features</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clipboard-read</td>
+<td>Read from the device clipboard via the Clipboard API</td>
+</tr>
+<tr>
+<td>clipboard-write</td>
+<td>Write to the device clipboard via the Clipboard API</td>
+</tr>
+<tr>
+<td>gamepad</td>
+<td>Determines whether any content in that document is allowed to access getGamepads(). If disabled in any document, no content in the document will be allowed to use getGamepads(), nor will the &quot;gamepadconnected&quot; and &quot;gamepaddisconnected&quot; events fire.</td>
+</tr>
+<tr>
+<td>speaker-selection</td>
+<td>Determines whether any content in a document is allowed to use the selectAudioOutput function to prompt the user to select an audio output device, or allowed to use setSinkId to change the device through which audio output should be rendered, to a non-system-default user-permitted device.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Experimental Features</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conversion-measurement</td>
+<td>Click Through Attribution Reporting. To enable this, use the Chrome command line flag --enable-blink-features=ConversionMeasurement</td>
+</tr>
+<tr>
+<td>focus-without-user-activation</td>
+<td>Helps control the use of automated focus in a main frame or <code>&lt;iframe&gt;</code>. The proposed feature provides a means for developers to block the use of automatic focus in nested contents.</td>
+</tr>
+<tr>
+<td>hid</td>
+<td>Allow a web page to communicate with HID devices (Human Interface Device)</td>
+</tr>
+<tr>
+<td>idle-detection</td>
+<td>Allow usage of the IdleDetector interface to better detect if a user is at their device, instead of trying to identify if a user has just become inactive, such as left window open, screen saver activated, screen turned off, changed tabs or changed applications.</td>
+</tr>
+<tr>
+<td>interest-cohort</td>
+<td>Federated Learning of Cohorts (FLoC) is a new way that browsers could enable interest-based advertising on the web. A site should be able to declare that it does not want to be included in the user's list of sites for cohort calculation.</td>
+</tr>
+<tr>
+<td>serial</td>
+<td>Provide direct communication between a web site and the device that it is controlling via a Serial port. To enable this, use the Chrome command line flag --enable-blink-features=Serial</td>
+</tr>
+<tr>
+<td>sync-script</td>
+<td>Unknown - No information currently available. To enable this, use the Chrome command line flag --enable-blink-features=ExperimentalProductivityFeatures.</td>
+</tr>
+<tr>
+<td>trust-token-redemption</td>
+<td>This API proposes a new per-origin storage area for “Privacy Pass” style cryptographic tokens, which are accessible in third party contexts. These tokens are non-personalized and cannot be used to track users, but are cryptographically signed so they cannot be forged.</td>
+</tr>
+<tr>
+<td>window-placement</td>
+<td>Proposal to provide additional informatiion for Multi-Screen Window Placement.</td>
+</tr>
+<tr>
+<td>vertical-scroll</td>
+<td>Vertical scroll policy is a feature introduced to assist websites in blocking certain embedded contents from interfering with vertical scrolling. Stopping a user from vertically scrolling the page might be a frustrating experience.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="51-customize-permissions-policy">5.1 Customize Permissions Policy</h3>
+<p>Customize Permissions Policy in HTTP Header</p>
+<pre><code class="lang-cs">    public class Startup
+    {
+        //...
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            //...
+            app.UseDefaultHeaders(h=&gt; {
+                var policy = new PermissionsPolicy();
+                
+                policy.Feature(FeatureNames.Camera).Disable();
+            	policy.Feature(FeatureNames.Fullscreen).Enable();
+            	policy.Feature(FeatureNames.Geolocation).Enable().Self();
+            	policy.Feature(FeatureNames.Usb).Enable().Custom(&quot;https://www.dnv.com&quot;);
+            	policy.Feature(FeatureNames.Microphone).Enable().Self().Custom(&quot;https://www.google.com&quot;);
+                
+                h.Add(PermissionsPolicy.Key, policy.ToString());
+            });
+            //...
+        }
+    }
+</code></pre>
+<h3 id="52-enable-all-permissions-policy">5.2 Enable all Permissions Policy</h3>
+<p>Enable all Permissions Policy in HTTP Header</p>
+<pre><code class="lang-cs">    public class Startup
+    {
+        //...
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            //...
+            app.UseDefaultHeaders(h=&gt; h.EnableAllPermissionsPolicyForSelf());
+            //...
+        }
+    }
+</code></pre>
+<h3 id="53-disable-all-permissions-policy">5.3 Disable all Permissions Policy</h3>
+<p>Disable all Permissions Policy in HTTP Header</p>
+<pre><code class="lang-cs">    public class Startup
+    {
+        //...
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            //...
+            app.UseDefaultHeaders(h=&gt; h.DisableAllPermissionsPolicy());
+            //...
+        }
+    }
+</code></pre>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackageDoc.wiki/blob/master/securityHeader.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

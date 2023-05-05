@@ -1,0 +1,450 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class TokenCacheProvider
+ </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class TokenCacheProvider
+ ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider">
+
+
+
+  <h1 id="DNV_OAuth_Core_TokenCache_TokenCacheProvider" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider" class="text-break">Class TokenCacheProvider
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="DNV.OAuth.Core.TokenCache.TokenCacheProviderBase.html">TokenCacheProviderBase</a></div>
+    <div class="level2"><span class="xref">TokenCacheProvider</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="DNV.OAuth.Abstractions.ITokenCacheProvider.html">ITokenCacheProvider</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="DNV.OAuth.Core.TokenCache.TokenCacheProviderBase.html#DNV_OAuth_Core_TokenCache_TokenCacheProviderBase_InitializeAsync_Microsoft_Identity_Client_ITokenCache_">TokenCacheProviderBase.InitializeAsync(ITokenCache)</a>
+    </div>
+    <div>
+      <a class="xref" href="DNV.OAuth.Core.TokenCache.TokenCacheProviderBase.html#DNV_OAuth_Core_TokenCache_TokenCacheProviderBase_ClearAsync_System_String_">TokenCacheProviderBase.ClearAsync(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="DNV.OAuth.Core.TokenCache.TokenCacheProviderBase.html#DNV_OAuth_Core_TokenCache_TokenCacheProviderBase_OnAfterAccessAsync_Microsoft_Identity_Client_TokenCacheNotificationArgs_">TokenCacheProviderBase.OnAfterAccessAsync(TokenCacheNotificationArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="DNV.OAuth.Core.TokenCache.TokenCacheProviderBase.html#DNV_OAuth_Core_TokenCache_TokenCacheProviderBase_OnBeforeAccessAsync_Microsoft_Identity_Client_TokenCacheNotificationArgs_">TokenCacheProviderBase.OnBeforeAccessAsync(TokenCacheNotificationArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="DNV.OAuth.Core.TokenCache.TokenCacheProviderBase.html#DNV_OAuth_Core_TokenCache_TokenCacheProviderBase_OnBeforeWriteAsync_Microsoft_Identity_Client_TokenCacheNotificationArgs_">TokenCacheProviderBase.OnBeforeWriteAsync(TokenCacheNotificationArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="DNV.html">DNV</a>.<a class="xref" href="DNV.OAuth.html">OAuth</a>.<a class="xref" href="DNV.OAuth.Core.html">Core</a>.<a class="xref" href="DNV.OAuth.Core.TokenCache.html">TokenCache</a></h6>
+  <h6><strong>Assembly</strong>: DNV.OAuth.Core.dll</h6>
+  <h5 id="DNV_OAuth_Core_TokenCache_TokenCacheProvider_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TokenCacheProvider : TokenCacheProviderBase, ITokenCacheProvider</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_TokenCache_TokenCacheProvider__ctor_Microsoft_Extensions_Caching_Distributed_IDistributedCache_Microsoft_Extensions_Options_IOptionsMonitor_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.TokenCache.TokenCacheProvider.%23ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache%2CMicrosoft.Extensions.Options.IOptionsMonitor%7BMicrosoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/TokenCache/TokenCacheProvider.cs/#L11">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Core_TokenCache_TokenCacheProvider__ctor_" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.#ctor*"></a>
+  <h4 id="DNV_OAuth_Core_TokenCache_TokenCacheProvider__ctor_Microsoft_Extensions_Caching_Distributed_IDistributedCache_Microsoft_Extensions_Options_IOptionsMonitor_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.#ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache,Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions})">TokenCacheProvider(IDistributedCache, IOptionsMonitor&lt;DistributedCacheEntryOptions&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TokenCacheProvider(IDistributedCache cache, IOptionsMonitor&lt;DistributedCacheEntryOptions&gt; cacheOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.idistributedcache">IDistributedCache</a></td>
+        <td><span class="parametername">cache</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptionsmonitor-1">IOptionsMonitor</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.distributedcacheentryoptions">DistributedCacheEntryOptions</a>&gt;</td>
+        <td><span class="parametername">cacheOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_TokenCache_TokenCacheProvider__ctor_Microsoft_Extensions_Caching_Distributed_IDistributedCache_Microsoft_Extensions_Options_IOptionsMonitor_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__Microsoft_AspNetCore_DataProtection_IDataProtectionProvider_.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.TokenCache.TokenCacheProvider.%23ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache%2CMicrosoft.Extensions.Options.IOptionsMonitor%7BMicrosoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions%7D%2CMicrosoft.AspNetCore.DataProtection.IDataProtectionProvider)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/TokenCache/TokenCacheProvider.cs/#L14">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Core_TokenCache_TokenCacheProvider__ctor_" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.#ctor*"></a>
+  <h4 id="DNV_OAuth_Core_TokenCache_TokenCacheProvider__ctor_Microsoft_Extensions_Caching_Distributed_IDistributedCache_Microsoft_Extensions_Options_IOptionsMonitor_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__Microsoft_AspNetCore_DataProtection_IDataProtectionProvider_" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.#ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache,Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions},Microsoft.AspNetCore.DataProtection.IDataProtectionProvider)">TokenCacheProvider(IDistributedCache, IOptionsMonitor&lt;DistributedCacheEntryOptions&gt;, IDataProtectionProvider?)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TokenCacheProvider(IDistributedCache cache, IOptionsMonitor&lt;DistributedCacheEntryOptions&gt; cacheOptions, IDataProtectionProvider? dataProtectionProvider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.idistributedcache">IDistributedCache</a></td>
+        <td><span class="parametername">cache</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptionsmonitor-1">IOptionsMonitor</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.distributedcacheentryoptions">DistributedCacheEntryOptions</a>&gt;</td>
+        <td><span class="parametername">cacheOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.dataprotection.idataprotectionprovider">IDataProtectionProvider</a></td>
+        <td><span class="parametername">dataProtectionProvider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_TokenCache_TokenCacheProvider_Cache.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.TokenCache.TokenCacheProvider.Cache%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/TokenCache/TokenCacheProvider.cs/#L23">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Core_TokenCache_TokenCacheProvider_Cache_" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.Cache*"></a>
+  <h4 id="DNV_OAuth_Core_TokenCache_TokenCacheProvider_Cache" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.Cache">Cache</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IDistributedCache Cache { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.idistributedcache">IDistributedCache</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="DNV.OAuth.Core.TokenCache.TokenCacheProviderBase.html#DNV_OAuth_Core_TokenCache_TokenCacheProviderBase_Cache">TokenCacheProviderBase.Cache</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_TokenCache_TokenCacheProvider_CacheOptions.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.TokenCache.TokenCacheProvider.CacheOptions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/TokenCache/TokenCacheProvider.cs/#L25">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Core_TokenCache_TokenCacheProvider_CacheOptions_" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.CacheOptions*"></a>
+  <h4 id="DNV_OAuth_Core_TokenCache_TokenCacheProvider_CacheOptions" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.CacheOptions">CacheOptions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DistributedCacheEntryOptions CacheOptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.distributedcacheentryoptions">DistributedCacheEntryOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="DNV.OAuth.Core.TokenCache.TokenCacheProviderBase.html#DNV_OAuth_Core_TokenCache_TokenCacheProviderBase_CacheOptions">TokenCacheProviderBase.CacheOptions</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_TokenCache_TokenCacheProvider_DataProtector.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.TokenCache.TokenCacheProvider.DataProtector%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/TokenCache/TokenCacheProvider.cs/#L9">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Core_TokenCache_TokenCacheProvider_DataProtector_" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.DataProtector*"></a>
+  <h4 id="DNV_OAuth_Core_TokenCache_TokenCacheProvider_DataProtector" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.DataProtector">DataProtector</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IDataProtector? DataProtector { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.dataprotection.idataprotector">IDataProtector</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_TokenCache_TokenCacheProvider_Protect_System_Byte___.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.TokenCache.TokenCacheProvider.Protect(System.Byte%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/TokenCache/TokenCacheProvider.cs/#L27">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Core_TokenCache_TokenCacheProvider_Protect_" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.Protect*"></a>
+  <h4 id="DNV_OAuth_Core_TokenCache_TokenCacheProvider_Protect_System_Byte___" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.Protect(System.Byte[])">Protect(byte[]?)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override byte[]? Protect(byte[]? bytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="DNV.OAuth.Core.TokenCache.TokenCacheProviderBase.html#DNV_OAuth_Core_TokenCache_TokenCacheProviderBase_Protect_System_Byte___">TokenCacheProviderBase.Protect(byte[]?)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_TokenCache_TokenCacheProvider_Unprotect_System_Byte___.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.TokenCache.TokenCacheProvider.Unprotect(System.Byte%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/TokenCache/TokenCacheProvider.cs/#L30">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Core_TokenCache_TokenCacheProvider_Unprotect_" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.Unprotect*"></a>
+  <h4 id="DNV_OAuth_Core_TokenCache_TokenCacheProvider_Unprotect_System_Byte___" data-uid="DNV.OAuth.Core.TokenCache.TokenCacheProvider.Unprotect(System.Byte[])">Unprotect(byte[]?)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override byte[]? Unprotect(byte[]? bytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="DNV.OAuth.Core.TokenCache.TokenCacheProviderBase.html#DNV_OAuth_Core_TokenCache_TokenCacheProviderBase_Unprotect_System_Byte___">TokenCacheProviderBase.Unprotect(byte[]?)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="DNV.OAuth.Abstractions.ITokenCacheProvider.html">ITokenCacheProvider</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_TokenCache_TokenCacheProvider.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.TokenCache.TokenCacheProvider%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/TokenCache/TokenCacheProvider.cs/#L7" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

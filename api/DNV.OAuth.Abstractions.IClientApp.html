@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IClientApp
+ </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IClientApp
+ ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="DNV.OAuth.Abstractions.IClientApp">
+
+
+
+  <h1 id="DNV_OAuth_Abstractions_IClientApp" data-uid="DNV.OAuth.Abstractions.IClientApp" class="text-break">Interface IClientApp
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="DNV.html">DNV</a>.<a class="xref" href="DNV.OAuth.html">OAuth</a>.<a class="xref" href="DNV.OAuth.Abstractions.html">Abstractions</a></h6>
+  <h6><strong>Assembly</strong>: DNV.OAuth.Abstractions.dll</h6>
+  <h5 id="DNV_OAuth_Abstractions_IClientApp_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IClientApp</code></pre>
+  </div>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Abstractions_IClientApp_AcquireTokenByAuthorizationCode_System_String_System_String_.md&amp;value=---%0Auid%3A%20DNV.OAuth.Abstractions.IClientApp.AcquireTokenByAuthorizationCode(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Abstractions/IClientApp.cs/#L15">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Abstractions_IClientApp_AcquireTokenByAuthorizationCode_" data-uid="DNV.OAuth.Abstractions.IClientApp.AcquireTokenByAuthorizationCode*"></a>
+  <h4 id="DNV_OAuth_Abstractions_IClientApp_AcquireTokenByAuthorizationCode_System_String_System_String_" data-uid="DNV.OAuth.Abstractions.IClientApp.AcquireTokenByAuthorizationCode(System.String,System.String)">AcquireTokenByAuthorizationCode(string, string)</h4>
+  <div class="markdown level1 summary"><p>Attempts to authenticate using account retrieved from the specified context by calling <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.iconfidentialclientapplication.acquiretokenbyauthorizationcode">AcquireTokenByAuthorizationCode(IEnumerable&lt;string&gt;, string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;AuthenticationResult&gt; AcquireTokenByAuthorizationCode(string authCode, string codeVerifier = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">authCode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">codeVerifier</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.authenticationresult">AuthenticationResult</a>&gt;</td>
+        <td><p>Authentication result containing a token for the requested scopes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Abstractions_IClientApp_AcquireTokenForClient.md&amp;value=---%0Auid%3A%20DNV.OAuth.Abstractions.IClientApp.AcquireTokenForClient%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Abstractions/IClientApp.cs/#L35">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Abstractions_IClientApp_AcquireTokenForClient_" data-uid="DNV.OAuth.Abstractions.IClientApp.AcquireTokenForClient*"></a>
+  <h4 id="DNV_OAuth_Abstractions_IClientApp_AcquireTokenForClient" data-uid="DNV.OAuth.Abstractions.IClientApp.AcquireTokenForClient">AcquireTokenForClient()</h4>
+  <div class="markdown level1 summary"><p>Attempts to authenticate using client credentials by calling <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.iconfidentialclientapplication.acquiretokenforclient">AcquireTokenForClient(IEnumerable&lt;string&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;AuthenticationResult&gt; AcquireTokenForClient()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.authenticationresult">AuthenticationResult</a>&gt;</td>
+        <td><p>Authentication result containing a token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Abstractions_IClientApp_AcquireTokenSilent_Microsoft_Identity_Client_IAccount_.md&amp;value=---%0Auid%3A%20DNV.OAuth.Abstractions.IClientApp.AcquireTokenSilent(Microsoft.Identity.Client.IAccount)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Abstractions/IClientApp.cs/#L29">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Abstractions_IClientApp_AcquireTokenSilent_" data-uid="DNV.OAuth.Abstractions.IClientApp.AcquireTokenSilent*"></a>
+  <h4 id="DNV_OAuth_Abstractions_IClientApp_AcquireTokenSilent_Microsoft_Identity_Client_IAccount_" data-uid="DNV.OAuth.Abstractions.IClientApp.AcquireTokenSilent(Microsoft.Identity.Client.IAccount)">AcquireTokenSilent(IAccount)</h4>
+  <div class="markdown level1 summary"><p>Attempts to authenticate using account by calling <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.iclientapplicationbase.acquiretokensilent#microsoft-identity-client-iclientapplicationbase-acquiretokensilent(system-collections-generic-ienumerable((system-string))-microsoft-identity-client-iaccount)">AcquireTokenSilent(IEnumerable&lt;string&gt;, IAccount)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;AuthenticationResult&gt; AcquireTokenSilent(IAccount account)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.iaccount">IAccount</a></td>
+        <td><span class="parametername">account</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.authenticationresult">AuthenticationResult</a>&gt;</td>
+        <td><p>Authentication result containing a token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Abstractions_IClientApp_AcquireTokenSilent_System_Security_Claims_ClaimsPrincipal_.md&amp;value=---%0Auid%3A%20DNV.OAuth.Abstractions.IClientApp.AcquireTokenSilent(System.Security.Claims.ClaimsPrincipal)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Abstractions/IClientApp.cs/#L22">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Abstractions_IClientApp_AcquireTokenSilent_" data-uid="DNV.OAuth.Abstractions.IClientApp.AcquireTokenSilent*"></a>
+  <h4 id="DNV_OAuth_Abstractions_IClientApp_AcquireTokenSilent_System_Security_Claims_ClaimsPrincipal_" data-uid="DNV.OAuth.Abstractions.IClientApp.AcquireTokenSilent(System.Security.Claims.ClaimsPrincipal)">AcquireTokenSilent(ClaimsPrincipal)</h4>
+  <div class="markdown level1 summary"><p>Attempts to authenticate using account retrieved from the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.claims.claimsprincipal">ClaimsPrincipal</a> by calling <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.iclientapplicationbase.acquiretokensilent#microsoft-identity-client-iclientapplicationbase-acquiretokensilent(system-collections-generic-ienumerable((system-string))-microsoft-identity-client-iaccount)">AcquireTokenSilent(IEnumerable&lt;string&gt;, IAccount)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;AuthenticationResult&gt; AcquireTokenSilent(ClaimsPrincipal claimsPrincipal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.claims.claimsprincipal">ClaimsPrincipal</a></td>
+        <td><span class="parametername">claimsPrincipal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.authenticationresult">AuthenticationResult</a>&gt;</td>
+        <td><p>Authentication result containing a token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Abstractions_IClientApp_ClearUserTokenCache_System_Security_Claims_ClaimsPrincipal_.md&amp;value=---%0Auid%3A%20DNV.OAuth.Abstractions.IClientApp.ClearUserTokenCache(System.Security.Claims.ClaimsPrincipal)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Abstractions/IClientApp.cs/#L41">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Abstractions_IClientApp_ClearUserTokenCache_" data-uid="DNV.OAuth.Abstractions.IClientApp.ClearUserTokenCache*"></a>
+  <h4 id="DNV_OAuth_Abstractions_IClientApp_ClearUserTokenCache_System_Security_Claims_ClaimsPrincipal_" data-uid="DNV.OAuth.Abstractions.IClientApp.ClearUserTokenCache(System.Security.Claims.ClaimsPrincipal)">ClearUserTokenCache(ClaimsPrincipal)</h4>
+  <div class="markdown level1 summary"><p>Removes all tokens in the cache for the account retrieved from the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.claims.claimsprincipal">ClaimsPrincipal</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ClearUserTokenCache(ClaimsPrincipal claimsPrincipal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.claims.claimsprincipal">ClaimsPrincipal</a></td>
+        <td><span class="parametername">claimsPrincipal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Abstractions_IClientApp.md&amp;value=---%0Auid%3A%20DNV.OAuth.Abstractions.IClientApp%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Abstractions/IClientApp.cs/#L7" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

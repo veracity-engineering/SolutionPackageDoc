@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>User Management Configuration </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="User Management Configuration ">
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="user-management-configuration">User Management Configuration</h1>
+
+<h2 id="config-database">Config Database</h2>
+<p><a href="/articles/userManagement/cosmos">Use Azure CosmosDB as database</a></p>
+<p><a href="/articles/userManagement/sqlserver">Use Azure SQL Server as database</a></p>
+<p>User other databases.</p>
+<blockquote>
+<p>The package can use all database engines supported by EF Core 5.0+. Here is a list -  <a href="https://docs.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli">EF Core 5.0 Database providers</a></p>
+</blockquote>
+<p><a href="/articles/userManagement/configuration">User Management Configuration</a></p>
+<h2 id="config-unauthorized-behavior">Config unauthorized behavior</h2>
+<p>The package provides the following two built-in methodologies to handle unauthorized access.
+| Name | Description|
+|--|--|
+| Return403ForbiddenCode | It will send 403 reponse to the client directly. <strong>It is default hehavior</strong>|
+| ThrowExceptionDirectly | It will throw <code>UnauthorizedAccessException</code> directly. Then developer should capture this exception and handle properly. |</p>
+<p>Change the default heavior to throw a exception directly.</p>
+<pre><code class="lang-cs">    public class Startup
+    {
+        //...
+        public void ConfigureServices(IServiceCollection services)
+        {
+            //...
+            services.AddUserManagement(
+                //...
+                PermissionOptions = new PermissionOptions()
+                      {
+                          //...
+                          HandleUnauthorizedAccess = BuiltinUnauthorizedAccessHandler.ThrowExceptionDirectly
+                      })
+            //...
+        }
+    }
+</code></pre>
+<p>Customize unauthorized behavior</p>
+<pre><code class="lang-cs">    public class Startup
+    {
+        //...
+        public void ConfigureServices(IServiceCollection services)
+        {
+            //...
+            services.AddUserManagement(
+                //...
+                PermissionOptions = new PermissionOptions()
+                      {
+                          //...
+                          HandleUnauthorizedAccess = (httpContext, missedPermission) =&gt;{
+                              ///... customized logic
+                          }
+                      }
+            //...
+        }
+    }
+</code></pre>
+<h2 id="config-logic-to-get-user-id-in-identity-provider">Config logic to get user id in Identity Provider</h2>
+<p>By default, The pacakge reads user id from the Claim which type is <code>userId</code>. It is feasible in case Veracity Identity Provider (Azure AD B2C). Setup your own logic if required.</p>
+<pre><code class="lang-cs">    public class Startup
+    {
+        //...
+        public void ConfigureServices(IServiceCollection services)
+        {
+            //...
+            services.AddUserManagement(
+                //...
+                PermissionOptions = new PermissionOptions()
+                      {
+                          //...
+                          GetUserIdentity = (User) =&gt; User.Claims.FirstOrDefault(t =&gt; t.Type == &quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name&quot;)?.Value
+                      }
+            //...
+        }
+    }
+</code></pre>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackageDoc.wiki/blob/master/userManagement/configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

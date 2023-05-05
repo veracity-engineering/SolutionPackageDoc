@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Configure Permission definition out of source code. </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Configure Permission definition out of source code. ">
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="configure-permission-definition-out-of-source-code">Configure Permission definition out of source code.</h1>
+
+<p>In this section, you learn how to configure permissions out of source code. Permission data is allowed to be stored in different forms like Json file, xml file or in database.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>PM&gt; <code>Install-Package DNVGL.Authorization.Web</code></p>
+<h2 id="implement-interface-ipermissionrepository">Implement interface <code>IPermissionRepository</code></h2>
+<p>Interface <code>IPermissionRepository</code> is required to be implemented to load meta data of all permssions.</p>
+<pre><code class="lang-cs">    public class OwnPermissionRepository : IPermissionRepository
+    {
+        public async Task&lt;IEnumerable&lt;PermissionEntity&gt;&gt; GetAll()
+        {
+            //... logic
+        }
+    }
+</code></pre>
+<h3 id="permissionentity-definition"><code>PermissionEntity</code> Definition</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>string</code></td>
+<td>The primary key of a permission</td>
+</tr>
+<tr>
+<td>Key</td>
+<td><code>string</code></td>
+<td>A readable unique key of a permission</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Permission name</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>string</code></td>
+<td>Permission description</td>
+</tr>
+<tr>
+<td>Group</td>
+<td><code>string</code></td>
+<td>Permission group</td>
+</tr>
+</tbody>
+</table>
+<h2 id="create-mandatory-permissions">Create mandatory permissions</h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ManageUser</td>
+</tr>
+<tr>
+<td>ViewUser</td>
+</tr>
+<tr>
+<td>ViewRole</td>
+</tr>
+<tr>
+<td>ManageRole</td>
+</tr>
+<tr>
+<td>ViewCompany</td>
+</tr>
+<tr>
+<td>ManageCompany</td>
+</tr>
+</tbody>
+</table>
+<h2 id="register-ipermissionrepository-service">Register <code>IPermissionRepository</code> service</h2>
+<pre><code class="lang-cs">    public class Startup
+    {
+        //...
+        public void ConfigureServices(IServiceCollection services)
+        {
+            //...
+            services.AddUserManagement().UseEFCore(new EFCoreOptions
+                {
+                    DbContextOptionsBuilder = options =&gt; options.UseSqlServer(@&quot;Data Source=.\SQLEXPRESS;Initial Catalog=UserManagement;Trusted_Connection=Yes;&quot;)
+                }).UsePermissionRepository&lt;OwnPermissionRepository&gt;();
+            //...
+        }
+    }
+</code></pre>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackageDoc.wiki/blob/master/userManagement/permissionStore.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

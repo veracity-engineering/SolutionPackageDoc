@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>OAuth HTTP Client Factory </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="OAuth HTTP Client Factory ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="oauth-http-client-factory">OAuth HTTP Client Factory</h1>
+
+<p>The <code>DNVGL.OAuth.Api.HttpClient package</code> is a .NET library which provides a factory for producing authenticated HttpClients for API integration via OAuth.</p>
+<p>Developers can use this library to create HttpClient instances which will be pre-authenticated for API requests based on provided configuration.</p>
+<p>This package supports two type of credential authentication:</p>
+<ul>
+<li>User credentials - A user may authenticate by providing a username and password via a UI.</li>
+<li>Client credentials - A service or application may provide a client id and secret to silently authenticate.</li>
+</ul>
+<hr>
+<h1 id="package-install">Package Install</h1>
+<p>Ensure you have configured to package NuGet Package Source or find the instructions <a href="/articles/PackageInstall.md">here</a>.</p>
+<p>Package Manager Console</p>
+<pre><code>PM&gt; `Install-Package DNVGL.OAuth.Api.HttpClient`
+</code></pre>
+<h1 id="basic-example">Basic example</h1>
+<h2 id="1-configuration">1. Configuration</h2>
+<p>Setup API http client configuration in <code>appsettings.json</code> file:</p>
+<pre><code class="lang-js">  {
+    &quot;ApiHttpClientOptions&quot;: [
+      {
+        &quot;Name&quot;: &quot;userCredentialsClient&quot;,
+        &quot;Flow&quot;: &quot;user-credentials&quot;,
+        &quot;BaseUri&quot;: &quot;&lt;BaseUri&gt;&quot;,
+        &quot;SubscriptionKey&quot;: &quot;&lt;SubscriptionKey&gt;&quot;
+      },
+      {
+        &quot;Name&quot;: &quot;clientCredentialsClient&quot;,
+        &quot;Flow&quot;:&quot;client-credentials&quot;,
+        &quot;BaseUri&quot;: &quot;&lt;BaseUri&gt;&quot;,
+        &quot;SubscriptionKey&quot;: &quot;&lt;SubscriptionKey&gt;&quot;
+        &quot;OAuthClientOptions&quot;: {
+          &quot;Authority&quot;: &quot;&lt;Authority&gt;&quot;,
+          &quot;ClientId&quot;: &quot;&lt;ClientId&gt;&quot;,
+          &quot;ClientSecret&quot;: &quot;&lt;ClientSecret&gt;&quot;,
+          &quot;Resource&quot;: &quot;&lt;Resource&gt;&quot;,
+          &quot;Scopes&quot;: [ &quot;&lt;Scope&gt;&quot;, &quot;offline_access&quot; ],
+          &quot;CallbackPath&quot;: &quot;&lt;CallbackPath&gt;&quot;
+        }
+      }
+    ]
+  }
+
+</code></pre>
+<p>The package injects an <code>IHttpClientFactory</code> which is able to provide multiple HttpClients for different purposes.  The HttpClients may all be configured through a configuration section in which the individual client configurations are listed with a unique <code>Name</code> which is used to request HttpClients with the corresponding configurations.</p>
+<p>The configuration shown above lists 2 HttpClients.  The first with name <code>&quot;userCredentialsClient&quot;</code> is an example of a configuration which would honour the signed in user's credentials for the API for which it makes requests.  The second with name <code>&quot;clientCredentialsClient&quot;</code> provides configuration for a client which would be authenticated via the client credential flow with a client id and secret to make requests in an API.  This configuration would allow us to request either type of HttpClient by requesting it from from the HttpClientFactory by providing one of the two names: <code>&quot;userCredentialsClient&quot;</code> or <code>&quot;clientCredentialsClient&quot;</code> in the method call to the HttpClientFactory.</p>
+<h2 id="2-registration">2. Registration</h2>
+<p>Call the <code>ServiceCollection</code> extension method <code>AddOAuthHttpClientFactory</code> to register an instance of the <code>IHttpClientFactory</code> in to your project in your <code>Startup.cs</code> file.</p>
+<p>The below code is retrieving the configuration from the <code>&quot;OAuthHttpClientOptions&quot;</code> section defined in <code>apsettings.json</code> above.</p>
+<pre><code class="lang-cs">public void ConfigureService(IServiceCollection services)
+{
+  ...
+  services.AddOAuthHttpClientFactory(Congiuration.GetSection(&quot;ApiHttpClientOptions&quot;).Get&lt;IEnumerable&lt;OAuthHttpClientOptions&gt;&gt;());
+  ...
+}
+</code></pre>
+<p>If you require a HttpClient applying the user credential flow you should also include the web authentication (<code>AddOidc</code>) and token cache handling (<code>AddDistributedMemoryCache</code>) from the <a href="DNVGL.OAuth.Web.html">DNVGL.OAuth.Web</a> package.  Include the NuGet package in your project and call the required methods as below:</p>
+<pre><code class="lang-cs">public void ConfigureService(IServiceCollection services)
+{
+  ...
+  services.AddDistributedMemoryCache();
+  ...
+  var oidcOptions = new OidcOptions
+  {
+    Authority = &quot;&lt;Authority&gt;&quot;,
+	  ClientId = &quot;&lt;ClientId&gt;&quot;,
+	  ClientSecret = &quot;&lt;ClientSecret&gt;&quot;,
+		Resource = &quot;&lt;Resource&gt;&quot;,
+	  Scopes = new[] { &quot;&lt;Scope&gt;&quot;, &quot;offline_access&quot; },
+	  ResponseType = OpenIdConnectResponseType.Code
+  };
+  services.AddOidc(oidcOptions);
+  ...
+  services.AddOAuthHttpClientFactory(Congiuration.GetSection(&quot;ApiHttpClientOptions&quot;).Get&lt;IEnumerable&lt;OAuthHttpClientOptions&gt;&gt;());
+  ...
+}
+</code></pre>
+<p>If you only require HttpClients applying the client credential flow the DNVGL.OAuth.Web package is not required.</p>
+<h2 id="3-request-a-client">3. Request a client</h2>
+<p>Resolve <code>IHttpClientFactory</code> to create user-credential or client-credential <code>HttpClient</code> to access web API.</p>
+<pre><code class="lang-cs">public class TestController
+{
+  private readonly IHttpClientFactory _httpClientFactory;
+
+  public TestController(IHttpClientFactory httpClientFactory)
+  {
+    _httpClientFactory = httpClientFactory;
+  }
+
+  public User DoSomethingWithSignInUser(string id)
+  {
+    var client = _httpClientFactory.Create(&quot;userCredentialsClient&quot;);
+    ...
+  }
+
+  public Company DoSomethingWithService(string id)
+  {
+    var client = _httpClientFactory.Create(&quot;clientCredentialsClient&quot;);
+    ...
+  }
+}
+</code></pre>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackageDoc.wiki/blob/master/DNVGL.OAuth.Api.HttpClient.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

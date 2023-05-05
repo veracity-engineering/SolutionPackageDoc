@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Data Model </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Data Model ">
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="data-model">Data Model</h1>
+
+<p>In this section, you learn the built-in data model in User Management Package. These model is defined in package - <code>DNVGL.Authorization.UserManagement.Abstraction</code>.</p>
+<blockquote>
+<p>You are allowed to extend data models with extra fields. <a href="/articles/userManagement/customModel">Extend Data model - Company, Role, User</a></p>
+</blockquote>
+<h2 id="company">Company</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>string</code></td>
+<td>The primary key of the company</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>ServiceId</td>
+<td><code>string</code></td>
+<td>It is the veracity service id.</td>
+</tr>
+<tr>
+<td>DomainUrl</td>
+<td><code>string</code></td>
+<td>It is domain url like <em>dnv.com</em>. or the secondary directory in url like <em>oilgas</em> in dnv.com/oilgas/phonebook.</td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td><code>string</code></td>
+<td>Permissions are combined as a string which use <em>semicolon(;)</em> as a delimiter.</td>
+</tr>
+<tr>
+<td>Active</td>
+<td><code>bool</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Deleted</td>
+<td><code>bool</code></td>
+<td><code>true</code> if the company is soft deleted, otherwise <code>false</code>.</td>
+</tr>
+<tr>
+<td>CreatedBy</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>CreatedOnUtc</td>
+<td><code>DateTime</code></td>
+<td></td>
+</tr>
+<tr>
+<td>UpdatedBy</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>UpdatedOnUtc</td>
+<td><code>DateTime</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="role">Role</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>string</code></td>
+<td>The primary key of the role</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Active</td>
+<td><code>bool</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Deleted</td>
+<td><code>bool</code></td>
+<td><code>true</code> if the role is soft deleted, otherwise <code>false</code>.</td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td><code>string</code></td>
+<td>Permissions are combined as a string which use <em>semicolon(;)</em> as a delimiter.</td>
+</tr>
+<tr>
+<td>CompanyId</td>
+<td><code>string</code></td>
+<td>The id of the company to which this role belongs. It is null if it is a global role.</td>
+</tr>
+<tr>
+<td>CreatedBy</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>CreatedOnUtc</td>
+<td><code>DateTime</code></td>
+<td></td>
+</tr>
+<tr>
+<td>UpdatedBy</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>UpdatedOnUtc</td>
+<td><code>DateTime</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="user">User</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>string</code></td>
+<td>The primary key of the user</td>
+</tr>
+<tr>
+<td>Email</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>FirstName</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>LastName</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>VeracityId</td>
+<td><code>string</code></td>
+<td>It is an id provided by identity provider.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>RoleIds</td>
+<td><code>string</code></td>
+<td>Role's ids are combined as a string which use <em>semicolon(;)</em> as a delimiter.</td>
+</tr>
+<tr>
+<td>CompanyIds</td>
+<td><code>string</code></td>
+<td>Company's ids are combined as a string which use <em>semicolon(;)</em> as a delimiter.</td>
+</tr>
+<tr>
+<td>Active</td>
+<td><code>bool</code></td>
+<td></td>
+</tr>
+<tr>
+<td>SuperAdmin</td>
+<td><code>bool</code></td>
+<td><code>true</code> if the user is a super admin, otherwise <code>false</code>.</td>
+</tr>
+<tr>
+<td>Deleted</td>
+<td><code>bool</code></td>
+<td><code>true</code> if the user is soft deleted, otherwise <code>false</code>.</td>
+</tr>
+<tr>
+<td>CreatedBy</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>CreatedOnUtc</td>
+<td><code>DateTime</code></td>
+<td></td>
+</tr>
+<tr>
+<td>UpdatedBy</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>UpdatedOnUtc</td>
+<td><code>DateTime</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackageDoc.wiki/blob/master/userManagement/dataModel.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

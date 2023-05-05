@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Introduction to Solution Web Project Templates </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Introduction to Solution Web Project Templates ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="introduction-to-solution-web-project-templates">Introduction to Solution Web Project Templates</h1>
+
+<p>Project templates produce ready-to-run projects that make it easy for users to start with a working set of code. .NET includes a few project templates such as a console application or a class library. So we provide a project template to help you initialize web project.</p>
+<p>We don't plan to introduce how to setup a project template via dotnet core cli. If you are interested, please refer <a href="https://docs.microsoft.com/en-us/dotnet/core/tutorials/cli-templates-create-template-package">Tutorial: Create a template package</a> .</p>
+<h2 id="introduce-templates-into-dotnet-cli-tools">Introduce templates into dotnet CLI Tools</h2>
+<h6 id="overview">Overview</h6>
+<p>The <code>DNV.SolutionPackage.ProjectTemplates</code> helps developer to quickly initialize a work around web application project. We don't need to take more time on setting up. The developer can focus on business domain development tasks. This template contains authentication with Veracity. If the application need user management, it is also provided.</p>
+<h6 id="install-the-template-package">Install the template package</h6>
+<p>There are two methods to install SolutionPackage project templates. One is to install it directly from Nuget package source. Other is to install from local file.</p>
+<pre><code class="lang-bash">dotnet new -i DNV.SolutionPackage.ProjectTemplates::1.0.0 --nuget-source &quot;https://dnvgl-one.pkgs.visualstudio.com/_packaging/DNVGL.SolutionPackage/nuget/v3/index.json&quot;
+
+dotnet new -i C:\Temp\DNV.SolutionPackage.ProjectTemplates.1.0.0.nupkg
+The following template packages will be installed:
+   C:\Temp\DNV.SolutionPackage.ProjectTemplates.1.0.0.nupkg
+
+Success: DNV.SolutionPackage.ProjectTemplates::1.0.0 installed the following templates:
+Template Name                    Short Name      Language  Tags
+-------------------------------  --------------  --------  ----
+DNV.SolutionPacakge.WebTemplate  DNVWebTemplate            DNV
+</code></pre>
+<h6 id="list-the-templates">List the templates</h6>
+<pre><code class="lang-bash">dotnet new --list
+</code></pre>
+<p>After the template package installation,  <code>DNV.SolutionPackages.WebTemplate</code> is in the templates list. You also can use <code>dotnet new --list</code> command to list the detail which templates have installed.</p>
+<pre><code class="lang-bash">dotnet new -l
+These templates matched your input:
+
+Template Name                                 Short Name           Language    Tags
+--------------------------------------------  -------------------  ----------  -------------------------------------
+ASP.NET Core Empty                            web                  [C#],F#     Web/Empty
+ASP.NET Core gRPC Service                     grpc                 [C#]        Web/gRPC
+ASP.NET Core Web API                          webapi               [C#],F#     Web/WebAPI
+ASP.NET Core Web App                          webapp,razor         [C#]        Web/MVC/Razor Pages
+ASP.NET Core Web App (Model-View-Controller)  mvc                  [C#],F#     Web/MVC
+ASP.NET Core with Angular                     angular              [C#]        Web/MVC/SPA
+ASP.NET Core with React.js                    react                [C#]        Web/MVC/SPA
+ASP.NET Core with React.js and Redux          reactredux           [C#]        Web/MVC/SPA
+Blazor Server App                             blazorserver         [C#]        Web/Blazor
+Blazor WebAssembly App                        blazorwasm           [C#]        Web/Blazor/WebAssembly/PWA
+Class Library                                 classlib             [C#],F#,VB  Common/Library
+Console App                                   console              [C#],F#,VB  Common/Console
+DNV.SolutionPacakge.WebTemplate               DNVWebTemplate                   DNV
+dotnet gitignore file                         gitignore                        Config
+...
+</code></pre>
+<p>There are some built-in template packages, also you see our <code>DNV.SolutionPackage.WebTemplate</code> in the list.</p>
+<h6 id="uninstall-the-template-package">Uninstall the template package</h6>
+<p>The <code>dotnet new --uninstall</code> command can remove the template.</p>
+<pre><code class="lang-bash">dotnet new --uninstall DNV.SolutionPackage.ProjectTemplates
+
+dotnet new -u DNV.SolutionPackage.ProjectTemplates
+Success: DNV.SolutionPackage.ProjectTemplates::1.0.0 was uninstalled.
+</code></pre>
+<h3 id="create-project-via-solution-package-project-templates">Create project via Solution Package project templates</h3>
+<p>Let's take a look the functions of <code>DNV.SolutionPackage.WebTemplate</code>. The  <code>dotnet new DNVWebTemplate --help</code> command list all the parameters.</p>
+<pre><code class="lang-bash">dotnet new DNVWebTemplate --help
+DNV.SolutionPacakge.WebTemplate
+Author: Tim Tu
+Options:
+  -t|--template      The type of webtemplate to use
+                         basic         - basic
+                         management    - management
+                     Default: basic
+
+  -s|--skipRestore   If specified, skips the automatic restore of the project on create.
+                     bool - Optional
+                     Default: false
+
+  -sk|--skipDBSetup  If specified, skips the DB creation process on create.
+                     bool - Optional
+                     Default: false
+</code></pre>
+<p>The <code>-t|--template</code> option chooses main functions will be installed in created project. The <code>basic</code> is default value, the created project will integrate authentication library <code>DNVGL.OAuth.Web</code> which also is from <code>DNV.SolutionPackage</code>.  The <code>management</code> option not only has all <code>basic</code> functions, but also integrates user management</p>
+<p>The <code>-s|--skipRestore</code> option restores the dependencies of the created project. The default value is <code>false</code>. Doesn't restore the dependencies after created project.</p>
+<p>The <code>-sk|--skipDBSetup</code> option must works with <code>-t|--template management</code> option. It will create tables related with user management in local SQL Server database. If there is no SQL Server in your local machine, A folder <code>Scripts</code> will be created in solution folder. The <code>Scripts</code> folder contains <code>db.bat</code> and <code>dbcreation.sql</code> files. Use <code>dbcreeation.sql</code> to generate tables in specify database.</p>
+<p>The <code>dotnet new DNVWebTemplate</code> command create project from <code>DNV.SolutionPackage.WebTemplate</code> template.</p>
+<pre><code class="lang-bash">dotnet new DNVWebTemplate --template management --name Demo.Management.Website --output ManagementSolution
+The template &quot;DNV.SolutionPacakge.WebTemplate&quot; was created successfully.
+
+Processing post-creation actions...
+No Primary Outputs to restore.
+
+Template is configured to run the following action:
+Actual command: Scripts/db.bat
+Do you want to run this action [Y(yes)|N(no)]?
+N
+</code></pre>
+<p>In the work folder, there are new solution and project files in folder <code>ManagementSolution</code>.</p>
+<p><img src="images/WebTemplates/mgt.website.example.PNG" alt=""></p>
+<p>When the website is running, the first access user will be added as administrator. This function is implemented in  <code>AuthController.cs</code> file. Please pay attention when you use in your business.</p>
+<p>The front-end of website is SPA application. The source code is in <code>ClientApp</code> folder.  Please refer <a href="https://webapptemplatedoc.z6.web.core.windows.net/articles/intro.html">https://webapptemplatedoc.z6.web.core.windows.net/articles/intro.html</a> .</p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackageDoc.wiki/blob/master/WebProjectTemplates.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

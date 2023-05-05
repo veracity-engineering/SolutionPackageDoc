@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Overview </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Overview ">
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="overview">Overview</h1>
+
+<p>In this section, you learn the different modes of user management, permission setup, package limitations, and decide the adoption of the package.</p>
+<h2 id="1-three-user-management-modes">1. Three user management modes</h2>
+<blockquote>
+<p>one user is allowed to be assigned to mutiple companies. <code>Company_CompanyRole_User</code> is the default mode.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Company</th>
+<th>Role</th>
+<th>User</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Company_CompanyRole_User</code></td>
+<td>✓</td>
+<td>✓ Role is defined at company level.</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>Company_GlobalRole_User</code></td>
+<td>✓</td>
+<td>✓ Role is defined at global level.</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>Role_User</code></td>
+<td>☒</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h3 id="change-default-user-management-mode">Change default user management mode</h3>
+<blockquote>
+<p>API endpoint and schema has slight difference on different modes.</p>
+</blockquote>
+<pre><code class="lang-cs">    public class Startup
+    {
+        //...
+        public void ConfigureServices(IServiceCollection services)
+        {
+            //...
+            services.AddUserManagement(
+                new UserManagementOptions
+                {
+                    //...
+                    Mode = UserManagementMode.Role_User
+                });
+            //...
+        }
+    }
+</code></pre>
+<h2 id="2-permission-setup">2. Permission setup</h2>
+<h3 id="build-in-permissions">Build-in Permissions</h3>
+<p>The following are serveral built-in permissions used to authorize user management apis.
+| Permission | Description |
+|--|--|
+| <code>Premissions.ManageUser</code> | permission to make change on user. |
+| <code>Premissions.ViewUser</code> | permission to read user. |
+| <code>Premissions.ManageRole</code> | permission to make change on role. |
+| <code>Premissions.ViewRole</code> | permission to read role. |
+| <code>Premissions.ManageCompany</code> | permission to make change on company. |
+| <code>Premissions.ViewCompany</code> | permission to read company. |</p>
+<h3 id="create-your-own-premissions">Create your own premissions</h3>
+<p>Define permissions by implementing interface - <code>IPermissionMatrix</code>. The following code defined two permissions.</p>
+<blockquote>
+<p>You are also allowed to manage permissions outside of the source code. <a href="/articles/userManagement/permissionStore">Here is the instruction</a>.</p>
+</blockquote>
+<pre><code class="lang-cs">    public class PermissionBook : IPermissionMatrix
+    {
+        public enum WeatherPermission
+        {
+            //...
+
+            [PermissionValue(id: &quot;8&quot;, key: &quot;ReadWeather&quot;, name: &quot;Read Weather&quot;, group: &quot;Weather&quot;, description: &quot;ReadWeather&quot;)]
+            ReadWeather,
+
+            [PermissionValue(id: &quot;9&quot;, key: &quot;WriteWeather&quot;, name: &quot;Write Weather&quot;, group: &quot;Weather&quot;, description: &quot;WriteWeather&quot;)]
+            WriteWeather,
+
+            //... other permissions
+        }
+    }
+</code></pre>
+<h3 id="authorize-api-with-permissions">Authorize API with permissions</h3>
+<p>Decorates API actions with permission.</p>
+<blockquote>
+<p>You are also allowed to use Role-based authorization like <code>[Authorize(Roles = &quot;****&quot;)]</code>. <a href="/articles/userManagement/authorize">Here is the instruction</a>.</p>
+</blockquote>
+<pre><code class="lang-cs">        [HttpGet]
+        [PermissionAuthorize(WeatherPermission.ReadWeather)]
+        public IEnumerable&lt;WeatherForecast&gt; Get()
+        {
+            //... api logic
+        }
+</code></pre>
+<h2 id="3-data-model">3. Data Model</h2>
+<p>The predefeind data models of <code>Company</code>, <code>Role</code> and <code>User</code> may not fully meet your needs. Please check the <a href="/articles/userManagement/dataModel">built-in model definition</a>, and follow this <a href="/articles/userManagement/customModel">instruction</a> to extend the data model.</p>
+<h2 id="4-company-role-user-deletion">4. Company/ Role/ User deletion</h2>
+<p>By default, the soft deletion is enabled. Change the default behavior to hard delete record.</p>
+<pre><code class="lang-cs">    public class Startup
+    {
+        //...
+        public void ConfigureServices(IServiceCollection services)
+        {
+            //...
+            services.AddUserManagement().UseEFCore(new EFCoreOptions
+                {
+                    DbContextOptionsBuilder = options =&gt; options.UseSqlServer(@&quot;Data Source=.\SQLEXPRESS;Initial Catalog=UserManagement;Trusted_Connection=Yes;&quot;),
+                    HardDelete = true
+                });
+            //...
+        }
+    }
+</code></pre>
+<h2 id="5-data-access-implementation">5. Data Access Implementation</h2>
+<p>We provide data access implementation in package - <code>DNVGL.Authorization.UserManagement.EFCore</code>. It has dependency on EF Core 5.0+.</p>
+<p>If you don't want to introduce EF Core in your project. then this package is not required to be installed. Here is an instruction to <a href="/articles/userManagement/dataAccess">Replace EF Core with your own data access</a></p>
+<h2 id="6-performance-">6. Performance ✓</h2>
+<p>By default, The package reads and check user's permission from database for every http request. You can change this behavior to load user's permission in to claim (in cookie), and then read, check user's premission from claim. The following is to setup such behavior.</p>
+<pre><code class="lang-cs">    public class Startup
+    {
+        //...
+        public void ConfigureServices(IServiceCollection services)
+        {
+            //...
+            services.AddAuthentication().AddCookie(o =&gt; o.Events.AddCookieValidateHandler(services));
+            //...
+        }
+    }
+</code></pre>
+<h2 id="7-swagger-ui">7. Swagger UI</h2>
+<p>By default, Swagger UI probably do not show <em>User Management APIs</em>. Then you could follow the <a href="/articles/userManagement/swagger">instructuon</a> to get it displayed.</p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackageDoc.wiki/blob/master/userManagement/overview.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
