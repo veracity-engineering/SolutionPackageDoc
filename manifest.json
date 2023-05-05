@@ -12,11 +12,2961 @@
       }
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.Abstractions.Extensions.ApplicationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.Abstractions.Extensions.ApplicationExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.Abstractions.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.Abstractions.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.Abstractions.IEventHub.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.Abstractions.IEventHub.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.Abstractions.IQueryableRepository-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.Abstractions.IQueryableRepository-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.Abstractions.IRepository-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.Abstractions.IRepository-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.Abstractions.IUnitOfWork.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.Abstractions.IUnitOfWork.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.Abstractions.UoW.IUoWProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.Abstractions.UoW.IUoWProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.Abstractions.UoW.UnitOfWork.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.Abstractions.UoW.UnitOfWork.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.Abstractions.UoW.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.Abstractions.UoW.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.Abstractions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.CQRS.Abstractions.ICommand-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.CQRS.Abstractions.ICommand-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.CQRS.Abstractions.ICommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.CQRS.Abstractions.ICommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.CQRS.Abstractions.ICommandHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.CQRS.Abstractions.ICommandHandler-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.CQRS.Abstractions.ICommandHandler-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.CQRS.Abstractions.ICommandHandler-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.CQRS.Abstractions.IQuery-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.CQRS.Abstractions.IQuery-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.CQRS.Abstractions.IQueryHandler-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.CQRS.Abstractions.IQueryHandler-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Application.CQRS.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Application.CQRS.Abstractions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.Abstractions.AsyncLocalContext-1.ContextHolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.Abstractions.AsyncLocalContext-1.ContextHolder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.Abstractions.AsyncLocalContext-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.Abstractions.AsyncLocalContext-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.Abstractions.DictionaryStringObjectJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.Abstractions.DictionaryStringObjectJsonConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.Abstractions.IAmbientContext-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.Abstractions.IAmbientContext-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.Abstractions.IContextAccessor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.Abstractions.IContextAccessor-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.Abstractions.IContextCreator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.Abstractions.IContextCreator-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.Abstractions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.AspNet.AspNetContextAccessor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.AspNet.AspNetContextAccessor-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.AspNet.AspNetContextExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.AspNet.AspNetContextExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.AspNet.AspNetContextMiddleware-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.AspNet.AspNetContextMiddleware-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.AspNet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.AspNet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.HttpClient.HttpClientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.HttpClient.HttpClientExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.HttpClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.HttpClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.ServiceBus.IServiceBusMessageBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.ServiceBus.IServiceBusMessageBuilder-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.ServiceBus.LocalContextAccessor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.ServiceBus.LocalContextAccessor-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.ServiceBus.ServiceBusMessageBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.ServiceBus.ServiceBusMessageBuilder-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.ServiceBus.ServiceBusProcessorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.ServiceBus.ServiceBusProcessorExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.ServiceBus.ServiceBusSenderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.ServiceBus.ServiceBusSenderExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Context.ServiceBus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Context.ServiceBus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Abstractions.Constants.FlowTypeClaimValues.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Abstractions.Constants.FlowTypeClaimValues.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Abstractions.Constants.TokenClaimTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Abstractions.Constants.TokenClaimTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Abstractions.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Abstractions.Constants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Abstractions.IClientApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Abstractions.IClientApp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Abstractions.IClientAppBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Abstractions.IClientAppBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Abstractions.ITokenCacheProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Abstractions.ITokenCacheProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Abstractions.OAuth2Options.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Abstractions.OAuth2Options.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Abstractions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Core.Exceptions.MissingScopeException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Core.Exceptions.MissingScopeException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Core.Exceptions.TokenExpiredException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Core.Exceptions.TokenExpiredException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Core.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Core.Exceptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Core.MsalClientApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Core.MsalClientApp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Core.MsalClientAppBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Core.MsalClientAppBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Core.OAuthExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Core.OAuthExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Core.TokenCache.TokenCacheProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Core.TokenCache.TokenCacheProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Core.TokenCache.TokenCacheProviderBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Core.TokenCache.TokenCacheProviderBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Core.TokenCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Core.TokenCache.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Core.TokenValidator.DNVTokenValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Core.TokenValidator.DNVTokenValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Core.TokenValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Core.TokenValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Core.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Cookie.CookieAuthenticationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Cookie.CookieAuthenticationExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Cookie.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Cookie.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Mfa.MfaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Mfa.MfaExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Mfa.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Mfa.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Multitenancy.MtCookieBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Multitenancy.MtCookieBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Multitenancy.MtExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Multitenancy.MtExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Multitenancy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Multitenancy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Policy.Constants.TokenClaimTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Policy.Constants.TokenClaimTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Policy.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Policy.Constants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Policy.IPolicyValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Policy.IPolicyValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Policy.IPolicyViolationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Policy.IPolicyViolationHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Policy.PolicyExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Policy.PolicyExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Policy.PolicyValidationMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Policy.PolicyValidationMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Policy.PolicyValidationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Policy.PolicyValidationOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.OAuth.Web.Extensions.Policy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.OAuth.Web.Extensions.Policy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.ConsoleApp.Commands.CommandType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.ConsoleApp.Commands.CommandType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.ConsoleApp.Commands.ConsoleCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.ConsoleApp.Commands.ConsoleCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.ConsoleApp.Commands.IConsoleCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.ConsoleApp.Commands.IConsoleCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.ConsoleApp.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.ConsoleApp.Commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.ConsoleApp.ConsoleOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.ConsoleApp.ConsoleOption.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.ConsoleApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.ConsoleApp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.Exceptions.JsonParseException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.Exceptions.JsonParseException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.Exceptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.Services.KeyVaultSecretsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.Services.KeyVaultSecretsService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.Services.SecretsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.Services.SecretsService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.Services.VariableGroupSecretsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.Services.VariableGroupSecretsService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.VariableGroupClientConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.VariableGroupClientConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNV.SecretsManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.SecretsManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.Entity.Company.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.Entity.Company.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.Entity.Role.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.Entity.Role.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.Entity.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.Entity.User.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.Entity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.ICompany-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.ICompany-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.IRole-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.IRole-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.IUser-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.IUser-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.IUserSynchronization-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.StringHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.StringHelper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.UserManagementMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.UserManagementMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.UserManagementSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.UserManagementSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.Abstraction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.AccessCrossCompanyPermissionFilterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.AccessCrossCompanyPermissionFilterAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.AccessibleCompanyFilterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.AccessibleCompanyFilterAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.CompaniesController-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.CompaniesController-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.CompanyEditModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.CompanyEditModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.CompanyViewDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.CompanyViewDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.PaginatedResultViewModel-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.PaginatedResultViewModel-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleEditModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleViewDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.RoleViewDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.UserEditModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.UserEditModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DTO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DummyUserSynchronization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.DummyUserSynchronization.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.GlobalRolesController-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.GlobalRolesController-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.GlobalUsersController-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.GlobalUsersController-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.RolesController-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.RolesController-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.UserManagementOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.UserManagementOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.UsersController-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.UsersController-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.ApiControllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.CompanyRepository-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.CompanyRepository-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.CompanyRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.CompanyRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.EFCoreOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.EFCoreOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.EFCoreSetup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.EFCoreSetup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.RoleRepository-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.RoleRepository-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.RoleRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.RoleRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserManagementContext-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserManagementContext-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserManagementContext-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserManagementContext-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserManagementContext-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserManagementContext-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserManagementContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserManagementContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserPermissionReader-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserPermissionReader-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserPermissionReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserPermissionReader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserRepository-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserRepository-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.UserRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.UserManagement.EFCore.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.Abstraction.BuiltinUnauthorizedAccessHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.Abstraction.BuiltinUnauthorizedAccessHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.Abstraction.IPermissionRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.Abstraction.IPermissionRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.Abstraction.IUserPermissionReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.Abstraction.IUserPermissionReader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.Abstraction.PermissionEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.Abstraction.PermissionEntity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.Abstraction.PermissionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.Abstraction.PermissionOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.Abstraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.Abstraction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.AttributeAuthorizationHandler-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.AttributeAuthorizationHandler-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.CompanyIdentityFieldNameFilterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.CompanyIdentityFieldNameFilterAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.CompanyMemberIgnorePermissionFilterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.CompanyMemberIgnorePermissionFilterAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.Constants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.CookieAuthenticationOptionsSetup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.CookieAuthenticationOptionsSetup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.EnumExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.EnumExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.IPermissionMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.IPermissionMatrix.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.PermissionAuthorizeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.PermissionAuthorizeAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.PermissionController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.PermissionController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.PermissionDefaultSetup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.PermissionDefaultSetup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.PermissionMatrix.Premissions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.PermissionMatrix.Premissions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.PermissionMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.PermissionMatrix.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.PermissionValueAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.PermissionValueAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Authorization.Web.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Authorization.Web.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Continuation.ContinuationToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Continuation.ContinuationToken.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Continuation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Continuation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Hash.HashExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Hash.HashExtension.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Hash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Hash.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.JsonOptions.JsonOptionsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.JsonOptions.JsonOptionsExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.JsonOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.JsonOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Pagination.PageParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Pagination.PageParam.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Pagination.PaginatedResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Pagination.PaginatedResult-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Pagination.PaginatedResultExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Pagination.PaginatedResultExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Pagination.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Pagination.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Patterns.AsyncLazy-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Patterns.AsyncLazy-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Patterns.IVisitor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Patterns.IVisitor-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Patterns.IVisitor-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Patterns.IVisitor-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Patterns.Singleton-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Patterns.Singleton-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Patterns.VisitorBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Patterns.VisitorBase-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Patterns.VisitorBase-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Patterns.VisitorBase-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Patterns.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Patterns.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Sorting.SortDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Sorting.SortDirection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Sorting.SortParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Sorting.SortParam.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Common.Core.Sorting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Common.Core.Sorting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Domain.EventHub.MediatR.Extensions.DependencyInjectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Domain.EventHub.MediatR.Extensions.DependencyInjectionExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Domain.EventHub.MediatR.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Domain.EventHub.MediatR.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Domain.Seedwork.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Domain.Seedwork.Entity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Domain.Seedwork.Enumeration-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Domain.Seedwork.Enumeration-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Domain.Seedwork.Event.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Domain.Seedwork.Event.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Domain.Seedwork.EventType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Domain.Seedwork.EventType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Domain.Seedwork.IAggregateRoot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Domain.Seedwork.IAggregateRoot.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Domain.Seedwork.IEventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Domain.Seedwork.IEventHandler-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Domain.Seedwork.ValueObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Domain.Seedwork.ValueObject.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Domain.Seedwork.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Domain.Seedwork.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.Exceptions.ClientConfigurationNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.Exceptions.ClientConfigurationNotFoundException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.Exceptions.InvalidCredentialFlowException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.Exceptions.InvalidCredentialFlowException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.Exceptions.MissingTokenException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.Exceptions.MissingTokenException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.Exceptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.Extensions.HttpClientFactoryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.Extensions.HttpClientFactoryExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.Extensions.OAuthHttpClientFactoryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.Extensions.OAuthHttpClientFactoryExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.IOAuthHttpClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.IOAuthHttpClientFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.OAuthCredentialFlow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.OAuthCredentialFlow.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.OAuthHttpClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.OAuthHttpClientFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.OAuthHttpClientFactoryOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.OAuthHttpClientFactoryOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.OAuthHttpClientOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.OAuthHttpClientOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Api.HttpClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Api.HttpClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Web.AuthorityItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Web.AuthorityItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Web.JwtOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Web.JwtOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Web.OAuthExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Web.OAuthExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Web.Oidc.OidcMessageExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Web.Oidc.OidcMessageExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Web.Oidc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Web.Oidc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Web.OidcOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Web.OidcOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Web.Swagger.SwaggerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Web.Swagger.SwaggerExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Web.Swagger.SwaggerOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Web.Swagger.SwaggerOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Web.Swagger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Web.Swagger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.OAuth.Web.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.OAuth.Web.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.ApiClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.ApiClientFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.ApiResourceClientBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.ApiResourceClientBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.DataFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.DataFormat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Directory.Abstractions.ICompanyDirectory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Directory.Abstractions.ICompanyDirectory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Directory.Abstractions.IServiceDirectory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Directory.Abstractions.IServiceDirectory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Directory.Abstractions.IUserDirectory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Directory.Abstractions.IUserDirectory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Directory.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Directory.Abstractions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Directory.CompanyDirectory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Directory.CompanyDirectory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Directory.Extensions.ConfigurationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Directory.Extensions.ConfigurationExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Directory.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Directory.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Directory.ServiceDirectory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Directory.ServiceDirectory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Directory.UserDirectory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Directory.UserDirectory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Directory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Directory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Exceptions.ServerErrorException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Exceptions.ServerErrorException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Exceptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Extensions.ConfigurationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Extensions.ConfigurationExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Extensions.IApiClientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Extensions.IApiClientExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.IApiClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.IApiClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.ISerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.ISerializer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.JsonSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.JsonSerializer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.Administrator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.Administrator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.AdministratorReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.AdministratorReference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.Company.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.Company.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.CompanyReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.CompanyReference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.CreateUserReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.CreateUserReference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.Message.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.Message.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.MyServiceReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.MyServiceReference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.PolicyValidationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.PolicyValidationResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.Profile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.Profile.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.ProfilePicture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.ProfilePicture.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.Reference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.Reference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.RoleReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.RoleReference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.Service.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.Service.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.ServiceReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.ServiceReference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.Subscription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.Subscription.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.SubscriptionState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.SubscriptionState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.SubscriptionStates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.SubscriptionStates.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.User.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.UserReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.UserReference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.Widget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.Widget.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.IMyCompanies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.IMyCompanies.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.IMyMessages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.IMyMessages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.IMyPolicies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.IMyPolicies.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.IMyProfile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.IMyProfile.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.IMyServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.IMyServices.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.IMyWidgets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.IMyWidgets.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.Abstractions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.Extensions.ConfigurationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.Extensions.ConfigurationExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.MyCompanies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.MyCompanies.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.MyMessages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.MyMessages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.MyPolicies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.MyPolicies.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.MyProfile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.MyProfile.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.MyServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.MyServices.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.My.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.My.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.IThisAdministrators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.IThisAdministrators.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.IThisServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.IThisServices.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.IThisSubscribers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.IThisSubscribers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.IThisUsers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.IThisUsers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.Models.CreateUserOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.Models.CreateUserOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.Models.NotificationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.Models.NotificationOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.Models.RegistrationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.Models.RegistrationOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.Models.SubscriptionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.Models.SubscriptionOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.Abstractions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.Extensions.ConfigurationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.Extensions.ConfigurationExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.ThisAdministrators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.ThisAdministrators.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.ThisServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.ThisServices.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.ThisSubscribers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.ThisSubscribers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.ThisUsers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.ThisUsers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.This.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.This.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Veracity.Services.Api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Veracity.Services.Api.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Web.Security.CSP.ContentSecurityPolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Web.Security.CSP.ContentSecurityPolicy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Web.Security.CSP.Directive.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Web.Security.CSP.Directive.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Web.Security.CSP.DirectiveNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Web.Security.CSP.DirectiveNames.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Web.Security.CSP.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Web.Security.CSP.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Web.Security.HttpContextExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Web.Security.HttpContextExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Web.Security.PermissionsPolicies.Feature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Web.Security.PermissionsPolicies.Feature.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Web.Security.PermissionsPolicies.FeatureBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Web.Security.PermissionsPolicies.FeatureBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Web.Security.PermissionsPolicies.FeatureNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Web.Security.PermissionsPolicies.FeatureNames.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Web.Security.PermissionsPolicies.PermissionsPolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Web.Security.PermissionsPolicies.PermissionsPolicy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Web.Security.PermissionsPolicies.PermissionsPolicyExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Web.Security.PermissionsPolicies.PermissionsPolicyExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Web.Security.PermissionsPolicies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Web.Security.PermissionsPolicies.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Web.Security.WebSecurityMiddlewareExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Web.Security.WebSecurityMiddlewareExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DNVGL.Web.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNVGL.Web.Security.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
@@ -412,6 +3362,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
