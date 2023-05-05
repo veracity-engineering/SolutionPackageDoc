@@ -147,7 +147,7 @@
 <h3 id="create-your-own-premissions">Create your own premissions</h3>
 <p>Define permissions by implementing interface - <code>IPermissionMatrix</code>. The following code defined two permissions.</p>
 <blockquote>
-<p>You are also allowed to manage permissions outside of the source code. <a href="/articles/userManagement/permissionStore">Here is the instruction</a>.</p>
+<p>You are also allowed to manage permissions outside of the source code. <a href="permissionStore">Here is the instruction</a>.</p>
 </blockquote>
 <pre><code class="lang-cs">    public class PermissionBook : IPermissionMatrix
     {
@@ -168,7 +168,7 @@
 <h3 id="authorize-api-with-permissions">Authorize API with permissions</h3>
 <p>Decorates API actions with permission.</p>
 <blockquote>
-<p>You are also allowed to use Role-based authorization like <code>[Authorize(Roles = &quot;****&quot;)]</code>. <a href="/articles/userManagement/authorize">Here is the instruction</a>.</p>
+<p>You are also allowed to use Role-based authorization like <code>[Authorize(Roles = &quot;****&quot;)]</code>. <a href="authorize">Here is the instruction</a>.</p>
 </blockquote>
 <pre><code class="lang-cs">        [HttpGet]
         [PermissionAuthorize(WeatherPermission.ReadWeather)]
@@ -178,7 +178,7 @@
         }
 </code></pre>
 <h2 id="3-data-model">3. Data Model</h2>
-<p>The predefeind data models of <code>Company</code>, <code>Role</code> and <code>User</code> may not fully meet your needs. Please check the <a href="/articles/userManagement/dataModel">built-in model definition</a>, and follow this <a href="/articles/userManagement/customModel">instruction</a> to extend the data model.</p>
+<p>The predefeind data models of <code>Company</code>, <code>Role</code> and <code>User</code> may not fully meet your needs. Please check the <a href="dataModel">built-in model definition</a>, and follow this <a href="customModel">instruction</a> to extend the data model.</p>
 <h2 id="4-company-role-user-deletion">4. Company/ Role/ User deletion</h2>
 <p>By default, the soft deletion is enabled. Change the default behavior to hard delete record.</p>
 <pre><code class="lang-cs">    public class Startup
@@ -198,7 +198,7 @@
 </code></pre>
 <h2 id="5-data-access-implementation">5. Data Access Implementation</h2>
 <p>We provide data access implementation in package - <code>DNVGL.Authorization.UserManagement.EFCore</code>. It has dependency on EF Core 5.0+.</p>
-<p>If you don't want to introduce EF Core in your project. then this package is not required to be installed. Here is an instruction to <a href="/articles/userManagement/dataAccess">Replace EF Core with your own data access</a></p>
+<p>If you don't want to introduce EF Core in your project. then this package is not required to be installed. Here is an instruction to <a href="dataAccess">Replace EF Core with your own data access</a></p>
 <h2 id="6-performance-">6. Performance ✓</h2>
 <p>By default, The package reads and check user's permission from database for every http request. You can change this behavior to load user's permission in to claim (in cookie), and then read, check user's premission from claim. The following is to setup such behavior.</p>
 <pre><code class="lang-cs">    public class Startup
@@ -213,7 +213,7 @@
     }
 </code></pre>
 <h2 id="7-swagger-ui">7. Swagger UI</h2>
-<p>By default, Swagger UI probably do not show <em>User Management APIs</em>. Then you could follow the <a href="/articles/userManagement/swagger">instructuon</a> to get it displayed.</p>
+<p>By default, Swagger UI probably do not show <em>User Management APIs</em>. Then you could follow the <a href="swagger">instructuon</a> to get it displayed.</p>
 </article>
           </div>
 

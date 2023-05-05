@@ -84,7 +84,7 @@
 <p>Only <strong>Client credentials</strong> authentication is supported by this package.</p>
 </blockquote>
 <h1 id="package-install">Package Install</h1>
-<p>Ensure you have configured to package NuGet Package Source or find the instructions <a href="/articles/PackageInstall.md">here</a>.</p>
+<p>Ensure you have configured to package NuGet Package Source or find the instructions <a href="../PackageInstall.html">here</a>.</p>
 <p>Package Manager Console</p>
 <pre><code>PM&gt; `Install-Package DNVGL.Veracity.Services.Api.Directory`
 </code></pre>
@@ -120,7 +120,7 @@
 <p>Register the service or services using extensions methods available from the <code>DNVGL.Veracity.Services.Api.Directory.Extensions</code> namespace.</p>
 <p><code>startup.cs</code></p>
 <blockquote>
-<p>Packages from <code>DNVGL.Veracity.Service.Api</code> are dependent on the <a href="/articles/DNVGL.OAuth.Api.HttpClient.md">DNVGL.OAuth.Api.HttpClient</a> package, therefore the HttpClientFactory should also be injected.</p>
+<p>Packages from <code>DNVGL.Veracity.Service.Api</code> are dependent on the <a href="../DNVGL.OAuth.Api.HttpClient.html">DNVGL.OAuth.Api.HttpClient</a> package, therefore the HttpClientFactory should also be injected.</p>
 </blockquote>
 <pre><code class="lang-cs">public void ConfigureServices(IServiceCollection services)
 {
