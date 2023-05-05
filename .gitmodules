@@ -1,12 +1,14 @@
-[submodule "src"]
-	path = src
-	url = https://github.com/veracity-engineering/SolutionPackage.git
-	branch = master
 [submodule "docs/articles"]
 	path = docs/articles
 	url = https://github.com/veracity-engineering/SolutionPackageDoc.wiki.git
 	branch = master
+
 [submodule "docs/_site"]
 	path = docs/_site
 	url = https://github.com/veracity-engineering/SolutionPackageDoc.git
 	branch = gh-pages
+	
+[submodule "src"]
+	path = src
+	url = https://github.com/veracity-engineering/SolutionPackage.git
+	branch = master
