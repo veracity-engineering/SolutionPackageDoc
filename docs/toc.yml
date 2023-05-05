@@ -1,4 +1,4 @@
 - name: Tutorials
-  href: articles
+  href: articles/index.md
 - name: Api Reference
-  href: api
+  href: api/index.md
