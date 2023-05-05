@@ -31,16 +31,17 @@ jobs:
         echo "::debug::Restore nuget packages"
         dotnet restore src/SolutionPackage.sln
         
+        echo "::debug::Fix index pages"
+        echo '# Tutorials page' > docs/articles/index.md
+        mkdir api
+        echo '# Api Reference Page' > docs/api/index.md 
+        
         echo "::debug::Update docfx"
         dotnet tool update -g docfx
         
         echo "::debug::Generate docfx files"
         echo '{"sdk":{"version": "6.0.406"}}' > global.json
-        docfx docs/docfx.json
-        
-        echo "::debug::Fix index pages"
-        echo '# Tutorials page' > docs/articles/index.md
-        echo '# Api Reference Page' > docs/api/index.md        
+        docfx docs/docfx.json       
         
     - name: Publish gh-pages
       run: |
