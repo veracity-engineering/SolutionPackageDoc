@@ -46,7 +46,7 @@ jobs:
         
         echo "::debug::Fix index pages"
         echo '# Tutorials page' > docs/articles/index.md
-        mkdir api
+        mkdir docs/api
         echo '# Api Reference Page' > docs/api/index.md 
         
         echo "::debug::Update docfx"
@@ -54,7 +54,7 @@ jobs:
         
         echo "::debug::Generate docfx files"
         echo '{"sdk":{"version": ${{ env.DOTNET_VER }}}}' > global.json
-        docfx docs/docfx.json       
+        docfx build docs/docfx.json
         
     - name: Publish gh-pages
       run: |
