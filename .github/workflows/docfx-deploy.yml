@@ -9,14 +9,27 @@ on:
 jobs:
   publish-docs:
     runs-on: ubuntu-latest
+
+    env:
+      DOTNET_INSTALL_DIR: '.\.dotnet'
+      DOTNET_VER: '6.0.406'
+
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-    
+
+    - name: Cache .NET
+      id: cache-dotnet
+      uses: actions/cache@v3
+      with:
+        path: ${{ env.DOTNET_INSTALL_DIR }}
+        key: ${{ runner.os }}-dotnet-${{ env.DOTNET_VER }}
+
     - name: Setup .NET 6
+      if: ${{ steps.cache-dotnet.outputs.cache-hit != 'true' }}
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.406'
+        dotnet-version: ${{ env.DOTNET_VER }}
         
     - name: Update submodules
       run: |
@@ -40,7 +53,7 @@ jobs:
         dotnet tool update -g docfx
         
         echo "::debug::Generate docfx files"
-        echo '{"sdk":{"version": "6.0.406"}}' > global.json
+        echo '{"sdk":{"version": ${{ env.DOTNET_VER }}}}' > global.json
         docfx docs/docfx.json       
         
     - name: Publish gh-pages
