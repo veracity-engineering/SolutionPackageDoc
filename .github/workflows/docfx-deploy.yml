@@ -29,9 +29,7 @@ jobs:
         echo '{"sdk":{"version": "6.0.406"}}' > global.json
         
         echo "::debug::Restore nuget packages"
-        pushd src
-        dotnet restore
-        popd
+        dotnet restore src/SolutionPackage.sln
         
         echo "::debug::Update docfx"
         dotnet tool update -g docfx
