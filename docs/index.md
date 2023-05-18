@@ -4,16 +4,18 @@
 
 Here you will find a collection of packages and tools for developers to support rapid, robust and extensible development of applications and services within DNV.
 
+Packages are available from **nuget.org** you can find a full list of available packages [here](https://www.nuget.org/profiles/Veracity-Engineering).
+
 Supported features may be found under categories:
 
-- [General](#general)
+- [Common](#common)
 - [Ambient Context](#ambient-context)
 - [Domain Driven Design](#domain-driven-design-ddd)
 - [Security](#security)
 - [Veracity](#veracity)
 
 ---
-## General
+## Common
 | Package | Description |
 |---------|-------------|
 | [DNVGL.Common.Core](/docs/common/core.md) | *Missing* |

@@ -8,8 +8,6 @@ This view point is appropriate for core Veracity applications where resources ar
 ---
 ## Package Install
 
-Ensure you have configured to package NuGet Package Source or find the instructions [here](/articles/PackageInstall.md).
-
 Package Manager Console
 ```
 PM> `Install-Package DNVGL.Veracity.Services.Api.Directory`

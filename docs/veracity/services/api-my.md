@@ -10,8 +10,6 @@ Resources retrieved from this view point are from the perspective of the authent
 ---
 ## Package Install
 
-Ensure you have configured to package NuGet Package Source or find the instructions [here](/docs).
-
 Package Manager Console
 ```
 PM> `Install-Package DNVGL.Veracity.Services.Api.My`

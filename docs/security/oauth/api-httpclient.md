@@ -11,8 +11,6 @@ This package supports two type of credential authentication:
 ---
 ## Package Install
 
-Ensure you have configured to package NuGet Package Source or find the instructions [here](/articles/PackageInstall.md).
-
 Package Manager Console
 ```
 PM> `Install-Package DNVGL.OAuth.Api.HttpClient`
