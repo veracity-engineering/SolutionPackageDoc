@@ -15,7 +15,7 @@ namespace DNV.OAuth.Demo.Controllers.Api
         /// <returns></returns>
         [HttpGet("mobile")]
 		[Authorize(AuthenticationSchemes = "App1")]
-		public IEnumerable<KeyValuePair<string, string>> GetMobileCliams()
+		public IEnumerable<KeyValuePair<string, string>> GetMobileClaims()
 		{
 			return this.User.Claims.Select(c => new KeyValuePair<string, string>(c.Type, c.Value));
 		}
@@ -26,7 +26,7 @@ namespace DNV.OAuth.Demo.Controllers.Api
 		/// <returns></returns>
 		[HttpGet("janus")]
 		[Authorize(AuthenticationSchemes = "App2")]
-		public IEnumerable<KeyValuePair<string, string>> GetJanusCliams()
+		public IEnumerable<KeyValuePair<string, string>> GetJanusClaims()
 		{
 			return this.User.Claims.Select(c => new KeyValuePair<string, string>(c.Type, c.Value));
 		}
