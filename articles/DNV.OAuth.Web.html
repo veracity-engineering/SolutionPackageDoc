@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Get started with DNVGL.OAuth.Web </title>
+      <title>Get started with DNV.OAuth.Web </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Get started with DNVGL.OAuth.Web ">
+      <meta name="title" content="Get started with DNV.OAuth.Web ">
     
       <link rel="shortcut icon" href="../favicon.png">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
@@ -76,7 +76,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="get-started-with-dnvgloauthweb">Get started with DNVGL.OAuth.Web</h1>
+<h1 id="get-started-with-dnvoauthweb">Get started with DNV.OAuth.Web</h1>
 
 <p>DNV.OAuth.Web is a .NETCore library for developers to simplify the work of setting up OpenId Connection authentication (OIDC) such as Veracity or Azure AD B2C for ASP.NET Core web project.</p>
 <p>Below samples will show you how to do authentication through Veracity.</p>
@@ -87,7 +87,7 @@
 <h1 id="package-install">Package Install</h1>
 <p>Ensure you have configured to package NuGet Package Source or find the instructions <a href="PackageInstall.html">here</a>.</p>
 <p>Package Manager Console</p>
-<pre><code>PM&gt; `Install-Package DNVGL.OAuth.Web`
+<pre><code>PM&gt; `Install-Package DNV.OAuth.Web`
 </code></pre>
 <hr>
 <h1 id="basic-authentication-usage">Basic Authentication Usage</h1>
@@ -128,7 +128,7 @@
 </ol>
 <p><img src="images/DNV.OAuth.Web/challenge.png" alt=""></p>
 <ol start="5">
-<li>A sample project is ready for you to try out: <a href="//SimpleOidc">OidcOAuthSample</a>.</li>
+<li>A sample project is ready for you to try out: <a href="https://github.com/veracity-engineering/SolutionPackageDoc/tree/master/samples/OidcOAuthSample">OidcOAuthSample</a>.</li>
 </ol>
 <hr>
 <h1 id="access-token-cache-usage">Access Token Cache Usage</h1>
@@ -194,9 +194,109 @@
 }
 </code></pre>
 <ol start="5">
-<li>A sample project is ready for you to try out: <a href="//TokenCacheDemo">TokenCacheSample</a>.</li>
+<li>A sample project is ready for you to try out: <a href="https://github.com/veracity-engineering/SolutionPackageDoc/tree/master/samples/TokenCacheSample">TokenCacheSample</a>.</li>
 </ol>
 <hr>
+<h1 id="authorize-api-with-a-specific-jwt-scheme">Authorize Api with a specific JWT scheme</h1>
+<ol>
+<li><p>Create two Api resources (tick the checkbox &quot;This is an API&quot;) in Veracity developer and copy out the client ids. Then for both Apis, add client application using the client id you created in the beginning.</p>
+</li>
+<li><p>Add the JWT options with two authentication themes in appsettings.json</p>
+</li>
+</ol>
+<pre><code class="lang-csharp">	&quot;JwtOptions&quot;: {
+		&quot;App1&quot;: {
+			&quot;AuthorizationPolicyName&quot;: &quot;Policy1&quot;,
+			&quot;Authority&quot;: &quot;&lt;Authority&gt;&quot;,
+			&quot;ClientId&quot;: &quot;&lt;client id of Api 1&gt;&quot;
+		},
+		&quot;App2&quot;: {
+			&quot;AuthorizationPolicyName&quot;: &quot;Policy2&quot;,
+			&quot;Authority&quot;: &quot;&lt;Authority&gt;&quot;,
+			&quot;ClientId&quot;: &quot;&lt;client id of Api 2&gt;&quot;
+		}
+	}
+</code></pre>
+<ol start="3">
+<li>Configure services to use JWT options</li>
+</ol>
+<pre><code class="lang-csharp">services.AddJwt(this.Configuration.GetSection(&quot;JwtOptions&quot;).GetChildren());
+</code></pre>
+<ol start="4">
+<li>Create controller authorized by JWT authentication theme</li>
+</ol>
+<pre><code class="lang-csharp">	[ApiController]
+	[Route(&quot;api/[controller]&quot;)]
+	public class TestController : ControllerBase
+	{
+        /// &lt;summary&gt;
+        /// requires token from App1
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        [HttpGet(&quot;mobile&quot;)]
+		[Authorize(AuthenticationSchemes = &quot;App1&quot;)]
+		public IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; GetMobileClaims()
+		{
+			return this.User.Claims.Select(c =&gt; new KeyValuePair&lt;string, string&gt;(c.Type, c.Value));
+		}
+
+		/// &lt;summary&gt;
+		/// requires token from App2
+		/// &lt;/summary&gt;
+		/// &lt;returns&gt;&lt;/returns&gt;
+		[HttpGet(&quot;janus&quot;)]
+		[Authorize(AuthenticationSchemes = &quot;App2&quot;)]
+		public IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; GetJanusClaims()
+		{
+			return this.User.Claims.Select(c =&gt; new KeyValuePair&lt;string, string&gt;(c.Type, c.Value));
+		}
+	}
+</code></pre>
+<ol start="5">
+<li><p>Configure swagger</p>
+<p>a. Add swagger options in appsettings.json</p>
+</li>
+</ol>
+<pre><code class="lang-csharp">	&quot;SwaggerOptions&quot;: {
+		&quot;Enabled&quot;: true,
+		&quot;Version&quot;: &quot;v1&quot;,
+		&quot;DocumentTitle&quot;: &quot;Demo API&quot;,
+		&quot;ClientId&quot;: &quot;&lt;put your client id here&gt;&quot;,
+		&quot;ClientSecret&quot;: &quot;&lt;put your client secret here&gt;&quot;,
+		&quot;AuthCodeFlow&quot;: {
+			&quot;AuthorizationUrl&quot;: &quot;&lt;Authorization url&gt;&quot;,
+			&quot;TokenUrl&quot;: &quot;&lt;Token url&gt;&quot;,
+			&quot;Scopes&quot;: {
+				&quot;App1&quot;: &quot;&lt;scope for App 1&gt;&quot;,
+				&quot;App2&quot;: &quot;&lt;scope for App 2&gt;&quot;
+			}
+		},
+		&quot;ClientCredsFlow&quot;: {
+			&quot;AuthorizationUrl&quot;: &quot;&lt;Authorization url&gt;&quot;,
+			&quot;TokenUrl&quot;: &quot;&lt;Token url&gt;&quot;,
+			&quot;Scopes&quot;: {
+				&quot;App1&quot;: &quot;&lt;scope for App 1&gt;&quot;,
+				&quot;App2&quot;: &quot;&lt;scope for App 2&gt;&quot;
+			}
+		}
+	}
+</code></pre>
+<ol start="6">
+<li>Add the code snippet below to your Start.cs file</li>
+</ol>
+<pre><code class="lang-csharp">	// ConfigureServices
+	services.AddSwagger(o =&gt; this.Configuration.Bind(&quot;SwaggerOptions&quot;, o));
+</code></pre>
+<pre><code class="lang-csharp">	//Configure
+	app.UseSwaggerWithUI(o =&gt; this.Configuration.Bind(&quot;SwaggerOptions&quot;, o));
+</code></pre>
+<ol start="7">
+<li><p>Verify the authentication
+Run the program and go to the swagger page, obtain the token through the authorization button by providing the client id/secrets of the app created in the beginning. Then you can execute the Api request in TestController and (hopefully) get a 200 Ok response, which means that the authorization worked as intended. Please select the correct scope aligned with the authentication theme when test the api.</p>
+</li>
+<li><p>A sample project is ready for you to try out: <a href="https://github.com/veracity-engineering/SolutionPackageDoc/tree/master/samples/DNV.OAuth.Demo">DemoSample</a>.</p>
+</li>
+</ol>
 </article>
           </div>
 

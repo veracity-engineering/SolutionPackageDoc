@@ -9720,12 +9720,6 @@ references:
   isSpec: "True"
   fullName: DNV.OAuth.Abstractions.IClientApp.AcquireTokenForClient
   nameWithType: IClientApp.AcquireTokenForClient
-- uid: DNV.OAuth.Abstractions.IClientApp.AcquireTokenSilent(Microsoft.Identity.Client.IAccount)
-  name: AcquireTokenSilent(IAccount)
-  href: api/DNV.OAuth.Abstractions.IClientApp.html#DNV_OAuth_Abstractions_IClientApp_AcquireTokenSilent_Microsoft_Identity_Client_IAccount_
-  commentId: M:DNV.OAuth.Abstractions.IClientApp.AcquireTokenSilent(Microsoft.Identity.Client.IAccount)
-  fullName: DNV.OAuth.Abstractions.IClientApp.AcquireTokenSilent(Microsoft.Identity.Client.IAccount)
-  nameWithType: IClientApp.AcquireTokenSilent(IAccount)
 - uid: DNV.OAuth.Abstractions.IClientApp.AcquireTokenSilent(System.Security.Claims.ClaimsPrincipal)
   name: AcquireTokenSilent(ClaimsPrincipal)
   href: api/DNV.OAuth.Abstractions.IClientApp.html#DNV_OAuth_Abstractions_IClientApp_AcquireTokenSilent_System_Security_Claims_ClaimsPrincipal_
@@ -9768,6 +9762,19 @@ references:
   isSpec: "True"
   fullName: DNV.OAuth.Abstractions.IClientApp.Execute
   nameWithType: IClientApp.Execute
+- uid: DNV.OAuth.Abstractions.IClientApp.GetAccount(System.Security.Claims.ClaimsPrincipal)
+  name: GetAccount(ClaimsPrincipal)
+  href: api/DNV.OAuth.Abstractions.IClientApp.html#DNV_OAuth_Abstractions_IClientApp_GetAccount_System_Security_Claims_ClaimsPrincipal_
+  commentId: M:DNV.OAuth.Abstractions.IClientApp.GetAccount(System.Security.Claims.ClaimsPrincipal)
+  fullName: DNV.OAuth.Abstractions.IClientApp.GetAccount(System.Security.Claims.ClaimsPrincipal)
+  nameWithType: IClientApp.GetAccount(ClaimsPrincipal)
+- uid: DNV.OAuth.Abstractions.IClientApp.GetAccount*
+  name: GetAccount
+  href: api/DNV.OAuth.Abstractions.IClientApp.html#DNV_OAuth_Abstractions_IClientApp_GetAccount_
+  commentId: Overload:DNV.OAuth.Abstractions.IClientApp.GetAccount
+  isSpec: "True"
+  fullName: DNV.OAuth.Abstractions.IClientApp.GetAccount
+  nameWithType: IClientApp.GetAccount
 - uid: DNV.OAuth.Abstractions.IClientAppBuilder
   name: IClientAppBuilder
   href: api/DNV.OAuth.Abstractions.IClientAppBuilder.html
@@ -10407,12 +10414,6 @@ references:
   isSpec: "True"
   fullName: DNV.OAuth.Core.MsalClientApp.AcquireTokenForClient
   nameWithType: MsalClientApp.AcquireTokenForClient
-- uid: DNV.OAuth.Core.MsalClientApp.AcquireTokenSilent(Microsoft.Identity.Client.IAccount)
-  name: AcquireTokenSilent(IAccount)
-  href: api/DNV.OAuth.Core.MsalClientApp.html#DNV_OAuth_Core_MsalClientApp_AcquireTokenSilent_Microsoft_Identity_Client_IAccount_
-  commentId: M:DNV.OAuth.Core.MsalClientApp.AcquireTokenSilent(Microsoft.Identity.Client.IAccount)
-  fullName: DNV.OAuth.Core.MsalClientApp.AcquireTokenSilent(Microsoft.Identity.Client.IAccount)
-  nameWithType: MsalClientApp.AcquireTokenSilent(IAccount)
 - uid: DNV.OAuth.Core.MsalClientApp.AcquireTokenSilent(System.Security.Claims.ClaimsPrincipal)
   name: AcquireTokenSilent(ClaimsPrincipal)
   href: api/DNV.OAuth.Core.MsalClientApp.html#DNV_OAuth_Core_MsalClientApp_AcquireTokenSilent_System_Security_Claims_ClaimsPrincipal_
