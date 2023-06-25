@@ -12,7 +12,7 @@ jobs:
 
     env:
       DOTNET_INSTALL_DIR: './.dotnet'
-      DOTNET_VER: '6.0.406'
+      DOTNET_VER: '7.0.x'
 
     steps:
     - name: Checkout
