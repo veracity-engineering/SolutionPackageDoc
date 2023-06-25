@@ -53,7 +53,7 @@ jobs:
         dotnet tool update -g docfx
         
         echo "::debug::Generate docfx files"
-        docfx docs/docfx.json
+        docfx docs/docfx.json --property TargetFrameworks=net6.0
         
     - name: Publish gh-pages
       run: |
