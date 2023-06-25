@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>appsettings.json </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="appsettings.json ">
+    
+      <link rel="shortcut icon" href="../favicon.png">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="appsettingsjson">appsettings.json</h2>
+
+<pre><code class="lang-json">&quot;Oidc&quot;: {
+    &quot;ResponseType&quot;: &quot;code&quot;,
+    &quot;ClientId&quot;: &quot;&quot;,
+    &quot;ClientSecret&quot;: &quot;&quot;,
+    &quot;Scopes&quot;: [
+      &quot;https://dnvglb2ctest.onmicrosoft.com/a4a8e726-c1cc-407c-83a0-4ce37f1ce130/user_impersonation&quot;
+    ],
+    &quot;Authority&quot;: &quot;https://logintest.veracity.com/tfp/ed815121-cdfa-4097-b524-e2b23cd36eb6/B2C_1A_SignInWithADFSIdp/v2.0&quot;
+},
+&quot;APIs&quot;: [
+    {
+		&quot;Name&quot;: &quot;VeracityAPIsV3&quot;,
+		&quot;Flow&quot;: 0, //&quot;user-credentials&quot;,
+		&quot;BaseUri&quot;: &quot;https://api-test.veracity.com/Veracity/Services/V3/&quot;,
+		&quot;SubscriptionKey&quot;: &quot;&quot;,
+		&quot;OAuthClientOptions&quot;: {
+		&quot;Scopes&quot;: [
+			&quot;https://dnvglb2ctest.onmicrosoft.com/a4a8e726-c1cc-407c-83a0-4ce37f1ce130/user_impersonation&quot;
+		],
+		&quot;ClientId&quot;: &quot;&quot;,
+		&quot;ClientSecret&quot;: &quot;&quot;,
+		&quot;Authority&quot;: &quot;https://logintest.veracity.com/tfp/ed815121-cdfa-4097-b524-e2b23cd36eb6/B2C_1A_SignInWithADFSIdp/v2.0&quot;
+		}
+	}, {
+		&quot;Name&quot;: &quot;VeracityAPIsV3&quot;,
+		&quot;Flow&quot;: 1, //&quot;client-credentials&quot;,
+		&quot;BaseUri&quot;: &quot;https://api-test.veracity.com&quot;,
+		&quot;SubscriptionKey&quot;: &quot;&quot;,
+		&quot;OAuthClientOptions&quot;: {
+		&quot;Scopes&quot;: [ &quot;https://dnvglb2ctest.onmicrosoft.com/efb3e529-2f80-458b-aedf-7f4c8c794b45/.default&quot; ],
+		&quot;ClientId&quot;: &quot;&quot;,
+		&quot;ClientSecret&quot;: &quot;&quot;,
+		&quot;Authority&quot;: &quot;https://login.microsoftonline.com/ed815121-cdfa-4097-b524-e2b23cd36eb6/v2.0&quot;
+		}
+    }
+]
+</code></pre>
+<h2 id="startupcs">Startup.cs</h2>
+<pre><code class="lang-csharp">
+services.AddOAuthHttpClientFactory(o =&gt; configuration.Bind(&quot;APIs&quot;, o));
+
+services.AddOAuthCore();
+
+var VeracityMyAPIs = &quot;VeracityAPIsV3&quot;;
+services.AddMyProfile(VeracityMyAPIs)
+            .AddMyCompanies(VeracityMyAPIs)
+            .AddMyServices(VeracityMyAPIs)
+            .AddMyMessages(VeracityMyAPIs)
+            .AddThisUsers(VeracityMyAPIs);
+
+services.AddOidc(o =&gt; configuration.Bind(&quot;Oidc&quot;, o))
+	.AddPolicyValidation(o =&gt;
+    {
+        o.PolicyValidationMode = PolicyValidationMode.PlatformTermsAndCondition;
+        o.VeracityPolicyApiConfigName = VeracityMyAPIs;
+        o.GetReturnUrl = (ctx, retPath) =&gt;
+            ctx.TryGetXForwardedHostUrl(out var hostUrl)
+                ? $&quot;{hostUrl}{retPath}&quot;
+                : $&quot;{ctx.Request.Scheme}://{ctx.Request.Host}{retPath}&quot;;
+    });
+</code></pre>
+<h2 id="controller">Controller</h2>
+<pre><code class="lang-csharp">public class ApiController : ControllerBase
+{
+    private readonly IMyServices _myServices;
+    private readonly IThisUsers _thisUsers;
+	
+	public ApiController(IMyServices myServices, IThisUsers thisUsers)
+	{
+		_myServices = myServices;
+		_thisUsers = thisUsers;
+	}
+	
+	[HttpGet(&quot;me/services&quot;)]
+	public async Task&lt;IActionResult&gt; GetMyServices()
+	{
+		return Ok(await _myServices.List());		
+	}
+	
+	[HttpGet(&quot;this/resolve&quot;)]
+	public async Task&lt;IActionResult&gt; FindByEmail(string email)
+	{
+		var users = await _thisUsers.Resolve(email);
+		return Ok(users?.FirstOrDefault());
+	}
+}
+
+</code></pre>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackageDoc.wiki/blob/master/A-Typical-Sample-of-Veracity-Identity-Implementation-with-Solution-Packages.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      godspeed
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -131,7 +131,7 @@
     <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_MsalClientApp__ctor_Microsoft_Identity_Client_IConfidentialClientApplication_Microsoft_Extensions_Primitives_StringValues_.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.MsalClientApp.%23ctor(Microsoft.Identity.Client.IConfidentialClientApplication%2CMicrosoft.Extensions.Primitives.StringValues)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L15">View Source</a>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L17">View Source</a>
   </span>
   <a id="DNV_OAuth_Core_MsalClientApp__ctor_" data-uid="DNV.OAuth.Core.MsalClientApp.#ctor*"></a>
   <h4 id="DNV_OAuth_Core_MsalClientApp__ctor_Microsoft_Identity_Client_IConfidentialClientApplication_Microsoft_Extensions_Primitives_StringValues_" data-uid="DNV.OAuth.Core.MsalClientApp.#ctor(Microsoft.Identity.Client.IConfidentialClientApplication,Microsoft.Extensions.Primitives.StringValues)">MsalClientApp(IConfidentialClientApplication, StringValues)</h4>
@@ -170,16 +170,16 @@
     <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_MsalClientApp_AcquireTokenByAuthorizationCode_System_String_System_String_.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.MsalClientApp.AcquireTokenByAuthorizationCode(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L21">View Source</a>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L23">View Source</a>
   </span>
   <a id="DNV_OAuth_Core_MsalClientApp_AcquireTokenByAuthorizationCode_" data-uid="DNV.OAuth.Core.MsalClientApp.AcquireTokenByAuthorizationCode*"></a>
-  <h4 id="DNV_OAuth_Core_MsalClientApp_AcquireTokenByAuthorizationCode_System_String_System_String_" data-uid="DNV.OAuth.Core.MsalClientApp.AcquireTokenByAuthorizationCode(System.String,System.String)">AcquireTokenByAuthorizationCode(string, string)</h4>
+  <h4 id="DNV_OAuth_Core_MsalClientApp_AcquireTokenByAuthorizationCode_System_String_System_String_" data-uid="DNV.OAuth.Core.MsalClientApp.AcquireTokenByAuthorizationCode(System.String,System.String)">AcquireTokenByAuthorizationCode(string, string?)</h4>
   <div class="markdown level1 summary"><p>Attempts to authenticate using account retrieved from the specified context by calling <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.iconfidentialclientapplication.acquiretokenbyauthorizationcode">AcquireTokenByAuthorizationCode(IEnumerable&lt;string&gt;, string)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AuthenticationResult&gt; AcquireTokenByAuthorizationCode(string authCode, string codeVerifier = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AuthenticationResult&gt; AcquireTokenByAuthorizationCode(string authCode, string? codeVerifier = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -224,7 +224,7 @@
     <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_MsalClientApp_AcquireTokenForClient.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.MsalClientApp.AcquireTokenForClient%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L51">View Source</a>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L52">View Source</a>
   </span>
   <a id="DNV_OAuth_Core_MsalClientApp_AcquireTokenForClient_" data-uid="DNV.OAuth.Core.MsalClientApp.AcquireTokenForClient*"></a>
   <h4 id="DNV_OAuth_Core_MsalClientApp_AcquireTokenForClient" data-uid="DNV.OAuth.Core.MsalClientApp.AcquireTokenForClient">AcquireTokenForClient()</h4>
@@ -256,11 +256,11 @@
     <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_MsalClientApp_AcquireTokenSilent_Microsoft_Identity_Client_IAccount_.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.MsalClientApp.AcquireTokenSilent(Microsoft.Identity.Client.IAccount)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L38">View Source</a>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L39">View Source</a>
   </span>
   <a id="DNV_OAuth_Core_MsalClientApp_AcquireTokenSilent_" data-uid="DNV.OAuth.Core.MsalClientApp.AcquireTokenSilent*"></a>
   <h4 id="DNV_OAuth_Core_MsalClientApp_AcquireTokenSilent_Microsoft_Identity_Client_IAccount_" data-uid="DNV.OAuth.Core.MsalClientApp.AcquireTokenSilent(Microsoft.Identity.Client.IAccount)">AcquireTokenSilent(IAccount)</h4>
-  <div class="markdown level1 summary"><p>Attempts to authenticate using account by calling <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.iclientapplicationbase.acquiretokensilent#microsoft-identity-client-iclientapplicationbase-acquiretokensilent(system-collections-generic-ienumerable((system-string))-microsoft-identity-client-iaccount)">AcquireTokenSilent(IEnumerable&lt;string&gt;, IAccount)</a>.</p>
+  <div class="markdown level1 summary"><p>Attempts to authenticate using account by calling <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.iconfidentialclientapplication.acquiretokensilent">AcquireTokenSilent(IEnumerable&lt;string&gt;, string)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -305,16 +305,16 @@
     <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_MsalClientApp_AcquireTokenSilent_System_Security_Claims_ClaimsPrincipal_.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.MsalClientApp.AcquireTokenSilent(System.Security.Claims.ClaimsPrincipal)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L31">View Source</a>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L33">View Source</a>
   </span>
   <a id="DNV_OAuth_Core_MsalClientApp_AcquireTokenSilent_" data-uid="DNV.OAuth.Core.MsalClientApp.AcquireTokenSilent*"></a>
   <h4 id="DNV_OAuth_Core_MsalClientApp_AcquireTokenSilent_System_Security_Claims_ClaimsPrincipal_" data-uid="DNV.OAuth.Core.MsalClientApp.AcquireTokenSilent(System.Security.Claims.ClaimsPrincipal)">AcquireTokenSilent(ClaimsPrincipal)</h4>
-  <div class="markdown level1 summary"><p>Attempts to authenticate using account retrieved from the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.claims.claimsprincipal">ClaimsPrincipal</a> by calling <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.iclientapplicationbase.acquiretokensilent#microsoft-identity-client-iclientapplicationbase-acquiretokensilent(system-collections-generic-ienumerable((system-string))-microsoft-identity-client-iaccount)">AcquireTokenSilent(IEnumerable&lt;string&gt;, IAccount)</a>.</p>
+  <div class="markdown level1 summary"><p>Attempts to authenticate using account retrieved from the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.claims.claimsprincipal">ClaimsPrincipal</a> by calling <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.iconfidentialclientapplication.acquiretokensilent">AcquireTokenSilent(IEnumerable&lt;string&gt;, string)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AuthenticationResult&gt; AcquireTokenSilent(ClaimsPrincipal claimsPrincipal)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AuthenticationResult&gt; AcquireTokenSilent(ClaimsPrincipal user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -328,7 +328,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.claims.claimsprincipal">ClaimsPrincipal</a></td>
-        <td><span class="parametername">claimsPrincipal</span></td>
+        <td><span class="parametername">user</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -354,7 +354,7 @@
     <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_MsalClientApp_ClearUserTokenCache_System_Security_Claims_ClaimsPrincipal_.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.MsalClientApp.ClearUserTokenCache(System.Security.Claims.ClaimsPrincipal)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L57">View Source</a>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L58">View Source</a>
   </span>
   <a id="DNV_OAuth_Core_MsalClientApp_ClearUserTokenCache_" data-uid="DNV.OAuth.Core.MsalClientApp.ClearUserTokenCache*"></a>
   <h4 id="DNV_OAuth_Core_MsalClientApp_ClearUserTokenCache_System_Security_Claims_ClaimsPrincipal_" data-uid="DNV.OAuth.Core.MsalClientApp.ClearUserTokenCache(System.Security.Claims.ClaimsPrincipal)">ClearUserTokenCache(ClaimsPrincipal)</h4>
@@ -363,7 +363,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task ClearUserTokenCache(ClaimsPrincipal claimsPrincipal)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task ClearUserTokenCache(ClaimsPrincipal user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -377,7 +377,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.claims.claimsprincipal">ClaimsPrincipal</a></td>
-        <td><span class="parametername">claimsPrincipal</span></td>
+        <td><span class="parametername">user</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -397,9 +397,107 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_MsalClientApp_Execute_System_Func_System_Threading_Tasks_Task_Microsoft_Identity_Client_AuthenticationResult___.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.MsalClientApp.Execute(System.Func%7BSystem.Threading.Tasks.Task%7BMicrosoft.Identity.Client.AuthenticationResult%7D%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L69">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Core_MsalClientApp_Execute_" data-uid="DNV.OAuth.Core.MsalClientApp.Execute*"></a>
+  <h4 id="DNV_OAuth_Core_MsalClientApp_Execute_System_Func_System_Threading_Tasks_Task_Microsoft_Identity_Client_AuthenticationResult___" data-uid="DNV.OAuth.Core.MsalClientApp.Execute(System.Func{System.Threading.Tasks.Task{Microsoft.Identity.Client.AuthenticationResult}})">Execute(Func&lt;Task&lt;AuthenticationResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;AuthenticationResult&gt; Execute(Func&lt;Task&lt;AuthenticationResult&gt;&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.authenticationresult">AuthenticationResult</a>&gt;&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.authenticationresult">AuthenticationResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_MsalClientApp_GetAccount_System_Security_Claims_ClaimsPrincipal_.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.MsalClientApp.GetAccount(System.Security.Claims.ClaimsPrincipal)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L65">View Source</a>
+  </span>
+  <a id="DNV_OAuth_Core_MsalClientApp_GetAccount_" data-uid="DNV.OAuth.Core.MsalClientApp.GetAccount*"></a>
+  <h4 id="DNV_OAuth_Core_MsalClientApp_GetAccount_System_Security_Claims_ClaimsPrincipal_" data-uid="DNV.OAuth.Core.MsalClientApp.GetAccount(System.Security.Claims.ClaimsPrincipal)">GetAccount(ClaimsPrincipal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IAccount&gt; GetAccount(ClaimsPrincipal user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.claims.claimsprincipal">ClaimsPrincipal</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.identity.client.iaccount">IAccount</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="DNV.OAuth.Abstractions.IClientApp.html">IClientApp</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="DNV.Web.Swagger.Throws.html#DNV_Web_Swagger_Throws_IfNull__1___0_System_String_">Throws.IfNull&lt;T&gt;(T, string?)</a>
   </div>
 
 </article>
@@ -413,7 +511,7 @@
                     <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Core_MsalClientApp.md&amp;value=---%0Auid%3A%20DNV.OAuth.Core.MsalClientApp%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Core/MsalClientApp.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
