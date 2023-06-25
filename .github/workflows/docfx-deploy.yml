@@ -25,7 +25,7 @@ jobs:
         path: ${{ env.DOTNET_INSTALL_DIR }}
         key: ${{ runner.os }}-dotnet-${{ env.DOTNET_VER }}
 
-    - name: Setup .NET 6
+    - name: Setup .NET
       if: ${{ steps.cache-dotnet.outputs.cache-hit != 'true' }}
       uses: actions/setup-dotnet@v3
       with:
@@ -53,7 +53,7 @@ jobs:
         dotnet tool update -g docfx
         
         echo "::debug::Generate docfx files"
-        docfx docs/docfx.json --property TargetFrameworks=net6.0
+        docfx docs/docfx.json
         
     - name: Publish gh-pages
       run: |
