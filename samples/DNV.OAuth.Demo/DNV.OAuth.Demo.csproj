@@ -7,8 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="DNV.OAuth.Core" Version="1.6.1" />
-		<PackageReference Include="DNV.OAuth.Web" Version="1.6.1" />
+		<PackageReference Include="DNV.OAuth.Core" Version="1.6.6" />
+		<PackageReference Include="DNV.OAuth.Web" Version="1.6.6" />
 		<PackageReference Include="DNV.OAuth.Web.Swagger" Version="1.6.1" />
 		<PackageReference Include="Microsoft.Identity.Client" Version="4.54.1" />
 		<PackageReference Include="Microsoft.Identity.Client.Extensions.Msal" Version="2.16.3" />
