@@ -39,7 +39,10 @@ namespace HttpClientContextSample.Controllers
             var request = new HttpRequestMessage(HttpMethod.Get, new Uri("api/identity/user", UriKind.Relative));
             var resp = await client.SendAsync(request);
             var content = resp.Content.ReadAsStringAsync();
-            var identity = JsonSerializer.Deserialize<Identity>(content.Result);
+            var identity = JsonSerializer.Deserialize<Identity>(content.Result, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
 
             ViewData["Name"] = identity?.Name;
             ViewData["Country"] = identity?.Country;

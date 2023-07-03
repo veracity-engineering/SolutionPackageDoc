@@ -22,8 +22,11 @@ namespace HttpClientContextSample.Controllers.Api
         {            
             var headers = _httpContext?.Request.Headers[AspNetContextAccessor<Identity>.HeaderKey];
             if(headers.HasValue)
-            {
-                var testContext = JsonSerializer.Deserialize<TestContext>(headers.Value.ToString());
+            {                
+                var testContext = JsonSerializer.Deserialize<TestContext>(headers.Value.ToString(), new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                });
                 return testContext?.Payload!;
             }
             return new Identity();
