@@ -29,16 +29,22 @@ var localContextAccessor = new LocalContextAccessor<SampleContext>((args) =>
 Func<ProcessMessageEventArgs, Task> messageHandler = args =>
 {
     Console.WriteLine(args.Message.Body.ToString());
-    Console.WriteLine("correlationid: " + localContextAccessor.Context.CorrelationId);
-    Console.WriteLine("payload->name: "+ localContextAccessor.Context.Payload.Name);
-    Console.WriteLine("payload->sampledata: "+localContextAccessor.Context.Payload.SampleData);
+    Console.WriteLine("correlationid: " + localContextAccessor.Context?.CorrelationId);
+    Console.WriteLine("payload->name: "+ localContextAccessor.Context?.Payload?.Name);
+    Console.WriteLine("payload->sampledata: "+localContextAccessor.Context?.Payload?.SampleData);
     
-    Console.WriteLine(Thread.CurrentThread.ManagedThreadId.ToString());
+    Console.WriteLine("Thread Id: "+ Thread.CurrentThread.ManagedThreadId.ToString());
     return Task.CompletedTask;
 };
 
 //call extension method to initialize context
 processor.ProcessMessageAsync += messageHandler.InitializeContext(localContextAccessor, (args) => { return (false, null); });
+processor.ProcessErrorAsync += args => {
 
+    Console.WriteLine(args.Exception.Message);
+    return Task.CompletedTask;
+};
+
+await processor.StartProcessingAsync();
 
 Console.ReadLine();
