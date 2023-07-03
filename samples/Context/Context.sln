@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNV.Context.ServiceBus.Samp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNV.Context.ServiceBus.Sample.SendMessage", "ServiceBus.SendMessage\DNV.Context.ServiceBus.Sample.SendMessage.csproj", "{E6666CFC-0419-49D5-97B0-262C12045399}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpClientContextSample", "HttpClientContextSample\HttpClientContextSample.csproj", "{6FD9AC9E-F55D-470A-BE88-FDA08C234249}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E6666CFC-0419-49D5-97B0-262C12045399}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6666CFC-0419-49D5-97B0-262C12045399}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6666CFC-0419-49D5-97B0-262C12045399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FD9AC9E-F55D-470A-BE88-FDA08C234249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FD9AC9E-F55D-470A-BE88-FDA08C234249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FD9AC9E-F55D-470A-BE88-FDA08C234249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FD9AC9E-F55D-470A-BE88-FDA08C234249}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
