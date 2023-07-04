@@ -1,0 +1,13 @@
+﻿@model DNV.Context.Abstractions.IContextAccessor<SampleContext>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>SampleContext:</h1>
+    <p>CorrelationId: @Model.Context.CorrelationId</p>
+    <p>Name: @Model.Context.Payload.Name</p>
+    <p>Sample Data: @Model.Context.Payload.SampleData</p>   
+   
+</div>
