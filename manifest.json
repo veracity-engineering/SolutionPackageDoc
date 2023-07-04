@@ -3665,6 +3665,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/context/DNV.Context.ServiceBus.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/context/DNV.Context.ServiceBus.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "articles/images/DNV.OAuth.Web/add-feed.png",
       "output": {
@@ -3720,6 +3730,16 @@
       "output": {
         "resource": {
           "relative_path": "articles/images/WebTemplates/mgt.website.example.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/images/context/servicebusexploresample.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/images/context/servicebusexploresample.PNG"
         }
       },
       "version": ""

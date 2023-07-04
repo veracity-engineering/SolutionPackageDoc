@@ -204,18 +204,18 @@
 <li><p>Add the JWT options with two authentication themes in appsettings.json</p>
 </li>
 </ol>
-<pre><code class="lang-csharp">	&quot;JwtOptions&quot;: {
-		&quot;App1&quot;: {
-			&quot;AuthorizationPolicyName&quot;: &quot;Policy1&quot;,
-			&quot;Authority&quot;: &quot;&lt;Authority&gt;&quot;,
-			&quot;ClientId&quot;: &quot;&lt;client id of Api 1&gt;&quot;
-		},
-		&quot;App2&quot;: {
-			&quot;AuthorizationPolicyName&quot;: &quot;Policy2&quot;,
-			&quot;Authority&quot;: &quot;&lt;Authority&gt;&quot;,
-			&quot;ClientId&quot;: &quot;&lt;client id of Api 2&gt;&quot;
-		}
+<pre><code class="lang-csharp">&quot;JwtOptions&quot;: {
+	&quot;App1&quot;: {
+		&quot;AuthorizationPolicyName&quot;: &quot;Policy1&quot;,
+		&quot;Authority&quot;: &quot;&lt;Authority&gt;&quot;,
+		&quot;ClientId&quot;: &quot;&lt;client id of Api 1&gt;&quot;
+	},
+	&quot;App2&quot;: {
+		&quot;AuthorizationPolicyName&quot;: &quot;Policy2&quot;,
+		&quot;Authority&quot;: &quot;&lt;Authority&gt;&quot;,
+		&quot;ClientId&quot;: &quot;&lt;client id of Api 2&gt;&quot;
 	}
+}
 </code></pre>
 <ol start="3">
 <li>Configure services to use JWT options</li>
@@ -225,70 +225,70 @@
 <ol start="4">
 <li>Create controller authorized by JWT authentication theme</li>
 </ol>
-<pre><code class="lang-csharp">	[ApiController]
-	[Route(&quot;api/[controller]&quot;)]
-	public class TestController : ControllerBase
+<pre><code class="lang-csharp">[ApiController]
+[Route(&quot;api/[controller]&quot;)]
+public class TestController : ControllerBase
+{
+	/// &lt;summary&gt;
+	/// requires token from App1
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt;&lt;/returns&gt;
+	[HttpGet(&quot;mobile&quot;)]
+	[Authorize(AuthenticationSchemes = &quot;App1&quot;)]
+	public IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; GetMobileClaims()
 	{
-        /// &lt;summary&gt;
-        /// requires token from App1
-        /// &lt;/summary&gt;
-        /// &lt;returns&gt;&lt;/returns&gt;
-        [HttpGet(&quot;mobile&quot;)]
-		[Authorize(AuthenticationSchemes = &quot;App1&quot;)]
-		public IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; GetMobileClaims()
-		{
-			return this.User.Claims.Select(c =&gt; new KeyValuePair&lt;string, string&gt;(c.Type, c.Value));
-		}
-
-		/// &lt;summary&gt;
-		/// requires token from App2
-		/// &lt;/summary&gt;
-		/// &lt;returns&gt;&lt;/returns&gt;
-		[HttpGet(&quot;janus&quot;)]
-		[Authorize(AuthenticationSchemes = &quot;App2&quot;)]
-		public IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; GetJanusClaims()
-		{
-			return this.User.Claims.Select(c =&gt; new KeyValuePair&lt;string, string&gt;(c.Type, c.Value));
-		}
+		return this.User.Claims.Select(c =&gt; new KeyValuePair&lt;string, string&gt;(c.Type, c.Value));
 	}
+
+	/// &lt;summary&gt;
+	/// requires token from App2
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt;&lt;/returns&gt;
+	[HttpGet(&quot;janus&quot;)]
+	[Authorize(AuthenticationSchemes = &quot;App2&quot;)]
+	public IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; GetJanusClaims()
+	{
+		return this.User.Claims.Select(c =&gt; new KeyValuePair&lt;string, string&gt;(c.Type, c.Value));
+	}
+}
 </code></pre>
 <ol start="5">
 <li><p>Configure swagger</p>
 <p>a. Add swagger options in appsettings.json</p>
 </li>
 </ol>
-<pre><code class="lang-csharp">	&quot;SwaggerOptions&quot;: {
-		&quot;Enabled&quot;: true,
-		&quot;Version&quot;: &quot;v1&quot;,
-		&quot;DocumentTitle&quot;: &quot;Demo API&quot;,
-		&quot;ClientId&quot;: &quot;&lt;put your client id here&gt;&quot;,
-		&quot;ClientSecret&quot;: &quot;&lt;put your client secret here&gt;&quot;,
-		&quot;AuthCodeFlow&quot;: {
-			&quot;AuthorizationUrl&quot;: &quot;&lt;Authorization url&gt;&quot;,
-			&quot;TokenUrl&quot;: &quot;&lt;Token url&gt;&quot;,
-			&quot;Scopes&quot;: {
-				&quot;App1&quot;: &quot;&lt;scope for App 1&gt;&quot;,
-				&quot;App2&quot;: &quot;&lt;scope for App 2&gt;&quot;
-			}
-		},
-		&quot;ClientCredsFlow&quot;: {
-			&quot;AuthorizationUrl&quot;: &quot;&lt;Authorization url&gt;&quot;,
-			&quot;TokenUrl&quot;: &quot;&lt;Token url&gt;&quot;,
-			&quot;Scopes&quot;: {
-				&quot;App1&quot;: &quot;&lt;scope for App 1&gt;&quot;,
-				&quot;App2&quot;: &quot;&lt;scope for App 2&gt;&quot;
-			}
+<pre><code class="lang-csharp">&quot;SwaggerOptions&quot;: {
+	&quot;Enabled&quot;: true,
+	&quot;Version&quot;: &quot;v1&quot;,
+	&quot;DocumentTitle&quot;: &quot;Demo API&quot;,
+	&quot;ClientId&quot;: &quot;&lt;put your client id here&gt;&quot;,
+	&quot;ClientSecret&quot;: &quot;&lt;put your client secret here&gt;&quot;,
+	&quot;AuthCodeFlow&quot;: {
+		&quot;AuthorizationUrl&quot;: &quot;&lt;Authorization url&gt;&quot;,
+		&quot;TokenUrl&quot;: &quot;&lt;Token url&gt;&quot;,
+		&quot;Scopes&quot;: {
+			&quot;App1&quot;: &quot;&lt;scope for App 1&gt;&quot;,
+			&quot;App2&quot;: &quot;&lt;scope for App 2&gt;&quot;
+		}
+	},
+	&quot;ClientCredsFlow&quot;: {
+		&quot;AuthorizationUrl&quot;: &quot;&lt;Authorization url&gt;&quot;,
+		&quot;TokenUrl&quot;: &quot;&lt;Token url&gt;&quot;,
+		&quot;Scopes&quot;: {
+			&quot;App1&quot;: &quot;&lt;scope for App 1&gt;&quot;,
+			&quot;App2&quot;: &quot;&lt;scope for App 2&gt;&quot;
 		}
 	}
+}
 </code></pre>
 <ol start="6">
 <li>Add the code snippet below to your Start.cs file</li>
 </ol>
-<pre><code class="lang-csharp">	// ConfigureServices
-	services.AddSwagger(o =&gt; this.Configuration.Bind(&quot;SwaggerOptions&quot;, o));
+<pre><code class="lang-csharp">// ConfigureServices
+services.AddSwagger(o =&gt; this.Configuration.Bind(&quot;SwaggerOptions&quot;, o));
 </code></pre>
-<pre><code class="lang-csharp">	//Configure
-	app.UseSwaggerWithUI(o =&gt; this.Configuration.Bind(&quot;SwaggerOptions&quot;, o));
+<pre><code class="lang-csharp">//Configure
+app.UseSwaggerWithUI(o =&gt; this.Configuration.Bind(&quot;SwaggerOptions&quot;, o));
 </code></pre>
 <ol start="7">
 <li><p>Verify the authentication
