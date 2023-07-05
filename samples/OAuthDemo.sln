@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokenCacheSample", "TokenCa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNV.OAuth.Demo", "DNV.OAuth.Demo\DNV.OAuth.Demo.csproj", "{AACC7456-7082-47E6-A72A-188506772CA4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DependencyInjection", "DependencyInjection", "{535E4B10-DB8F-4137-9313-0AB10D2B586B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationsAndAttributes", "DependencyInjection\ConfigurationsAndAttributes\ConfigurationsAndAttributes.csproj", "{0FA6607A-52D8-4A0B-9BAE-1F7597B3CE64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,11 +31,18 @@ Global
 		{AACC7456-7082-47E6-A72A-188506772CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AACC7456-7082-47E6-A72A-188506772CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AACC7456-7082-47E6-A72A-188506772CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FA6607A-52D8-4A0B-9BAE-1F7597B3CE64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FA6607A-52D8-4A0B-9BAE-1F7597B3CE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FA6607A-52D8-4A0B-9BAE-1F7597B3CE64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FA6607A-52D8-4A0B-9BAE-1F7597B3CE64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BA2F02B7-E26D-4422-82B5-5BA630E5ADBB}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0FA6607A-52D8-4A0B-9BAE-1F7597B3CE64} = {535E4B10-DB8F-4137-9313-0AB10D2B586B}
 	EndGlobalSection
 EndGlobal
