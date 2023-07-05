@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.33808.371
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swagger.Demo", "Swagger.Demo.csproj", "{77DF59BB-68F7-4421-AD01-D59718A35DAA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNV.Web.Swagger", "..\..\..\SolutionPackage\src\Web\Swagger\DNV.Web.Swagger.csproj", "{B0EEC510-59F2-4FCA-ABF1-834B458E42D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77DF59BB-68F7-4421-AD01-D59718A35DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77DF59BB-68F7-4421-AD01-D59718A35DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77DF59BB-68F7-4421-AD01-D59718A35DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77DF59BB-68F7-4421-AD01-D59718A35DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0EEC510-59F2-4FCA-ABF1-834B458E42D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0EEC510-59F2-4FCA-ABF1-834B458E42D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0EEC510-59F2-4FCA-ABF1-834B458E42D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0EEC510-59F2-4FCA-ABF1-834B458E42D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBD9511E-E03A-4B15-BE8C-8B9630887A90}
+	EndGlobalSection
+EndGlobal

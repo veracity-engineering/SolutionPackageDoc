@@ -1,0 +1,286 @@
+{
+	"Movies": [
+		{
+			"id": "a6af1404-d1af-4865-b5a0-36902dd65fc9",
+			"name": "Fast X",
+			"releaseDate": "2023-05-16",
+			"rating": 73,
+			"type": "Movie"
+		},
+		{
+			"id": "3f6a774a-acd9-4160-85c2-1ac8f50592d9",
+			"name": "Extraction 2",
+			"releaseDate": "2023-06-08",
+			"rating": 77,
+			"type": "Movie"
+		},
+		{
+			"id": "c75fe0fe-d51c-4897-964c-c61c722928f7",
+			"name": "Spider-Man: Across the Spider-Verse",
+			"releaseDate": "2023-05-30",
+			"rating": 86,
+			"type": "Movie"
+		},
+		{
+			"id": "b7586b3f-b4bd-4f8e-979b-9d67f062afc1",
+			"name": "John Wick: Chapter 4",
+			"releaseDate": "2023-03-21",
+			"rating": 79,
+			"type": "Movie"
+		},
+		{
+			"id": "6946b02c-3d07-4179-8c1e-5b1cbee6bfd8",
+			"name": "The Super Mario Bros. Movie",
+			"releaseDate": "2023-04-04",
+			"rating": 78,
+			"type": "Movie"
+		},
+		{
+			"id": "c6a77584-a70d-4e93-b79a-3cef77fc5076",
+			"name": "Transformers: Rise of the Beasts",
+			"releaseDate": "2023-06-05",
+			"rating": 71,
+			"type": "Movie"
+		},
+		{
+			"id": "70da0ede-7b7b-4d99-ae6b-1385b4402b29",
+			"name": "My Fault",
+			"releaseDate": "2023-06-07",
+			"rating": 83,
+			"type": "Movie"
+		},
+		{
+			"id": "acfdeb6b-ac71-498b-9472-d30649b01c25",
+			"name": "Elemental",
+			"releaseDate": "2023-06-13",
+			"rating": 74,
+			"type": "Movie"
+		},
+		{
+			"id": "aaad04d2-fc4d-4535-b30f-8c8f3b96a5b0",
+			"name": "The Flash",
+			"releaseDate": "2023-06-12",
+			"rating": 68,
+			"type": "Movie"
+		},
+		{
+			"id": "f9737fad-2576-4f07-b14d-8600f3ed8b34",
+			"name": "Guardians of the Galaxy Vol. 3",
+			"releaseDate": "2023-05-02",
+			"rating": 81,
+			"type": "Movie"
+		},
+		{
+			"id": "19d30b55-5a09-484a-8b8b-6394c887f908",
+			"name": "Through My Window: Across the Sea",
+			"releaseDate": "2023-06-22",
+			"rating": 67,
+			"type": "Movie"
+		},
+		{
+			"id": "4b7628a3-f0b0-4bb1-86ad-6fe9f26624ba",
+			"name": "Avatar: The Way of Water",
+			"releaseDate": "2022-12-13",
+			"rating": 77,
+			"type": "Movie"
+		},
+		{
+			"id": "bf119307-02b4-40fd-9a9f-323f478fb186",
+			"name": "Hypnotic",
+			"releaseDate": "2023-05-10",
+			"rating": 64,
+			"type": "Movie"
+		},
+		{
+			"id": "691b1646-a2cc-4110-808a-087c021102a0",
+			"name": "The Little Mermaid",
+			"releaseDate": "2023-05-17",
+			"rating": 62,
+			"type": "Movie"
+		},
+		{
+			"id": "1f6dc656-5a81-48fc-8e4d-60450cb599e3",
+			"name": "Evil Dead Rise",
+			"releaseDate": "2023-04-11",
+			"rating": 70,
+			"type": "Movie"
+		},
+		{
+			"id": "9c8752b3-2b80-4707-b696-046b0631ab17",
+			"name": "The Black Demon",
+			"releaseDate": "2023-04-25",
+			"rating": 63,
+			"type": "Movie"
+		},
+		{
+			"id": "e38d5eb4-15bb-4902-9ea6-8f90d1c1fccf",
+			"name": "Guy Ritchie's The Covenant",
+			"releaseDate": "2023-04-18",
+			"rating": 77,
+			"type": "Movie"
+		},
+		{
+			"id": "515ae557-4ab6-45d7-b256-8d46278a5468",
+			"name": "Ant-Man and the Wasp: Quantumania",
+			"releaseDate": "2023-02-14",
+			"rating": 65,
+			"type": "Movie"
+		},
+		{
+			"id": "5b7ad1ad-e42f-4ff2-bf95-be3fd3430817",
+			"name": "Titanic",
+			"releaseDate": "1997-11-17",
+			"rating": 79,
+			"type": "Movie"
+		},
+		{
+			"id": "2cef72a6-e7fe-4354-98e3-d402d7d3b419",
+			"name": "Los bastardos",
+			"releaseDate": "2023-03-29",
+			"rating": 63,
+			"type": "Movie"
+		}
+	],
+	"TVShows": [
+		{
+			"id": "90d9a0d3-b129-48e3-8aba-8cb9e210c908",
+			"name": "Bhagya Lakshmi",
+			"date": "2021-08-02T16:00:00.000Z",
+			"rating": 46,
+			"type": "TVShow"
+		},
+		{
+			"id": "bec2b71e-df95-4c9f-acb0-72330642a2ac",
+			"name": "Secret Invasion",
+			"date": "2023-06-20T16:00:00.000Z",
+			"rating": 78,
+			"type": "TVShow"
+		},
+		{
+			"id": "790d81c0-a1c7-4706-bd64-f3d774025987",
+			"name": "Silo",
+			"date": "2023-05-03T16:00:00.000Z",
+			"rating": 82,
+			"type": "TVShow"
+		},
+		{
+			"id": "f8f0c3d6-d35a-44be-9e6a-4444d4a38185",
+			"name": "Superman & Lois",
+			"date": "2021-02-22T16:00:00.000Z",
+			"rating": 81,
+			"type": "TVShow"
+		},
+		{
+			"id": "853020e2-3c6d-4068-9e73-b8c88c178ab7",
+			"name": "The Good Doctor",
+			"date": "2017-09-24T16:00:00.000Z",
+			"rating": 85,
+			"type": "TVShow"
+		},
+		{
+			"id": "a72bf2a0-330e-43a3-9684-85b1b9548480",
+			"name": "Grey's Anatomy",
+			"date": "2005-03-26T16:00:00.000Z",
+			"rating": 83,
+			"type": "TVShow"
+		},
+		{
+			"id": "cc6ac2d8-ee36-4961-9b2e-9ae4e76dd07a",
+			"name": "The Flash",
+			"date": "2014-10-06T16:00:00.000Z",
+			"rating": 78,
+			"type": "TVShow"
+		},
+		{
+			"id": "8a7fc956-3e55-4118-814a-f8a2d8dfe0f3",
+			"name": "Black Mirror",
+			"date": "2011-12-03T16:00:00.000Z",
+			"rating": 83,
+			"type": "TVShow"
+		},
+		{
+			"id": "c22a3ab3-9b83-43ca-b6fc-2082f662201c",
+			"name": "The Blacklist",
+			"date": "2013-09-22T16:00:00.000Z",
+			"rating": 76,
+			"type": "TVShow"
+		},
+		{
+			"id": "a467961d-96ff-465c-8b38-d4017e7f724d",
+			"name": "The Idol",
+			"date": "2023-06-03T16:00:00.000Z",
+			"rating": 67,
+			"type": "TVShow"
+		},
+		{
+			"id": "9ff74458-e859-45ca-9df4-56cd5246295a",
+			"name": "The Iron Heart",
+			"date": "2022-11-13T16:00:00.000Z",
+			"rating": 61,
+			"type": "TVShow"
+		},
+		{
+			"id": "7654b164-1979-4fc7-832d-6f8bd7f2a18c",
+			"name": "Fear the Walking Dead",
+			"date": "2015-08-22T16:00:00.000Z",
+			"rating": 77,
+			"type": "TVShow"
+		},
+		{
+			"id": "275661ab-bd43-42a6-afd8-c22ab14f13fa",
+			"name": "Lucifer",
+			"date": "2016-01-24T16:00:00.000Z",
+			"rating": 85,
+			"type": "TVShow"
+		},
+		{
+			"id": "573966e1-d158-482c-bdb7-b2b8aec8db4d",
+			"name": "Supernatural",
+			"date": "2005-09-12T16:00:00.000Z",
+			"rating": 83,
+			"type": "TVShow"
+		},
+		{
+			"id": "51390b5b-8426-4460-8352-d19d08330763",
+			"name": "Suits",
+			"date": "2011-06-22T16:00:00.000Z",
+			"rating": 82,
+			"type": "TVShow"
+		},
+		{
+			"id": "f14a130c-8eee-46af-aed0-71c3da9eb7c2",
+			"name": "Criminal Minds",
+			"date": "2005-09-21T16:00:00.000Z",
+			"rating": 83,
+			"type": "TVShow"
+		},
+		{
+			"id": "27672387-f129-405b-86c1-e4ce7f76fbca",
+			"name": "The Simpsons",
+			"date": "1989-12-16T16:00:00.000Z",
+			"rating": 80,
+			"type": "TVShow"
+		},
+		{
+			"id": "e23d36b2-4463-4842-8514-e49b8980343b",
+			"name": "Mayans M.C.",
+			"date": "2018-09-03T16:00:00.000Z",
+			"rating": 81,
+			"type": "TVShow"
+		},
+		{
+			"id": "30788963-9ad8-4b9d-9bc6-44ed9b0e6ca8",
+			"name": "NCIS",
+			"date": "2003-09-22T16:00:00.000Z",
+			"rating": 76,
+			"type": "TVShow"
+		},
+		{
+			"id": "7e080410-a754-44af-912e-ad3efb9eb955",
+			"name": "Law & Order",
+			"date": "1990-09-12T15:00:00.000Z",
+			"rating": 76,
+			"type": "TVShow"
+		}
+	]
+}
