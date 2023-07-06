@@ -25,13 +25,18 @@ services.AddControllers()
 	// required for JsonPatchDocument support
 	.AddNewtonsoftJson();
 
-services.AddEndpointsApiExplorer();
+services.AddApiVersioning()
+	.AddApiExplorer(o =>
+	{
+		o.GroupNameFormat = "'v'VVV";
+		o.SubstituteApiVersionInUrl = true;
+	});
 
 var app = builder.Build();
 
 app.UseProblemDetails();
 
-app.MapControllers();
+app.MapDefaultControllerRoute();
 
 app.UseSwaggerWithUI(o => configuration.Bind("SwaggerOptions", o));
 

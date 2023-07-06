@@ -3,7 +3,7 @@
 namespace Swagger.Demo.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v{version:apiVersion}/[controller]")]
 [Consumes("application/json")]
 [Produces("application/json")]
 public class ApiControllerBase : ControllerBase
