@@ -1,8 +1,7 @@
 using DNV.Web.Swagger;
 using Hellang.Middleware.ProblemDetails;
 using Hellang.Middleware.ProblemDetails.Mvc;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json.Converters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,18 +11,11 @@ var configuration = builder.Configuration;
 services.AddProblemDetails()
 	.AddProblemDetailsConventions();
 
-services.AddSwagger(o => configuration.Bind("SwaggerOptions", o));
+services.AddSwagger(o => configuration.Bind("SwaggerOptions", o))
+	.AddSwaggerGenNewtonsoftSupport();
 
 services.AddControllers()
-	.AddJsonOptions(o =>
-	{
-		o.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
-
-		// * convert enum to string
-		o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-	})
-	// required for JsonPatchDocument support
-	.AddNewtonsoftJson();
+	.AddNewtonsoftJson(o => o.SerializerSettings.Converters.Add(new StringEnumConverter()));
 
 services.AddApiVersioning()
 	.AddApiExplorer(o =>

@@ -12,7 +12,7 @@ public class TodoController : ApiControllerBase
 {
 	private static readonly IList<Todo> TodoList = new List<Todo>
 	{
-		new() { Id = Guid.Empty, Name = "Blank" }
+		new() { Id = Guid.Empty, Name = "Blank", Status = TodoStatus.Complete }
 	};
 
 	/// <summary>
