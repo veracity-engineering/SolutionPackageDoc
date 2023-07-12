@@ -1,22 +1,12 @@
 using DNV.Web.Security;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
+builder.WebHost.UseKestrel(o => o.AddServerHeader = false);
 builder.Services.AddRazorPages();
-
 var app = builder.Build();
+app.UseHsts();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-
-
-//----------------------------------------------------------DNV.Web.Security Code Sample----------------------------------------------------------------------
+//--------------------------------------- DNV.Web.Security Code Sample ------------------------------------------------
 
 //Use default response header.
 app.UseDefaultSecurityHeaders();
@@ -40,15 +30,9 @@ app.UseDefaultSecurityHeaders();
 //app.UseDefaultSecurityHeaders(apiPredicate: request => request.Path.Value?.Contains("/api/") == true);
 
 
-//------------------------------------------------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
-
 app.UseRouting();
-
-app.UseAuthorization();
-
 app.MapRazorPages();
-
 app.Run();
