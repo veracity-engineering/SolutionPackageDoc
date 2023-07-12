@@ -3503,6 +3503,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DNV.Web.Swagger.SwaggerOptions.Authentication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DNV.Web.Swagger.SwaggerOptions.Authentication.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DNV.Web.Swagger.SwaggerOptions.yml",
       "output": {
         ".html": {
@@ -3527,6 +3537,46 @@
       "output": {
         ".html": {
           "relative_path": "api/DNV.Web.Swagger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.AspNetCore.Http.Metadata.ITagsMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.AspNetCore.Http.Metadata.ITagsMetadata.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.AspNetCore.Http.Metadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.AspNetCore.Http.Metadata.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.AspNetCore.Http.TagsAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.AspNetCore.Http.TagsAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.AspNetCore.Http.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.AspNetCore.Http.html"
         }
       },
       "version": ""
@@ -3557,6 +3607,16 @@
       "output": {
         ".html": {
           "relative_path": "articles/A-Typical-Sample-of-Veracity-Identity-Implementation-with-Solution-Packages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/DDD.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/DDD.html"
         }
       },
       "version": ""
@@ -3666,6 +3726,42 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/_Sidebar.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/_Sidebar.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/context/DNV.Context.AspNet.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/context/DNV.Context.AspNet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/context/DNV.Context.HttpClient.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/context/DNV.Context.HttpClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
       "source_relative_path": "articles/context/DNV.Context.ServiceBus.md",
       "output": {
         ".html": {
@@ -3730,6 +3826,16 @@
       "output": {
         "resource": {
           "relative_path": "articles/images/WebTemplates/mgt.website.example.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/images/context/aspnetcontextsample.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/images/context/aspnetcontextsample.png"
         }
       },
       "version": ""

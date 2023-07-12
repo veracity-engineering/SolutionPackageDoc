@@ -18431,58 +18431,77 @@ references:
   commentId: T:DNV.Web.Swagger.SwaggerOptions
   fullName: DNV.Web.Swagger.SwaggerOptions
   nameWithType: SwaggerOptions
-- uid: DNV.Web.Swagger.SwaggerOptions.AuthCodeFlow
+- uid: DNV.Web.Swagger.SwaggerOptions.Authentication
+  name: SwaggerOptions.Authentication
+  href: api/DNV.Web.Swagger.SwaggerOptions.Authentication.html
+  commentId: T:DNV.Web.Swagger.SwaggerOptions.Authentication
+  fullName: DNV.Web.Swagger.SwaggerOptions.Authentication
+  nameWithType: SwaggerOptions.Authentication
+- uid: DNV.Web.Swagger.SwaggerOptions.Authentication.AuthCodeFlow
   name: AuthCodeFlow
-  href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_AuthCodeFlow
-  commentId: P:DNV.Web.Swagger.SwaggerOptions.AuthCodeFlow
-  fullName: DNV.Web.Swagger.SwaggerOptions.AuthCodeFlow
-  nameWithType: SwaggerOptions.AuthCodeFlow
-- uid: DNV.Web.Swagger.SwaggerOptions.AuthCodeFlow*
+  href: api/DNV.Web.Swagger.SwaggerOptions.Authentication.html#DNV_Web_Swagger_SwaggerOptions_Authentication_AuthCodeFlow
+  commentId: P:DNV.Web.Swagger.SwaggerOptions.Authentication.AuthCodeFlow
+  fullName: DNV.Web.Swagger.SwaggerOptions.Authentication.AuthCodeFlow
+  nameWithType: SwaggerOptions.Authentication.AuthCodeFlow
+- uid: DNV.Web.Swagger.SwaggerOptions.Authentication.AuthCodeFlow*
   name: AuthCodeFlow
-  href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_AuthCodeFlow_
-  commentId: Overload:DNV.Web.Swagger.SwaggerOptions.AuthCodeFlow
+  href: api/DNV.Web.Swagger.SwaggerOptions.Authentication.html#DNV_Web_Swagger_SwaggerOptions_Authentication_AuthCodeFlow_
+  commentId: Overload:DNV.Web.Swagger.SwaggerOptions.Authentication.AuthCodeFlow
   isSpec: "True"
-  fullName: DNV.Web.Swagger.SwaggerOptions.AuthCodeFlow
-  nameWithType: SwaggerOptions.AuthCodeFlow
-- uid: DNV.Web.Swagger.SwaggerOptions.ClientCredsFlow
+  fullName: DNV.Web.Swagger.SwaggerOptions.Authentication.AuthCodeFlow
+  nameWithType: SwaggerOptions.Authentication.AuthCodeFlow
+- uid: DNV.Web.Swagger.SwaggerOptions.Authentication.ClientCredsFlow
   name: ClientCredsFlow
-  href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_ClientCredsFlow
-  commentId: P:DNV.Web.Swagger.SwaggerOptions.ClientCredsFlow
-  fullName: DNV.Web.Swagger.SwaggerOptions.ClientCredsFlow
-  nameWithType: SwaggerOptions.ClientCredsFlow
-- uid: DNV.Web.Swagger.SwaggerOptions.ClientCredsFlow*
+  href: api/DNV.Web.Swagger.SwaggerOptions.Authentication.html#DNV_Web_Swagger_SwaggerOptions_Authentication_ClientCredsFlow
+  commentId: P:DNV.Web.Swagger.SwaggerOptions.Authentication.ClientCredsFlow
+  fullName: DNV.Web.Swagger.SwaggerOptions.Authentication.ClientCredsFlow
+  nameWithType: SwaggerOptions.Authentication.ClientCredsFlow
+- uid: DNV.Web.Swagger.SwaggerOptions.Authentication.ClientCredsFlow*
   name: ClientCredsFlow
-  href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_ClientCredsFlow_
-  commentId: Overload:DNV.Web.Swagger.SwaggerOptions.ClientCredsFlow
+  href: api/DNV.Web.Swagger.SwaggerOptions.Authentication.html#DNV_Web_Swagger_SwaggerOptions_Authentication_ClientCredsFlow_
+  commentId: Overload:DNV.Web.Swagger.SwaggerOptions.Authentication.ClientCredsFlow
   isSpec: "True"
-  fullName: DNV.Web.Swagger.SwaggerOptions.ClientCredsFlow
-  nameWithType: SwaggerOptions.ClientCredsFlow
-- uid: DNV.Web.Swagger.SwaggerOptions.ClientId
+  fullName: DNV.Web.Swagger.SwaggerOptions.Authentication.ClientCredsFlow
+  nameWithType: SwaggerOptions.Authentication.ClientCredsFlow
+- uid: DNV.Web.Swagger.SwaggerOptions.Authentication.ClientId
   name: ClientId
-  href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_ClientId
-  commentId: P:DNV.Web.Swagger.SwaggerOptions.ClientId
-  fullName: DNV.Web.Swagger.SwaggerOptions.ClientId
-  nameWithType: SwaggerOptions.ClientId
-- uid: DNV.Web.Swagger.SwaggerOptions.ClientId*
+  href: api/DNV.Web.Swagger.SwaggerOptions.Authentication.html#DNV_Web_Swagger_SwaggerOptions_Authentication_ClientId
+  commentId: P:DNV.Web.Swagger.SwaggerOptions.Authentication.ClientId
+  fullName: DNV.Web.Swagger.SwaggerOptions.Authentication.ClientId
+  nameWithType: SwaggerOptions.Authentication.ClientId
+- uid: DNV.Web.Swagger.SwaggerOptions.Authentication.ClientId*
   name: ClientId
-  href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_ClientId_
-  commentId: Overload:DNV.Web.Swagger.SwaggerOptions.ClientId
+  href: api/DNV.Web.Swagger.SwaggerOptions.Authentication.html#DNV_Web_Swagger_SwaggerOptions_Authentication_ClientId_
+  commentId: Overload:DNV.Web.Swagger.SwaggerOptions.Authentication.ClientId
   isSpec: "True"
-  fullName: DNV.Web.Swagger.SwaggerOptions.ClientId
-  nameWithType: SwaggerOptions.ClientId
-- uid: DNV.Web.Swagger.SwaggerOptions.ClientSecret
+  fullName: DNV.Web.Swagger.SwaggerOptions.Authentication.ClientId
+  nameWithType: SwaggerOptions.Authentication.ClientId
+- uid: DNV.Web.Swagger.SwaggerOptions.Authentication.ClientSecret
   name: ClientSecret
-  href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_ClientSecret
-  commentId: P:DNV.Web.Swagger.SwaggerOptions.ClientSecret
-  fullName: DNV.Web.Swagger.SwaggerOptions.ClientSecret
-  nameWithType: SwaggerOptions.ClientSecret
-- uid: DNV.Web.Swagger.SwaggerOptions.ClientSecret*
+  href: api/DNV.Web.Swagger.SwaggerOptions.Authentication.html#DNV_Web_Swagger_SwaggerOptions_Authentication_ClientSecret
+  commentId: P:DNV.Web.Swagger.SwaggerOptions.Authentication.ClientSecret
+  fullName: DNV.Web.Swagger.SwaggerOptions.Authentication.ClientSecret
+  nameWithType: SwaggerOptions.Authentication.ClientSecret
+- uid: DNV.Web.Swagger.SwaggerOptions.Authentication.ClientSecret*
   name: ClientSecret
-  href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_ClientSecret_
-  commentId: Overload:DNV.Web.Swagger.SwaggerOptions.ClientSecret
+  href: api/DNV.Web.Swagger.SwaggerOptions.Authentication.html#DNV_Web_Swagger_SwaggerOptions_Authentication_ClientSecret_
+  commentId: Overload:DNV.Web.Swagger.SwaggerOptions.Authentication.ClientSecret
   isSpec: "True"
-  fullName: DNV.Web.Swagger.SwaggerOptions.ClientSecret
-  nameWithType: SwaggerOptions.ClientSecret
+  fullName: DNV.Web.Swagger.SwaggerOptions.Authentication.ClientSecret
+  nameWithType: SwaggerOptions.Authentication.ClientSecret
+- uid: DNV.Web.Swagger.SwaggerOptions.Authentication.ImplicitFlow
+  name: ImplicitFlow
+  href: api/DNV.Web.Swagger.SwaggerOptions.Authentication.html#DNV_Web_Swagger_SwaggerOptions_Authentication_ImplicitFlow
+  commentId: P:DNV.Web.Swagger.SwaggerOptions.Authentication.ImplicitFlow
+  fullName: DNV.Web.Swagger.SwaggerOptions.Authentication.ImplicitFlow
+  nameWithType: SwaggerOptions.Authentication.ImplicitFlow
+- uid: DNV.Web.Swagger.SwaggerOptions.Authentication.ImplicitFlow*
+  name: ImplicitFlow
+  href: api/DNV.Web.Swagger.SwaggerOptions.Authentication.html#DNV_Web_Swagger_SwaggerOptions_Authentication_ImplicitFlow_
+  commentId: Overload:DNV.Web.Swagger.SwaggerOptions.Authentication.ImplicitFlow
+  isSpec: "True"
+  fullName: DNV.Web.Swagger.SwaggerOptions.Authentication.ImplicitFlow
+  nameWithType: SwaggerOptions.Authentication.ImplicitFlow
 - uid: DNV.Web.Swagger.SwaggerOptions.DocumentTitle
   name: DocumentTitle
   href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_DocumentTitle
@@ -18509,19 +18528,19 @@ references:
   isSpec: "True"
   fullName: DNV.Web.Swagger.SwaggerOptions.Enabled
   nameWithType: SwaggerOptions.Enabled
-- uid: DNV.Web.Swagger.SwaggerOptions.ImplicitFlow
-  name: ImplicitFlow
-  href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_ImplicitFlow
-  commentId: P:DNV.Web.Swagger.SwaggerOptions.ImplicitFlow
-  fullName: DNV.Web.Swagger.SwaggerOptions.ImplicitFlow
-  nameWithType: SwaggerOptions.ImplicitFlow
-- uid: DNV.Web.Swagger.SwaggerOptions.ImplicitFlow*
-  name: ImplicitFlow
-  href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_ImplicitFlow_
-  commentId: Overload:DNV.Web.Swagger.SwaggerOptions.ImplicitFlow
+- uid: DNV.Web.Swagger.SwaggerOptions.OAuth
+  name: OAuth
+  href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_OAuth
+  commentId: P:DNV.Web.Swagger.SwaggerOptions.OAuth
+  fullName: DNV.Web.Swagger.SwaggerOptions.OAuth
+  nameWithType: SwaggerOptions.OAuth
+- uid: DNV.Web.Swagger.SwaggerOptions.OAuth*
+  name: OAuth
+  href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_OAuth_
+  commentId: Overload:DNV.Web.Swagger.SwaggerOptions.OAuth
   isSpec: "True"
-  fullName: DNV.Web.Swagger.SwaggerOptions.ImplicitFlow
-  nameWithType: SwaggerOptions.ImplicitFlow
+  fullName: DNV.Web.Swagger.SwaggerOptions.OAuth
+  nameWithType: SwaggerOptions.OAuth
 - uid: DNV.Web.Swagger.SwaggerOptions.PostGenConfigure
   name: PostGenConfigure
   href: api/DNV.Web.Swagger.SwaggerOptions.html#DNV_Web_Swagger_SwaggerOptions_PostGenConfigure
@@ -18596,3 +18615,72 @@ references:
   fullName.vb: DNV.Web.Swagger.Throws.IfNull(Of T)(T, String)
   nameWithType: Throws.IfNull<T>(T, string?)
   nameWithType.vb: Throws.IfNull(Of T)(T, String)
+- uid: Microsoft.AspNetCore.Http
+  name: Microsoft.AspNetCore.Http
+  href: api/Microsoft.AspNetCore.Http.html
+  commentId: N:Microsoft.AspNetCore.Http
+  fullName: Microsoft.AspNetCore.Http
+  nameWithType: Microsoft.AspNetCore.Http
+- uid: Microsoft.AspNetCore.Http.Metadata
+  name: Microsoft.AspNetCore.Http.Metadata
+  href: api/Microsoft.AspNetCore.Http.Metadata.html
+  commentId: N:Microsoft.AspNetCore.Http.Metadata
+  fullName: Microsoft.AspNetCore.Http.Metadata
+  nameWithType: Microsoft.AspNetCore.Http.Metadata
+- uid: Microsoft.AspNetCore.Http.Metadata.ITagsMetadata
+  name: ITagsMetadata
+  href: api/Microsoft.AspNetCore.Http.Metadata.ITagsMetadata.html
+  commentId: T:Microsoft.AspNetCore.Http.Metadata.ITagsMetadata
+  fullName: Microsoft.AspNetCore.Http.Metadata.ITagsMetadata
+  nameWithType: ITagsMetadata
+- uid: Microsoft.AspNetCore.Http.Metadata.ITagsMetadata.Tags
+  name: Tags
+  href: api/Microsoft.AspNetCore.Http.Metadata.ITagsMetadata.html#Microsoft_AspNetCore_Http_Metadata_ITagsMetadata_Tags
+  commentId: P:Microsoft.AspNetCore.Http.Metadata.ITagsMetadata.Tags
+  fullName: Microsoft.AspNetCore.Http.Metadata.ITagsMetadata.Tags
+  nameWithType: ITagsMetadata.Tags
+- uid: Microsoft.AspNetCore.Http.Metadata.ITagsMetadata.Tags*
+  name: Tags
+  href: api/Microsoft.AspNetCore.Http.Metadata.ITagsMetadata.html#Microsoft_AspNetCore_Http_Metadata_ITagsMetadata_Tags_
+  commentId: Overload:Microsoft.AspNetCore.Http.Metadata.ITagsMetadata.Tags
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Http.Metadata.ITagsMetadata.Tags
+  nameWithType: ITagsMetadata.Tags
+- uid: Microsoft.AspNetCore.Http.TagsAttribute
+  name: TagsAttribute
+  href: api/Microsoft.AspNetCore.Http.TagsAttribute.html
+  commentId: T:Microsoft.AspNetCore.Http.TagsAttribute
+  fullName: Microsoft.AspNetCore.Http.TagsAttribute
+  nameWithType: TagsAttribute
+- uid: Microsoft.AspNetCore.Http.TagsAttribute.#ctor(System.String[])
+  name: TagsAttribute(params string[])
+  href: api/Microsoft.AspNetCore.Http.TagsAttribute.html#Microsoft_AspNetCore_Http_TagsAttribute__ctor_System_String___
+  commentId: M:Microsoft.AspNetCore.Http.TagsAttribute.#ctor(System.String[])
+  name.vb: New(ParamArray String())
+  fullName: Microsoft.AspNetCore.Http.TagsAttribute.TagsAttribute(params string[])
+  fullName.vb: Microsoft.AspNetCore.Http.TagsAttribute.New(ParamArray String())
+  nameWithType: TagsAttribute.TagsAttribute(params string[])
+  nameWithType.vb: TagsAttribute.New(ParamArray String())
+- uid: Microsoft.AspNetCore.Http.TagsAttribute.#ctor*
+  name: TagsAttribute
+  href: api/Microsoft.AspNetCore.Http.TagsAttribute.html#Microsoft_AspNetCore_Http_TagsAttribute__ctor_
+  commentId: Overload:Microsoft.AspNetCore.Http.TagsAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Microsoft.AspNetCore.Http.TagsAttribute.TagsAttribute
+  fullName.vb: Microsoft.AspNetCore.Http.TagsAttribute.New
+  nameWithType: TagsAttribute.TagsAttribute
+  nameWithType.vb: TagsAttribute.New
+- uid: Microsoft.AspNetCore.Http.TagsAttribute.Tags
+  name: Tags
+  href: api/Microsoft.AspNetCore.Http.TagsAttribute.html#Microsoft_AspNetCore_Http_TagsAttribute_Tags
+  commentId: P:Microsoft.AspNetCore.Http.TagsAttribute.Tags
+  fullName: Microsoft.AspNetCore.Http.TagsAttribute.Tags
+  nameWithType: TagsAttribute.Tags
+- uid: Microsoft.AspNetCore.Http.TagsAttribute.Tags*
+  name: Tags
+  href: api/Microsoft.AspNetCore.Http.TagsAttribute.html#Microsoft_AspNetCore_Http_TagsAttribute_Tags_
+  commentId: Overload:Microsoft.AspNetCore.Http.TagsAttribute.Tags
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Http.TagsAttribute.Tags
+  nameWithType: TagsAttribute.Tags

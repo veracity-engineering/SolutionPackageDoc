@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>DNV.Context.ServiceBus </title>
+      <title>DNV.Context.HttpClient </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="DNV.Context.ServiceBus ">
+      <meta name="title" content="DNV.Context.HttpClient ">
     
       <link rel="shortcut icon" href="../../favicon.png">
       <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
@@ -76,75 +76,97 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="dnvcontextservicebus">DNV.Context.ServiceBus</h1>
+<h1 id="dnvcontexthttpclient">DNV.Context.HttpClient</h1>
 
-<p>The <code>DNV.Context.ServiceBus package</code> is a .Net library which provides some extension method based on <code>Azure.Messaging.ServiceBus</code> for sending and receiving messages with ambient context(<code>IContextAccessor&lt;&gt;</code>).</p>
+<p>The <code>DNV.Context.HttpClient</code> package is a .Net library which provides extension methods for adding context data in http client request.</p>
 <hr>
 <h2 id="basic-example">Basic example</h2>
-<h3 id="send-message-with-context">Send Message With Context</h3>
-<p>You can self define the context payload, ex</p>
-<pre><code class="lang-cs">public class SampleContext
-    {
-        public string Name { get; set; }
-        public string SampleData { get; set; }
-    }
-</code></pre>
-<p>Before start sending the message, get the <code>IContextAccessor&lt;&gt;</code> at first, and then call the extension method <code>SendMessageAsync&lt;&gt;(message, context)</code> with the context. It will send the context within the message.
-The correlation id will be set into <code>message.CorrelationId</code>, and the detailed context will be set into the customized key(<code>X-Ambient-Context-{typeof(T).Name}</code>) inside the message property <code>ApplicationProperties</code>.</p>
-<p><img src="images/context/servicebusexploresample.PNG" alt="A sample message with context inside Service Bus Explorer"></p>
-<pre><code class="lang-cs">public class ExampleController : Controller
-    {
-        private readonly ILogger&lt;HomeController&gt; _logger;
-        private readonly IContextAccessor&lt;SampleContext&gt; _contextAccessor;
-        private readonly ServiceBusConfig _serviceBusConfig;
-
-        public HomeController(ILogger&lt;HomeController&gt; logger, IContextAccessor&lt;SampleContext&gt; contextAccessor, IOptionsSnapshot&lt;ServiceBusConfig&gt; serviceBusOptions)
-        {
-            _logger = logger;
-            _contextAccessor = contextAccessor;
-            _serviceBusConfig = serviceBusOptions.Value;
-        }       
-
-        [Route(&quot;/sendmessage&quot;), HttpPost]        
-        public async Task&lt;IActionResult&gt; SendMessage()
-        {
-            var client = new ServiceBusClient(_serviceBusConfig.ConnectionString);
-            var sender = client.CreateSender(_serviceBusConfig.TargetQueue);
-
-            //send message with context
-            await sender.SendMessageAsync(new ServiceBusMessage(&quot;test&quot;), _contextAccessor);
-
-            return Ok();
-        }
-
-    }
-</code></pre>
-<h3 id="receive-message-with-context">Receive Message With Context</h3>
-<p>Mainly call the extension method <code>InitializeContext&lt;T&gt;(context)</code> of <code>Func&lt;ProcessMessageEventArgs, Task&gt;</code> and register it with the servicebus processor, it will help to build the context from the received message.</p>
-<pre><code class="lang-cs">var client = new ServiceBusClient(connectionString);
-var processor = client.CreateProcessor(targetQueue);
-
-//define context
-var localContextAccessor = new LocalContextAccessor&lt;SampleContext&gt;((args) =&gt;
+<h3 id="add-context-to-http-client-context-handler">Add Context to Http Client Context Handler</h3>
+<p>First define the context payload, ex</p>
+<pre><code class="lang-cs">public class Identity
 {
-    return (false, null);
-});
-
-//define the default handler
-Func&lt;ProcessMessageEventArgs, Task&gt; messageHandler = args =&gt;
+    public string? Name { get; set; }
+    public string? Country { get; set; }
+    public string? City { get; set; }
+}
+</code></pre>
+<p>When application startup, call an extension method <code>AddHttpClientContext</code>. This will add a Http message handler(<code>HttpClientContextHandler</code>) to the named http client. <code>HttpClientContextHandler</code> will serialize context data to request headers before send http request.</p>
+<p>In this example, it adds an empty <code>Identity</code> object to <code>HttpClientContextHandler</code>.</p>
+<pre><code class="lang-cs">builder.Services.AddAspNetContext((context) =&gt; (true, new Identity()), null);
+</code></pre>
+<h3 id="send-http-request-with-context-data">Send Http Request With Context Data</h3>
+<p>In your controller, initialize context first, then send request with context data.</p>
+<pre><code class="lang-cs">public class HomeController : Controller
 {
-    Console.WriteLine(args.Message.Body.ToString());
-    Console.WriteLine(&quot;correlationid: &quot; + localContextAccessor.Context?.CorrelationId);
-    Console.WriteLine(&quot;payload-&gt;name: &quot;+ localContextAccessor.Context?.Payload?.Name);
-    Console.WriteLine(&quot;payload-&gt;sampledata: &quot;+localContextAccessor.Context?.Payload?.SampleData);
+    private readonly IHttpClientFactory _httpClientFactory;
+    private readonly IContextCreator&lt;Identity&gt; _contextCreator;
+
+    public HomeController(IHttpClientFactory httpClientFactory,
+                            IContextCreator&lt;Identity&gt; contextCreator)
+    {
+        _httpClientFactory = httpClientFactory;
+        _contextCreator = contextCreator;
+    }       
+
+    [HttpPost]
+    [Route(&quot;useridentity&quot;)]
+    public async Task&lt;IActionResult&gt; UserIdentity([FromForm] Identity userIdentity)
+    {
+        // Initialize context
+        _contextCreator.InitializeContext(new Identity
+        {
+            Name = userIdentity.Name,
+            Country = userIdentity.Country,
+            City = userIdentity.City
+        }, Guid.NewGuid().ToString());
+
+        // Call extension method to create http client
+        var client = _httpClientFactory.CreateContextClient&lt;Identity&gt;();
+        client.BaseAddress = new Uri(&quot;https://localhost:7174&quot;);
+
+        // Send request
+        var request = new HttpRequestMessage(HttpMethod.Get, new Uri(&quot;api/identity/user&quot;, UriKind.Relative));
+        var resp = await client.SendAsync(request);
+        ......
+    }
+}
+</code></pre>
+<p>In your api controller, get context from http request header, and returns to caller.</p>
+<pre><code class="lang-cs">[HttpGet]
+[Route(&quot;user&quot;)]
+public Identity GetUser()
+{            
+    var headers = _httpContext?.Request.Headers[AspNetContextAccessor&lt;Identity&gt;.HeaderKey];
+    if(headers.HasValue)
+    {                
+        var testContext = JsonSerializer.Deserialize&lt;TestContext&gt;(headers.Value.ToString(), new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true,
+        });
+        return testContext?.Payload!;
+    }
+    return new Identity();
+}
+</code></pre>
+<h3 id="display-context-data-in-page">Display Context Data in Page</h3>
+<pre><code class="lang-cs">[HttpPost]
+[Route(&quot;useridentity&quot;)]
+public async Task&lt;IActionResult&gt; UserIdentity([FromForm] Identity userIdentity)
+{
+    ......
     
-    Console.WriteLine(&quot;Thread Id: &quot;+ Thread.CurrentThread.ManagedThreadId.ToString());
-    return Task.CompletedTask;
-};
+    // Receive data and returns to the view for display.
+    var content = resp.Content.ReadAsStringAsync();
+    var identity = JsonSerializer.Deserialize&lt;Identity&gt;(content.Result, new JsonSerializerOptions
+    {
+        PropertyNameCaseInsensitive = true
+    });
 
-//call extension method to initialize context
-processor.ProcessMessageAsync += messageHandler.InitializeContext(localContextAccessor, (args) =&gt; { return (false, null); });
-
+    ViewData[&quot;Name&quot;] = identity?.Name;
+    ViewData[&quot;Country&quot;] = identity?.Country;
+    ViewData[&quot;City&quot;] = identity?.City;
+    return View(&quot;Result&quot;);
+}
 </code></pre>
 </article>
           </div>
@@ -154,7 +176,7 @@ processor.ProcessMessageAsync += messageHandler.InitializeContext(localContextAc
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/veracity-engineering/SolutionPackageDoc.wiki/blob/master/context/DNV.Context.ServiceBus.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/veracity-engineering/SolutionPackageDoc.wiki/blob/master/context/DNV.Context.HttpClient.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
