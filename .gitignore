@@ -2,4 +2,5 @@
 docs/api/
 docs/articles/
 docs/obj/
-src/
+**/bin/
+**/obj/
