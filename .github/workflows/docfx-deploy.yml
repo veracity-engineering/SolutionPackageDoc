@@ -30,43 +30,43 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: ${{ env.DOTNET_VER }}
-        
+
     - name: Update submodules
       run: |
-        git clone -b master --single-branch --depth 1 https://github.com/veracity-engineering/SolutionPackageDoc.wiki.git docs/articles
-
         git clone -b master --single-branch --depth 1 https://git:${{ secrets.SRC_TOKEN }}@github.com/veracity-engineering/SolutionPackage.git src
+        pushd src/src
+        find . -iname 'readme.md' -exec cp --parents {} ../../docs/articles/ \;
 
         git clone -b gh-pages --single-branch --depth 1 https://github.com/veracity-engineering/SolutionPackageDoc.git docs/_site
-      
+
     - name: Generate docs
       run: |
         echo "::debug::Restore nuget packages"
         dotnet restore src/SolutionPackage.sln
-        
+
         echo "::debug::Fix index pages"
         echo '# Tutorials page' > docs/articles/index.md
         mkdir docs/api
-        echo '# Api Reference Page' > docs/api/index.md 
-        
+        echo '# Api Reference Page' > docs/api/index.md
+
         echo "::debug::Update docfx"
         dotnet tool update -g docfx
-        
+
         echo "::debug::Generate docfx files"
         docfx docs/docfx.json
-        
+
     - name: Publish gh-pages
       run: |
         cd docs/_site
-        
+
         echo "::debug::Add new files to git"
         git fetch
         git add .
-        
+
         echo "::debug::Commit changes to git"
         git config user.email "actions-bot@users.noreply.github.com"
         git config user.name "github actions bot"
         git commit -m "Update docs" || echo "No change to commit"
-        
+
         echo "::debug::Push commit to remote"
         git push https://git:${{ secrets.GITHUB_TOKEN }}@github.com/veracity-engineering/SolutionPackageDoc.git HEAD:gh-pages
