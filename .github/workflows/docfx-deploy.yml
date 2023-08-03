@@ -36,6 +36,7 @@ jobs:
         git clone -b master --single-branch --depth 1 https://git:${{ secrets.SRC_TOKEN }}@github.com/veracity-engineering/SolutionPackage.git src
         pushd src/src
         find . -iname 'readme.md' -exec cp --parents {} ../../docs/articles/ \;
+        popd
 
         git clone -b gh-pages --single-branch --depth 1 https://github.com/veracity-engineering/SolutionPackageDoc.git docs/_site
 
