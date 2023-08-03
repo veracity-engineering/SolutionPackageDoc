@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>DNV Specifications framework </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="DNV Specifications framework ">
+    
+      <link rel="shortcut icon" href="../../favicon.png">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="dnv-specifications-framework">DNV Specifications framework</h1>
+
+<p>This project represents a way to do Specification by Example - BDD style inspired by
+the conciseness of <a href="https://github.com/machine/machine.specifications">Machine.Specifications</a>.</p>
+<h2 id="what-does-it-do">What does it do?</h2>
+<p>In BDD one talks about the <strong>given</strong>, <strong>when</strong>, <strong>then</strong>. Much like <strong>arrange</strong>, <strong>act</strong> and <strong>assert</strong> in a way that
+is more common in TDD. The biggest difference is on a mindset level of thinking in specifications of behaviors in your
+system. What this particular library delivers is a way to do these and also keep in line with what is common in the BDD
+world of having isolated specifications and not have typically a <strong>FooTests</strong> and dump all your tests for the unit <code>Foo</code> in
+it.</p>
+<p>The library supports convention lifecycle methods <code>Establish()</code>, <code>Because()</code> and <code>Destroy()</code>. There is no virtual method
+to override, just match the expected signatures:</p>
+<table>
+<thead>
+<tr>
+<th>Signature</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void Establish()</td>
+<td>Establishes the current context - <strong>given</strong> / <strong>arrange</strong></td>
+</tr>
+<tr>
+<td>void Because()</td>
+<td>Triggers the behavior being specified - <strong>when</strong> / <strong>act</strong></td>
+</tr>
+<tr>
+<td>void Destroy()</td>
+<td>Tears down the context</td>
+</tr>
+</tbody>
+</table>
+<p>If your specification requires to run in an async context, it also supports the following:</p>
+<table>
+<thead>
+<tr>
+<th>Signature</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task Establish()</td>
+<td>Establishes the current context - <strong>given</strong> / <strong>arrange</strong></td>
+</tr>
+<tr>
+<td>Task Because()</td>
+<td>Triggers the behavior being specified - <strong>when</strong> / <strong>act</strong></td>
+</tr>
+<tr>
+<td>Task Destroy()</td>
+<td>Tears down the context</td>
+</tr>
+</tbody>
+</table>
+<p>All lifecycle methods are optional and will be ignored if not there.
+Multiple levels of inheritance recursively is supported, meaning that specifications will run all the lifecycle methods
+from the proper level in the hierarchy chain and up or down the hierarchy depending on whether it is arrange/act or teardown.</p>
+<p>To get all this to work, all you need to do is inherit from the <code>Specification</code> type found in <code>DNV.Specifications.&lt;Testframework&gt;</code>.</p>
+<h2 id="structure-and-naming">Structure and naming</h2>
+<p>The general purpose of BDD and specification by example is to make it all very human readable and possible to navigate quite
+easily. New developers can come into the solution and pretty much read up on the specifications and get a glimpse of how the
+system works. So rather than having a <strong>FooTests</strong> class with all the tests, it is recommended to have folders describing the scenario being
+specified. For a unit this could be named <code>for_&lt;name of unit&gt;</code> e.g. : <code>for_SecurityService</code>. If you're testing a more domain
+centric scenario in your system that involves multiple units, the folder name would reflect the name of the scenario e.g.:
+<code>for_logging_in_users</code>.</p>
+<p>Within these folders you'd keep your <strong>when</strong> statements. E.g. <strong>When_authenticating_an_admin_user</strong>. If you want to group things,
+for instance lets say you have multiple behaviors within the concept of <strong>authenticating</strong>, you could then have a folder grouping these
+called <strong>When_authenticating</strong> and then drop in the behavior specifications within this folder <strong>an_admin_user</strong> and <strong>a_null_user</strong>.</p>
+<p>In addition to this you might want to reuse a context. This can quite easily be achieved through inheritance. Structure-wise you'd
+then have a <strong>given</strong> folder and namespace where you'd put the common reusable context - again reflecting what it represents,
+for instance for our authentication scenario: <strong>no_user_authenticated</strong>.</p>
+<p>For a sample of how this looks like, look within the test folders <a href="../../tests/Specifications/">here</a> folder.</p>
+<h2 id="compiler-warnings">Compiler Warnings</h2>
+<p>Since the naming of classes, methods and structure deviates from what is expected by default from the C# compiler, you typically
+end up getting a lot of warnings. These can be turned off by adding a <strong>NoWarn</strong> element within a <strong>PropertyGroup</strong> to your <code>.csproj</code> file:</p>
+<pre><code class="lang-xml">&lt;PropertyGroup&gt;
+    &lt;NoWarn&gt;CA1707;CS1591;RCS1213;IDE0051;IDE1006;CA1051&lt;/NoWarn&gt;
+&lt;/PropertyGroup&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Warning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1707">CA1707</a></td>
+<td>Identifiers should not contain underscores</td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/CA1051">CA1051</a></td>
+<td>Do not declare visible instance fields</td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1591">CS1591</a></td>
+<td>Missing XML comment for publicly visible type or member 'Type_or_Member'</td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0051">IDE0051</a></td>
+<td>Remove unused private member</td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/naming-rules#rule-id-ide1006-naming-rule-violation">IDE1006</a></td>
+<td>Naming rule violation</td>
+</tr>
+<tr>
+<td><a href="https://github.com/JosefPihrt/Roslynator/blob/master/docs/analyzers/RCS1213.md">RCS1213</a></td>
+<td>Remove unused member declaration</td>
+</tr>
+</tbody>
+</table>
+<p>If you're using static code analysis and stylecop and have turned on all rules by default, you might also encounter the following that you want to turn off:</p>
+<table>
+<thead>
+<tr>
+<th>Warning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://documentation.help/StyleCop/SA1636.html">SA1633</a></td>
+<td>File header copyright text must match</td>
+</tr>
+<tr>
+<td><a href="https://documentation.help/StyleCop/SA1649.html">SA1649</a></td>
+<td>File name must match type name</td>
+</tr>
+<tr>
+<td><a href="https://documentation.help/StyleCop/SA1600.html">SA1600</a></td>
+<td>Elements must be documented</td>
+</tr>
+<tr>
+<td><a href="https://documentation.help/StyleCop/SA1310.html">SA1310</a></td>
+<td>Field names must not contain underscore</td>
+</tr>
+<tr>
+<td><a href="https://documentation.help/StyleCop/SA1502.html">SA1502</a></td>
+<td>Element must not be on a single line</td>
+</tr>
+<tr>
+<td><a href="https://documentation.help/StyleCop/SA1134.html">SA1134</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Depending on your solution, you might want to consider suppressnig the following.</p>
+<table>
+<thead>
+<tr>
+<th>Warning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/JosefPihrt/Roslynator/blob/master/docs/analyzers/RCS1090.md">RCS1090</a></td>
+<td>Add call to 'ConfigureAwait'.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code class="lang-csharp">class When_authenticating_an_admin_user : Specification
+{
+    SecurityService subject;
+    UserToken user_token;
+
+    void Establish() =&gt;
+             subject = new SecurityService();
+
+    void Because() =&gt;
+             user_token = subject.Authenticate(&quot;username&quot;, &quot;password&quot;);
+
+    [Fact] void should_indicate_the_users_role() =&gt;
+        user_token.Role.ShouldEqual(Roles.Admin);
+
+    [Fact] void should_have_a_unique_session_id() =&gt;
+        user_token.SessionId.ShouldNotBeNull();
+}
+</code></pre>
+<p>Catching an exception and testing for the correct exception:</p>
+<pre><code class="lang-csharp">class When_authenticating_a_null_user : Specification
+{
+    SecurityService subject;
+    Exception result;
+
+    void Establish() =&gt;
+             subject = new SecurityService();
+
+    void Because() =&gt;
+             result = Catch.Exception(() =&gt; subject.Authenticate(null, null));
+
+    [Fact] void should_throw_user_must_be_specified_exception() =&gt;
+        result.ShouldBeOfExactType&lt;UserMustBeSpecified&gt;();
+}
+</code></pre>
+<p>Building reusable contexts (in a sub-namespace with given):</p>
+<pre><code class="lang-csharp">class no_user_authenticated
+{
+    protected SecurityService subject;
+
+    void Establish() =&gt;
+             subject = new SecurityService();
+}
+</code></pre>
+<p>Refactor one of the specifications:</p>
+<pre><code class="lang-csharp">class When_authenticating_a_null_user : given.no_user_authenticated
+{
+    Exception result;
+
+    void Because() =&gt;
+             result = Catch.Exception(() =&gt; subject.Authenticate(null, null));
+
+    [Fact] void should_throw_user_must_be_specified_exception() =&gt;
+        result.ShouldBeOfExactType&lt;UserMustBeSpecified&gt;();
+}
+</code></pre>
+<p>Supports teardown through <code>destroy</code>:</p>
+<pre><code class="lang-csharp">class no_user_authenticated
+{
+    protected SecurityService subject;
+
+    void Establish() =&gt;
+             subject = new SecurityService();
+
+    void Destroy() =&gt; subject.Dispose();
+
+}
+</code></pre>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackageDoc/blob/master/docs/articles/Specifications/README.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      godspeed
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

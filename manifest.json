@@ -3696,10 +3696,40 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/DependencyInjection/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/DependencyInjection/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/Home.md",
       "output": {
         ".html": {
           "relative_path": "articles/Home.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/OAuth/Api.HttpClient/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/OAuth/Api.HttpClient/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/OAuth/Web/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/OAuth/Web/README.html"
         }
       },
       "version": ""
@@ -3716,20 +3746,63 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/WebProjectTemplates.md",
+      "source_relative_path": "articles/SecretsManager/ConsoleApp/README.md",
       "output": {
         ".html": {
-          "relative_path": "articles/WebProjectTemplates.html"
+          "relative_path": "articles/SecretsManager/ConsoleApp/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/Specifications/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Specifications/README.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/_Sidebar.md",
+      "source_relative_path": "articles/Veracity/Services/ApiV3/Api.Directory/readme.md",
       "output": {
         ".html": {
-          "relative_path": "articles/_Sidebar.html"
+          "relative_path": "articles/Veracity/Services/ApiV3/Api.Directory/readme.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Veracity/Services/ApiV3/Api.My/readme.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Veracity/Services/ApiV3/Api.My/readme.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Veracity/Services/ApiV3/Api.This/readme.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Veracity/Services/ApiV3/Api.This/readme.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/WebProjectTemplates.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/WebProjectTemplates.html"
         }
       },
       "version": ""

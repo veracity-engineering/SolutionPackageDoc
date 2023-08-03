@@ -364,15 +364,6 @@ references:
   commentId: T:DNV.Application.CQRS.Abstractions.ICommand
   fullName: DNV.Application.CQRS.Abstractions.ICommand
   nameWithType: ICommand
-- uid: DNV.Application.CQRS.Abstractions.ICommand`1
-  name: ICommand<TResponse>
-  href: api/DNV.Application.CQRS.Abstractions.ICommand-1.html
-  commentId: T:DNV.Application.CQRS.Abstractions.ICommand`1
-  name.vb: ICommand(Of TResponse)
-  fullName: DNV.Application.CQRS.Abstractions.ICommand<TResponse>
-  fullName.vb: DNV.Application.CQRS.Abstractions.ICommand(Of TResponse)
-  nameWithType: ICommand<TResponse>
-  nameWithType.vb: ICommand(Of TResponse)
 - uid: DNV.Application.CQRS.Abstractions.ICommandHandler`1
   name: ICommandHandler<TCommand>
   href: api/DNV.Application.CQRS.Abstractions.ICommandHandler-1.html
@@ -391,15 +382,15 @@ references:
   fullName.vb: DNV.Application.CQRS.Abstractions.ICommandHandler(Of TCommand, TResult)
   nameWithType: ICommandHandler<TCommand, TResult>
   nameWithType.vb: ICommandHandler(Of TCommand, TResult)
-- uid: DNV.Application.CQRS.Abstractions.IQuery`1
-  name: IQuery<TResponse>
-  href: api/DNV.Application.CQRS.Abstractions.IQuery-1.html
-  commentId: T:DNV.Application.CQRS.Abstractions.IQuery`1
-  name.vb: IQuery(Of TResponse)
-  fullName: DNV.Application.CQRS.Abstractions.IQuery<TResponse>
-  fullName.vb: DNV.Application.CQRS.Abstractions.IQuery(Of TResponse)
-  nameWithType: IQuery<TResponse>
-  nameWithType.vb: IQuery(Of TResponse)
+- uid: DNV.Application.CQRS.Abstractions.ICommand`1
+  name: ICommand<TResponse>
+  href: api/DNV.Application.CQRS.Abstractions.ICommand-1.html
+  commentId: T:DNV.Application.CQRS.Abstractions.ICommand`1
+  name.vb: ICommand(Of TResponse)
+  fullName: DNV.Application.CQRS.Abstractions.ICommand<TResponse>
+  fullName.vb: DNV.Application.CQRS.Abstractions.ICommand(Of TResponse)
+  nameWithType: ICommand<TResponse>
+  nameWithType.vb: ICommand(Of TResponse)
 - uid: DNV.Application.CQRS.Abstractions.IQueryHandler`2
   name: IQueryHandler<TRequest, TResponse>
   href: api/DNV.Application.CQRS.Abstractions.IQueryHandler-2.html
@@ -409,6 +400,15 @@ references:
   fullName.vb: DNV.Application.CQRS.Abstractions.IQueryHandler(Of TRequest, TResponse)
   nameWithType: IQueryHandler<TRequest, TResponse>
   nameWithType.vb: IQueryHandler(Of TRequest, TResponse)
+- uid: DNV.Application.CQRS.Abstractions.IQuery`1
+  name: IQuery<TResponse>
+  href: api/DNV.Application.CQRS.Abstractions.IQuery-1.html
+  commentId: T:DNV.Application.CQRS.Abstractions.IQuery`1
+  name.vb: IQuery(Of TResponse)
+  fullName: DNV.Application.CQRS.Abstractions.IQuery<TResponse>
+  fullName.vb: DNV.Application.CQRS.Abstractions.IQuery(Of TResponse)
+  nameWithType: IQuery<TResponse>
+  nameWithType.vb: IQuery(Of TResponse)
 - uid: DNV.Authorization.UserManagement.Abstraction
   name: DNV.Authorization.UserManagement.Abstraction
   href: api/DNV.Authorization.UserManagement.Abstraction.html
@@ -1304,6 +1304,83 @@ references:
   fullName.vb: DNV.Authorization.UserManagement.Abstraction.IRole(Of TRole).Update
   nameWithType: IRole<TRole>.Update
   nameWithType.vb: IRole(Of TRole).Update
+- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1
+  name: IUserSynchronization<TUser>
+  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html
+  commentId: T:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1
+  name.vb: IUserSynchronization(Of TUser)
+  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>
+  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser)
+  nameWithType: IUserSynchronization<TUser>
+  nameWithType.vb: IUserSynchronization(Of TUser)
+- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PullUserFromSource(`0)
+  name: PullUserFromSource(TUser)
+  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_PullUserFromSource__0_
+  commentId: M:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PullUserFromSource(`0)
+  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.PullUserFromSource(TUser)
+  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).PullUserFromSource(TUser)
+  nameWithType: IUserSynchronization<TUser>.PullUserFromSource(TUser)
+  nameWithType.vb: IUserSynchronization(Of TUser).PullUserFromSource(TUser)
+- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PullUserFromSource*
+  name: PullUserFromSource
+  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_PullUserFromSource_
+  commentId: Overload:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PullUserFromSource
+  isSpec: "True"
+  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.PullUserFromSource
+  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).PullUserFromSource
+  nameWithType: IUserSynchronization<TUser>.PullUserFromSource
+  nameWithType.vb: IUserSynchronization(Of TUser).PullUserFromSource
+- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PushUserToSource(`0)
+  name: PushUserToSource(TUser)
+  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_PushUserToSource__0_
+  commentId: M:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PushUserToSource(`0)
+  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.PushUserToSource(TUser)
+  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).PushUserToSource(TUser)
+  nameWithType: IUserSynchronization<TUser>.PushUserToSource(TUser)
+  nameWithType.vb: IUserSynchronization(Of TUser).PushUserToSource(TUser)
+- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PushUserToSource*
+  name: PushUserToSource
+  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_PushUserToSource_
+  commentId: Overload:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PushUserToSource
+  isSpec: "True"
+  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.PushUserToSource
+  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).PushUserToSource
+  nameWithType: IUserSynchronization<TUser>.PushUserToSource
+  nameWithType.vb: IUserSynchronization(Of TUser).PushUserToSource
+- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtLocal(`0)
+  name: RemoveUserAtLocal(TUser)
+  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_RemoveUserAtLocal__0_
+  commentId: M:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtLocal(`0)
+  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.RemoveUserAtLocal(TUser)
+  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).RemoveUserAtLocal(TUser)
+  nameWithType: IUserSynchronization<TUser>.RemoveUserAtLocal(TUser)
+  nameWithType.vb: IUserSynchronization(Of TUser).RemoveUserAtLocal(TUser)
+- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtLocal*
+  name: RemoveUserAtLocal
+  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_RemoveUserAtLocal_
+  commentId: Overload:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtLocal
+  isSpec: "True"
+  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.RemoveUserAtLocal
+  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).RemoveUserAtLocal
+  nameWithType: IUserSynchronization<TUser>.RemoveUserAtLocal
+  nameWithType.vb: IUserSynchronization(Of TUser).RemoveUserAtLocal
+- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtSource(`0)
+  name: RemoveUserAtSource(TUser)
+  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_RemoveUserAtSource__0_
+  commentId: M:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtSource(`0)
+  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.RemoveUserAtSource(TUser)
+  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).RemoveUserAtSource(TUser)
+  nameWithType: IUserSynchronization<TUser>.RemoveUserAtSource(TUser)
+  nameWithType.vb: IUserSynchronization(Of TUser).RemoveUserAtSource(TUser)
+- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtSource*
+  name: RemoveUserAtSource
+  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_RemoveUserAtSource_
+  commentId: Overload:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtSource
+  isSpec: "True"
+  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.RemoveUserAtSource
+  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).RemoveUserAtSource
+  nameWithType: IUserSynchronization<TUser>.RemoveUserAtSource
+  nameWithType.vb: IUserSynchronization(Of TUser).RemoveUserAtSource
 - uid: DNV.Authorization.UserManagement.Abstraction.IUser`1
   name: IUser<TUser>
   href: api/DNV.Authorization.UserManagement.Abstraction.IUser-1.html
@@ -1489,83 +1566,6 @@ references:
   fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUser(Of TUser).Update
   nameWithType: IUser<TUser>.Update
   nameWithType.vb: IUser(Of TUser).Update
-- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1
-  name: IUserSynchronization<TUser>
-  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html
-  commentId: T:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1
-  name.vb: IUserSynchronization(Of TUser)
-  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>
-  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser)
-  nameWithType: IUserSynchronization<TUser>
-  nameWithType.vb: IUserSynchronization(Of TUser)
-- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PullUserFromSource(`0)
-  name: PullUserFromSource(TUser)
-  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_PullUserFromSource__0_
-  commentId: M:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PullUserFromSource(`0)
-  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.PullUserFromSource(TUser)
-  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).PullUserFromSource(TUser)
-  nameWithType: IUserSynchronization<TUser>.PullUserFromSource(TUser)
-  nameWithType.vb: IUserSynchronization(Of TUser).PullUserFromSource(TUser)
-- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PullUserFromSource*
-  name: PullUserFromSource
-  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_PullUserFromSource_
-  commentId: Overload:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PullUserFromSource
-  isSpec: "True"
-  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.PullUserFromSource
-  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).PullUserFromSource
-  nameWithType: IUserSynchronization<TUser>.PullUserFromSource
-  nameWithType.vb: IUserSynchronization(Of TUser).PullUserFromSource
-- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PushUserToSource(`0)
-  name: PushUserToSource(TUser)
-  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_PushUserToSource__0_
-  commentId: M:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PushUserToSource(`0)
-  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.PushUserToSource(TUser)
-  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).PushUserToSource(TUser)
-  nameWithType: IUserSynchronization<TUser>.PushUserToSource(TUser)
-  nameWithType.vb: IUserSynchronization(Of TUser).PushUserToSource(TUser)
-- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PushUserToSource*
-  name: PushUserToSource
-  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_PushUserToSource_
-  commentId: Overload:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.PushUserToSource
-  isSpec: "True"
-  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.PushUserToSource
-  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).PushUserToSource
-  nameWithType: IUserSynchronization<TUser>.PushUserToSource
-  nameWithType.vb: IUserSynchronization(Of TUser).PushUserToSource
-- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtLocal(`0)
-  name: RemoveUserAtLocal(TUser)
-  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_RemoveUserAtLocal__0_
-  commentId: M:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtLocal(`0)
-  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.RemoveUserAtLocal(TUser)
-  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).RemoveUserAtLocal(TUser)
-  nameWithType: IUserSynchronization<TUser>.RemoveUserAtLocal(TUser)
-  nameWithType.vb: IUserSynchronization(Of TUser).RemoveUserAtLocal(TUser)
-- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtLocal*
-  name: RemoveUserAtLocal
-  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_RemoveUserAtLocal_
-  commentId: Overload:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtLocal
-  isSpec: "True"
-  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.RemoveUserAtLocal
-  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).RemoveUserAtLocal
-  nameWithType: IUserSynchronization<TUser>.RemoveUserAtLocal
-  nameWithType.vb: IUserSynchronization(Of TUser).RemoveUserAtLocal
-- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtSource(`0)
-  name: RemoveUserAtSource(TUser)
-  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_RemoveUserAtSource__0_
-  commentId: M:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtSource(`0)
-  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.RemoveUserAtSource(TUser)
-  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).RemoveUserAtSource(TUser)
-  nameWithType: IUserSynchronization<TUser>.RemoveUserAtSource(TUser)
-  nameWithType.vb: IUserSynchronization(Of TUser).RemoveUserAtSource(TUser)
-- uid: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtSource*
-  name: RemoveUserAtSource
-  href: api/DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html#DNV_Authorization_UserManagement_Abstraction_IUserSynchronization_1_RemoveUserAtSource_
-  commentId: Overload:DNV.Authorization.UserManagement.Abstraction.IUserSynchronization`1.RemoveUserAtSource
-  isSpec: "True"
-  fullName: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization<TUser>.RemoveUserAtSource
-  fullName.vb: DNV.Authorization.UserManagement.Abstraction.IUserSynchronization(Of TUser).RemoveUserAtSource
-  nameWithType: IUserSynchronization<TUser>.RemoveUserAtSource
-  nameWithType.vb: IUserSynchronization(Of TUser).RemoveUserAtSource
 - uid: DNV.Authorization.UserManagement.Abstraction.StringHelper
   name: StringHelper
   href: api/DNV.Authorization.UserManagement.Abstraction.StringHelper.html
@@ -3375,24 +3375,6 @@ references:
   fullName.vb: DNV.Authorization.UserManagement.ApiControllers.RolesController(Of TCompany, TRole, TUser).GetCompanyRoles
   nameWithType: RolesController<TCompany, TRole, TUser>.GetCompanyRoles
   nameWithType.vb: RolesController(Of TCompany, TRole, TUser).GetCompanyRoles
-- uid: DNV.Authorization.UserManagement.ApiControllers.RolesController`3.GetCrosscompanyRole(System.String)
-  name: GetCrosscompanyRole(string)
-  href: api/DNV.Authorization.UserManagement.ApiControllers.RolesController-3.html#DNV_Authorization_UserManagement_ApiControllers_RolesController_3_GetCrosscompanyRole_System_String_
-  commentId: M:DNV.Authorization.UserManagement.ApiControllers.RolesController`3.GetCrosscompanyRole(System.String)
-  name.vb: GetCrosscompanyRole(String)
-  fullName: DNV.Authorization.UserManagement.ApiControllers.RolesController<TCompany, TRole, TUser>.GetCrosscompanyRole(string)
-  fullName.vb: DNV.Authorization.UserManagement.ApiControllers.RolesController(Of TCompany, TRole, TUser).GetCrosscompanyRole(String)
-  nameWithType: RolesController<TCompany, TRole, TUser>.GetCrosscompanyRole(string)
-  nameWithType.vb: RolesController(Of TCompany, TRole, TUser).GetCrosscompanyRole(String)
-- uid: DNV.Authorization.UserManagement.ApiControllers.RolesController`3.GetCrosscompanyRole*
-  name: GetCrosscompanyRole
-  href: api/DNV.Authorization.UserManagement.ApiControllers.RolesController-3.html#DNV_Authorization_UserManagement_ApiControllers_RolesController_3_GetCrosscompanyRole_
-  commentId: Overload:DNV.Authorization.UserManagement.ApiControllers.RolesController`3.GetCrosscompanyRole
-  isSpec: "True"
-  fullName: DNV.Authorization.UserManagement.ApiControllers.RolesController<TCompany, TRole, TUser>.GetCrosscompanyRole
-  fullName.vb: DNV.Authorization.UserManagement.ApiControllers.RolesController(Of TCompany, TRole, TUser).GetCrosscompanyRole
-  nameWithType: RolesController<TCompany, TRole, TUser>.GetCrosscompanyRole
-  nameWithType.vb: RolesController(Of TCompany, TRole, TUser).GetCrosscompanyRole
 - uid: DNV.Authorization.UserManagement.ApiControllers.RolesController`3.GetCrossCompanyRoles(System.String)
   name: GetCrossCompanyRoles(string)
   href: api/DNV.Authorization.UserManagement.ApiControllers.RolesController-3.html#DNV_Authorization_UserManagement_ApiControllers_RolesController_3_GetCrossCompanyRoles_System_String_
@@ -3411,6 +3393,24 @@ references:
   fullName.vb: DNV.Authorization.UserManagement.ApiControllers.RolesController(Of TCompany, TRole, TUser).GetCrossCompanyRoles
   nameWithType: RolesController<TCompany, TRole, TUser>.GetCrossCompanyRoles
   nameWithType.vb: RolesController(Of TCompany, TRole, TUser).GetCrossCompanyRoles
+- uid: DNV.Authorization.UserManagement.ApiControllers.RolesController`3.GetCrosscompanyRole(System.String)
+  name: GetCrosscompanyRole(string)
+  href: api/DNV.Authorization.UserManagement.ApiControllers.RolesController-3.html#DNV_Authorization_UserManagement_ApiControllers_RolesController_3_GetCrosscompanyRole_System_String_
+  commentId: M:DNV.Authorization.UserManagement.ApiControllers.RolesController`3.GetCrosscompanyRole(System.String)
+  name.vb: GetCrosscompanyRole(String)
+  fullName: DNV.Authorization.UserManagement.ApiControllers.RolesController<TCompany, TRole, TUser>.GetCrosscompanyRole(string)
+  fullName.vb: DNV.Authorization.UserManagement.ApiControllers.RolesController(Of TCompany, TRole, TUser).GetCrosscompanyRole(String)
+  nameWithType: RolesController<TCompany, TRole, TUser>.GetCrosscompanyRole(string)
+  nameWithType.vb: RolesController(Of TCompany, TRole, TUser).GetCrosscompanyRole(String)
+- uid: DNV.Authorization.UserManagement.ApiControllers.RolesController`3.GetCrosscompanyRole*
+  name: GetCrosscompanyRole
+  href: api/DNV.Authorization.UserManagement.ApiControllers.RolesController-3.html#DNV_Authorization_UserManagement_ApiControllers_RolesController_3_GetCrosscompanyRole_
+  commentId: Overload:DNV.Authorization.UserManagement.ApiControllers.RolesController`3.GetCrosscompanyRole
+  isSpec: "True"
+  fullName: DNV.Authorization.UserManagement.ApiControllers.RolesController<TCompany, TRole, TUser>.GetCrosscompanyRole
+  fullName.vb: DNV.Authorization.UserManagement.ApiControllers.RolesController(Of TCompany, TRole, TUser).GetCrosscompanyRole
+  nameWithType: RolesController<TCompany, TRole, TUser>.GetCrosscompanyRole
+  nameWithType.vb: RolesController(Of TCompany, TRole, TUser).GetCrosscompanyRole
 - uid: DNV.Authorization.UserManagement.ApiControllers.RolesController`3.GetRole(System.String,System.String)
   name: GetRole(string, string)
   href: api/DNV.Authorization.UserManagement.ApiControllers.RolesController-3.html#DNV_Authorization_UserManagement_ApiControllers_RolesController_3_GetRole_System_String_System_String_
@@ -3715,6 +3715,22 @@ references:
   isSpec: "True"
   fullName: DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel
   nameWithType: UserManagementDefaultSetup.AddUserManagementWithCustomModel
+- uid: DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD*
+  name: AddUserManagementWithCustomModelAndCRUD
+  href: api/DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.html#DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModelAndCRUD_
+  commentId: Overload:DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD
+  isSpec: "True"
+  fullName: DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD
+  nameWithType: UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD
+- uid: DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)
+  name: AddUserManagementWithCustomModelAndCRUD<TCompany, TRole, TUser>(IServiceCollection, UserManagementOptions)
+  href: api/DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.html#DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModelAndCRUD__3_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_
+  commentId: M:DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)
+  name.vb: AddUserManagementWithCustomModelAndCRUD(Of TCompany, TRole, TUser)(IServiceCollection, UserManagementOptions)
+  fullName: DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD<TCompany, TRole, TUser>(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)
+  fullName.vb: DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD(Of TCompany, TRole, TUser)(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)
+  nameWithType: UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD<TCompany, TRole, TUser>(IServiceCollection, UserManagementOptions)
+  nameWithType.vb: UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD(Of TCompany, TRole, TUser)(IServiceCollection, UserManagementOptions)
 - uid: DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)
   name: AddUserManagementWithCustomModel<TUser>(IServiceCollection, UserManagementOptions)
   href: api/DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.html#DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_
@@ -3742,22 +3758,6 @@ references:
   fullName.vb: DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel(Of TCompany, TRole, TUser)(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)
   nameWithType: UserManagementDefaultSetup.AddUserManagementWithCustomModel<TCompany, TRole, TUser>(IServiceCollection, UserManagementOptions)
   nameWithType.vb: UserManagementDefaultSetup.AddUserManagementWithCustomModel(Of TCompany, TRole, TUser)(IServiceCollection, UserManagementOptions)
-- uid: DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD*
-  name: AddUserManagementWithCustomModelAndCRUD
-  href: api/DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.html#DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModelAndCRUD_
-  commentId: Overload:DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD
-  isSpec: "True"
-  fullName: DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD
-  nameWithType: UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD
-- uid: DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)
-  name: AddUserManagementWithCustomModelAndCRUD<TCompany, TRole, TUser>(IServiceCollection, UserManagementOptions)
-  href: api/DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.html#DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModelAndCRUD__3_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_
-  commentId: M:DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)
-  name.vb: AddUserManagementWithCustomModelAndCRUD(Of TCompany, TRole, TUser)(IServiceCollection, UserManagementOptions)
-  fullName: DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD<TCompany, TRole, TUser>(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)
-  fullName.vb: DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD(Of TCompany, TRole, TUser)(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)
-  nameWithType: UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD<TCompany, TRole, TUser>(IServiceCollection, UserManagementOptions)
-  nameWithType.vb: UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD(Of TCompany, TRole, TUser)(IServiceCollection, UserManagementOptions)
 - uid: DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions
   name: UserManagementOptions
   href: api/DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html
@@ -5000,15 +5000,6 @@ references:
   fullName.vb: DNV.Authorization.UserManagement.EFCore.UserPermissionReader(Of TCompany, TRole, TUser).GetPermissions(System.Collections.Generic.IEnumerable(Of String))
   nameWithType: UserPermissionReader<TCompany, TRole, TUser>.GetPermissions(IEnumerable<string>)
   nameWithType.vb: UserPermissionReader(Of TCompany, TRole, TUser).GetPermissions(IEnumerable(Of String))
-- uid: DNV.Authorization.UserManagement.EFCore.UserPermissionReader`3.GetPermissions(System.String,System.String)
-  name: GetPermissions(string, string)
-  href: api/DNV.Authorization.UserManagement.EFCore.UserPermissionReader-3.html#DNV_Authorization_UserManagement_EFCore_UserPermissionReader_3_GetPermissions_System_String_System_String_
-  commentId: M:DNV.Authorization.UserManagement.EFCore.UserPermissionReader`3.GetPermissions(System.String,System.String)
-  name.vb: GetPermissions(String, String)
-  fullName: DNV.Authorization.UserManagement.EFCore.UserPermissionReader<TCompany, TRole, TUser>.GetPermissions(string, string)
-  fullName.vb: DNV.Authorization.UserManagement.EFCore.UserPermissionReader(Of TCompany, TRole, TUser).GetPermissions(String, String)
-  nameWithType: UserPermissionReader<TCompany, TRole, TUser>.GetPermissions(string, string)
-  nameWithType.vb: UserPermissionReader(Of TCompany, TRole, TUser).GetPermissions(String, String)
 - uid: DNV.Authorization.UserManagement.EFCore.UserPermissionReader`3.GetPermissions(System.String)
   name: GetPermissions(string)
   href: api/DNV.Authorization.UserManagement.EFCore.UserPermissionReader-3.html#DNV_Authorization_UserManagement_EFCore_UserPermissionReader_3_GetPermissions_System_String_
@@ -5018,6 +5009,15 @@ references:
   fullName.vb: DNV.Authorization.UserManagement.EFCore.UserPermissionReader(Of TCompany, TRole, TUser).GetPermissions(String)
   nameWithType: UserPermissionReader<TCompany, TRole, TUser>.GetPermissions(string)
   nameWithType.vb: UserPermissionReader(Of TCompany, TRole, TUser).GetPermissions(String)
+- uid: DNV.Authorization.UserManagement.EFCore.UserPermissionReader`3.GetPermissions(System.String,System.String)
+  name: GetPermissions(string, string)
+  href: api/DNV.Authorization.UserManagement.EFCore.UserPermissionReader-3.html#DNV_Authorization_UserManagement_EFCore_UserPermissionReader_3_GetPermissions_System_String_System_String_
+  commentId: M:DNV.Authorization.UserManagement.EFCore.UserPermissionReader`3.GetPermissions(System.String,System.String)
+  name.vb: GetPermissions(String, String)
+  fullName: DNV.Authorization.UserManagement.EFCore.UserPermissionReader<TCompany, TRole, TUser>.GetPermissions(string, string)
+  fullName.vb: DNV.Authorization.UserManagement.EFCore.UserPermissionReader(Of TCompany, TRole, TUser).GetPermissions(String, String)
+  nameWithType: UserPermissionReader<TCompany, TRole, TUser>.GetPermissions(string, string)
+  nameWithType.vb: UserPermissionReader(Of TCompany, TRole, TUser).GetPermissions(String, String)
 - uid: DNV.Authorization.UserManagement.EFCore.UserPermissionReader`3.GetPermissions*
   name: GetPermissions
   href: api/DNV.Authorization.UserManagement.EFCore.UserPermissionReader-3.html#DNV_Authorization_UserManagement_EFCore_UserPermissionReader_3_GetPermissions_
@@ -5320,15 +5320,6 @@ references:
   fullName.vb: DNV.Authorization.Web.Abstraction.IUserPermissionReader.GetPermissions(System.Collections.Generic.IEnumerable(Of String))
   nameWithType: IUserPermissionReader.GetPermissions(IEnumerable<string>)
   nameWithType.vb: IUserPermissionReader.GetPermissions(IEnumerable(Of String))
-- uid: DNV.Authorization.Web.Abstraction.IUserPermissionReader.GetPermissions(System.String,System.String)
-  name: GetPermissions(string, string)
-  href: api/DNV.Authorization.Web.Abstraction.IUserPermissionReader.html#DNV_Authorization_Web_Abstraction_IUserPermissionReader_GetPermissions_System_String_System_String_
-  commentId: M:DNV.Authorization.Web.Abstraction.IUserPermissionReader.GetPermissions(System.String,System.String)
-  name.vb: GetPermissions(String, String)
-  fullName: DNV.Authorization.Web.Abstraction.IUserPermissionReader.GetPermissions(string, string)
-  fullName.vb: DNV.Authorization.Web.Abstraction.IUserPermissionReader.GetPermissions(String, String)
-  nameWithType: IUserPermissionReader.GetPermissions(string, string)
-  nameWithType.vb: IUserPermissionReader.GetPermissions(String, String)
 - uid: DNV.Authorization.Web.Abstraction.IUserPermissionReader.GetPermissions(System.String)
   name: GetPermissions(string)
   href: api/DNV.Authorization.Web.Abstraction.IUserPermissionReader.html#DNV_Authorization_Web_Abstraction_IUserPermissionReader_GetPermissions_System_String_
@@ -5338,6 +5329,15 @@ references:
   fullName.vb: DNV.Authorization.Web.Abstraction.IUserPermissionReader.GetPermissions(String)
   nameWithType: IUserPermissionReader.GetPermissions(string)
   nameWithType.vb: IUserPermissionReader.GetPermissions(String)
+- uid: DNV.Authorization.Web.Abstraction.IUserPermissionReader.GetPermissions(System.String,System.String)
+  name: GetPermissions(string, string)
+  href: api/DNV.Authorization.Web.Abstraction.IUserPermissionReader.html#DNV_Authorization_Web_Abstraction_IUserPermissionReader_GetPermissions_System_String_System_String_
+  commentId: M:DNV.Authorization.Web.Abstraction.IUserPermissionReader.GetPermissions(System.String,System.String)
+  name.vb: GetPermissions(String, String)
+  fullName: DNV.Authorization.Web.Abstraction.IUserPermissionReader.GetPermissions(string, string)
+  fullName.vb: DNV.Authorization.Web.Abstraction.IUserPermissionReader.GetPermissions(String, String)
+  nameWithType: IUserPermissionReader.GetPermissions(string, string)
+  nameWithType.vb: IUserPermissionReader.GetPermissions(String, String)
 - uid: DNV.Authorization.Web.Abstraction.IUserPermissionReader.GetPermissions*
   name: GetPermissions
   href: api/DNV.Authorization.Web.Abstraction.IUserPermissionReader.html#DNV_Authorization_Web_Abstraction_IUserPermissionReader_GetPermissions_
@@ -5470,6 +5470,14 @@ references:
   fullName.vb: DNV.Authorization.Web.AttributeAuthorizationHandler(Of TRequirement, TAttribute)
   nameWithType: AttributeAuthorizationHandler<TRequirement, TAttribute>
   nameWithType.vb: AttributeAuthorizationHandler(Of TRequirement, TAttribute)
+- uid: DNV.Authorization.Web.AttributeAuthorizationHandler`2.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,`0)
+  name: HandleRequirementAsync(AuthorizationHandlerContext, TRequirement)
+  href: api/DNV.Authorization.Web.AttributeAuthorizationHandler-2.html#DNV_Authorization_Web_AttributeAuthorizationHandler_2_HandleRequirementAsync_Microsoft_AspNetCore_Authorization_AuthorizationHandlerContext__0_
+  commentId: M:DNV.Authorization.Web.AttributeAuthorizationHandler`2.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,`0)
+  fullName: DNV.Authorization.Web.AttributeAuthorizationHandler<TRequirement, TAttribute>.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext, TRequirement)
+  fullName.vb: DNV.Authorization.Web.AttributeAuthorizationHandler(Of TRequirement, TAttribute).HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext, TRequirement)
+  nameWithType: AttributeAuthorizationHandler<TRequirement, TAttribute>.HandleRequirementAsync(AuthorizationHandlerContext, TRequirement)
+  nameWithType.vb: AttributeAuthorizationHandler(Of TRequirement, TAttribute).HandleRequirementAsync(AuthorizationHandlerContext, TRequirement)
 - uid: DNV.Authorization.Web.AttributeAuthorizationHandler`2.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,`0,System.Collections.Generic.IEnumerable{`1})
   name: HandleRequirementAsync(AuthorizationHandlerContext, TRequirement, IEnumerable<TAttribute>)
   href: api/DNV.Authorization.Web.AttributeAuthorizationHandler-2.html#DNV_Authorization_Web_AttributeAuthorizationHandler_2_HandleRequirementAsync_Microsoft_AspNetCore_Authorization_AuthorizationHandlerContext__0_System_Collections_Generic_IEnumerable__1__
@@ -5479,14 +5487,6 @@ references:
   fullName.vb: DNV.Authorization.Web.AttributeAuthorizationHandler(Of TRequirement, TAttribute).HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext, TRequirement, System.Collections.Generic.IEnumerable(Of TAttribute))
   nameWithType: AttributeAuthorizationHandler<TRequirement, TAttribute>.HandleRequirementAsync(AuthorizationHandlerContext, TRequirement, IEnumerable<TAttribute>)
   nameWithType.vb: AttributeAuthorizationHandler(Of TRequirement, TAttribute).HandleRequirementAsync(AuthorizationHandlerContext, TRequirement, IEnumerable(Of TAttribute))
-- uid: DNV.Authorization.Web.AttributeAuthorizationHandler`2.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,`0)
-  name: HandleRequirementAsync(AuthorizationHandlerContext, TRequirement)
-  href: api/DNV.Authorization.Web.AttributeAuthorizationHandler-2.html#DNV_Authorization_Web_AttributeAuthorizationHandler_2_HandleRequirementAsync_Microsoft_AspNetCore_Authorization_AuthorizationHandlerContext__0_
-  commentId: M:DNV.Authorization.Web.AttributeAuthorizationHandler`2.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,`0)
-  fullName: DNV.Authorization.Web.AttributeAuthorizationHandler<TRequirement, TAttribute>.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext, TRequirement)
-  fullName.vb: DNV.Authorization.Web.AttributeAuthorizationHandler(Of TRequirement, TAttribute).HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext, TRequirement)
-  nameWithType: AttributeAuthorizationHandler<TRequirement, TAttribute>.HandleRequirementAsync(AuthorizationHandlerContext, TRequirement)
-  nameWithType.vb: AttributeAuthorizationHandler(Of TRequirement, TAttribute).HandleRequirementAsync(AuthorizationHandlerContext, TRequirement)
 - uid: DNV.Authorization.Web.AttributeAuthorizationHandler`2.HandleRequirementAsync*
   name: HandleRequirementAsync
   href: api/DNV.Authorization.Web.AttributeAuthorizationHandler-2.html#DNV_Authorization_Web_AttributeAuthorizationHandler_2_HandleRequirementAsync_
@@ -5587,12 +5587,6 @@ references:
   commentId: T:DNV.Authorization.Web.Constants
   fullName: DNV.Authorization.Web.Constants
   nameWithType: Constants
-- uid: DNV.Authorization.Web.Constants.AUTHORIZATION_COMPANYID
-  name: AUTHORIZATION_COMPANYID
-  href: api/DNV.Authorization.Web.Constants.html#DNV_Authorization_Web_Constants_AUTHORIZATION_COMPANYID
-  commentId: F:DNV.Authorization.Web.Constants.AUTHORIZATION_COMPANYID
-  fullName: DNV.Authorization.Web.Constants.AUTHORIZATION_COMPANYID
-  nameWithType: Constants.AUTHORIZATION_COMPANYID
 - uid: DNV.Authorization.Web.Constants.AUTHORIZATIONCOMPANYID
   name: AUTHORIZATIONCOMPANYID
   href: api/DNV.Authorization.Web.Constants.html#DNV_Authorization_Web_Constants_AUTHORIZATIONCOMPANYID
@@ -5611,18 +5605,24 @@ references:
   commentId: F:DNV.Authorization.Web.Constants.AUTHORIZATIONTENANTROUTE
   fullName: DNV.Authorization.Web.Constants.AUTHORIZATIONTENANTROUTE
   nameWithType: Constants.AUTHORIZATIONTENANTROUTE
-- uid: DNV.Authorization.Web.Constants.COMPANY_ROLE_NOT_RELEVANT
-  name: COMPANY_ROLE_NOT_RELEVANT
-  href: api/DNV.Authorization.Web.Constants.html#DNV_Authorization_Web_Constants_COMPANY_ROLE_NOT_RELEVANT
-  commentId: F:DNV.Authorization.Web.Constants.COMPANY_ROLE_NOT_RELEVANT
-  fullName: DNV.Authorization.Web.Constants.COMPANY_ROLE_NOT_RELEVANT
-  nameWithType: Constants.COMPANY_ROLE_NOT_RELEVANT
+- uid: DNV.Authorization.Web.Constants.AUTHORIZATION_COMPANYID
+  name: AUTHORIZATION_COMPANYID
+  href: api/DNV.Authorization.Web.Constants.html#DNV_Authorization_Web_Constants_AUTHORIZATION_COMPANYID
+  commentId: F:DNV.Authorization.Web.Constants.AUTHORIZATION_COMPANYID
+  fullName: DNV.Authorization.Web.Constants.AUTHORIZATION_COMPANYID
+  nameWithType: Constants.AUTHORIZATION_COMPANYID
 - uid: DNV.Authorization.Web.Constants.COMPANYID
   name: COMPANYID
   href: api/DNV.Authorization.Web.Constants.html#DNV_Authorization_Web_Constants_COMPANYID
   commentId: F:DNV.Authorization.Web.Constants.COMPANYID
   fullName: DNV.Authorization.Web.Constants.COMPANYID
   nameWithType: Constants.COMPANYID
+- uid: DNV.Authorization.Web.Constants.COMPANY_ROLE_NOT_RELEVANT
+  name: COMPANY_ROLE_NOT_RELEVANT
+  href: api/DNV.Authorization.Web.Constants.html#DNV_Authorization_Web_Constants_COMPANY_ROLE_NOT_RELEVANT
+  commentId: F:DNV.Authorization.Web.Constants.COMPANY_ROLE_NOT_RELEVANT
+  fullName: DNV.Authorization.Web.Constants.COMPANY_ROLE_NOT_RELEVANT
+  nameWithType: Constants.COMPANY_ROLE_NOT_RELEVANT
 - uid: DNV.Authorization.Web.Constants.IGNORE_PERMISSIONS
   name: IGNORE_PERMISSIONS
   href: api/DNV.Authorization.Web.Constants.html#DNV_Authorization_Web_Constants_IGNORE_PERMISSIONS
@@ -5841,24 +5841,6 @@ references:
   isSpec: "True"
   fullName: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization
   nameWithType: PermissionDefaultSetup.AddPermissionAuthorization
-- uid: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.Web.Abstraction.PermissionOptions)
-  name: AddPermissionAuthorization<TUserPermissionReader>(IServiceCollection, PermissionOptions)
-  href: api/DNV.Authorization.Web.PermissionDefaultSetup.html#DNV_Authorization_Web_PermissionDefaultSetup_AddPermissionAuthorization__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_Web_Abstraction_PermissionOptions_
-  commentId: M:DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.Web.Abstraction.PermissionOptions)
-  name.vb: AddPermissionAuthorization(Of TUserPermissionReader)(IServiceCollection, PermissionOptions)
-  fullName: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization<TUserPermissionReader>(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.Web.Abstraction.PermissionOptions)
-  fullName.vb: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization(Of TUserPermissionReader)(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.Web.Abstraction.PermissionOptions)
-  nameWithType: PermissionDefaultSetup.AddPermissionAuthorization<TUserPermissionReader>(IServiceCollection, PermissionOptions)
-  nameWithType.vb: PermissionDefaultSetup.AddPermissionAuthorization(Of TUserPermissionReader)(IServiceCollection, PermissionOptions)
-- uid: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.Web.Abstraction.PermissionOptions)
-  name: AddPermissionAuthorization<TUserPermissionReader, TPermissionRepository>(IServiceCollection, PermissionOptions)
-  href: api/DNV.Authorization.Web.PermissionDefaultSetup.html#DNV_Authorization_Web_PermissionDefaultSetup_AddPermissionAuthorization__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_Web_Abstraction_PermissionOptions_
-  commentId: M:DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.Web.Abstraction.PermissionOptions)
-  name.vb: AddPermissionAuthorization(Of TUserPermissionReader, TPermissionRepository)(IServiceCollection, PermissionOptions)
-  fullName: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization<TUserPermissionReader, TPermissionRepository>(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.Web.Abstraction.PermissionOptions)
-  fullName.vb: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization(Of TUserPermissionReader, TPermissionRepository)(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.Web.Abstraction.PermissionOptions)
-  nameWithType: PermissionDefaultSetup.AddPermissionAuthorization<TUserPermissionReader, TPermissionRepository>(IServiceCollection, PermissionOptions)
-  nameWithType.vb: PermissionDefaultSetup.AddPermissionAuthorization(Of TUserPermissionReader, TPermissionRepository)(IServiceCollection, PermissionOptions)
 - uid: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorizationWithoutUserPermissionReader(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.Web.Abstraction.PermissionOptions)
   name: AddPermissionAuthorizationWithoutUserPermissionReader(IServiceCollection, PermissionOptions)
   href: api/DNV.Authorization.Web.PermissionDefaultSetup.html#DNV_Authorization_Web_PermissionDefaultSetup_AddPermissionAuthorizationWithoutUserPermissionReader_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_Web_Abstraction_PermissionOptions_
@@ -5881,6 +5863,24 @@ references:
   fullName.vb: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorizationWithoutUserPermissionReader(Of TPermissionRepository)(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.Web.Abstraction.PermissionOptions)
   nameWithType: PermissionDefaultSetup.AddPermissionAuthorizationWithoutUserPermissionReader<TPermissionRepository>(IServiceCollection, PermissionOptions)
   nameWithType.vb: PermissionDefaultSetup.AddPermissionAuthorizationWithoutUserPermissionReader(Of TPermissionRepository)(IServiceCollection, PermissionOptions)
+- uid: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.Web.Abstraction.PermissionOptions)
+  name: AddPermissionAuthorization<TUserPermissionReader>(IServiceCollection, PermissionOptions)
+  href: api/DNV.Authorization.Web.PermissionDefaultSetup.html#DNV_Authorization_Web_PermissionDefaultSetup_AddPermissionAuthorization__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_Web_Abstraction_PermissionOptions_
+  commentId: M:DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.Web.Abstraction.PermissionOptions)
+  name.vb: AddPermissionAuthorization(Of TUserPermissionReader)(IServiceCollection, PermissionOptions)
+  fullName: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization<TUserPermissionReader>(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.Web.Abstraction.PermissionOptions)
+  fullName.vb: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization(Of TUserPermissionReader)(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.Web.Abstraction.PermissionOptions)
+  nameWithType: PermissionDefaultSetup.AddPermissionAuthorization<TUserPermissionReader>(IServiceCollection, PermissionOptions)
+  nameWithType.vb: PermissionDefaultSetup.AddPermissionAuthorization(Of TUserPermissionReader)(IServiceCollection, PermissionOptions)
+- uid: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.Web.Abstraction.PermissionOptions)
+  name: AddPermissionAuthorization<TUserPermissionReader, TPermissionRepository>(IServiceCollection, PermissionOptions)
+  href: api/DNV.Authorization.Web.PermissionDefaultSetup.html#DNV_Authorization_Web_PermissionDefaultSetup_AddPermissionAuthorization__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_Web_Abstraction_PermissionOptions_
+  commentId: M:DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.Web.Abstraction.PermissionOptions)
+  name.vb: AddPermissionAuthorization(Of TUserPermissionReader, TPermissionRepository)(IServiceCollection, PermissionOptions)
+  fullName: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization<TUserPermissionReader, TPermissionRepository>(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.Web.Abstraction.PermissionOptions)
+  fullName.vb: DNV.Authorization.Web.PermissionDefaultSetup.AddPermissionAuthorization(Of TUserPermissionReader, TPermissionRepository)(Microsoft.Extensions.DependencyInjection.IServiceCollection, DNV.Authorization.Web.Abstraction.PermissionOptions)
+  nameWithType: PermissionDefaultSetup.AddPermissionAuthorization<TUserPermissionReader, TPermissionRepository>(IServiceCollection, PermissionOptions)
+  nameWithType.vb: PermissionDefaultSetup.AddPermissionAuthorization(Of TUserPermissionReader, TPermissionRepository)(IServiceCollection, PermissionOptions)
 - uid: DNV.Authorization.Web.PermissionDefaultSetup.PouplateRoleOfPrincipal(Microsoft.AspNetCore.Http.HttpContext,System.Security.Claims.ClaimsPrincipal,System.String)
   name: PouplateRoleOfPrincipal(HttpContext, ClaimsPrincipal, string)
   href: api/DNV.Authorization.Web.PermissionDefaultSetup.html#DNV_Authorization_Web_PermissionDefaultSetup_PouplateRoleOfPrincipal_Microsoft_AspNetCore_Http_HttpContext_System_Security_Claims_ClaimsPrincipal_System_String_
@@ -6226,15 +6226,6 @@ references:
   isSpec: "True"
   fullName: DNV.Common.Core.Diagnostics.Throws.IfNull
   nameWithType: Throws.IfNull
-- uid: DNV.Common.Core.Diagnostics.Throws.IfNull``1(``0,System.String)
-  name: IfNull<T>(T?, string)
-  href: api/DNV.Common.Core.Diagnostics.Throws.html#DNV_Common_Core_Diagnostics_Throws_IfNull__1___0_System_String_
-  commentId: M:DNV.Common.Core.Diagnostics.Throws.IfNull``1(``0,System.String)
-  name.vb: IfNull(Of T)(T, String)
-  fullName: DNV.Common.Core.Diagnostics.Throws.IfNull<T>(T?, string)
-  fullName.vb: DNV.Common.Core.Diagnostics.Throws.IfNull(Of T)(T, String)
-  nameWithType: Throws.IfNull<T>(T?, string)
-  nameWithType.vb: Throws.IfNull(Of T)(T, String)
 - uid: DNV.Common.Core.Diagnostics.Throws.IfNullOrEmpty(System.String,System.String)
   name: IfNullOrEmpty(string?, string)
   href: api/DNV.Common.Core.Diagnostics.Throws.html#DNV_Common_Core_Diagnostics_Throws_IfNullOrEmpty_System_String_System_String_
@@ -6310,6 +6301,15 @@ references:
   isSpec: "True"
   fullName: DNV.Common.Core.Diagnostics.Throws.IfNullOrWhitespace
   nameWithType: Throws.IfNullOrWhitespace
+- uid: DNV.Common.Core.Diagnostics.Throws.IfNull``1(``0,System.String)
+  name: IfNull<T>(T?, string)
+  href: api/DNV.Common.Core.Diagnostics.Throws.html#DNV_Common_Core_Diagnostics_Throws_IfNull__1___0_System_String_
+  commentId: M:DNV.Common.Core.Diagnostics.Throws.IfNull``1(``0,System.String)
+  name.vb: IfNull(Of T)(T, String)
+  fullName: DNV.Common.Core.Diagnostics.Throws.IfNull<T>(T?, string)
+  fullName.vb: DNV.Common.Core.Diagnostics.Throws.IfNull(Of T)(T, String)
+  nameWithType: Throws.IfNull<T>(T?, string)
+  nameWithType.vb: Throws.IfNull(Of T)(T, String)
 - uid: DNV.Common.Core.Diagnostics.Throws.IfOutOfRange*
   name: IfOutOfRange
   href: api/DNV.Common.Core.Diagnostics.Throws.html#DNV_Common_Core_Diagnostics_Throws_IfOutOfRange_
@@ -6484,6 +6484,37 @@ references:
   isSpec: "True"
   fullName: DNV.Common.Core.Pagination.PageParam.PageSize
   nameWithType: PageParam.PageSize
+- uid: DNV.Common.Core.Pagination.PaginatedResultExtensions
+  name: PaginatedResultExtensions
+  href: api/DNV.Common.Core.Pagination.PaginatedResultExtensions.html
+  commentId: T:DNV.Common.Core.Pagination.PaginatedResultExtensions
+  fullName: DNV.Common.Core.Pagination.PaginatedResultExtensions
+  nameWithType: PaginatedResultExtensions
+- uid: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate*
+  name: Paginate
+  href: api/DNV.Common.Core.Pagination.PaginatedResultExtensions.html#DNV_Common_Core_Pagination_PaginatedResultExtensions_Paginate_
+  commentId: Overload:DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate
+  isSpec: "True"
+  fullName: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate
+  nameWithType: PaginatedResultExtensions.Paginate
+- uid: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate``1(System.Collections.Generic.IEnumerable{``0},DNV.Common.Core.Pagination.PageParam,System.Nullable{System.Int32})
+  name: Paginate<T>(IEnumerable<T>, PageParam, int?)
+  href: api/DNV.Common.Core.Pagination.PaginatedResultExtensions.html#DNV_Common_Core_Pagination_PaginatedResultExtensions_Paginate__1_System_Collections_Generic_IEnumerable___0__DNV_Common_Core_Pagination_PageParam_System_Nullable_System_Int32__
+  commentId: M:DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate``1(System.Collections.Generic.IEnumerable{``0},DNV.Common.Core.Pagination.PageParam,System.Nullable{System.Int32})
+  name.vb: Paginate(Of T)(IEnumerable(Of T), PageParam, Integer?)
+  fullName: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate<T>(System.Collections.Generic.IEnumerable<T>, DNV.Common.Core.Pagination.PageParam, int?)
+  fullName.vb: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate(Of T)(System.Collections.Generic.IEnumerable(Of T), DNV.Common.Core.Pagination.PageParam, Integer?)
+  nameWithType: PaginatedResultExtensions.Paginate<T>(IEnumerable<T>, PageParam, int?)
+  nameWithType.vb: PaginatedResultExtensions.Paginate(Of T)(IEnumerable(Of T), PageParam, Integer?)
+- uid: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32,System.Nullable{System.Int32})
+  name: Paginate<T>(IEnumerable<T>, int, int, int?)
+  href: api/DNV.Common.Core.Pagination.PaginatedResultExtensions.html#DNV_Common_Core_Pagination_PaginatedResultExtensions_Paginate__1_System_Collections_Generic_IEnumerable___0__System_Int32_System_Int32_System_Nullable_System_Int32__
+  commentId: M:DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32,System.Nullable{System.Int32})
+  name.vb: Paginate(Of T)(IEnumerable(Of T), Integer, Integer, Integer?)
+  fullName: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate<T>(System.Collections.Generic.IEnumerable<T>, int, int, int?)
+  fullName.vb: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate(Of T)(System.Collections.Generic.IEnumerable(Of T), Integer, Integer, Integer?)
+  nameWithType: PaginatedResultExtensions.Paginate<T>(IEnumerable<T>, int, int, int?)
+  nameWithType.vb: PaginatedResultExtensions.Paginate(Of T)(IEnumerable(Of T), Integer, Integer, Integer?)
 - uid: DNV.Common.Core.Pagination.PaginatedResult`1
   name: PaginatedResult<T>
   href: api/DNV.Common.Core.Pagination.PaginatedResult-1.html
@@ -6597,37 +6628,6 @@ references:
   fullName.vb: DNV.Common.Core.Pagination.PaginatedResult(Of T).TotalPages
   nameWithType: PaginatedResult<T>.TotalPages
   nameWithType.vb: PaginatedResult(Of T).TotalPages
-- uid: DNV.Common.Core.Pagination.PaginatedResultExtensions
-  name: PaginatedResultExtensions
-  href: api/DNV.Common.Core.Pagination.PaginatedResultExtensions.html
-  commentId: T:DNV.Common.Core.Pagination.PaginatedResultExtensions
-  fullName: DNV.Common.Core.Pagination.PaginatedResultExtensions
-  nameWithType: PaginatedResultExtensions
-- uid: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate*
-  name: Paginate
-  href: api/DNV.Common.Core.Pagination.PaginatedResultExtensions.html#DNV_Common_Core_Pagination_PaginatedResultExtensions_Paginate_
-  commentId: Overload:DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate
-  isSpec: "True"
-  fullName: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate
-  nameWithType: PaginatedResultExtensions.Paginate
-- uid: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate``1(System.Collections.Generic.IEnumerable{``0},DNV.Common.Core.Pagination.PageParam,System.Nullable{System.Int32})
-  name: Paginate<T>(IEnumerable<T>, PageParam, int?)
-  href: api/DNV.Common.Core.Pagination.PaginatedResultExtensions.html#DNV_Common_Core_Pagination_PaginatedResultExtensions_Paginate__1_System_Collections_Generic_IEnumerable___0__DNV_Common_Core_Pagination_PageParam_System_Nullable_System_Int32__
-  commentId: M:DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate``1(System.Collections.Generic.IEnumerable{``0},DNV.Common.Core.Pagination.PageParam,System.Nullable{System.Int32})
-  name.vb: Paginate(Of T)(IEnumerable(Of T), PageParam, Integer?)
-  fullName: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate<T>(System.Collections.Generic.IEnumerable<T>, DNV.Common.Core.Pagination.PageParam, int?)
-  fullName.vb: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate(Of T)(System.Collections.Generic.IEnumerable(Of T), DNV.Common.Core.Pagination.PageParam, Integer?)
-  nameWithType: PaginatedResultExtensions.Paginate<T>(IEnumerable<T>, PageParam, int?)
-  nameWithType.vb: PaginatedResultExtensions.Paginate(Of T)(IEnumerable(Of T), PageParam, Integer?)
-- uid: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32,System.Nullable{System.Int32})
-  name: Paginate<T>(IEnumerable<T>, int, int, int?)
-  href: api/DNV.Common.Core.Pagination.PaginatedResultExtensions.html#DNV_Common_Core_Pagination_PaginatedResultExtensions_Paginate__1_System_Collections_Generic_IEnumerable___0__System_Int32_System_Int32_System_Nullable_System_Int32__
-  commentId: M:DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32,System.Nullable{System.Int32})
-  name.vb: Paginate(Of T)(IEnumerable(Of T), Integer, Integer, Integer?)
-  fullName: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate<T>(System.Collections.Generic.IEnumerable<T>, int, int, int?)
-  fullName.vb: DNV.Common.Core.Pagination.PaginatedResultExtensions.Paginate(Of T)(System.Collections.Generic.IEnumerable(Of T), Integer, Integer, Integer?)
-  nameWithType: PaginatedResultExtensions.Paginate<T>(IEnumerable<T>, int, int, int?)
-  nameWithType.vb: PaginatedResultExtensions.Paginate(Of T)(IEnumerable(Of T), Integer, Integer, Integer?)
 - uid: DNV.Common.Core.Patterns
   name: DNV.Common.Core.Patterns
   href: api/DNV.Common.Core.Patterns.html
@@ -7562,15 +7562,6 @@ references:
   isSpec: "True"
   fullName: DNV.Context.HttpClient.HttpClientExtensions.AddHttpClientContext
   nameWithType: HttpClientExtensions.AddHttpClientContext
-- uid: DNV.Context.HttpClient.HttpClientExtensions.AddHttpClientContext``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.IServiceProvider,System.Net.Http.HttpClient},System.Action{System.Text.Json.JsonSerializerOptions})
-  name: AddHttpClientContext<T>(IServiceCollection, Action<IServiceProvider, HttpClient>?, Action<JsonSerializerOptions>?)
-  href: api/DNV.Context.HttpClient.HttpClientExtensions.html#DNV_Context_HttpClient_HttpClientExtensions_AddHttpClientContext__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_System_IServiceProvider_System_Net_Http_HttpClient__System_Action_System_Text_Json_JsonSerializerOptions__
-  commentId: M:DNV.Context.HttpClient.HttpClientExtensions.AddHttpClientContext``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.IServiceProvider,System.Net.Http.HttpClient},System.Action{System.Text.Json.JsonSerializerOptions})
-  name.vb: AddHttpClientContext(Of T)(IServiceCollection, Action(Of IServiceProvider, HttpClient), Action(Of JsonSerializerOptions))
-  fullName: DNV.Context.HttpClient.HttpClientExtensions.AddHttpClientContext<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<System.IServiceProvider, System.Net.Http.HttpClient>?, System.Action<System.Text.Json.JsonSerializerOptions>?)
-  fullName.vb: DNV.Context.HttpClient.HttpClientExtensions.AddHttpClientContext(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of System.IServiceProvider, System.Net.Http.HttpClient), System.Action(Of System.Text.Json.JsonSerializerOptions))
-  nameWithType: HttpClientExtensions.AddHttpClientContext<T>(IServiceCollection, Action<IServiceProvider, HttpClient>?, Action<JsonSerializerOptions>?)
-  nameWithType.vb: HttpClientExtensions.AddHttpClientContext(Of T)(IServiceCollection, Action(Of IServiceProvider, HttpClient), Action(Of JsonSerializerOptions))
 - uid: DNV.Context.HttpClient.HttpClientExtensions.AddHttpClientContextHandler*
   name: AddHttpClientContextHandler
   href: api/DNV.Context.HttpClient.HttpClientExtensions.html#DNV_Context_HttpClient_HttpClientExtensions_AddHttpClientContextHandler_
@@ -7587,6 +7578,15 @@ references:
   fullName.vb: DNV.Context.HttpClient.HttpClientExtensions.AddHttpClientContextHandler(Of T)(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)
   nameWithType: HttpClientExtensions.AddHttpClientContextHandler<T>(IHttpClientBuilder)
   nameWithType.vb: HttpClientExtensions.AddHttpClientContextHandler(Of T)(IHttpClientBuilder)
+- uid: DNV.Context.HttpClient.HttpClientExtensions.AddHttpClientContext``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.IServiceProvider,System.Net.Http.HttpClient},System.Action{System.Text.Json.JsonSerializerOptions})
+  name: AddHttpClientContext<T>(IServiceCollection, Action<IServiceProvider, HttpClient>?, Action<JsonSerializerOptions>?)
+  href: api/DNV.Context.HttpClient.HttpClientExtensions.html#DNV_Context_HttpClient_HttpClientExtensions_AddHttpClientContext__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_System_IServiceProvider_System_Net_Http_HttpClient__System_Action_System_Text_Json_JsonSerializerOptions__
+  commentId: M:DNV.Context.HttpClient.HttpClientExtensions.AddHttpClientContext``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.IServiceProvider,System.Net.Http.HttpClient},System.Action{System.Text.Json.JsonSerializerOptions})
+  name.vb: AddHttpClientContext(Of T)(IServiceCollection, Action(Of IServiceProvider, HttpClient), Action(Of JsonSerializerOptions))
+  fullName: DNV.Context.HttpClient.HttpClientExtensions.AddHttpClientContext<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<System.IServiceProvider, System.Net.Http.HttpClient>?, System.Action<System.Text.Json.JsonSerializerOptions>?)
+  fullName.vb: DNV.Context.HttpClient.HttpClientExtensions.AddHttpClientContext(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of System.IServiceProvider, System.Net.Http.HttpClient), System.Action(Of System.Text.Json.JsonSerializerOptions))
+  nameWithType: HttpClientExtensions.AddHttpClientContext<T>(IServiceCollection, Action<IServiceProvider, HttpClient>?, Action<JsonSerializerOptions>?)
+  nameWithType.vb: HttpClientExtensions.AddHttpClientContext(Of T)(IServiceCollection, Action(Of IServiceProvider, HttpClient), Action(Of JsonSerializerOptions))
 - uid: DNV.Context.HttpClient.HttpClientExtensions.CreateContextClient*
   name: CreateContextClient
   href: api/DNV.Context.HttpClient.HttpClientExtensions.html#DNV_Context_HttpClient_HttpClientExtensions_CreateContextClient_
@@ -7970,12 +7970,6 @@ references:
   commentId: N:DNV.DependencyInjection.Abstractions
   fullName: DNV.DependencyInjection.Abstractions
   nameWithType: DNV.DependencyInjection.Abstractions
-- uid: DNV.DependencyInjection.Abstractions.DisableAutoRegistrationAttribute
-  name: DisableAutoRegistrationAttribute
-  href: api/DNV.DependencyInjection.Abstractions.DisableAutoRegistrationAttribute.html
-  commentId: T:DNV.DependencyInjection.Abstractions.DisableAutoRegistrationAttribute
-  fullName: DNV.DependencyInjection.Abstractions.DisableAutoRegistrationAttribute
-  nameWithType: DisableAutoRegistrationAttribute
 - uid: DNV.DependencyInjection.Abstractions.DNVServiceProviderOptions
   name: DNVServiceProviderOptions
   href: api/DNV.DependencyInjection.Abstractions.DNVServiceProviderOptions.html
@@ -8073,38 +8067,18 @@ references:
   isSpec: "True"
   fullName: DNV.DependencyInjection.Abstractions.DNVServiceProviderOptions.IgnoredBaseTypes
   nameWithType: DNVServiceProviderOptions.IgnoredBaseTypes
+- uid: DNV.DependencyInjection.Abstractions.DisableAutoRegistrationAttribute
+  name: DisableAutoRegistrationAttribute
+  href: api/DNV.DependencyInjection.Abstractions.DisableAutoRegistrationAttribute.html
+  commentId: T:DNV.DependencyInjection.Abstractions.DisableAutoRegistrationAttribute
+  fullName: DNV.DependencyInjection.Abstractions.DisableAutoRegistrationAttribute
+  nameWithType: DisableAutoRegistrationAttribute
 - uid: DNV.DependencyInjection.Abstractions.ICanAddServices
   name: ICanAddServices
   href: api/DNV.DependencyInjection.Abstractions.ICanAddServices.html
   commentId: T:DNV.DependencyInjection.Abstractions.ICanAddServices
   fullName: DNV.DependencyInjection.Abstractions.ICanAddServices
   nameWithType: ICanAddServices
-- uid: DNV.DependencyInjection.Abstractions.ICanAddServices`1
-  name: ICanAddServices<TContainerBuilder>
-  href: api/DNV.DependencyInjection.Abstractions.ICanAddServices-1.html
-  commentId: T:DNV.DependencyInjection.Abstractions.ICanAddServices`1
-  name.vb: ICanAddServices(Of TContainerBuilder)
-  fullName: DNV.DependencyInjection.Abstractions.ICanAddServices<TContainerBuilder>
-  fullName.vb: DNV.DependencyInjection.Abstractions.ICanAddServices(Of TContainerBuilder)
-  nameWithType: ICanAddServices<TContainerBuilder>
-  nameWithType.vb: ICanAddServices(Of TContainerBuilder)
-- uid: DNV.DependencyInjection.Abstractions.ICanAddServices`1.AddTo(`0)
-  name: AddTo(TContainerBuilder)
-  href: api/DNV.DependencyInjection.Abstractions.ICanAddServices-1.html#DNV_DependencyInjection_Abstractions_ICanAddServices_1_AddTo__0_
-  commentId: M:DNV.DependencyInjection.Abstractions.ICanAddServices`1.AddTo(`0)
-  fullName: DNV.DependencyInjection.Abstractions.ICanAddServices<TContainerBuilder>.AddTo(TContainerBuilder)
-  fullName.vb: DNV.DependencyInjection.Abstractions.ICanAddServices(Of TContainerBuilder).AddTo(TContainerBuilder)
-  nameWithType: ICanAddServices<TContainerBuilder>.AddTo(TContainerBuilder)
-  nameWithType.vb: ICanAddServices(Of TContainerBuilder).AddTo(TContainerBuilder)
-- uid: DNV.DependencyInjection.Abstractions.ICanAddServices`1.AddTo*
-  name: AddTo
-  href: api/DNV.DependencyInjection.Abstractions.ICanAddServices-1.html#DNV_DependencyInjection_Abstractions_ICanAddServices_1_AddTo_
-  commentId: Overload:DNV.DependencyInjection.Abstractions.ICanAddServices`1.AddTo
-  isSpec: "True"
-  fullName: DNV.DependencyInjection.Abstractions.ICanAddServices<TContainerBuilder>.AddTo
-  fullName.vb: DNV.DependencyInjection.Abstractions.ICanAddServices(Of TContainerBuilder).AddTo
-  nameWithType: ICanAddServices<TContainerBuilder>.AddTo
-  nameWithType.vb: ICanAddServices(Of TContainerBuilder).AddTo
 - uid: DNV.DependencyInjection.Abstractions.ICanAddServicesForTypesWith`1
   name: ICanAddServicesForTypesWith<TAttribute>
   href: api/DNV.DependencyInjection.Abstractions.ICanAddServicesForTypesWith-1.html
@@ -8140,6 +8114,32 @@ references:
   fullName.vb: DNV.DependencyInjection.Abstractions.ICanAddServicesForTypesWith(Of TAttribute, TContainerBuilder).AddServiceFor
   nameWithType: ICanAddServicesForTypesWith<TAttribute, TContainerBuilder>.AddServiceFor
   nameWithType.vb: ICanAddServicesForTypesWith(Of TAttribute, TContainerBuilder).AddServiceFor
+- uid: DNV.DependencyInjection.Abstractions.ICanAddServices`1
+  name: ICanAddServices<TContainerBuilder>
+  href: api/DNV.DependencyInjection.Abstractions.ICanAddServices-1.html
+  commentId: T:DNV.DependencyInjection.Abstractions.ICanAddServices`1
+  name.vb: ICanAddServices(Of TContainerBuilder)
+  fullName: DNV.DependencyInjection.Abstractions.ICanAddServices<TContainerBuilder>
+  fullName.vb: DNV.DependencyInjection.Abstractions.ICanAddServices(Of TContainerBuilder)
+  nameWithType: ICanAddServices<TContainerBuilder>
+  nameWithType.vb: ICanAddServices(Of TContainerBuilder)
+- uid: DNV.DependencyInjection.Abstractions.ICanAddServices`1.AddTo(`0)
+  name: AddTo(TContainerBuilder)
+  href: api/DNV.DependencyInjection.Abstractions.ICanAddServices-1.html#DNV_DependencyInjection_Abstractions_ICanAddServices_1_AddTo__0_
+  commentId: M:DNV.DependencyInjection.Abstractions.ICanAddServices`1.AddTo(`0)
+  fullName: DNV.DependencyInjection.Abstractions.ICanAddServices<TContainerBuilder>.AddTo(TContainerBuilder)
+  fullName.vb: DNV.DependencyInjection.Abstractions.ICanAddServices(Of TContainerBuilder).AddTo(TContainerBuilder)
+  nameWithType: ICanAddServices<TContainerBuilder>.AddTo(TContainerBuilder)
+  nameWithType.vb: ICanAddServices(Of TContainerBuilder).AddTo(TContainerBuilder)
+- uid: DNV.DependencyInjection.Abstractions.ICanAddServices`1.AddTo*
+  name: AddTo
+  href: api/DNV.DependencyInjection.Abstractions.ICanAddServices-1.html#DNV_DependencyInjection_Abstractions_ICanAddServices_1_AddTo_
+  commentId: Overload:DNV.DependencyInjection.Abstractions.ICanAddServices`1.AddTo
+  isSpec: "True"
+  fullName: DNV.DependencyInjection.Abstractions.ICanAddServices<TContainerBuilder>.AddTo
+  fullName.vb: DNV.DependencyInjection.Abstractions.ICanAddServices(Of TContainerBuilder).AddTo
+  nameWithType: ICanAddServices<TContainerBuilder>.AddTo
+  nameWithType.vb: ICanAddServices(Of TContainerBuilder).AddTo
 - uid: DNV.DependencyInjection.Abstractions.Lifetime
   name: DNV.DependencyInjection.Abstractions.Lifetime
   href: api/DNV.DependencyInjection.Abstractions.Lifetime.html
@@ -8680,15 +8680,6 @@ references:
   commentId: T:DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType
   fullName: DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType
   nameWithType: CouldNotCreateInstanceOfType
-- uid: DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.#ctor(System.Type,System.Exception)
-  name: CouldNotCreateInstanceOfType(Type, Exception)
-  href: api/DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.html#DNV_DependencyInjection_Registry_CouldNotCreateInstanceOfType__ctor_System_Type_System_Exception_
-  commentId: M:DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.#ctor(System.Type,System.Exception)
-  name.vb: New(Type, Exception)
-  fullName: DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.CouldNotCreateInstanceOfType(System.Type, System.Exception)
-  fullName.vb: DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.New(System.Type, System.Exception)
-  nameWithType: CouldNotCreateInstanceOfType.CouldNotCreateInstanceOfType(Type, Exception)
-  nameWithType.vb: CouldNotCreateInstanceOfType.New(Type, Exception)
 - uid: DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.#ctor(System.Type)
   name: CouldNotCreateInstanceOfType(Type)
   href: api/DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.html#DNV_DependencyInjection_Registry_CouldNotCreateInstanceOfType__ctor_System_Type_
@@ -8698,6 +8689,15 @@ references:
   fullName.vb: DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.New(System.Type)
   nameWithType: CouldNotCreateInstanceOfType.CouldNotCreateInstanceOfType(Type)
   nameWithType.vb: CouldNotCreateInstanceOfType.New(Type)
+- uid: DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.#ctor(System.Type,System.Exception)
+  name: CouldNotCreateInstanceOfType(Type, Exception)
+  href: api/DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.html#DNV_DependencyInjection_Registry_CouldNotCreateInstanceOfType__ctor_System_Type_System_Exception_
+  commentId: M:DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.#ctor(System.Type,System.Exception)
+  name.vb: New(Type, Exception)
+  fullName: DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.CouldNotCreateInstanceOfType(System.Type, System.Exception)
+  fullName.vb: DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.New(System.Type, System.Exception)
+  nameWithType: CouldNotCreateInstanceOfType.CouldNotCreateInstanceOfType(Type, Exception)
+  nameWithType.vb: CouldNotCreateInstanceOfType.New(Type, Exception)
 - uid: DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.#ctor*
   name: CouldNotCreateInstanceOfType
   href: api/DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.html#DNV_DependencyInjection_Registry_CouldNotCreateInstanceOfType__ctor_
@@ -8708,6 +8708,75 @@ references:
   fullName.vb: DNV.DependencyInjection.Registry.CouldNotCreateInstanceOfType.New
   nameWithType: CouldNotCreateInstanceOfType.CouldNotCreateInstanceOfType
   nameWithType.vb: CouldNotCreateInstanceOfType.New
+- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1
+  name: DNVServiceProviderFactory<TContainerBuilder>
+  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html
+  commentId: T:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1
+  name.vb: DNVServiceProviderFactory(Of TContainerBuilder)
+  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>
+  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder)
+  nameWithType: DNVServiceProviderFactory<TContainerBuilder>
+  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder)
+- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: CreateBuilder(IServiceCollection)
+  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateBuilder_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateBuilder(IServiceCollection)
+  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateBuilder(IServiceCollection)
+- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateBuilder*
+  name: CreateBuilder
+  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateBuilder_
+  commentId: Overload:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateBuilder
+  isSpec: "True"
+  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateBuilder
+  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateBuilder
+  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateBuilder
+  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateBuilder
+- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateContainerBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: CreateContainerBuilder(IServiceCollection)
+  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateContainerBuilder_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateContainerBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateContainerBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateContainerBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateContainerBuilder(IServiceCollection)
+  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateContainerBuilder(IServiceCollection)
+- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateContainerBuilder*
+  name: CreateContainerBuilder
+  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateContainerBuilder_
+  commentId: Overload:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateContainerBuilder
+  isSpec: "True"
+  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateContainerBuilder
+  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateContainerBuilder
+  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateContainerBuilder
+  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateContainerBuilder
+- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateServiceProvider(`0)
+  name: CreateServiceProvider(TContainerBuilder)
+  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateServiceProvider__0_
+  commentId: M:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateServiceProvider(`0)
+  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateServiceProvider(TContainerBuilder)
+  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateServiceProvider(TContainerBuilder)
+  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateServiceProvider(TContainerBuilder)
+  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateServiceProvider(TContainerBuilder)
+- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateServiceProvider(`0,DNV.DependencyInjection.Registry.DiscoveredServices{`0})
+  name: CreateServiceProvider(TContainerBuilder, DiscoveredServices<TContainerBuilder>)
+  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateServiceProvider__0_DNV_DependencyInjection_Registry_DiscoveredServices__0__
+  commentId: M:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateServiceProvider(`0,DNV.DependencyInjection.Registry.DiscoveredServices{`0})
+  name.vb: CreateServiceProvider(TContainerBuilder, DiscoveredServices(Of TContainerBuilder))
+  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateServiceProvider(TContainerBuilder, DNV.DependencyInjection.Registry.DiscoveredServices<TContainerBuilder>)
+  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateServiceProvider(TContainerBuilder, DNV.DependencyInjection.Registry.DiscoveredServices(Of TContainerBuilder))
+  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateServiceProvider(TContainerBuilder, DiscoveredServices<TContainerBuilder>)
+  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateServiceProvider(TContainerBuilder, DiscoveredServices(Of TContainerBuilder))
+- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateServiceProvider*
+  name: CreateServiceProvider
+  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateServiceProvider_
+  commentId: Overload:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateServiceProvider
+  isSpec: "True"
+  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateServiceProvider
+  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateServiceProvider
+  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateServiceProvider
+  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateServiceProvider
 - uid: DNV.DependencyInjection.Registry.DiscoveredServices`1
   name: DiscoveredServices<TContainerBuilder>
   href: api/DNV.DependencyInjection.Registry.DiscoveredServices-1.html
@@ -8802,75 +8871,6 @@ references:
   fullName.vb: DNV.DependencyInjection.Registry.DiscoveredServices(Of TContainerBuilder).DiscoverServices
   nameWithType: DiscoveredServices<TContainerBuilder>.DiscoverServices
   nameWithType.vb: DiscoveredServices(Of TContainerBuilder).DiscoverServices
-- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1
-  name: DNVServiceProviderFactory<TContainerBuilder>
-  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html
-  commentId: T:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1
-  name.vb: DNVServiceProviderFactory(Of TContainerBuilder)
-  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>
-  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder)
-  nameWithType: DNVServiceProviderFactory<TContainerBuilder>
-  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder)
-- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  name: CreateBuilder(IServiceCollection)
-  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateBuilder_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateBuilder(IServiceCollection)
-  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateBuilder(IServiceCollection)
-- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateBuilder*
-  name: CreateBuilder
-  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateBuilder_
-  commentId: Overload:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateBuilder
-  isSpec: "True"
-  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateBuilder
-  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateBuilder
-  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateBuilder
-  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateBuilder
-- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateContainerBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  name: CreateContainerBuilder(IServiceCollection)
-  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateContainerBuilder_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateContainerBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateContainerBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateContainerBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateContainerBuilder(IServiceCollection)
-  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateContainerBuilder(IServiceCollection)
-- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateContainerBuilder*
-  name: CreateContainerBuilder
-  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateContainerBuilder_
-  commentId: Overload:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateContainerBuilder
-  isSpec: "True"
-  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateContainerBuilder
-  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateContainerBuilder
-  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateContainerBuilder
-  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateContainerBuilder
-- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateServiceProvider(`0,DNV.DependencyInjection.Registry.DiscoveredServices{`0})
-  name: CreateServiceProvider(TContainerBuilder, DiscoveredServices<TContainerBuilder>)
-  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateServiceProvider__0_DNV_DependencyInjection_Registry_DiscoveredServices__0__
-  commentId: M:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateServiceProvider(`0,DNV.DependencyInjection.Registry.DiscoveredServices{`0})
-  name.vb: CreateServiceProvider(TContainerBuilder, DiscoveredServices(Of TContainerBuilder))
-  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateServiceProvider(TContainerBuilder, DNV.DependencyInjection.Registry.DiscoveredServices<TContainerBuilder>)
-  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateServiceProvider(TContainerBuilder, DNV.DependencyInjection.Registry.DiscoveredServices(Of TContainerBuilder))
-  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateServiceProvider(TContainerBuilder, DiscoveredServices<TContainerBuilder>)
-  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateServiceProvider(TContainerBuilder, DiscoveredServices(Of TContainerBuilder))
-- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateServiceProvider(`0)
-  name: CreateServiceProvider(TContainerBuilder)
-  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateServiceProvider__0_
-  commentId: M:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateServiceProvider(`0)
-  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateServiceProvider(TContainerBuilder)
-  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateServiceProvider(TContainerBuilder)
-  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateServiceProvider(TContainerBuilder)
-  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateServiceProvider(TContainerBuilder)
-- uid: DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateServiceProvider*
-  name: CreateServiceProvider
-  href: api/DNV.DependencyInjection.Registry.DNVServiceProviderFactory-1.html#DNV_DependencyInjection_Registry_DNVServiceProviderFactory_1_CreateServiceProvider_
-  commentId: Overload:DNV.DependencyInjection.Registry.DNVServiceProviderFactory`1.CreateServiceProvider
-  isSpec: "True"
-  fullName: DNV.DependencyInjection.Registry.DNVServiceProviderFactory<TContainerBuilder>.CreateServiceProvider
-  fullName.vb: DNV.DependencyInjection.Registry.DNVServiceProviderFactory(Of TContainerBuilder).CreateServiceProvider
-  nameWithType: DNVServiceProviderFactory<TContainerBuilder>.CreateServiceProvider
-  nameWithType.vb: DNVServiceProviderFactory(Of TContainerBuilder).CreateServiceProvider
 - uid: DNV.DependencyInjection.Registry.Types
   name: DNV.DependencyInjection.Registry.Types
   href: api/DNV.DependencyInjection.Registry.Types.html
@@ -10541,15 +10541,6 @@ references:
   commentId: T:DNV.OAuth.Core.TokenCache.TokenCacheProvider
   fullName: DNV.OAuth.Core.TokenCache.TokenCacheProvider
   nameWithType: TokenCacheProvider
-- uid: DNV.OAuth.Core.TokenCache.TokenCacheProvider.#ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache,Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions},Microsoft.AspNetCore.DataProtection.IDataProtectionProvider)
-  name: TokenCacheProvider(IDistributedCache, IOptionsMonitor<DistributedCacheEntryOptions>, IDataProtectionProvider?)
-  href: api/DNV.OAuth.Core.TokenCache.TokenCacheProvider.html#DNV_OAuth_Core_TokenCache_TokenCacheProvider__ctor_Microsoft_Extensions_Caching_Distributed_IDistributedCache_Microsoft_Extensions_Options_IOptionsMonitor_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__Microsoft_AspNetCore_DataProtection_IDataProtectionProvider_
-  commentId: M:DNV.OAuth.Core.TokenCache.TokenCacheProvider.#ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache,Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions},Microsoft.AspNetCore.DataProtection.IDataProtectionProvider)
-  name.vb: New(IDistributedCache, IOptionsMonitor(Of DistributedCacheEntryOptions), IDataProtectionProvider)
-  fullName: DNV.OAuth.Core.TokenCache.TokenCacheProvider.TokenCacheProvider(Microsoft.Extensions.Caching.Distributed.IDistributedCache, Microsoft.Extensions.Options.IOptionsMonitor<Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions>, Microsoft.AspNetCore.DataProtection.IDataProtectionProvider?)
-  fullName.vb: DNV.OAuth.Core.TokenCache.TokenCacheProvider.New(Microsoft.Extensions.Caching.Distributed.IDistributedCache, Microsoft.Extensions.Options.IOptionsMonitor(Of Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions), Microsoft.AspNetCore.DataProtection.IDataProtectionProvider)
-  nameWithType: TokenCacheProvider.TokenCacheProvider(IDistributedCache, IOptionsMonitor<DistributedCacheEntryOptions>, IDataProtectionProvider?)
-  nameWithType.vb: TokenCacheProvider.New(IDistributedCache, IOptionsMonitor(Of DistributedCacheEntryOptions), IDataProtectionProvider)
 - uid: DNV.OAuth.Core.TokenCache.TokenCacheProvider.#ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache,Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions})
   name: TokenCacheProvider(IDistributedCache, IOptionsMonitor<DistributedCacheEntryOptions>)
   href: api/DNV.OAuth.Core.TokenCache.TokenCacheProvider.html#DNV_OAuth_Core_TokenCache_TokenCacheProvider__ctor_Microsoft_Extensions_Caching_Distributed_IDistributedCache_Microsoft_Extensions_Options_IOptionsMonitor_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__
@@ -10559,6 +10550,15 @@ references:
   fullName.vb: DNV.OAuth.Core.TokenCache.TokenCacheProvider.New(Microsoft.Extensions.Caching.Distributed.IDistributedCache, Microsoft.Extensions.Options.IOptionsMonitor(Of Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions))
   nameWithType: TokenCacheProvider.TokenCacheProvider(IDistributedCache, IOptionsMonitor<DistributedCacheEntryOptions>)
   nameWithType.vb: TokenCacheProvider.New(IDistributedCache, IOptionsMonitor(Of DistributedCacheEntryOptions))
+- uid: DNV.OAuth.Core.TokenCache.TokenCacheProvider.#ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache,Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions},Microsoft.AspNetCore.DataProtection.IDataProtectionProvider)
+  name: TokenCacheProvider(IDistributedCache, IOptionsMonitor<DistributedCacheEntryOptions>, IDataProtectionProvider?)
+  href: api/DNV.OAuth.Core.TokenCache.TokenCacheProvider.html#DNV_OAuth_Core_TokenCache_TokenCacheProvider__ctor_Microsoft_Extensions_Caching_Distributed_IDistributedCache_Microsoft_Extensions_Options_IOptionsMonitor_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__Microsoft_AspNetCore_DataProtection_IDataProtectionProvider_
+  commentId: M:DNV.OAuth.Core.TokenCache.TokenCacheProvider.#ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache,Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions},Microsoft.AspNetCore.DataProtection.IDataProtectionProvider)
+  name.vb: New(IDistributedCache, IOptionsMonitor(Of DistributedCacheEntryOptions), IDataProtectionProvider)
+  fullName: DNV.OAuth.Core.TokenCache.TokenCacheProvider.TokenCacheProvider(Microsoft.Extensions.Caching.Distributed.IDistributedCache, Microsoft.Extensions.Options.IOptionsMonitor<Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions>, Microsoft.AspNetCore.DataProtection.IDataProtectionProvider?)
+  fullName.vb: DNV.OAuth.Core.TokenCache.TokenCacheProvider.New(Microsoft.Extensions.Caching.Distributed.IDistributedCache, Microsoft.Extensions.Options.IOptionsMonitor(Of Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions), Microsoft.AspNetCore.DataProtection.IDataProtectionProvider)
+  nameWithType: TokenCacheProvider.TokenCacheProvider(IDistributedCache, IOptionsMonitor<DistributedCacheEntryOptions>, IDataProtectionProvider?)
+  nameWithType.vb: TokenCacheProvider.New(IDistributedCache, IOptionsMonitor(Of DistributedCacheEntryOptions), IDataProtectionProvider)
 - uid: DNV.OAuth.Core.TokenCache.TokenCacheProvider.#ctor*
   name: TokenCacheProvider
   href: api/DNV.OAuth.Core.TokenCache.TokenCacheProvider.html#DNV_OAuth_Core_TokenCache_TokenCacheProvider__ctor_
@@ -13134,24 +13134,6 @@ references:
   commentId: T:DNV.Veracity.Services.Api.ApiClientFactory
   fullName: DNV.Veracity.Services.Api.ApiClientFactory
   nameWithType: ApiClientFactory
-- uid: DNV.Veracity.Services.Api.ApiClientFactory._httpClientFactory
-  name: _httpClientFactory
-  href: api/DNV.Veracity.Services.Api.ApiClientFactory.html#DNV_Veracity_Services_Api_ApiClientFactory__httpClientFactory
-  commentId: F:DNV.Veracity.Services.Api.ApiClientFactory._httpClientFactory
-  fullName: DNV.Veracity.Services.Api.ApiClientFactory._httpClientFactory
-  nameWithType: ApiClientFactory._httpClientFactory
-- uid: DNV.Veracity.Services.Api.ApiClientFactory._optionsList
-  name: _optionsList
-  href: api/DNV.Veracity.Services.Api.ApiClientFactory.html#DNV_Veracity_Services_Api_ApiClientFactory__optionsList
-  commentId: F:DNV.Veracity.Services.Api.ApiClientFactory._optionsList
-  fullName: DNV.Veracity.Services.Api.ApiClientFactory._optionsList
-  nameWithType: ApiClientFactory._optionsList
-- uid: DNV.Veracity.Services.Api.ApiClientFactory._serializer
-  name: _serializer
-  href: api/DNV.Veracity.Services.Api.ApiClientFactory.html#DNV_Veracity_Services_Api_ApiClientFactory__serializer
-  commentId: F:DNV.Veracity.Services.Api.ApiClientFactory._serializer
-  fullName: DNV.Veracity.Services.Api.ApiClientFactory._serializer
-  nameWithType: ApiClientFactory._serializer
 - uid: DNV.Veracity.Services.Api.ApiClientFactory.#ctor(System.Collections.Generic.IEnumerable{DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions},System.Net.Http.IHttpClientFactory,DNV.Veracity.Services.Api.ISerializer)
   name: ApiClientFactory(IEnumerable<OAuthHttpClientOptions>, IHttpClientFactory, ISerializer)
   href: api/DNV.Veracity.Services.Api.ApiClientFactory.html#DNV_Veracity_Services_Api_ApiClientFactory__ctor_System_Collections_Generic_IEnumerable_DNV_OAuth_Api_HttpClient_OAuthHttpClientOptions__System_Net_Http_IHttpClientFactory_DNV_Veracity_Services_Api_ISerializer_
@@ -13184,6 +13166,24 @@ references:
   isSpec: "True"
   fullName: DNV.Veracity.Services.Api.ApiClientFactory.GetClient
   nameWithType: ApiClientFactory.GetClient
+- uid: DNV.Veracity.Services.Api.ApiClientFactory._httpClientFactory
+  name: _httpClientFactory
+  href: api/DNV.Veracity.Services.Api.ApiClientFactory.html#DNV_Veracity_Services_Api_ApiClientFactory__httpClientFactory
+  commentId: F:DNV.Veracity.Services.Api.ApiClientFactory._httpClientFactory
+  fullName: DNV.Veracity.Services.Api.ApiClientFactory._httpClientFactory
+  nameWithType: ApiClientFactory._httpClientFactory
+- uid: DNV.Veracity.Services.Api.ApiClientFactory._optionsList
+  name: _optionsList
+  href: api/DNV.Veracity.Services.Api.ApiClientFactory.html#DNV_Veracity_Services_Api_ApiClientFactory__optionsList
+  commentId: F:DNV.Veracity.Services.Api.ApiClientFactory._optionsList
+  fullName: DNV.Veracity.Services.Api.ApiClientFactory._optionsList
+  nameWithType: ApiClientFactory._optionsList
+- uid: DNV.Veracity.Services.Api.ApiClientFactory._serializer
+  name: _serializer
+  href: api/DNV.Veracity.Services.Api.ApiClientFactory.html#DNV_Veracity_Services_Api_ApiClientFactory__serializer
+  commentId: F:DNV.Veracity.Services.Api.ApiClientFactory._serializer
+  fullName: DNV.Veracity.Services.Api.ApiClientFactory._serializer
+  nameWithType: ApiClientFactory._serializer
 - uid: DNV.Veracity.Services.Api.ApiResourceClientBuilder
   name: ApiResourceClientBuilder
   href: api/DNV.Veracity.Services.Api.ApiResourceClientBuilder.html
@@ -13984,15 +13984,6 @@ references:
   isSpec: "True"
   fullName: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Deserialize
   nameWithType: IApiClientExtensions.Deserialize
-- uid: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Deserialize``1(DNV.Veracity.Services.Api.IApiClient,System.String)
-  name: Deserialize<T>(IApiClient, string)
-  href: api/DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.html#DNV_Veracity_Services_Api_Extensions_IApiClientExtensions_Deserialize__1_DNV_Veracity_Services_Api_IApiClient_System_String_
-  commentId: M:DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Deserialize``1(DNV.Veracity.Services.Api.IApiClient,System.String)
-  name.vb: Deserialize(Of T)(IApiClient, String)
-  fullName: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Deserialize<T>(DNV.Veracity.Services.Api.IApiClient, string)
-  fullName.vb: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Deserialize(Of T)(DNV.Veracity.Services.Api.IApiClient, String)
-  nameWithType: IApiClientExtensions.Deserialize<T>(IApiClient, string)
-  nameWithType.vb: IApiClientExtensions.Deserialize(Of T)(IApiClient, String)
 - uid: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.DeserializeFromStream*
   name: DeserializeFromStream
   href: api/DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.html#DNV_Veracity_Services_Api_Extensions_IApiClientExtensions_DeserializeFromStream_
@@ -14009,6 +14000,15 @@ references:
   fullName.vb: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.DeserializeFromStream(Of T)(DNV.Veracity.Services.Api.IApiClient, System.IO.Stream)
   nameWithType: IApiClientExtensions.DeserializeFromStream<T>(IApiClient, Stream)
   nameWithType.vb: IApiClientExtensions.DeserializeFromStream(Of T)(IApiClient, Stream)
+- uid: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Deserialize``1(DNV.Veracity.Services.Api.IApiClient,System.String)
+  name: Deserialize<T>(IApiClient, string)
+  href: api/DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.html#DNV_Veracity_Services_Api_Extensions_IApiClientExtensions_Deserialize__1_DNV_Veracity_Services_Api_IApiClient_System_String_
+  commentId: M:DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Deserialize``1(DNV.Veracity.Services.Api.IApiClient,System.String)
+  name.vb: Deserialize(Of T)(IApiClient, String)
+  fullName: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Deserialize<T>(DNV.Veracity.Services.Api.IApiClient, string)
+  fullName.vb: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Deserialize(Of T)(DNV.Veracity.Services.Api.IApiClient, String)
+  nameWithType: IApiClientExtensions.Deserialize<T>(IApiClient, string)
+  nameWithType.vb: IApiClientExtensions.Deserialize(Of T)(IApiClient, String)
 - uid: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.DoCallApi(DNV.Veracity.Services.Api.IApiClient,System.Func{System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}},System.Boolean,System.Func{System.Net.Http.HttpResponseMessage,System.Boolean,System.Threading.Tasks.Task})
   name: DoCallApi(IApiClient, Func<Task<HttpResponseMessage>>, bool, Func<HttpResponseMessage, bool, Task>?)
   href: api/DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.html#DNV_Veracity_Services_Api_Extensions_IApiClientExtensions_DoCallApi_DNV_Veracity_Services_Api_IApiClient_System_Func_System_Threading_Tasks_Task_System_Net_Http_HttpResponseMessage___System_Boolean_System_Func_System_Net_Http_HttpResponseMessage_System_Boolean_System_Threading_Tasks_Task__
@@ -14114,15 +14114,6 @@ references:
   isSpec: "True"
   fullName: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Serialize
   nameWithType: IApiClientExtensions.Serialize
-- uid: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Serialize``1(DNV.Veracity.Services.Api.IApiClient,``0)
-  name: Serialize<T>(IApiClient, T)
-  href: api/DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.html#DNV_Veracity_Services_Api_Extensions_IApiClientExtensions_Serialize__1_DNV_Veracity_Services_Api_IApiClient___0_
-  commentId: M:DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Serialize``1(DNV.Veracity.Services.Api.IApiClient,``0)
-  name.vb: Serialize(Of T)(IApiClient, T)
-  fullName: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Serialize<T>(DNV.Veracity.Services.Api.IApiClient, T)
-  fullName.vb: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Serialize(Of T)(DNV.Veracity.Services.Api.IApiClient, T)
-  nameWithType: IApiClientExtensions.Serialize<T>(IApiClient, T)
-  nameWithType.vb: IApiClientExtensions.Serialize(Of T)(IApiClient, T)
 - uid: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.SerializeToStream*
   name: SerializeToStream
   href: api/DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.html#DNV_Veracity_Services_Api_Extensions_IApiClientExtensions_SerializeToStream_
@@ -14139,6 +14130,15 @@ references:
   fullName.vb: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.SerializeToStream(Of T)(DNV.Veracity.Services.Api.IApiClient, T, System.IO.Stream)
   nameWithType: IApiClientExtensions.SerializeToStream<T>(IApiClient, T, Stream)
   nameWithType.vb: IApiClientExtensions.SerializeToStream(Of T)(IApiClient, T, Stream)
+- uid: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Serialize``1(DNV.Veracity.Services.Api.IApiClient,``0)
+  name: Serialize<T>(IApiClient, T)
+  href: api/DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.html#DNV_Veracity_Services_Api_Extensions_IApiClientExtensions_Serialize__1_DNV_Veracity_Services_Api_IApiClient___0_
+  commentId: M:DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Serialize``1(DNV.Veracity.Services.Api.IApiClient,``0)
+  name.vb: Serialize(Of T)(IApiClient, T)
+  fullName: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Serialize<T>(DNV.Veracity.Services.Api.IApiClient, T)
+  fullName.vb: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.Serialize(Of T)(DNV.Veracity.Services.Api.IApiClient, T)
+  nameWithType: IApiClientExtensions.Serialize<T>(IApiClient, T)
+  nameWithType.vb: IApiClientExtensions.Serialize(Of T)(IApiClient, T)
 - uid: DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.ToJsonContent(DNV.Veracity.Services.Api.IApiClient,System.Object)
   name: ToJsonContent(IApiClient, object)
   href: api/DNV.Veracity.Services.Api.Extensions.IApiClientExtensions.html#DNV_Veracity_Services_Api_Extensions_IApiClientExtensions_ToJsonContent_DNV_Veracity_Services_Api_IApiClient_System_Object_
@@ -14244,15 +14244,6 @@ references:
   isSpec: "True"
   fullName: DNV.Veracity.Services.Api.ISerializer.Deserialize
   nameWithType: ISerializer.Deserialize
-- uid: DNV.Veracity.Services.Api.ISerializer.Deserialize``1(System.String)
-  name: Deserialize<T>(string)
-  href: api/DNV.Veracity.Services.Api.ISerializer.html#DNV_Veracity_Services_Api_ISerializer_Deserialize__1_System_String_
-  commentId: M:DNV.Veracity.Services.Api.ISerializer.Deserialize``1(System.String)
-  name.vb: Deserialize(Of T)(String)
-  fullName: DNV.Veracity.Services.Api.ISerializer.Deserialize<T>(string)
-  fullName.vb: DNV.Veracity.Services.Api.ISerializer.Deserialize(Of T)(String)
-  nameWithType: ISerializer.Deserialize<T>(string)
-  nameWithType.vb: ISerializer.Deserialize(Of T)(String)
 - uid: DNV.Veracity.Services.Api.ISerializer.DeserializeAsync*
   name: DeserializeAsync
   href: api/DNV.Veracity.Services.Api.ISerializer.html#DNV_Veracity_Services_Api_ISerializer_DeserializeAsync_
@@ -14269,6 +14260,15 @@ references:
   fullName.vb: DNV.Veracity.Services.Api.ISerializer.DeserializeAsync(Of T)(System.IO.Stream, System.Threading.CancellationToken)
   nameWithType: ISerializer.DeserializeAsync<T>(Stream, CancellationToken)
   nameWithType.vb: ISerializer.DeserializeAsync(Of T)(Stream, CancellationToken)
+- uid: DNV.Veracity.Services.Api.ISerializer.Deserialize``1(System.String)
+  name: Deserialize<T>(string)
+  href: api/DNV.Veracity.Services.Api.ISerializer.html#DNV_Veracity_Services_Api_ISerializer_Deserialize__1_System_String_
+  commentId: M:DNV.Veracity.Services.Api.ISerializer.Deserialize``1(System.String)
+  name.vb: Deserialize(Of T)(String)
+  fullName: DNV.Veracity.Services.Api.ISerializer.Deserialize<T>(string)
+  fullName.vb: DNV.Veracity.Services.Api.ISerializer.Deserialize(Of T)(String)
+  nameWithType: ISerializer.Deserialize<T>(string)
+  nameWithType.vb: ISerializer.Deserialize(Of T)(String)
 - uid: DNV.Veracity.Services.Api.ISerializer.Serialize*
   name: Serialize
   href: api/DNV.Veracity.Services.Api.ISerializer.html#DNV_Veracity_Services_Api_ISerializer_Serialize_
@@ -14276,15 +14276,6 @@ references:
   isSpec: "True"
   fullName: DNV.Veracity.Services.Api.ISerializer.Serialize
   nameWithType: ISerializer.Serialize
-- uid: DNV.Veracity.Services.Api.ISerializer.Serialize``1(``0)
-  name: Serialize<T>(T)
-  href: api/DNV.Veracity.Services.Api.ISerializer.html#DNV_Veracity_Services_Api_ISerializer_Serialize__1___0_
-  commentId: M:DNV.Veracity.Services.Api.ISerializer.Serialize``1(``0)
-  name.vb: Serialize(Of T)(T)
-  fullName: DNV.Veracity.Services.Api.ISerializer.Serialize<T>(T)
-  fullName.vb: DNV.Veracity.Services.Api.ISerializer.Serialize(Of T)(T)
-  nameWithType: ISerializer.Serialize<T>(T)
-  nameWithType.vb: ISerializer.Serialize(Of T)(T)
 - uid: DNV.Veracity.Services.Api.ISerializer.SerializeAsync*
   name: SerializeAsync
   href: api/DNV.Veracity.Services.Api.ISerializer.html#DNV_Veracity_Services_Api_ISerializer_SerializeAsync_
@@ -14301,6 +14292,15 @@ references:
   fullName.vb: DNV.Veracity.Services.Api.ISerializer.SerializeAsync(Of T)(T, System.IO.Stream, System.Threading.CancellationToken)
   nameWithType: ISerializer.SerializeAsync<T>(T, Stream, CancellationToken)
   nameWithType.vb: ISerializer.SerializeAsync(Of T)(T, Stream, CancellationToken)
+- uid: DNV.Veracity.Services.Api.ISerializer.Serialize``1(``0)
+  name: Serialize<T>(T)
+  href: api/DNV.Veracity.Services.Api.ISerializer.html#DNV_Veracity_Services_Api_ISerializer_Serialize__1___0_
+  commentId: M:DNV.Veracity.Services.Api.ISerializer.Serialize``1(``0)
+  name.vb: Serialize(Of T)(T)
+  fullName: DNV.Veracity.Services.Api.ISerializer.Serialize<T>(T)
+  fullName.vb: DNV.Veracity.Services.Api.ISerializer.Serialize(Of T)(T)
+  nameWithType: ISerializer.Serialize<T>(T)
+  nameWithType.vb: ISerializer.Serialize(Of T)(T)
 - uid: DNV.Veracity.Services.Api.JsonSerializer
   name: JsonSerializer
   href: api/DNV.Veracity.Services.Api.JsonSerializer.html
@@ -14346,15 +14346,6 @@ references:
   isSpec: "True"
   fullName: DNV.Veracity.Services.Api.JsonSerializer.Deserialize
   nameWithType: JsonSerializer.Deserialize
-- uid: DNV.Veracity.Services.Api.JsonSerializer.Deserialize``1(System.String)
-  name: Deserialize<T>(string)
-  href: api/DNV.Veracity.Services.Api.JsonSerializer.html#DNV_Veracity_Services_Api_JsonSerializer_Deserialize__1_System_String_
-  commentId: M:DNV.Veracity.Services.Api.JsonSerializer.Deserialize``1(System.String)
-  name.vb: Deserialize(Of T)(String)
-  fullName: DNV.Veracity.Services.Api.JsonSerializer.Deserialize<T>(string)
-  fullName.vb: DNV.Veracity.Services.Api.JsonSerializer.Deserialize(Of T)(String)
-  nameWithType: JsonSerializer.Deserialize<T>(string)
-  nameWithType.vb: JsonSerializer.Deserialize(Of T)(String)
 - uid: DNV.Veracity.Services.Api.JsonSerializer.DeserializeAsync*
   name: DeserializeAsync
   href: api/DNV.Veracity.Services.Api.JsonSerializer.html#DNV_Veracity_Services_Api_JsonSerializer_DeserializeAsync_
@@ -14371,6 +14362,15 @@ references:
   fullName.vb: DNV.Veracity.Services.Api.JsonSerializer.DeserializeAsync(Of T)(System.IO.Stream, System.Threading.CancellationToken)
   nameWithType: JsonSerializer.DeserializeAsync<T>(Stream, CancellationToken)
   nameWithType.vb: JsonSerializer.DeserializeAsync(Of T)(Stream, CancellationToken)
+- uid: DNV.Veracity.Services.Api.JsonSerializer.Deserialize``1(System.String)
+  name: Deserialize<T>(string)
+  href: api/DNV.Veracity.Services.Api.JsonSerializer.html#DNV_Veracity_Services_Api_JsonSerializer_Deserialize__1_System_String_
+  commentId: M:DNV.Veracity.Services.Api.JsonSerializer.Deserialize``1(System.String)
+  name.vb: Deserialize(Of T)(String)
+  fullName: DNV.Veracity.Services.Api.JsonSerializer.Deserialize<T>(string)
+  fullName.vb: DNV.Veracity.Services.Api.JsonSerializer.Deserialize(Of T)(String)
+  nameWithType: JsonSerializer.Deserialize<T>(string)
+  nameWithType.vb: JsonSerializer.Deserialize(Of T)(String)
 - uid: DNV.Veracity.Services.Api.JsonSerializer.Serialize*
   name: Serialize
   href: api/DNV.Veracity.Services.Api.JsonSerializer.html#DNV_Veracity_Services_Api_JsonSerializer_Serialize_
@@ -14378,15 +14378,6 @@ references:
   isSpec: "True"
   fullName: DNV.Veracity.Services.Api.JsonSerializer.Serialize
   nameWithType: JsonSerializer.Serialize
-- uid: DNV.Veracity.Services.Api.JsonSerializer.Serialize``1(``0)
-  name: Serialize<T>(T)
-  href: api/DNV.Veracity.Services.Api.JsonSerializer.html#DNV_Veracity_Services_Api_JsonSerializer_Serialize__1___0_
-  commentId: M:DNV.Veracity.Services.Api.JsonSerializer.Serialize``1(``0)
-  name.vb: Serialize(Of T)(T)
-  fullName: DNV.Veracity.Services.Api.JsonSerializer.Serialize<T>(T)
-  fullName.vb: DNV.Veracity.Services.Api.JsonSerializer.Serialize(Of T)(T)
-  nameWithType: JsonSerializer.Serialize<T>(T)
-  nameWithType.vb: JsonSerializer.Serialize(Of T)(T)
 - uid: DNV.Veracity.Services.Api.JsonSerializer.SerializeAsync*
   name: SerializeAsync
   href: api/DNV.Veracity.Services.Api.JsonSerializer.html#DNV_Veracity_Services_Api_JsonSerializer_SerializeAsync_
@@ -14403,6 +14394,15 @@ references:
   fullName.vb: DNV.Veracity.Services.Api.JsonSerializer.SerializeAsync(Of T)(T, System.IO.Stream, System.Threading.CancellationToken)
   nameWithType: JsonSerializer.SerializeAsync<T>(T, Stream, CancellationToken)
   nameWithType.vb: JsonSerializer.SerializeAsync(Of T)(T, Stream, CancellationToken)
+- uid: DNV.Veracity.Services.Api.JsonSerializer.Serialize``1(``0)
+  name: Serialize<T>(T)
+  href: api/DNV.Veracity.Services.Api.JsonSerializer.html#DNV_Veracity_Services_Api_JsonSerializer_Serialize__1___0_
+  commentId: M:DNV.Veracity.Services.Api.JsonSerializer.Serialize``1(``0)
+  name.vb: Serialize(Of T)(T)
+  fullName: DNV.Veracity.Services.Api.JsonSerializer.Serialize<T>(T)
+  fullName.vb: DNV.Veracity.Services.Api.JsonSerializer.Serialize(Of T)(T)
+  nameWithType: JsonSerializer.Serialize<T>(T)
+  nameWithType.vb: JsonSerializer.Serialize(Of T)(T)
 - uid: DNV.Veracity.Services.Api.Models
   name: DNV.Veracity.Services.Api.Models
   href: api/DNV.Veracity.Services.Api.Models.html

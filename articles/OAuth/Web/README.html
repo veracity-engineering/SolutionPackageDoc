@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>OAuth for Web Projects </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="OAuth for Web Projects ">
+    
+      <link rel="shortcut icon" href="../../../favicon.png">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="oauth-for-web-projects">OAuth for Web Projects</h1>
+
+<p>Provides a .NETCore library for developers to simplify the work of setting up OpenId Connection authentication (OIDC) such as Veracity or Azure AD B2C for ASP.NET Core web project.</p>
+<h2 id="basic-authentication">Basic Authentication</h2>
+<p>Introduce simple user credential authentication with OIDC.</p>
+<h3 id="1-registration">1. Registration</h3>
+<p>Add <code>AddOidc</code> extension method to <code>ConfigureServices</code>.</p>
+<pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
+{
+	...
+	services.AddOidc(o =&gt;
+	{
+		o.Authority = &quot;&lt;Authority&gt;&quot;;
+		o.ClientId = &quot;&lt;ClientId&gt;&quot;;
+		o.ClientSecret = &quot;&lt;ClientSecret&gt;&quot;;
+		o.Resource = &quot;&lt;Resource&gt;&quot;;
+		o.Scopes = new[] { &quot;&lt;Scope&gt;&quot; };
+	});
+	...
+}
+</code></pre>
+<h3 id="2-configuration">2. Configuration</h3>
+<p>Add <code>UseAuthentication</code> and <code>UseAuthorization</code> extension methods to <code>Configure</code>.</p>
+<pre><code class="lang-csharp">public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+	...
+	app.UseAuthentication().UseAuthorization();
+	...
+}
+</code></pre>
+<h3 id="3-authorize">3. Authorize</h3>
+<p>Decorate a controller or action with <code>[Authorize]</code> and launch your project.  A challenge request will be sent to IDP(Microsoft or Veracity) to start the authentication process, and the <code>HttpContext</code> will be filled with authentication result.</p>
+<pre><code class="lang-cs">public class ExampleController
+{
+  [Authorize]
+  public IActionResult Index()
+  {
+    ...
+  }
+}
+</code></pre>
+<hr>
+<h2 id="access-token-cache">Access Token Cache</h2>
+<p>If you web project act as an API gateway, you will want to cache users' access tokens to prevent unnecessary token requests. The library uses <code>MSAL (Microsoft Authentication Library)</code> to manipulate tokens.</p>
+<h3 id="1-confguration">1. Confguration</h3>
+<p>Authorization code flow needs to be set to acquire access token, and refresh token is required for MSAL to re-acquire token from IDP if the token exceed its expiration.</p>
+<pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
+{
+	...
+	var oidcOptions = new OidcOptions
+	{
+		Authority = &quot;&lt;Authority&gt;&quot;,
+		ClientId = &quot;&lt;ClientId&gt;&quot;,
+		ClientSecret = &quot;&lt;ClientSecret&gt;&quot;,
+		Resource = &quot;&lt;Resource&gt;&quot;,
+		Scopes = new[] { &quot;&lt;Scope&gt;&quot;, &quot;offline_access&quot; },	// offline_access is required to retrieve refresh_token.
+		ResponseType = OpenIdConnectResponseType.Code
+	};
+	...
+}
+</code></pre>
+<h3 id="2-distributed-cache-registration">2. Distributed Cache Registration</h3>
+<p>To cache the tokens, an implementaion of <code>IDistributedCache</code> such as <code>MemoryDistributedCache</code> needs to be added.</p>
+<pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
+{
+	...
+	services.AddDistributedMemoryCache();
+	...
+}
+</code></pre>
+<p>Alternatively you could use <code>RedisCache</code>.</p>
+<pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
+{
+	...
+	services.AddDistributedRedisCache(o =&gt;
+	{
+		o.InstanceName = &quot;&lt;InstanceName&gt;&quot;;
+		o.Configuration = &quot;&lt;Configuration&gt;&quot;;
+	});
+	...
+}
+</code></pre>
+<h3 id="3-token-cache-registration">3. Token Cache Registration</h3>
+<p>Calling <code>AddDistributedTokenCache</code> will have <code>IDistributedCache</code> attached to MSAL client app behind the scene, and the token acquiring process will be replaced by MSAL client app.</p>
+<pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
+{
+	...
+	services.AddDistributedTokenCache(oidcOptions);
+	...
+}
+</code></pre>
+<h3 id="4-oidc-registration">4. OIDC Registration</h3>
+<p>Don't forget to add <code>AddOidc</code> after what you did previously.</p>
+<pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
+{
+	...
+	services.AddOidc(oidcOptions);
+	...
+}
+</code></pre>
+<p>Add UseAuthentication and UseAuthorization extension methods to Configure.</p>
+<pre><code class="lang-csharp">public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+	...
+	app.UseAuthentication().UseAuthorization();
+	...
+}
+</code></pre>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veracity-engineering/SolutionPackageDoc/blob/master/docs/articles/OAuth/Web/README.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      godspeed
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
