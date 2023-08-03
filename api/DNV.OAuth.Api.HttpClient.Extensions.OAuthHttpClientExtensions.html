@@ -1,97 +1,119 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class OAuthHttpClientExtensions
  </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class OAuthHttpClientExtensions
  ">
-    
-      <link rel="shortcut icon" href="../favicon.png">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <link rel="icon" href="../favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions.md&amp;value=---%0Auid%3A%20DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
 
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions">
+
+        <article data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions">
 
 
 
-  <h1 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions" class="text-break">Class OAuthHttpClientExtensions
-</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">OAuthHttpClientExtensions</span></div>
+  <h1 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions" class="text-break">
+    Class OAuthHttpClientExtensions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DNV.html">DNV</a>.<a class="xref" href="DNV.OAuth.html">OAuth</a>.<a class="xref" href="DNV.OAuth.Api.html">Api</a>.<a class="xref" href="DNV.OAuth.Api.HttpClient.html">HttpClient</a>.<a class="xref" href="DNV.OAuth.Api.HttpClient.Extensions.html">Extensions</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DNV.OAuth.Api.HttpClient.dll</dd></dl>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class OAuthHttpClientExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">OAuthHttpClientExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -113,433 +135,293 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="DNV.html">DNV</a>.<a class="xref" href="DNV.OAuth.html">OAuth</a>.<a class="xref" href="DNV.OAuth.Api.html">Api</a>.<a class="xref" href="DNV.OAuth.Api.HttpClient.html">HttpClient</a>.<a class="xref" href="DNV.OAuth.Api.HttpClient.Extensions.html">Extensions</a></h6>
-  <h6><strong>Assembly</strong>: DNV.OAuth.Api.HttpClient.dll</h6>
-  <h5 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class OAuthHttpClientExtensions</code></pre>
-  </div>
-  <h3 id="methods">Methods
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_OAuth_Api_HttpClient_OAuthHttpClientOptions_System_Action_Microsoft_Extensions_DependencyInjection_IHttpClientBuilder__System_Action_System_IServiceProvider_System_Net_Http_HttpClient__System_Action_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__.md&amp;value=---%0Auid%3A%20DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CDNV.OAuth.Api.HttpClient.OAuthHttpClientOptions%2CSystem.Action%7BMicrosoft.Extensions.DependencyInjection.IHttpClientBuilder%7D%2CSystem.Action%7BSystem.IServiceProvider%2CSystem.Net.Http.HttpClient%7D%2CSystem.Action%7BMicrosoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L69">View Source</a>
-  </span>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClient_" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClient*"></a>
-  <h4 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_OAuth_Api_HttpClient_OAuthHttpClientOptions_System_Action_Microsoft_Extensions_DependencyInjection_IHttpClientBuilder__System_Action_System_IServiceProvider_System_Net_Http_HttpClient__System_Action_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions,System.Action{Microsoft.Extensions.DependencyInjection.IHttpClientBuilder},System.Action{System.IServiceProvider,System.Net.Http.HttpClient},System.Action{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions})">AddOAuthHttpClient(IServiceCollection, OAuthHttpClientOptions, Action&lt;IHttpClientBuilder&gt;?, Action&lt;IServiceProvider, HttpClient&gt;?, Action&lt;DistributedCacheEntryOptions&gt;?)</h4>
+
+  <h3 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_OAuth_Api_HttpClient_OAuthHttpClientOptions_System_Action_Microsoft_Extensions_DependencyInjection_IHttpClientBuilder__System_Action_System_IServiceProvider_System_Net_Http_HttpClient__System_Action_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions,System.Action{Microsoft.Extensions.DependencyInjection.IHttpClientBuilder},System.Action{System.IServiceProvider,System.Net.Http.HttpClient},System.Action{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions})">
+  AddOAuthHttpClient(IServiceCollection, OAuthHttpClientOptions, Action&lt;IHttpClientBuilder&gt;?, Action&lt;IServiceProvider, HttpClient&gt;?, Action&lt;DistributedCacheEntryOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IServiceCollection AddOAuthHttpClient(this IServiceCollection services, OAuthHttpClientOptions option, Action&lt;IHttpClientBuilder&gt;? configBuilderAction = null, Action&lt;IServiceProvider, HttpClient&gt;? clientConfigAction = null, Action&lt;DistributedCacheEntryOptions&gt;? cacheConfigAction = null)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td><span class="parametername">services</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions.html">OAuthHttpClientOptions</a></td>
-        <td><span class="parametername">option</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ihttpclientbuilder">IHttpClientBuilder</a>&gt;</td>
-        <td><span class="parametername">configBuilderAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a>&gt;</td>
-        <td><span class="parametername">clientConfigAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.distributedcacheentryoptions">DistributedCacheEntryOptions</a>&gt;</td>
-        <td><span class="parametername">cacheConfigAction</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClientHandler_Microsoft_Extensions_DependencyInjection_IHttpClientBuilder_DNV_OAuth_Api_HttpClient_OAuthHttpClientOptions_System_Action_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__.md&amp;value=---%0Auid%3A%20DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClientHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder%2CDNV.OAuth.Api.HttpClient.OAuthHttpClientOptions%2CSystem.Action%7BMicrosoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L137">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>option</code> <a class="xref" href="DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions.html">OAuthHttpClientOptions</a></dt>
+    <dd></dd>
+    <dt><code>configBuilderAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ihttpclientbuilder">IHttpClientBuilder</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>clientConfigAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cacheConfigAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.distributedcacheentryoptions">DistributedCacheEntryOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClientHandler_" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClientHandler*"></a>
-  <h4 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClientHandler_Microsoft_Extensions_DependencyInjection_IHttpClientBuilder_DNV_OAuth_Api_HttpClient_OAuthHttpClientOptions_System_Action_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClientHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions,System.Action{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions})">AddOAuthHttpClientHandler(IHttpClientBuilder, OAuthHttpClientOptions, Action&lt;DistributedCacheEntryOptions&gt;?)</h4>
+
+  <h3 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClientHandler_Microsoft_Extensions_DependencyInjection_IHttpClientBuilder_DNV_OAuth_Api_HttpClient_OAuthHttpClientOptions_System_Action_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClientHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions,System.Action{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions})">
+  AddOAuthHttpClientHandler(IHttpClientBuilder, OAuthHttpClientOptions, Action&lt;DistributedCacheEntryOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IHttpClientBuilder AddOAuthHttpClientHandler(this IHttpClientBuilder builder, OAuthHttpClientOptions options, Action&lt;DistributedCacheEntryOptions&gt;? cacheConfigAction = null)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ihttpclientbuilder">IHttpClientBuilder</a></td>
-        <td><span class="parametername">builder</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions.html">OAuthHttpClientOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.distributedcacheentryoptions">DistributedCacheEntryOptions</a>&gt;</td>
-        <td><span class="parametername">cacheConfigAction</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ihttpclientbuilder">IHttpClientBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClients_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_System_Collections_Generic_ICollection_DNV_OAuth_Api_HttpClient_OAuthHttpClientOptions___System_Action_Microsoft_Extensions_DependencyInjection_IHttpClientBuilder__System_Action_System_IServiceProvider_System_Net_Http_HttpClient__System_Action_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__.md&amp;value=---%0Auid%3A%20DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClients(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CSystem.Action%7BSystem.Collections.Generic.ICollection%7BDNV.OAuth.Api.HttpClient.OAuthHttpClientOptions%7D%7D%2CSystem.Action%7BMicrosoft.Extensions.DependencyInjection.IHttpClientBuilder%7D%2CSystem.Action%7BSystem.IServiceProvider%2CSystem.Net.Http.HttpClient%7D%2CSystem.Action%7BMicrosoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L28">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ihttpclientbuilder">IHttpClientBuilder</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions.html">OAuthHttpClientOptions</a></dt>
+    <dd></dd>
+    <dt><code>cacheConfigAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.distributedcacheentryoptions">DistributedCacheEntryOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ihttpclientbuilder">IHttpClientBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
   <a id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClients_" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClients*"></a>
-  <h4 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClients_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_System_Collections_Generic_ICollection_DNV_OAuth_Api_HttpClient_OAuthHttpClientOptions___System_Action_Microsoft_Extensions_DependencyInjection_IHttpClientBuilder__System_Action_System_IServiceProvider_System_Net_Http_HttpClient__System_Action_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClients(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.Collections.Generic.ICollection{DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions}},System.Action{Microsoft.Extensions.DependencyInjection.IHttpClientBuilder},System.Action{System.IServiceProvider,System.Net.Http.HttpClient},System.Action{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions})">AddOAuthHttpClients(IServiceCollection, Action&lt;ICollection&lt;OAuthHttpClientOptions&gt;&gt;, Action&lt;IHttpClientBuilder&gt;?, Action&lt;IServiceProvider, HttpClient&gt;?, Action&lt;DistributedCacheEntryOptions&gt;?)</h4>
+
+  <h3 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClients_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_System_Collections_Generic_ICollection_DNV_OAuth_Api_HttpClient_OAuthHttpClientOptions___System_Action_Microsoft_Extensions_DependencyInjection_IHttpClientBuilder__System_Action_System_IServiceProvider_System_Net_Http_HttpClient__System_Action_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClients(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.Collections.Generic.ICollection{DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions}},System.Action{Microsoft.Extensions.DependencyInjection.IHttpClientBuilder},System.Action{System.IServiceProvider,System.Net.Http.HttpClient},System.Action{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions})">
+  AddOAuthHttpClients(IServiceCollection, Action&lt;ICollection&lt;OAuthHttpClientOptions&gt;&gt;, Action&lt;IHttpClientBuilder&gt;?, Action&lt;IServiceProvider, HttpClient&gt;?, Action&lt;DistributedCacheEntryOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IServiceCollection AddOAuthHttpClients(this IServiceCollection services, Action&lt;ICollection&lt;OAuthHttpClientOptions&gt;&gt; optionsConfigAction, Action&lt;IHttpClientBuilder&gt;? configBuilderAction = null, Action&lt;IServiceProvider, HttpClient&gt;? clientConfigAction = null, Action&lt;DistributedCacheEntryOptions&gt;? cacheConfigAction = null)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td><span class="parametername">services</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions.html">OAuthHttpClientOptions</a>&gt;&gt;</td>
-        <td><span class="parametername">optionsConfigAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ihttpclientbuilder">IHttpClientBuilder</a>&gt;</td>
-        <td><span class="parametername">configBuilderAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a>&gt;</td>
-        <td><span class="parametername">clientConfigAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.distributedcacheentryoptions">DistributedCacheEntryOptions</a>&gt;</td>
-        <td><span class="parametername">cacheConfigAction</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClients_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_DNV_OAuth_Api_HttpClient_OAuthHttpClientOptions__System_Action_Microsoft_Extensions_DependencyInjection_IHttpClientBuilder__System_Action_System_IServiceProvider_System_Net_Http_HttpClient__System_Action_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__.md&amp;value=---%0Auid%3A%20DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClients(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CSystem.Collections.Generic.IEnumerable%7BDNV.OAuth.Api.HttpClient.OAuthHttpClientOptions%7D%2CSystem.Action%7BMicrosoft.Extensions.DependencyInjection.IHttpClientBuilder%7D%2CSystem.Action%7BSystem.IServiceProvider%2CSystem.Net.Http.HttpClient%7D%2CSystem.Action%7BMicrosoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L49">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>optionsConfigAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions.html">OAuthHttpClientOptions</a>&gt;&gt;</dt>
+    <dd></dd>
+    <dt><code>configBuilderAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ihttpclientbuilder">IHttpClientBuilder</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>clientConfigAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cacheConfigAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.distributedcacheentryoptions">DistributedCacheEntryOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClients_" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClients*"></a>
-  <h4 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClients_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_DNV_OAuth_Api_HttpClient_OAuthHttpClientOptions__System_Action_Microsoft_Extensions_DependencyInjection_IHttpClientBuilder__System_Action_System_IServiceProvider_System_Net_Http_HttpClient__System_Action_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClients(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions},System.Action{Microsoft.Extensions.DependencyInjection.IHttpClientBuilder},System.Action{System.IServiceProvider,System.Net.Http.HttpClient},System.Action{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions})">AddOAuthHttpClients(IServiceCollection, IEnumerable&lt;OAuthHttpClientOptions&gt;, Action&lt;IHttpClientBuilder&gt;?, Action&lt;IServiceProvider, HttpClient&gt;?, Action&lt;DistributedCacheEntryOptions&gt;?)</h4>
+
+  <h3 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_AddOAuthHttpClients_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_DNV_OAuth_Api_HttpClient_OAuthHttpClientOptions__System_Action_Microsoft_Extensions_DependencyInjection_IHttpClientBuilder__System_Action_System_IServiceProvider_System_Net_Http_HttpClient__System_Action_Microsoft_Extensions_Caching_Distributed_DistributedCacheEntryOptions__" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.AddOAuthHttpClients(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions},System.Action{Microsoft.Extensions.DependencyInjection.IHttpClientBuilder},System.Action{System.IServiceProvider,System.Net.Http.HttpClient},System.Action{Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions})">
+  AddOAuthHttpClients(IServiceCollection, IEnumerable&lt;OAuthHttpClientOptions&gt;, Action&lt;IHttpClientBuilder&gt;?, Action&lt;IServiceProvider, HttpClient&gt;?, Action&lt;DistributedCacheEntryOptions&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IServiceCollection AddOAuthHttpClients(this IServiceCollection services, IEnumerable&lt;OAuthHttpClientOptions&gt; options, Action&lt;IHttpClientBuilder&gt;? configBuilderAction = null, Action&lt;IServiceProvider, HttpClient&gt;? clientConfigAction = null, Action&lt;DistributedCacheEntryOptions&gt;? cacheConfigAction = null)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td><span class="parametername">services</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions.html">OAuthHttpClientOptions</a>&gt;</td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ihttpclientbuilder">IHttpClientBuilder</a>&gt;</td>
-        <td><span class="parametername">configBuilderAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a>&gt;</td>
-        <td><span class="parametername">clientConfigAction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.distributedcacheentryoptions">DistributedCacheEntryOptions</a>&gt;</td>
-        <td><span class="parametername">cacheConfigAction</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_GetAllOAuthClientOptions_System_IServiceProvider_System_String_.md&amp;value=---%0Auid%3A%20DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.GetAllOAuthClientOptions(System.IServiceProvider%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L101">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions.html">OAuthHttpClientOptions</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>configBuilderAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.ihttpclientbuilder">IHttpClientBuilder</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>clientConfigAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>cacheConfigAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.distributed.distributedcacheentryoptions">DistributedCacheEntryOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_GetAllOAuthClientOptions_" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.GetAllOAuthClientOptions*"></a>
-  <h4 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_GetAllOAuthClientOptions_System_IServiceProvider_System_String_" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.GetAllOAuthClientOptions(System.IServiceProvider,System.String)">GetAllOAuthClientOptions(IServiceProvider, string)</h4>
+
+  <h3 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_GetAllOAuthClientOptions_System_IServiceProvider_System_String_" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.GetAllOAuthClientOptions(System.IServiceProvider,System.String)">
+  GetAllOAuthClientOptions(IServiceProvider, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;OAuthHttpClientOptions&gt; GetAllOAuthClientOptions(this IServiceProvider serviceProvider, string name)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></td>
-        <td><span class="parametername">serviceProvider</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions.html">OAuthHttpClientOptions</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_GetOAuthClientOptions_System_IServiceProvider_System_String_.md&amp;value=---%0Auid%3A%20DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.GetOAuthClientOptions(System.IServiceProvider%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L90">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serviceProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions.html">OAuthHttpClientOptions</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_GetOAuthClientOptions_" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.GetOAuthClientOptions*"></a>
-  <h4 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_GetOAuthClientOptions_System_IServiceProvider_System_String_" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.GetOAuthClientOptions(System.IServiceProvider,System.String)">GetOAuthClientOptions(IServiceProvider, string)</h4>
+
+  <h3 id="DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions_GetOAuthClientOptions_System_IServiceProvider_System_String_" data-uid="DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions.GetOAuthClientOptions(System.IServiceProvider,System.String)">
+  GetOAuthClientOptions(IServiceProvider, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static OAuthHttpClientOptions GetOAuthClientOptions(this IServiceProvider serviceProvider, string name)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></td>
-        <td><span class="parametername">serviceProvider</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions.html">OAuthHttpClientOptions</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serviceProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DNV.OAuth.Api.HttpClient.OAuthHttpClientOptions.html">OAuthHttpClientOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_OAuth_Api_HttpClient_Extensions_OAuthHttpClientExtensions.md&amp;value=---%0Auid%3A%20DNV.OAuth.Api.HttpClient.Extensions.OAuthHttpClientExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L17" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
+          <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/OAuth/Api.HttpClient/Extensions/OAuthHttpClientExtensions.cs/#L17" class="edit-link">Edit this page</a>
         </div>
+
+        
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      godspeed
-      
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          godspeed
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

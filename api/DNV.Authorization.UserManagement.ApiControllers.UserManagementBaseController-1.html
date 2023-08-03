@@ -1,103 +1,135 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class UserManagementBaseController&lt;TUser&gt;
  </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class UserManagementBaseController&lt;TUser&gt;
  ">
-    
-      <link rel="shortcut icon" href="../favicon.png">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <link rel="icon" href="../favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
 
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1">
+
+        <article data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1">
 
 
 
-  <h1 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1" class="text-break">Class UserManagementBaseController&lt;TUser&gt;
-</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase">ControllerBase</a></div>
-    <div class="level2"><span class="xref">UserManagementBaseController&lt;TUser&gt;</span></div>
-      <div class="level3"><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.CompaniesController-2.html">CompaniesController&lt;TCompany, TUser&gt;</a></div>
-      <div class="level3"><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.GlobalRolesController-2.html">GlobalRolesController&lt;TRole, TUser&gt;</a></div>
-      <div class="level3"><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.GlobalUsersController-1.html">GlobalUsersController&lt;TUser&gt;</a></div>
-      <div class="level3"><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.RolesController-3.html">RolesController&lt;TCompany, TRole, TUser&gt;</a></div>
-      <div class="level3"><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UsersController-2.html">UsersController&lt;TRole, TUser&gt;</a></div>
+  <h1 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1" class="text-break">
+    Class UserManagementBaseController&lt;TUser&gt;
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DNV.html">DNV</a>.<a class="xref" href="DNV.Authorization.html">Authorization</a>.<a class="xref" href="DNV.Authorization.UserManagement.html">UserManagement</a>.<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.html">ApiControllers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DNV.Authorization.UserManagement.ApiControllers.dll</dd></dl>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UserManagementBaseController&lt;TUser&gt; : ControllerBase where TUser : User, new()</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TUser</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase">ControllerBase</a></div>
+      <div><span class="xref">UserManagementBaseController&lt;TUser&gt;</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.CompaniesController-2.html">CompaniesController&lt;TCompany, TUser&gt;</a></div>
+      <div><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.GlobalRolesController-2.html">GlobalRolesController&lt;TRole, TUser&gt;</a></div>
+      <div><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.GlobalUsersController-1.html">GlobalUsersController&lt;TUser&gt;</a></div>
+      <div><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.RolesController-3.html">RolesController&lt;TCompany, TRole, TUser&gt;</a></div>
+      <div><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UsersController-2.html">UsersController&lt;TRole, TUser&gt;</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.statuscode#microsoft-aspnetcore-mvc-controllerbase-statuscode(system-int32)">ControllerBase.StatusCode(int)</a>
     </div>
@@ -611,548 +643,395 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="DNV.html">DNV</a>.<a class="xref" href="DNV.Authorization.html">Authorization</a>.<a class="xref" href="DNV.Authorization.UserManagement.html">UserManagement</a>.<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.html">ApiControllers</a></h6>
-  <h6><strong>Assembly</strong>: DNV.Authorization.UserManagement.ApiControllers.dll</h6>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UserManagementBaseController&lt;TUser&gt; : ControllerBase where TUser : User, new()</code></pre>
-  </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TUser</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="constructors">Constructors
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1__ctor_DNV_Authorization_UserManagement_Abstraction_IUser__0__DNV_Authorization_Web_Abstraction_PermissionOptions_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController%601.%23ctor(DNV.Authorization.UserManagement.Abstraction.IUser%7B%600%7D%2CDNV.Authorization.Web.Abstraction.PermissionOptions)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L21">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1__ctor_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.#ctor*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1__ctor_DNV_Authorization_UserManagement_Abstraction_IUser__0__DNV_Authorization_Web_Abstraction_PermissionOptions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.#ctor(DNV.Authorization.UserManagement.Abstraction.IUser{`0},DNV.Authorization.Web.Abstraction.PermissionOptions)">UserManagementBaseController(IUser&lt;TUser&gt;, PermissionOptions)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected UserManagementBaseController(IUser&lt;TUser&gt; userRepository, PermissionOptions premissionOptions)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IUser-1.html">IUser</a>&lt;TUser&gt;</td>
-        <td><span class="parametername">userRepository</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.Web.Abstraction.PermissionOptions.html">PermissionOptions</a></td>
-        <td><span class="parametername">premissionOptions</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_FetchRole__1_System_String_DNV_Authorization_Web_Abstraction_IPermissionRepository_DNV_Authorization_UserManagement_Abstraction_IRole___0__.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController%601.FetchRole%60%601(System.String%2CDNV.Authorization.Web.Abstraction.IPermissionRepository%2CDNV.Authorization.UserManagement.Abstraction.IRole%7B%60%600%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L39">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_FetchRole_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.FetchRole*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_FetchRole__1_System_String_DNV_Authorization_Web_Abstraction_IPermissionRepository_DNV_Authorization_UserManagement_Abstraction_IRole___0__" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.FetchRole``1(System.String,DNV.Authorization.Web.Abstraction.IPermissionRepository,DNV.Authorization.UserManagement.Abstraction.IRole{``0})">FetchRole&lt;TRole&gt;(string, IPermissionRepository, IRole&lt;TRole&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;RoleViewDto&gt; FetchRole&lt;TRole&gt;(string id, IPermissionRepository permissionRepository, IRole&lt;TRole&gt; roleRepository) where TRole : Role, new()</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.Web.Abstraction.IPermissionRepository.html">IPermissionRepository</a></td>
-        <td><span class="parametername">permissionRepository</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IRole-1.html">IRole</a>&lt;TRole&gt;</td>
-        <td><span class="parametername">roleRepository</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.RoleViewDto.html">RoleViewDto</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TRole</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetAllRoles__1_DNV_Authorization_UserManagement_Abstraction_IRole___0__DNV_Authorization_Web_Abstraction_IPermissionRepository_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController%601.GetAllRoles%60%601(DNV.Authorization.UserManagement.Abstraction.IRole%7B%60%600%7D%2CDNV.Authorization.Web.Abstraction.IPermissionRepository)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L131">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetAllRoles_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.GetAllRoles*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetAllRoles__1_DNV_Authorization_UserManagement_Abstraction_IRole___0__DNV_Authorization_Web_Abstraction_IPermissionRepository_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.GetAllRoles``1(DNV.Authorization.UserManagement.Abstraction.IRole{``0},DNV.Authorization.Web.Abstraction.IPermissionRepository)">GetAllRoles&lt;TRole&gt;(IRole&lt;TRole&gt;, IPermissionRepository)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IEnumerable&lt;RoleViewDto&gt;&gt; GetAllRoles&lt;TRole&gt;(IRole&lt;TRole&gt; roleRepository, IPermissionRepository permissionRepository) where TRole : Role, new()</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IRole-1.html">IRole</a>&lt;TRole&gt;</td>
-        <td><span class="parametername">roleRepository</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.Web.Abstraction.IPermissionRepository.html">IPermissionRepository</a></td>
-        <td><span class="parametername">permissionRepository</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.RoleViewDto.html">RoleViewDto</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TRole</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetAllUsers_DNV_Authorization_UserManagement_Abstraction_IUser__0__DNV_Authorization_Web_Abstraction_IPermissionRepository_DNV_Common_Core_Pagination_PageParam_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController%601.GetAllUsers(DNV.Authorization.UserManagement.Abstraction.IUser%7B%600%7D%2CDNV.Authorization.Web.Abstraction.IPermissionRepository%2CDNV.Common.Core.Pagination.PageParam)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L84">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetAllUsers_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.GetAllUsers*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetAllUsers_DNV_Authorization_UserManagement_Abstraction_IUser__0__DNV_Authorization_Web_Abstraction_IPermissionRepository_DNV_Common_Core_Pagination_PageParam_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.GetAllUsers(DNV.Authorization.UserManagement.Abstraction.IUser{`0},DNV.Authorization.Web.Abstraction.IPermissionRepository,DNV.Common.Core.Pagination.PageParam)">GetAllUsers(IUser&lt;TUser&gt;, IPermissionRepository, PageParam)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;PaginatedResult&lt;UserViewModel&gt;&gt; GetAllUsers(IUser&lt;TUser&gt; userRepository, IPermissionRepository permissionRepository, PageParam pageParam = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IUser-1.html">IUser</a>&lt;TUser&gt;</td>
-        <td><span class="parametername">userRepository</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.Web.Abstraction.IPermissionRepository.html">IPermissionRepository</a></td>
-        <td><span class="parametername">permissionRepository</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Common.Core.Pagination.PageParam.html">PageParam</a></td>
-        <td><span class="parametername">pageParam</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Common.Core.Pagination.PaginatedResult-1.html">PaginatedResult</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetCurrentUser.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController%601.GetCurrentUser%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L27">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetCurrentUser_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.GetCurrentUser*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetCurrentUser" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.GetCurrentUser">GetCurrentUser()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;TUser&gt; GetCurrentUser()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TUser&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_IsCompanyAccessible_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController%601.IsCompanyAccessible(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L33">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_IsCompanyAccessible_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.IsCompanyAccessible*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_IsCompanyAccessible_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.IsCompanyAccessible(System.String)">IsCompanyAccessible(string)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;bool&gt; IsCompanyAccessible(string companyId)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PopulateUserRoleInfo__0_DNV_Authorization_UserManagement_ApiControllers_DTO_UserViewModel_System_Collections_Generic_IEnumerable_DNV_Authorization_Web_Abstraction_PermissionEntity__.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController%601.PopulateUserRoleInfo(%600%2CDNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel%2CSystem.Collections.Generic.IEnumerable%7BDNV.Authorization.Web.Abstraction.PermissionEntity%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L64">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PopulateUserRoleInfo_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.PopulateUserRoleInfo*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PopulateUserRoleInfo__0_DNV_Authorization_UserManagement_ApiControllers_DTO_UserViewModel_System_Collections_Generic_IEnumerable_DNV_Authorization_Web_Abstraction_PermissionEntity__" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.PopulateUserRoleInfo(`0,DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel,System.Collections.Generic.IEnumerable{DNV.Authorization.Web.Abstraction.PermissionEntity})">PopulateUserRoleInfo(TUser, UserViewModel, IEnumerable&lt;PermissionEntity&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected UserViewModel PopulateUserRoleInfo(TUser user, UserViewModel userViewModel, IEnumerable&lt;PermissionEntity&gt; allPermissions)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TUser</span></td>
-        <td><span class="parametername">user</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a></td>
-        <td><span class="parametername">userViewModel</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.Authorization.Web.Abstraction.PermissionEntity.html">PermissionEntity</a>&gt;</td>
-        <td><span class="parametername">allPermissions</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PruneUserCompanyInfo_DNV_Authorization_UserManagement_ApiControllers_DTO_UserViewModel_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController%601.PruneUserCompanyInfo(DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L57">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PruneUserCompanyInfo_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.PruneUserCompanyInfo*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PruneUserCompanyInfo_DNV_Authorization_UserManagement_ApiControllers_DTO_UserViewModel_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.PruneUserCompanyInfo(DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel,System.String)">PruneUserCompanyInfo(UserViewModel, string)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected UserViewModel PruneUserCompanyInfo(UserViewModel user, string companyId)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a></td>
-        <td><span class="parametername">user</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PruneUserInfo_DNV_Authorization_UserManagement_ApiControllers_DTO_UserViewModel_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController%601.PruneUserInfo(DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L49">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PruneUserInfo_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.PruneUserInfo*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PruneUserInfo_DNV_Authorization_UserManagement_ApiControllers_DTO_UserViewModel_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.PruneUserInfo(DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel,System.String)">PruneUserInfo(UserViewModel, string)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected UserViewModel PruneUserInfo(UserViewModel user, string companyId)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a></td>
-        <td><span class="parametername">user</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="extensionmethods">Extension Methods</h3>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
   <div>
       <a class="xref" href="DNV.Web.Swagger.Throws.html#DNV_Web_Swagger_Throws_IfNull__1___0_System_String_">Throws.IfNull&lt;T&gt;(T, string?)</a>
   </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1__ctor_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.#ctor*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1__ctor_DNV_Authorization_UserManagement_Abstraction_IUser__0__DNV_Authorization_Web_Abstraction_PermissionOptions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.#ctor(DNV.Authorization.UserManagement.Abstraction.IUser{`0},DNV.Authorization.Web.Abstraction.PermissionOptions)">
+  UserManagementBaseController(IUser&lt;TUser&gt;, PermissionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UserManagementBaseController(IUser&lt;TUser&gt; userRepository, PermissionOptions premissionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userRepository</code> <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IUser-1.html">IUser</a>&lt;TUser&gt;</dt>
+    <dd></dd>
+    <dt><code>premissionOptions</code> <a class="xref" href="DNV.Authorization.Web.Abstraction.PermissionOptions.html">PermissionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_FetchRole_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.FetchRole*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_FetchRole__1_System_String_DNV_Authorization_Web_Abstraction_IPermissionRepository_DNV_Authorization_UserManagement_Abstraction_IRole___0__" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.FetchRole``1(System.String,DNV.Authorization.Web.Abstraction.IPermissionRepository,DNV.Authorization.UserManagement.Abstraction.IRole{``0})">
+  FetchRole&lt;TRole&gt;(string, IPermissionRepository, IRole&lt;TRole&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task&lt;RoleViewDto&gt; FetchRole&lt;TRole&gt;(string id, IPermissionRepository permissionRepository, IRole&lt;TRole&gt; roleRepository) where TRole : Role, new()</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>permissionRepository</code> <a class="xref" href="DNV.Authorization.Web.Abstraction.IPermissionRepository.html">IPermissionRepository</a></dt>
+    <dd></dd>
+    <dt><code>roleRepository</code> <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IRole-1.html">IRole</a>&lt;TRole&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.RoleViewDto.html">RoleViewDto</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TRole</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetAllRoles_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.GetAllRoles*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetAllRoles__1_DNV_Authorization_UserManagement_Abstraction_IRole___0__DNV_Authorization_Web_Abstraction_IPermissionRepository_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.GetAllRoles``1(DNV.Authorization.UserManagement.Abstraction.IRole{``0},DNV.Authorization.Web.Abstraction.IPermissionRepository)">
+  GetAllRoles&lt;TRole&gt;(IRole&lt;TRole&gt;, IPermissionRepository)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task&lt;IEnumerable&lt;RoleViewDto&gt;&gt; GetAllRoles&lt;TRole&gt;(IRole&lt;TRole&gt; roleRepository, IPermissionRepository permissionRepository) where TRole : Role, new()</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>roleRepository</code> <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IRole-1.html">IRole</a>&lt;TRole&gt;</dt>
+    <dd></dd>
+    <dt><code>permissionRepository</code> <a class="xref" href="DNV.Authorization.Web.Abstraction.IPermissionRepository.html">IPermissionRepository</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.RoleViewDto.html">RoleViewDto</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TRole</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetAllUsers_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.GetAllUsers*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetAllUsers_DNV_Authorization_UserManagement_Abstraction_IUser__0__DNV_Authorization_Web_Abstraction_IPermissionRepository_DNV_Common_Core_Pagination_PageParam_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.GetAllUsers(DNV.Authorization.UserManagement.Abstraction.IUser{`0},DNV.Authorization.Web.Abstraction.IPermissionRepository,DNV.Common.Core.Pagination.PageParam)">
+  GetAllUsers(IUser&lt;TUser&gt;, IPermissionRepository, PageParam)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task&lt;PaginatedResult&lt;UserViewModel&gt;&gt; GetAllUsers(IUser&lt;TUser&gt; userRepository, IPermissionRepository permissionRepository, PageParam pageParam = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userRepository</code> <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IUser-1.html">IUser</a>&lt;TUser&gt;</dt>
+    <dd></dd>
+    <dt><code>permissionRepository</code> <a class="xref" href="DNV.Authorization.Web.Abstraction.IPermissionRepository.html">IPermissionRepository</a></dt>
+    <dd></dd>
+    <dt><code>pageParam</code> <a class="xref" href="DNV.Common.Core.Pagination.PageParam.html">PageParam</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Common.Core.Pagination.PaginatedResult-1.html">PaginatedResult</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetCurrentUser_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.GetCurrentUser*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetCurrentUser" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.GetCurrentUser">
+  GetCurrentUser()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task&lt;TUser&gt; GetCurrentUser()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TUser&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_IsCompanyAccessible_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.IsCompanyAccessible*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_IsCompanyAccessible_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.IsCompanyAccessible(System.String)">
+  IsCompanyAccessible(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task&lt;bool&gt; IsCompanyAccessible(string companyId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PopulateUserRoleInfo_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.PopulateUserRoleInfo*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PopulateUserRoleInfo__0_DNV_Authorization_UserManagement_ApiControllers_DTO_UserViewModel_System_Collections_Generic_IEnumerable_DNV_Authorization_Web_Abstraction_PermissionEntity__" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.PopulateUserRoleInfo(`0,DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel,System.Collections.Generic.IEnumerable{DNV.Authorization.Web.Abstraction.PermissionEntity})">
+  PopulateUserRoleInfo(TUser, UserViewModel, IEnumerable&lt;PermissionEntity&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UserViewModel PopulateUserRoleInfo(TUser user, UserViewModel userViewModel, IEnumerable&lt;PermissionEntity&gt; allPermissions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <span class="xref">TUser</span></dt>
+    <dd></dd>
+    <dt><code>userViewModel</code> <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a></dt>
+    <dd></dd>
+    <dt><code>allPermissions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.Authorization.Web.Abstraction.PermissionEntity.html">PermissionEntity</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PruneUserCompanyInfo_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.PruneUserCompanyInfo*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PruneUserCompanyInfo_DNV_Authorization_UserManagement_ApiControllers_DTO_UserViewModel_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.PruneUserCompanyInfo(DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel,System.String)">
+  PruneUserCompanyInfo(UserViewModel, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UserViewModel PruneUserCompanyInfo(UserViewModel user, string companyId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a></dt>
+    <dd></dd>
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PruneUserInfo_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.PruneUserInfo*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_PruneUserInfo_DNV_Authorization_UserManagement_ApiControllers_DTO_UserViewModel_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController`1.PruneUserInfo(DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel,System.String)">
+  PruneUserInfo(UserViewModel, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UserViewModel PruneUserInfo(UserViewModel user, string companyId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a></dt>
+    <dd></dd>
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L16" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
+          <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/BaseController.cs/#L16" class="edit-link">Edit this page</a>
         </div>
+
+        
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      godspeed
-      
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          godspeed
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

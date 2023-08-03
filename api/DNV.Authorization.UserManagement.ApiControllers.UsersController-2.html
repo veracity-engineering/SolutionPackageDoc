@@ -1,99 +1,135 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class UsersController&lt;TRole, TUser&gt;
  </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class UsersController&lt;TRole, TUser&gt;
  ">
-    
-      <link rel="shortcut icon" href="../favicon.png">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <link rel="icon" href="../favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
 
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2">
+
+        <article data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2">
 
 
 
-  <h1 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2" class="text-break">Class UsersController&lt;TRole, TUser&gt;
-</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase">ControllerBase</a></div>
-    <div class="level2"><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.html">UserManagementBaseController</a>&lt;TUser&gt;</div>
-    <div class="level3"><span class="xref">UsersController&lt;TRole, TUser&gt;</span></div>
+  <h1 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2" class="text-break">
+    Class UsersController&lt;TRole, TUser&gt;
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DNV.html">DNV</a>.<a class="xref" href="DNV.Authorization.html">Authorization</a>.<a class="xref" href="DNV.Authorization.UserManagement.html">UserManagement</a>.<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.html">ApiControllers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DNV.Authorization.UserManagement.ApiControllers.dll</dd></dl>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Authorize]
+[Produces(&quot;application/json&quot;, new string[] { })]
+[ApiController]
+[TypeFilter(typeof(ErrorCodeExceptionFilter))]
+[Route(&quot;api/company/{companyId}/users&quot;)]
+[CompanyIdentityFieldNameFilter(&quot;companyId&quot;, &quot;&quot;, &quot;&quot;)]
+[ApiExplorerSettings(GroupName = &quot;UserManagement&#39;s User APIs&quot;)]
+public class UsersController&lt;TRole, TUser&gt; : UserManagementBaseController&lt;TUser&gt; where TRole : Role, new() where TUser : User, new()</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TRole</code></dt>
+    <dd></dd>
+    <dt><code>TUser</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase">ControllerBase</a></div>
+      <div><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.html">UserManagementBaseController</a>&lt;TUser&gt;</div>
+      <div><span class="xref">UsersController&lt;TRole, TUser&gt;</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementBaseController-1.html#DNV_Authorization_UserManagement_ApiControllers_UserManagementBaseController_1_GetCurrentUser">UserManagementBaseController&lt;TUser&gt;.GetCurrentUser()</a>
     </div>
@@ -631,113 +667,80 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DNV.Web.Swagger.Throws.html#DNV_Web_Swagger_Throws_IfNull__1___0_System_String_">Throws.IfNull&lt;T&gt;(T, string?)</a>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="DNV.html">DNV</a>.<a class="xref" href="DNV.Authorization.html">Authorization</a>.<a class="xref" href="DNV.Authorization.UserManagement.html">UserManagement</a>.<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.html">ApiControllers</a></h6>
-  <h6><strong>Assembly</strong>: DNV.Authorization.UserManagement.ApiControllers.dll</h6>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Authorize]
-[Produces(&quot;application/json&quot;, new string[] { })]
-[ApiController]
-[TypeFilter(typeof(ErrorCodeExceptionFilter))]
-[Route(&quot;api/company/{companyId}/users&quot;)]
-[CompanyIdentityFieldNameFilter(&quot;companyId&quot;, &quot;&quot;, &quot;&quot;)]
-[ApiExplorerSettings(GroupName = &quot;UserManagement&#39;s User APIs&quot;)]
-public class UsersController&lt;TRole, TUser&gt; : UserManagementBaseController&lt;TUser&gt; where TRole : Role, new() where TUser : User, new()</code></pre>
-  </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TRole</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TUser</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="constructors">Constructors
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2__ctor_DNV_Authorization_UserManagement_Abstraction_IUser__1__DNV_Authorization_UserManagement_Abstraction_IRole__0__DNV_Authorization_UserManagement_Abstraction_IUserSynchronization__1__DNV_Authorization_Web_Abstraction_PermissionOptions_DNV_Authorization_Web_Abstraction_IPermissionRepository_DNV_Authorization_UserManagement_Abstraction_UserManagementSettings_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.%23ctor(DNV.Authorization.UserManagement.Abstraction.IUser%7B%601%7D%2CDNV.Authorization.UserManagement.Abstraction.IRole%7B%600%7D%2CDNV.Authorization.UserManagement.Abstraction.IUserSynchronization%7B%601%7D%2CDNV.Authorization.Web.Abstraction.PermissionOptions%2CDNV.Authorization.Web.Abstraction.IPermissionRepository%2CDNV.Authorization.UserManagement.Abstraction.UserManagementSettings)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L34">View Source</a>
-  </span>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2__ctor_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.#ctor*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2__ctor_DNV_Authorization_UserManagement_Abstraction_IUser__1__DNV_Authorization_UserManagement_Abstraction_IRole__0__DNV_Authorization_UserManagement_Abstraction_IUserSynchronization__1__DNV_Authorization_Web_Abstraction_PermissionOptions_DNV_Authorization_Web_Abstraction_IPermissionRepository_DNV_Authorization_UserManagement_Abstraction_UserManagementSettings_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.#ctor(DNV.Authorization.UserManagement.Abstraction.IUser{`1},DNV.Authorization.UserManagement.Abstraction.IRole{`0},DNV.Authorization.UserManagement.Abstraction.IUserSynchronization{`1},DNV.Authorization.Web.Abstraction.PermissionOptions,DNV.Authorization.Web.Abstraction.IPermissionRepository,DNV.Authorization.UserManagement.Abstraction.UserManagementSettings)">UsersController(IUser&lt;TUser&gt;, IRole&lt;TRole&gt;, IUserSynchronization&lt;TUser&gt;, PermissionOptions, IPermissionRepository, UserManagementSettings)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2__ctor_DNV_Authorization_UserManagement_Abstraction_IUser__1__DNV_Authorization_UserManagement_Abstraction_IRole__0__DNV_Authorization_UserManagement_Abstraction_IUserSynchronization__1__DNV_Authorization_Web_Abstraction_PermissionOptions_DNV_Authorization_Web_Abstraction_IPermissionRepository_DNV_Authorization_UserManagement_Abstraction_UserManagementSettings_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.#ctor(DNV.Authorization.UserManagement.Abstraction.IUser{`1},DNV.Authorization.UserManagement.Abstraction.IRole{`0},DNV.Authorization.UserManagement.Abstraction.IUserSynchronization{`1},DNV.Authorization.Web.Abstraction.PermissionOptions,DNV.Authorization.Web.Abstraction.IPermissionRepository,DNV.Authorization.UserManagement.Abstraction.UserManagementSettings)">
+  UsersController(IUser&lt;TUser&gt;, IRole&lt;TRole&gt;, IUserSynchronization&lt;TUser&gt;, PermissionOptions, IPermissionRepository, UserManagementSettings)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public UsersController(IUser&lt;TUser&gt; userRepository, IRole&lt;TRole&gt; roleRepository, IUserSynchronization&lt;TUser&gt; userSynchronization, PermissionOptions premissionOptions, IPermissionRepository permissionRepository, UserManagementSettings userManagementSettings)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IUser-1.html">IUser</a>&lt;TUser&gt;</td>
-        <td><span class="parametername">userRepository</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IRole-1.html">IRole</a>&lt;TRole&gt;</td>
-        <td><span class="parametername">roleRepository</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html">IUserSynchronization</a>&lt;TUser&gt;</td>
-        <td><span class="parametername">userSynchronization</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.Web.Abstraction.PermissionOptions.html">PermissionOptions</a></td>
-        <td><span class="parametername">premissionOptions</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.Web.Abstraction.IPermissionRepository.html">IPermissionRepository</a></td>
-        <td><span class="parametername">permissionRepository</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.Abstraction.UserManagementSettings.html">UserManagementSettings</a></td>
-        <td><span class="parametername">userManagementSettings</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateCrossCompanyUser_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.CreateCrossCompanyUser(DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L659">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userRepository</code> <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IUser-1.html">IUser</a>&lt;TUser&gt;</dt>
+    <dd></dd>
+    <dt><code>roleRepository</code> <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IRole-1.html">IRole</a>&lt;TRole&gt;</dt>
+    <dd></dd>
+    <dt><code>userSynchronization</code> <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.IUserSynchronization-1.html">IUserSynchronization</a>&lt;TUser&gt;</dt>
+    <dd></dd>
+    <dt><code>premissionOptions</code> <a class="xref" href="DNV.Authorization.Web.Abstraction.PermissionOptions.html">PermissionOptions</a></dt>
+    <dd></dd>
+    <dt><code>permissionRepository</code> <a class="xref" href="DNV.Authorization.Web.Abstraction.IPermissionRepository.html">IPermissionRepository</a></dt>
+    <dd></dd>
+    <dt><code>userManagementSettings</code> <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.UserManagementSettings.html">UserManagementSettings</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateCrossCompanyUser_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.CreateCrossCompanyUser*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateCrossCompanyUser_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.CreateCrossCompanyUser(DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel)">CreateCrossCompanyUser(UserEditModel)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateCrossCompanyUser_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.CreateCrossCompanyUser(DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel)">
+  CreateCrossCompanyUser(UserEditModel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L659"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Create a user. Only using it if user's company is unknown.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost]
 [Route(&quot;~/api/admin/users&quot;)]
@@ -747,39 +750,26 @@ public class UsersController&lt;TRole, TUser&gt; : UserManagementBaseController&
 [PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ManageUser, PermissionMatrix.Premissions.ViewCompany })]
 public Task&lt;ActionResult&gt; CreateCrossCompanyUser(UserEditModel model)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel.html">UserEditModel</a></td>
-        <td><span class="parametername">model</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateCrossCompanyUser_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>model</code> <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel.html">UserEditModel</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateCrossCompanyUser_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission: ManageUser, ViewCompany</p>
 <p>Sample request:</p>
 <pre><code>{
@@ -795,19 +785,21 @@ public Task&lt;ActionResult&gt; CreateCrossCompanyUser(UserEditModel model)</cod
 }
 </code></pre>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateCrossCompanyUserFromCustomModel__1_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.CreateCrossCompanyUserFromCustomModel(%601)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L613">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateCrossCompanyUserFromCustomModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.CreateCrossCompanyUserFromCustomModel*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateCrossCompanyUserFromCustomModel__1_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.CreateCrossCompanyUserFromCustomModel(`1)">CreateCrossCompanyUserFromCustomModel(TUser)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateCrossCompanyUserFromCustomModel__1_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.CreateCrossCompanyUserFromCustomModel(`1)">
+  CreateCrossCompanyUserFromCustomModel(TUser)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L613"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Create a user using custom model. Only if custom user model is used. Only using it if user's company is unknown.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost]
 [Route(&quot;~/api/admin/users/custommodel&quot;)]
@@ -818,39 +810,26 @@ public Task&lt;ActionResult&gt; CreateCrossCompanyUser(UserEditModel model)</cod
 [ApiExplorerSettings(GroupName = &quot;UserManagement&#39;s User APIs - Custom Model&quot;)]
 public Task&lt;ActionResult&gt; CreateCrossCompanyUserFromCustomModel(TUser model)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TUser</span></td>
-        <td><span class="parametername">model</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateCrossCompanyUserFromCustomModel__1__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>model</code> <span class="xref">TUser</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateCrossCompanyUserFromCustomModel__1__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission: ManageUser, ViewCompany</p>
 <p>Sample request:</p>
 <pre><code>{
@@ -866,19 +845,21 @@ public Task&lt;ActionResult&gt; CreateCrossCompanyUserFromCustomModel(TUser mode
 }
 </code></pre>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateUser_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.CreateUser(System.String%2CDNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L350">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateUser_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.CreateUser*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateUser_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.CreateUser(System.String,DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel)">CreateUser(string, UserEditModel)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateUser_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.CreateUser(System.String,DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel)">
+  CreateUser(string, UserEditModel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Create a user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost]
 [Route(&quot;&quot;)]
@@ -887,45 +868,29 @@ public Task&lt;ActionResult&gt; CreateCrossCompanyUserFromCustomModel(TUser mode
 [AccessibleCompanyFilter]
 public Task&lt;string&gt; CreateUser(string companyId, UserEditModel model)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td><p>Company Id</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel.html">UserEditModel</a></td>
-        <td><span class="parametername">model</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateUser_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Company Id</p>
+</dd>
+    <dt><code>model</code> <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel.html">UserEditModel</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateUser_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ManageUser</p>
 <p>Required Permission for user not in this company: ManageUser,ViewCompany</p>
 <p>Sample request:</p>
@@ -942,19 +907,21 @@ public Task&lt;string&gt; CreateUser(string companyId, UserEditModel model)</cod
 }
 </code></pre>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateUserFromCustommodel_System_String__1_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.CreateUserFromCustommodel(System.String%2C%601)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L299">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateUserFromCustommodel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.CreateUserFromCustommodel*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateUserFromCustommodel_System_String__1_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.CreateUserFromCustommodel(System.String,`1)">CreateUserFromCustommodel(string, TUser)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateUserFromCustommodel_System_String__1_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.CreateUserFromCustommodel(System.String,`1)">
+  CreateUserFromCustommodel(string, TUser)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Create a user using custom model. Only if custom user model is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost]
 [Route(&quot;custommodel&quot;)]
@@ -964,45 +931,29 @@ public Task&lt;string&gt; CreateUser(string companyId, UserEditModel model)</cod
 [AccessibleCompanyFilter]
 public Task&lt;string&gt; CreateUserFromCustommodel(string companyId, TUser model)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td><p>Company Id</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">TUser</span></td>
-        <td><span class="parametername">model</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateUserFromCustommodel_System_String__1__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Company Id</p>
+</dd>
+    <dt><code>model</code> <span class="xref">TUser</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_CreateUserFromCustommodel_System_String__1__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ManageUser</p>
 <p>Required Permission for user not in this company: ManageUser,ViewCompany</p>
 <p>Sample request:</p>
@@ -1019,74 +970,65 @@ public Task&lt;string&gt; CreateUserFromCustommodel(string companyId, TUser mode
 }
 </code></pre>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_DeleteCrossCompanyUser_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.DeleteCrossCompanyUser(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L787">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_DeleteCrossCompanyUser_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.DeleteCrossCompanyUser*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_DeleteCrossCompanyUser_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.DeleteCrossCompanyUser(System.String)">DeleteCrossCompanyUser(string)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_DeleteCrossCompanyUser_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.DeleteCrossCompanyUser(System.String)">
+  DeleteCrossCompanyUser(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L787"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Delete a user.Only using it if user's company is unknown.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpDelete]
 [Route(&quot;~/api/admin/users/{id}&quot;)]
 [PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ManageUser, PermissionMatrix.Premissions.ViewCompany })]
 public Task DeleteCrossCompanyUser(string id)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>User Id</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_DeleteCrossCompanyUser_System_String__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User Id</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_DeleteCrossCompanyUser_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission: ManageUser, ViewCompany</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_DeleteUser_System_String_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.DeleteUser(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L396">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_DeleteUser_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.DeleteUser*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_DeleteUser_System_String_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.DeleteUser(System.String,System.String)">DeleteUser(string, string)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_DeleteUser_System_String_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.DeleteUser(System.String,System.String)">
+  DeleteUser(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L396"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Delete a user</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpDelete]
 [Route(&quot;{id}&quot;)]
@@ -1095,115 +1037,90 @@ public Task DeleteCrossCompanyUser(string id)</code></pre>
 [AccessibleCompanyFilter]
 public Task DeleteUser(string companyId, string id)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td><p>Company Id</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>User Id</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_DeleteUser_System_String_System_String__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Company Id</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User Id</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_DeleteUser_System_String_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ManageUser</p>
 <p>Required Permission for user not in this company: ManageUser,ViewCompany</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCompanyUserByIdentityId_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.GetCompanyUserByIdentityId(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L432">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCompanyUserByIdentityId_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCompanyUserByIdentityId*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCompanyUserByIdentityId_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCompanyUserByIdentityId(System.String)">GetCompanyUserByIdentityId(string)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCompanyUserByIdentityId_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCompanyUserByIdentityId(System.String)">
+  GetCompanyUserByIdentityId(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L432"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Get Current user info with user's permission in this company.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Route(&quot;~/api/company/{companyId}/users/currentUser&quot;)]
 public Task&lt;UserViewModel&gt; GetCompanyUserByIdentityId(string companyId)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td><p>Company Id</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCompanyUserByIdentityId_System_String__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Company Id</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCompanyUserByIdentityId_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>No permission is required</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCompanyUsers_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.GetCompanyUsers(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L547">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCompanyUsers_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCompanyUsers*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCompanyUsers_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCompanyUsers(System.String)">GetCompanyUsers(string)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCompanyUsers_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCompanyUsers(System.String)">
+  GetCompanyUsers(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L547"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Route(&quot;~/api/admin/{companyid}/users&quot;)]
@@ -1211,259 +1128,213 @@ public Task&lt;UserViewModel&gt; GetCompanyUserByIdentityId(string companyId)</c
 [PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ViewUser, PermissionMatrix.Premissions.ViewCompany })]
 public Task&lt;IEnumerable&lt;UserViewModel&gt;&gt; GetCompanyUsers(string companyid)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyid</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUser_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.GetCrossCompanyUser(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L564">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>companyid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUser_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCrossCompanyUser*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUser_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCrossCompanyUser(System.String)">GetCrossCompanyUser(string)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUser_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCrossCompanyUser(System.String)">
+  GetCrossCompanyUser(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L564"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Get a user's info. Only using it if user's company is unknown.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Route(&quot;~/api/admin/users/{id}&quot;)]
 [PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ViewUser, PermissionMatrix.Premissions.ViewCompany })]
 public Task&lt;UserViewModel&gt; GetCrossCompanyUser(string id)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>User Id</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUser_System_String__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User Id</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUser_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission: ViewUser,ViewCompany</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUserByEmail_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.GetCrossCompanyUserByEmail(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L580">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUserByEmail_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCrossCompanyUserByEmail*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUserByEmail_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCrossCompanyUserByEmail(System.String)">GetCrossCompanyUserByEmail(string)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUserByEmail_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCrossCompanyUserByEmail(System.String)">
+  GetCrossCompanyUserByEmail(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L580"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Get a user's info. Only using it if user's company is unknown.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Route(&quot;~/api/admin/users/email/{email}&quot;)]
 [PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ViewUser, PermissionMatrix.Premissions.ViewCompany })]
 public Task&lt;UserViewModel&gt; GetCrossCompanyUserByEmail(string email)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">email</span></td>
-        <td><p>User Email</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUserByEmail_System_String__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>email</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User Email</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUserByEmail_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission: ViewUser,ViewCompany</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUsers.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.GetCrossCompanyUsers%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L520">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUsers_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCrossCompanyUsers*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUsers" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCrossCompanyUsers">GetCrossCompanyUsers()</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUsers" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCrossCompanyUsers">
+  GetCrossCompanyUsers()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L520"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Get all users.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Route(&quot;~/api/admin/users&quot;)]
 [PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ViewUser, PermissionMatrix.Premissions.ViewCompany })]
 public Task&lt;IEnumerable&lt;UserViewModel&gt;&gt; GetCrossCompanyUsers()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUsers_remarks">Remarks</h5>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUsers_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission: ViewUser,ViewCompany</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUsersGetUsersPaged_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.GetCrossCompanyUsersGetUsersPaged(System.Int32%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L537">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUsersGetUsersPaged_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCrossCompanyUsersGetUsersPaged*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUsersGetUsersPaged_System_Int32_System_Int32_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCrossCompanyUsersGetUsersPaged(System.Int32,System.Int32)">GetCrossCompanyUsersGetUsersPaged(int, int)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUsersGetUsersPaged_System_Int32_System_Int32_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetCrossCompanyUsersGetUsersPaged(System.Int32,System.Int32)">
+  GetCrossCompanyUsersGetUsersPaged(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L537"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Get all users, grouping large sets of data into pages.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Route(&quot;~/api/admin/users/{page:int}/{size:int}&quot;)]
 [PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ViewUser, PermissionMatrix.Premissions.ViewCompany })]
 public Task&lt;PaginatedResultViewModel&lt;UserViewModel&gt;&gt; GetCrossCompanyUsersGetUsersPaged(int page = 0, int size = 0)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">page</span></td>
-        <td><p>The page index, starting from 1</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">size</span></td>
-        <td><p>the page size</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.PaginatedResultViewModel-1.html">PaginatedResultViewModel</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUsersGetUsersPaged_System_Int32_System_Int32__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>page</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The page index, starting from 1</p>
+</dd>
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the page size</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.PaginatedResultViewModel-1.html">PaginatedResultViewModel</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetCrossCompanyUsersGetUsersPaged_System_Int32_System_Int32__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission: ViewUser,ViewCompany</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUser_System_String_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.GetUser(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L99">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUser_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUser*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUser_System_String_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUser(System.String,System.String)">GetUser(string, string)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUser_System_String_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUser(System.String,System.String)">
+  GetUser(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Get user info by user id</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Route(&quot;{id}&quot;)]
@@ -1472,62 +1343,48 @@ public Task&lt;PaginatedResultViewModel&lt;UserViewModel&gt;&gt; GetCrossCompany
 [AccessibleCompanyFilter]
 public Task&lt;UserViewModel&gt; GetUser(string companyId, string id)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td><p>Company Id</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>User Id</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUser_System_String_System_String__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Company Id</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User Id</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUser_System_String_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ViewUser</p>
 <p>Required Permission for user not in this company: ViewUser,ViewCompany</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserByEmail_System_String_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.GetUserByEmail(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L130">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserByEmail_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUserByEmail*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserByEmail_System_String_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUserByEmail(System.String,System.String)">GetUserByEmail(string, string)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserByEmail_System_String_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUserByEmail(System.String,System.String)">
+  GetUserByEmail(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Get user info by user email</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Route(&quot;email/{email}&quot;)]
@@ -1536,98 +1393,85 @@ public Task&lt;UserViewModel&gt; GetUser(string companyId, string id)</code></pr
 [AccessibleCompanyFilter]
 public Task&lt;UserViewModel&gt; GetUserByEmail(string companyId, string email)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td><p>Company Id</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">email</span></td>
-        <td><p>User email</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserByEmail_System_String_System_String__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Company Id</p>
+</dd>
+    <dt><code>email</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User email</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserByEmail_System_String_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ViewUser</p>
 <p>Required Permission for user not in this company: ViewUser,ViewCompany</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserByIdentityId.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.GetUserByIdentityId%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L480">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserByIdentityId_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUserByIdentityId*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserByIdentityId" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUserByIdentityId">GetUserByIdentityId()</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserByIdentityId" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUserByIdentityId">
+  GetUserByIdentityId()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L480"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Get Current user info with user's all permission</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Route(&quot;~/api/users/currentUser&quot;)]
 public Task&lt;UserViewModel&gt; GetUserByIdentityId()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserByIdentityId_remarks">Remarks</h5>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserByIdentityId_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>No permission is required</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserCorssCompanyPermissions_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.GetUserCorssCompanyPermissions(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L498">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserCorssCompanyPermissions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUserCorssCompanyPermissions*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserCorssCompanyPermissions_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUserCorssCompanyPermissions(System.String)">GetUserCorssCompanyPermissions(string)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserCorssCompanyPermissions_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUserCorssCompanyPermissions(System.String)">
+  GetUserCorssCompanyPermissions(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L498"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Get a user's all permissions. This API should only be used in Company_GlobalRole_User mode</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Route(&quot;~/api/users/{id}/permissions&quot;)]
@@ -1635,56 +1479,45 @@ public Task&lt;UserViewModel&gt; GetUserByIdentityId()</code></pre>
 [AccessCrossCompanyPermissionFilter(new object[] { PermissionMatrix.Premissions.ViewCompany })]
 public Task&lt;IEnumerable&lt;string&gt;&gt; GetUserCorssCompanyPermissions(string id)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>User Id</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserCorssCompanyPermissions_System_String__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User Id</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserCorssCompanyPermissions_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ViewUser</p>
 <p>Required Permission for user not in this company: ViewUser,ViewCompany</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserPermissions_System_String_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.GetUserPermissions(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L456">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserPermissions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUserPermissions*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserPermissions_System_String_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUserPermissions(System.String,System.String)">GetUserPermissions(string, string)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserPermissions_System_String_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUserPermissions(System.String,System.String)">
+  GetUserPermissions(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L456"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Ger a user's permission in this company.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Route(&quot;~/api/company/{companyId}/users/{id}/permissions&quot;)]
@@ -1692,62 +1525,48 @@ public Task&lt;IEnumerable&lt;string&gt;&gt; GetUserCorssCompanyPermissions(stri
 [AccessCrossCompanyPermissionFilter(new object[] { PermissionMatrix.Premissions.ViewCompany })]
 public Task&lt;IEnumerable&lt;string&gt;&gt; GetUserPermissions(string companyId, string id)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td><p>Company Id</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>User Id</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserPermissions_System_String_System_String__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Company Id</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User Id</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUserPermissions_System_String_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ViewUser</p>
 <p>Required Permission for user not in this company: ViewUser,ViewCompany</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUsers_System_String_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.GetUsers(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L54">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUsers_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUsers*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUsers_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUsers(System.String)">GetUsers(string)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUsers_System_String_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUsers(System.String)">
+  GetUsers(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Get all user of a company</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Route(&quot;&quot;)]
@@ -1756,56 +1575,45 @@ public Task&lt;IEnumerable&lt;string&gt;&gt; GetUserPermissions(string companyId
 [AccessibleCompanyFilter]
 public Task&lt;IEnumerable&lt;UserViewModel&gt;&gt; GetUsers(string companyId)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td><p>Company Id</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUsers_System_String__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Company Id</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUsers_System_String__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ViewUser</p>
 <p>Required Permission for user not in this company: ViewUser,ViewCompany</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUsersPaged_System_String_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.GetUsersPaged(System.String%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L76">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUsersPaged_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUsersPaged*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUsersPaged_System_String_System_Int32_System_Int32_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUsersPaged(System.String,System.Int32,System.Int32)">GetUsersPaged(string, int, int)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUsersPaged_System_String_System_Int32_System_Int32_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.GetUsersPaged(System.String,System.Int32,System.Int32)">
+  GetUsersPaged(string, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Get all user of a company, grouping large sets of data into pages.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Route(&quot;{page:int}/{size:int}&quot;)]
@@ -1814,113 +1622,80 @@ public Task&lt;IEnumerable&lt;UserViewModel&gt;&gt; GetUsers(string companyId)</
 [AccessibleCompanyFilter]
 public Task&lt;PaginatedResultViewModel&lt;UserViewModel&gt;&gt; GetUsersPaged(string companyId, int page = 0, int size = 0)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td><p>Company Id</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">page</span></td>
-        <td><p>The page index, starting from 1</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">size</span></td>
-        <td><p>the page size</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.PaginatedResultViewModel-1.html">PaginatedResultViewModel</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUsersPaged_System_String_System_Int32_System_Int32__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Company Id</p>
+</dd>
+    <dt><code>page</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The page index, starting from 1</p>
+</dd>
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the page size</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.PaginatedResultViewModel-1.html">PaginatedResultViewModel</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserViewModel.html">UserViewModel</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_GetUsersPaged_System_String_System_Int32_System_Int32__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ViewUser</p>
 <p>Required Permission for user not in this company: ViewUser,ViewCompany</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateCrossCompanyUser_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.UpdateCrossCompanyUser(System.String%2CDNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L756">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateCrossCompanyUser_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.UpdateCrossCompanyUser*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateCrossCompanyUser_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.UpdateCrossCompanyUser(System.String,DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel)">UpdateCrossCompanyUser(string, UserEditModel)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateCrossCompanyUser_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.UpdateCrossCompanyUser(System.String,DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel)">
+  UpdateCrossCompanyUser(string, UserEditModel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L756"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Update a user.Only using it if user's company is unknown.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPut]
 [Route(&quot;~/api/admin/users/{id}&quot;)]
 [PermissionAuthorize(new object[] { PermissionMatrix.Premissions.ManageUser, PermissionMatrix.Premissions.ViewCompany })]
 public Task UpdateCrossCompanyUser(string id, UserEditModel model)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>User Id</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel.html">UserEditModel</a></td>
-        <td><span class="parametername">model</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateCrossCompanyUser_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User Id</p>
+</dd>
+    <dt><code>model</code> <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel.html">UserEditModel</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateCrossCompanyUser_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission: ManageUser, ViewCompany</p>
 <p>Sample request:</p>
 <pre><code>{
@@ -1936,19 +1711,21 @@ public Task UpdateCrossCompanyUser(string id, UserEditModel model)</code></pre>
 }
 </code></pre>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateCrossCompanyUserFromCustomModel_System_String__1_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.UpdateCrossCompanyUserFromCustomModel(System.String%2C%601)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L716">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateCrossCompanyUserFromCustomModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.UpdateCrossCompanyUserFromCustomModel*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateCrossCompanyUserFromCustomModel_System_String__1_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.UpdateCrossCompanyUserFromCustomModel(System.String,`1)">UpdateCrossCompanyUserFromCustomModel(string, TUser)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateCrossCompanyUserFromCustomModel_System_String__1_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.UpdateCrossCompanyUserFromCustomModel(System.String,`1)">
+  UpdateCrossCompanyUserFromCustomModel(string, TUser)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L716"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Update a user using custom model. Only if custom user model is used. Only using it if user's company is unknown.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPut]
 [Route(&quot;~/api/admin/users/custommodel/{id}&quot;)]
@@ -1956,45 +1733,29 @@ public Task UpdateCrossCompanyUser(string id, UserEditModel model)</code></pre>
 [ApiExplorerSettings(GroupName = &quot;UserManagement&#39;s User APIs - Custom Model&quot;)]
 public Task UpdateCrossCompanyUserFromCustomModel(string id, TUser model)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>User Id</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">TUser</span></td>
-        <td><span class="parametername">model</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateCrossCompanyUserFromCustomModel_System_String__1__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User Id</p>
+</dd>
+    <dt><code>model</code> <span class="xref">TUser</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateCrossCompanyUserFromCustomModel_System_String__1__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission: ManageUser, ViewCompany</p>
 <p>Sample request:</p>
 <pre><code>{
@@ -2010,19 +1771,21 @@ public Task UpdateCrossCompanyUserFromCustomModel(string id, TUser model)</code>
 }
 </code></pre>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateUser_System_String_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.UpdateUser(System.String%2CSystem.String%2CDNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L237">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateUser_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.UpdateUser*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateUser_System_String_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.UpdateUser(System.String,System.String,DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel)">UpdateUser(string, string, UserEditModel)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateUser_System_String_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.UpdateUser(System.String,System.String,DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel)">
+  UpdateUser(string, string, UserEditModel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Update a user</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPut]
 [Route(&quot;{id}&quot;)]
@@ -2031,51 +1794,32 @@ public Task UpdateCrossCompanyUserFromCustomModel(string id, TUser model)</code>
 [AccessibleCompanyFilter]
 public Task UpdateUser(string companyId, string id, UserEditModel model)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td><p>Company Id</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>User Id</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel.html">UserEditModel</a></td>
-        <td><span class="parametername">model</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateUser_System_String_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Company Id</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User Id</p>
+</dd>
+    <dt><code>model</code> <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.DTO.UserEditModel.html">UserEditModel</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateUser_System_String_System_String_DNV_Authorization_UserManagement_ApiControllers_DTO_UserEditModel__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ManageUser</p>
 <p>Required Permission for user not in this company: ManageUser,ViewCompany</p>
 <p>Sample request:</p>
@@ -2092,19 +1836,21 @@ public Task UpdateUser(string companyId, string id, UserEditModel model)</code><
 }
 </code></pre>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateUserFromCustomModel_System_String_System_String__1_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602.UpdateUserFromCustomModel(System.String%2CSystem.String%2C%601)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L178">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateUserFromCustomModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.UpdateUserFromCustomModel*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateUserFromCustomModel_System_String_System_String__1_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.UpdateUserFromCustomModel(System.String,System.String,`1)">UpdateUserFromCustomModel(string, string, TUser)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateUserFromCustomModel_System_String_System_String__1_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UsersController`2.UpdateUserFromCustomModel(System.String,System.String,`1)">
+  UpdateUserFromCustomModel(string, string, TUser)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Update a user using custom model. Only if custom user model is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPut]
 [Route(&quot;custommodel/{id}&quot;)]
@@ -2114,51 +1860,32 @@ public Task UpdateUser(string companyId, string id, UserEditModel model)</code><
 [ApiExplorerSettings(GroupName = &quot;UserManagement&#39;s User APIs - Custom Model&quot;)]
 public Task UpdateUserFromCustomModel(string companyId, string id, TUser model)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">companyId</span></td>
-        <td><p>Company Id</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>User Id</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">TUser</span></td>
-        <td><span class="parametername">model</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateUserFromCustomModel_System_String_System_String__1__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>companyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Company Id</p>
+</dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User Id</p>
+</dd>
+    <dt><code>model</code> <span class="xref">TUser</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UsersController_2_UpdateUserFromCustomModel_System_String_System_String__1__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Required Permission for user in the this company: ManageUser</p>
 <p>Required Permission for user not in this company: ManageUser,ViewCompany</p>
 <p>Sample request:</p>
@@ -2175,51 +1902,33 @@ public Task UpdateUserFromCustomModel(string companyId, string id, TUser model)<
 }
 </code></pre>
 </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="DNV.Web.Swagger.Throws.html#DNV_Web_Swagger_Throws_IfNull__1___0_System_String_">Throws.IfNull&lt;T&gt;(T, string?)</a>
-  </div>
+
+
+
+
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UsersController_2.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UsersController%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L19" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
+          <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UsersController.cs/#L19" class="edit-link">Edit this page</a>
         </div>
+
+        
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      godspeed
-      
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          godspeed
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

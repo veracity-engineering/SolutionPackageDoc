@@ -1,98 +1,120 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class UserManagementDefaultSetup
  </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class UserManagementDefaultSetup
  ">
-    
-      <link rel="shortcut icon" href="../favicon.png">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <link rel="icon" href="../favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
 
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup">
+
+        <article data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup">
 
 
 
-  <h1 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup" class="text-break">Class UserManagementDefaultSetup
-</h1>
-  <div class="markdown level0 summary"><p>Provides extension methods to register user management related services to <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">UserManagementDefaultSetup</span></div>
+  <h1 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup" class="text-break">
+    Class UserManagementDefaultSetup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UserManagementDefaultSetup.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DNV.html">DNV</a>.<a class="xref" href="DNV.Authorization.html">Authorization</a>.<a class="xref" href="DNV.Authorization.UserManagement.html">UserManagement</a>.<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.html">ApiControllers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DNV.Authorization.UserManagement.ApiControllers.dll</dd></dl>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+  <div class="markdown summary"><p>Provides extension methods to register user management related services to <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class UserManagementDefaultSetup</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">UserManagementDefaultSetup</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -114,155 +136,111 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="DNV.html">DNV</a>.<a class="xref" href="DNV.Authorization.html">Authorization</a>.<a class="xref" href="DNV.Authorization.UserManagement.html">UserManagement</a>.<a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.html">ApiControllers</a></h6>
-  <h6><strong>Assembly</strong>: DNV.Authorization.UserManagement.ApiControllers.dll</h6>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class UserManagementDefaultSetup</code></pre>
-  </div>
-  <h3 id="methods">Methods
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagement_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagement(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CDNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UserManagementDefaultSetup.cs/#L23">View Source</a>
-  </span>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagement_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagement*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagement_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagement(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)">AddUserManagement(IServiceCollection, UserManagementOptions)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagement_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagement(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)">
+  AddUserManagement(IServiceCollection, UserManagementOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UserManagementDefaultSetup.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Thie extension methods will setup user management module with built in services and data models:<a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Company.html">Company</a>,<a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Role.html">Role</a> and <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.User.html">User</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IServiceCollection AddUserManagement(this IServiceCollection services, UserManagementOptions options = null)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td><span class="parametername">services</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>A instance of <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a> to configure the user management module.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModelAndCRUD__3_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD%60%603(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CDNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UserManagementDefaultSetup.cs/#L148">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a></dt>
+    <dd><p>A instance of <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a> to configure the user management module.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModelAndCRUD_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModelAndCRUD__3_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)">AddUserManagementWithCustomModelAndCRUD&lt;TCompany, TRole, TUser&gt;(IServiceCollection, UserManagementOptions)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModelAndCRUD__3_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModelAndCRUD``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)">
+  AddUserManagementWithCustomModelAndCRUD&lt;TCompany, TRole, TUser&gt;(IServiceCollection, UserManagementOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UserManagementDefaultSetup.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>customized data access service to be registered into <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> at other place.</p>
 <p>customized company, role and user model should be specified to replace generic type: <code>TCompany</code>, <code>TRole</code>, <code>TUser</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IServiceCollection AddUserManagementWithCustomModelAndCRUD&lt;TCompany, TRole, TUser&gt;(this IServiceCollection services, UserManagementOptions options) where TCompany : Company, new() where TRole : Role, new() where TUser : User, new()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td><span class="parametername">services</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>A instance of <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a> to configure the user management module.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TCompany</span></td>
-        <td><p>The type that represents a customized company model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Company.html">Company</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TRole</span></td>
-        <td><p>The type that represents a customized role model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Role.html">Role</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TUser</span></td>
-        <td><p>The type that represents a customized user model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.User.html">User</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModelAndCRUD__3_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a></dt>
+    <dd><p>A instance of <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a> to configure the user management module.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCompany</code></dt>
+    <dd><p>The type that represents a customized company model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Company.html">Company</a>.</p>
+</dd>
+    <dt><code>TRole</code></dt>
+    <dd><p>The type that represents a customized role model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Role.html">Role</a>.</p>
+</dd>
+    <dt><code>TUser</code></dt>
+    <dd><p>The type that represents a customized user model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.User.html">User</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModelAndCRUD__3_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p><example>For example,</example></p>
 <pre><code class="lang-csharp">services.AddUserManagementWithCustomModel&lt;Company,Role,User&gt;(
 ...
@@ -274,255 +252,177 @@ services.AddDbContext&lt;UserManagementContext&gt;(options =&gt; options.UseSqlS
        .AddScoped&lt;ICompany&lt;Company&gt;, CompanyRepository&gt;();</code></pre>
 
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel%60%601(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CDNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UserManagementDefaultSetup.cs/#L50">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)">AddUserManagementWithCustomModel&lt;TUser&gt;(IServiceCollection, UserManagementOptions)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)">
+  AddUserManagementWithCustomModel&lt;TUser&gt;(IServiceCollection, UserManagementOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UserManagementDefaultSetup.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Thie extension methods will setup user management module with built in services and data models:<a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Company.html">Company</a> and <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Role.html">Role</a>.</p>
 <p>A customized user model should be specified to replace generic type: <code>TUser</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IServiceCollection AddUserManagementWithCustomModel&lt;TUser&gt;(this IServiceCollection services, UserManagementOptions options = null) where TUser : User, new()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td><span class="parametername">services</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>A instance of <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a> to configure the user management module.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TUser</span></td>
-        <td><p>The type that represents a customized user model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.User.html">User</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a></dt>
+    <dd><p>A instance of <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a> to configure the user management module.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TUser</code></dt>
+    <dd><p>The type that represents a customized user model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.User.html">User</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p><example>For example,</example></p>
 <pre><code class="lang-csharp">services.AddUserManagementWithCustomModel&lt;User&gt;(
 ...
 });</code></pre>
 
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel%60%602(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CDNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UserManagementDefaultSetup.cs/#L73">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)">AddUserManagementWithCustomModel&lt;TCompany, TUser&gt;(IServiceCollection, UserManagementOptions)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)">
+  AddUserManagementWithCustomModel&lt;TCompany, TUser&gt;(IServiceCollection, UserManagementOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UserManagementDefaultSetup.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Thie extension methods will setup user management module with built in services and data models:<a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Role.html">Role</a>.</p>
 <p>customized company and user model should be specified to replace generic type: <code>TCompany</code>, <code>TUser</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IServiceCollection AddUserManagementWithCustomModel&lt;TCompany, TUser&gt;(this IServiceCollection services, UserManagementOptions options = null) where TCompany : Company, new() where TUser : User, new()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td><span class="parametername">services</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>A instance of <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a> to configure the user management module.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TCompany</span></td>
-        <td><p>The type that represents a customized company model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Company.html">Company</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TUser</span></td>
-        <td><p>The type that represents a customized user model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.User.html">User</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a></dt>
+    <dd><p>A instance of <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a> to configure the user management module.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCompany</code></dt>
+    <dd><p>The type that represents a customized company model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Company.html">Company</a>.</p>
+</dd>
+    <dt><code>TUser</code></dt>
+    <dd><p>The type that represents a customized user model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.User.html">User</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p><example>For example,</example></p>
 <pre><code class="lang-csharp">services.AddUserManagementWithCustomModel&lt;Company,User&gt;(
 ...
 });</code></pre>
 
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__3_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel%60%603(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CDNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UserManagementDefaultSetup.cs/#L97">View Source</a>
-  </span>
+
+
+
+
   <a id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel*"></a>
-  <h4 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__3_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)">AddUserManagementWithCustomModel&lt;TCompany, TRole, TUser&gt;(IServiceCollection, UserManagementOptions)</h4>
+
+  <h3 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__3_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions_" data-uid="DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup.AddUserManagementWithCustomModel``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions)">
+  AddUserManagementWithCustomModel&lt;TCompany, TRole, TUser&gt;(IServiceCollection, UserManagementOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UserManagementDefaultSetup.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Thie extension methods will setup user management module with built in services.</p>
 <p>customized company, role and user model should be specified to replace generic type: <code>TCompany</code>, <code>TRole</code>, <code>TUser</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IServiceCollection AddUserManagementWithCustomModel&lt;TCompany, TRole, TUser&gt;(this IServiceCollection services, UserManagementOptions options = null) where TCompany : Company, new() where TRole : Role, new() where TUser : User, new()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td><span class="parametername">services</span></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>A instance of <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a> to configure the user management module.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TCompany</span></td>
-        <td><p>The type that represents a customized company model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Company.html">Company</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TRole</span></td>
-        <td><p>The type that represents a customized role model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Role.html">Role</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TUser</span></td>
-        <td><p>The type that represents a customized user model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.User.html">User</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__3_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a></dt>
+    <dd><p>A instance of <a class="xref" href="DNV.Authorization.UserManagement.ApiControllers.UserManagementOptions.html">UserManagementOptions</a> to configure the user management module.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCompany</code></dt>
+    <dd><p>The type that represents a customized company model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Company.html">Company</a>.</p>
+</dd>
+    <dt><code>TRole</code></dt>
+    <dd><p>The type that represents a customized role model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Role.html">Role</a>.</p>
+</dd>
+    <dt><code>TUser</code></dt>
+    <dd><p>The type that represents a customized user model.It mush be inherited from <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.User.html">User</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup_AddUserManagementWithCustomModel__3_Microsoft_Extensions_DependencyInjection_IServiceCollection_DNV_Authorization_UserManagement_ApiControllers_UserManagementOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p><example>For example,</example></p>
 <pre><code class="lang-csharp">services.AddUserManagementWithCustomModel&lt;Company,Role,User&gt;(
 ...
@@ -530,46 +430,32 @@ services.AddDbContext&lt;UserManagementContext&gt;(options =&gt; options.UseSqlS
 
 </div>
 
-</article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_ApiControllers_UserManagementDefaultSetup.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.ApiControllers.UserManagementDefaultSetup%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UserManagementDefaultSetup.cs/#L14" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.ApiControllers/UserManagementDefaultSetup.cs/#L14" class="edit-link">Edit this page</a>
         </div>
+
+        
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      godspeed
-      
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          godspeed
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

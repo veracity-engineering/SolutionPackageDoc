@@ -1,98 +1,120 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class User
  </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class User
  ">
-    
-      <link rel="shortcut icon" href="../favicon.png">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <link rel="icon" href="../favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
 
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User">
+
+        <article data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User">
 
 
 
-  <h1 id="DNV_Authorization_UserManagement_Abstraction_Entity_User" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User" class="text-break">Class User
-</h1>
-  <div class="markdown level0 summary"><p>Represents user information for a user record.</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">User</span></div>
+  <h1 id="DNV_Authorization_UserManagement_Abstraction_Entity_User" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User" class="text-break">
+    Class User
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DNV.html">DNV</a>.<a class="xref" href="DNV.Authorization.html">Authorization</a>.<a class="xref" href="DNV.Authorization.UserManagement.html">UserManagement</a>.<a class="xref" href="DNV.Authorization.UserManagement.Abstraction.html">Abstraction</a>.<a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.html">Entity</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DNV.Authorization.UserManagement.Abstraction.dll</dd></dl>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+  <div class="markdown summary"><p>Represents user information for a user record.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class User</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">User</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -114,665 +136,671 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="DNV.html">DNV</a>.<a class="xref" href="DNV.Authorization.html">Authorization</a>.<a class="xref" href="DNV.Authorization.UserManagement.html">UserManagement</a>.<a class="xref" href="DNV.Authorization.UserManagement.Abstraction.html">Abstraction</a>.<a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.html">Entity</a></h6>
-  <h6><strong>Assembly</strong>: DNV.Authorization.UserManagement.Abstraction.dll</h6>
-  <h5 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class User</code></pre>
-  </div>
-  <h3 id="properties">Properties
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_Active.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.Active%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L72">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Active_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Active*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Active" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Active">Active</h4>
-  <div class="markdown level1 summary"><p>Gets or sets a flag indicating if this user is active or not.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Active { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><p>True if this user is active, otherwise false.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyIdList.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyIdList%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L66">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyIdList_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyIdList*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyIdList" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyIdList">CompanyIdList</h4>
-  <div class="markdown level1 summary"><p>Get the company's id list of company to which this user belongs.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;string&gt; CompanyIdList { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyIds.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyIds%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L61">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyIds_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyIds*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyIds" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyIds">CompanyIds</h4>
-  <div class="markdown level1 summary"><p>Gets or sets id of company to which this user belongs.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string CompanyIds { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><p>Company's ids are combined as a string which use semicolon(;) as a delimiter.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyList.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyList%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L102">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyList_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyList*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyList" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyList">CompanyList</h4>
-  <div class="markdown level1 summary"><p>Get the list of companys to which this user belongs.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Company&gt; CompanyList { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Company.html">Company</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyList_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Do not set this property to change a user's company. Instead, set <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.User.html#DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyIds">CompanyIds</a>.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_CreatedBy.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.CreatedBy%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L107">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CreatedBy_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CreatedBy*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CreatedBy" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CreatedBy">CreatedBy</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the name of user who created this user.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CreatedBy { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_CreatedOnUtc.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.CreatedOnUtc%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L112">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CreatedOnUtc_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CreatedOnUtc*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CreatedOnUtc" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CreatedOnUtc">CreatedOnUtc</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the UTC date that this user is created.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime CreatedOnUtc { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_Deleted.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.Deleted%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L86">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Deleted_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Deleted*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Deleted" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Deleted">Deleted</h4>
-  <div class="markdown level1 summary"><p>Gets or sets a flag indicating if this user is deleted or not.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Deleted { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Deleted_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>This property is not being used by in the package now. it will be used to support soft delete in future release.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_Description.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.Description%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L44">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Description_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Description*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Description" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Description">Description</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the description for this user.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_Email.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.Email%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L21">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Email_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Email*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Email" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Email">Email</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the email for this user.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Email { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_FirstName.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.FirstName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L26">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_FirstName_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.FirstName*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_FirstName" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.FirstName">FirstName</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the first name for this user.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string FirstName { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_Id.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.Id%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L16">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Id_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Id*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Id" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Id">Id</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the primary key for this user.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_LastName.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.LastName%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L31">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_LastName_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.LastName*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_LastName" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.LastName">LastName</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the last name for this user.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string LastName { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleIdList.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleIdList%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L55">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleIdList_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleIdList*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleIdList" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleIdList">RoleIdList</h4>
-  <div class="markdown level1 summary"><p>Get the roles id list of roles which this user has.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;string&gt; RoleIdList { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleIds.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleIds%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L50">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleIds_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleIds*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleIds" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleIds">RoleIds</h4>
-  <div class="markdown level1 summary"><p>Gets or sets id of roles which this user has.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string RoleIds { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><p>Role's ids are combined as a string which use semicolon(;) as a delimiter.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleList.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleList%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L94">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleList_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleList*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleList" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleList">RoleList</h4>
-  <div class="markdown level1 summary"><p>Get the list of roles which this user has.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Role&gt; RoleList { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Role.html">Role</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleList_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Do not set this property to change a user's role. Instead, set <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.User.html#DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleIds">RoleIds</a>.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_SuperAdmin.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.SuperAdmin%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L78">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_SuperAdmin_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.SuperAdmin*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_SuperAdmin" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.SuperAdmin">SuperAdmin</h4>
-  <div class="markdown level1 summary"><p>Gets or sets a flag indicating if this user is super admin or not.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool SuperAdmin { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><p>True if this user is super admin, otherwise false.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_UpdatedBy.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.UpdatedBy%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L117">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_UpdatedBy_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.UpdatedBy*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_UpdatedBy" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.UpdatedBy">UpdatedBy</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the name of user who updated this user last time.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string UpdatedBy { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_UpdatedOnUtc.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.UpdatedOnUtc%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L122">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_UpdatedOnUtc_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.UpdatedOnUtc*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_UpdatedOnUtc" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.UpdatedOnUtc">UpdatedOnUtc</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the UTC date that this user is updated last time.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime UpdatedOnUtc { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User_VeracityId.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User.VeracityId%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L39">View Source</a>
-  </span>
-  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_VeracityId_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.VeracityId*"></a>
-  <h4 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_VeracityId" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.VeracityId">VeracityId</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the identity id for this user.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string VeracityId { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_VeracityId_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>It is an id provided by identity provider.</p>
-</div>
-  <h3 id="extensionmethods">Extension Methods</h3>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
   <div>
       <a class="xref" href="DNV.Web.Swagger.Throws.html#DNV_Web_Swagger_Throws_IfNull__1___0_System_String_">Throws.IfNull&lt;T&gt;(T, string?)</a>
   </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Active_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Active*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Active" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Active">
+  Active
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating if this user is active or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Active { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if this user is active, otherwise false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyIdList_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyIdList*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyIdList" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyIdList">
+  CompanyIdList
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the company's id list of company to which this user belongs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;string&gt; CompanyIdList { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyIds_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyIds*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyIds" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyIds">
+  CompanyIds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets id of company to which this user belongs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string CompanyIds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Company's ids are combined as a string which use semicolon(;) as a delimiter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyList_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyList*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyList" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CompanyList">
+  CompanyList
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the list of companys to which this user belongs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Company&gt; CompanyList { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Company.html">Company</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyList_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Do not set this property to change a user's company. Instead, set <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.User.html#DNV_Authorization_UserManagement_Abstraction_Entity_User_CompanyIds">CompanyIds</a>.</p>
+</div>
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CreatedBy_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CreatedBy*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CreatedBy" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CreatedBy">
+  CreatedBy
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the name of user who created this user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CreatedBy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CreatedOnUtc_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CreatedOnUtc*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_CreatedOnUtc" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.CreatedOnUtc">
+  CreatedOnUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the UTC date that this user is created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime CreatedOnUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Deleted_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Deleted*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Deleted" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Deleted">
+  Deleted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating if this user is deleted or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Deleted { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Deleted_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This property is not being used by in the package now. it will be used to support soft delete in future release.</p>
+</div>
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Description_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Description*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Description" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Description">
+  Description
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the description for this user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Email_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Email*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Email" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Email">
+  Email
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the email for this user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Email { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_FirstName_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.FirstName*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_FirstName" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.FirstName">
+  FirstName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the first name for this user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FirstName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Id_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Id*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_Id" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.Id">
+  Id
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the primary key for this user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_LastName_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.LastName*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_LastName" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.LastName">
+  LastName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the last name for this user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LastName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleIdList_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleIdList*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleIdList" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleIdList">
+  RoleIdList
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the roles id list of roles which this user has.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;string&gt; RoleIdList { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleIds_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleIds*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleIds" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleIds">
+  RoleIds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets id of roles which this user has.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string RoleIds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Role's ids are combined as a string which use semicolon(;) as a delimiter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleList_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleList*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleList" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.RoleList">
+  RoleList
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the list of roles which this user has.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Role&gt; RoleList { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.Role.html">Role</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleList_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Do not set this property to change a user's role. Instead, set <a class="xref" href="DNV.Authorization.UserManagement.Abstraction.Entity.User.html#DNV_Authorization_UserManagement_Abstraction_Entity_User_RoleIds">RoleIds</a>.</p>
+</div>
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_SuperAdmin_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.SuperAdmin*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_SuperAdmin" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.SuperAdmin">
+  SuperAdmin
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating if this user is super admin or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SuperAdmin { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if this user is super admin, otherwise false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_UpdatedBy_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.UpdatedBy*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_UpdatedBy" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.UpdatedBy">
+  UpdatedBy
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the name of user who updated this user last time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string UpdatedBy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_UpdatedOnUtc_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.UpdatedOnUtc*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_UpdatedOnUtc" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.UpdatedOnUtc">
+  UpdatedOnUtc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the UTC date that this user is updated last time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime UpdatedOnUtc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DNV_Authorization_UserManagement_Abstraction_Entity_User_VeracityId_" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.VeracityId*"></a>
+
+  <h3 id="DNV_Authorization_UserManagement_Abstraction_Entity_User_VeracityId" data-uid="DNV.Authorization.UserManagement.Abstraction.Entity.User.VeracityId">
+  VeracityId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the identity id for this user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string VeracityId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="DNV_Authorization_UserManagement_Abstraction_Entity_User_VeracityId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>It is an id provided by identity provider.</p>
+</div>
+
+
+
+
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/veracity-engineering/SolutionPackage/new/master/apiSpec/new?filename=DNV_Authorization_UserManagement_Abstraction_Entity_User.md&amp;value=---%0Auid%3A%20DNV.Authorization.UserManagement.Abstraction.Entity.User%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L11" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
+          <a href="https://github.com/veracity-engineering/SolutionPackage/blob/master/src/Authorization/UserManagement.Abstraction/Entity/User.cs/#L11" class="edit-link">Edit this page</a>
         </div>
+
+        
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      godspeed
-      
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          godspeed
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
