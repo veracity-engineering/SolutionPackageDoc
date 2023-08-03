@@ -1,12 +1,12 @@
 - name: Tutorials Page
-  href: index.md
+  href: Home.md
 
 - name: DNV.OAuth.Web
   href: DNV.OAuth.Web.md
 
 - name: DNVGL.OAuth.Api.HttpClient
   href: DNVGL.OAuth.Api.HttpClient.md
-  
+
 - name: HTTP Response Security Header
   href: securityHeader.md
 
