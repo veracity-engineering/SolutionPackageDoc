@@ -4,3 +4,6 @@ docs/articles/
 docs/obj/
 **/bin/
 **/obj/
+**/.vs/
+**/bin/
+**/obj/
