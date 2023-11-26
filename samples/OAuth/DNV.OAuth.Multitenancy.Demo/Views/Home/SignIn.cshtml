@@ -1,0 +1,14 @@
+﻿@{
+	ViewData["Title"] = "User Page";
+}
+<h1 class="display-4">OpenId Connect OAuth Demo</h1>
+
+<a asp-action="Signout">Sign out</a>
+
+<dl>
+	@foreach (var claim in this.User.Claims)
+	{
+		<dt>@claim.Type</dt>
+		<dd>@claim.Value</dd>
+	}
+</dl>
