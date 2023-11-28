@@ -1,7 +1,11 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using DNV.Veracity.Services.Api.Models;
+using DNV.Veracity.Services.Api.My.Abstractions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DNV.OAuth.Demo.Controllers.Api
 {
@@ -9,15 +13,22 @@ namespace DNV.OAuth.Demo.Controllers.Api
 	[Route("api/[controller]")]
 	public class TestController : ControllerBase
 	{
-        /// <summary>
-        /// requires token from App1
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet("mobile")]
-		[Authorize(AuthenticationSchemes = "App1")]
-		public IEnumerable<KeyValuePair<string, string>> GetMobileClaims()
+		private readonly IMyProfile _myProfile;
+
+		public TestController(IMyProfile myProfile)
 		{
-			return this.User.Claims.Select(c => new KeyValuePair<string, string>(c.Type, c.Value));
+			_myProfile = myProfile ?? throw new ArgumentNullException(nameof(myProfile));
+		}
+
+		/// <summary>
+		/// requires token from Veracity
+		/// </summary>
+		/// <returns></returns>
+		[HttpGet("mobile")]
+		[Authorize(AuthenticationSchemes = "Veracity")]
+		public Task<Profile> GetMyProfile()
+		{
+			return _myProfile.Get();
 		}
 
 		/// <summary>

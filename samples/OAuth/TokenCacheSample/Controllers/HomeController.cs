@@ -1,5 +1,7 @@
 ﻿using DNV.OAuth.Abstractions;
 using DNV.OAuth.Web;
+using DNV.Veracity.Services.Api.Models;
+using DNV.Veracity.Services.Api.My.Abstractions;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,29 +13,16 @@ namespace TokenCacheSample.Controllers
 	[Authorize]
 	public class HomeController : Controller
 	{
-		private IClientAppBuilder _appBuilder;
-        private readonly OAuth2Options _options;
+		private readonly IMyProfile _myProfile;
 
-        public HomeController(IClientAppBuilder appBuilder, OAuth2Options options)
+		public HomeController(IMyProfile myProfile)
 		{
-			_appBuilder = appBuilder;
-            _options = options;
-        }
+			_myProfile = myProfile ?? throw new ArgumentNullException(nameof(myProfile));
+		}
 
-		public async Task<IActionResult> Index()
+		public Task<Profile> Index()
 		{
-			try
-			{
-				var clientApp = _appBuilder.Build(_options);
-				this.ViewBag.Account = this.HttpContext.User;
-				var result = await clientApp.AcquireTokenSilent(this.HttpContext.User);
-				this.ViewBag.Token = result.AccessToken ?? result.IdToken;
-			}
-			catch(Exception e)
-			{
-			}
-
-			return View();
+			return _myProfile.Get();
 		}
 
 		public async Task<IActionResult> Signout()

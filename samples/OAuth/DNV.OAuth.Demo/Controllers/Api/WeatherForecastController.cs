@@ -10,7 +10,7 @@ namespace DNV.OAuth.Demo.Controllers.Api
 {
 	[ApiController]
 	[Route("api/[controller]")]
-	[Authorize(AuthenticationSchemes = "App1, App2")]
+	[Authorize(AuthenticationSchemes = "Veracity, App2")]
 	public class WeatherForecastController : ControllerBase
 	{
 		private static readonly string[] Summaries = new[]
