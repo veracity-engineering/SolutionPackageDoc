@@ -5,11 +5,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
+using DNV.OAuth.Web;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 
 namespace DNV.OAuth.Multitenancy.Demo.Controllers
 {
@@ -29,6 +28,7 @@ namespace DNV.OAuth.Multitenancy.Demo.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();
@@ -40,10 +40,9 @@ namespace DNV.OAuth.Multitenancy.Demo.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public new async Task<IActionResult> SignOut()
+        public new async Task SignOut()
         {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return this.RedirectToAction("Index");
+            await HttpContext.SignOut(new[] {CookieAuthenticationDefaults.AuthenticationScheme, OpenIdConnectDefaults.AuthenticationScheme}, "/");
         }
 
         [Authorize]

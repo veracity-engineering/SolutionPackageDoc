@@ -1,18 +1,18 @@
 using DNV.OAuth.Core;
 using DNV.OAuth.Web;
+using DNV.OAuth.Web.Cookie;
 using DNV.OAuth.Web.Extensions.Multitenancy;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+
 using System.Threading.Tasks;
 
 namespace DNV.OAuth.Multitenancy.Demo
@@ -32,35 +32,39 @@ namespace DNV.OAuth.Multitenancy.Demo
             services.AddControllersWithViews();
             services.AddHttpContextAccessor();
             services.AddOAuthCore();
-            //services.AddAuthorizationCore(o =>
-            //{
-            //    o.AddPolicy(nameof(o.DefaultPolicy),
-            //        p => p.AddAuthenticationSchemes(CookieAuthenticationDefaults.AuthenticationScheme,
-            //            OpenIdConnectDefaults.AuthenticationScheme).RequireAuthenticatedUser().Build());
-            //    var p = o.GetPolicy(nameof(o.DefaultPolicy));
-
-            //    if (p != null)
-            //        o.DefaultPolicy = p;
-            //});
 
             var oidcOptions = new OidcOptions
             {
                 Authority = "https://login.veracity.com/tfp/a68572e3-63ce-4bc1-acdc-b64943502e9d/b2c_1a_signinwithadfsidp/v2.0",
                 ClientId = "34598bb3-b07f-4187-a32b-d64ef8f086bc",
                 Scopes = new[] { "https://dnvglb2cprod.onmicrosoft.com/952bbe91-2a89-48a3-95af-fc96bca5c03a/user_impersonation" },
-                ResponseType = OpenIdConnectResponseType.IdToken
+                ResponseType = OpenIdConnectResponseType.IdToken,
+                Events = new OpenIdConnectEvents
+                {
+                    OnRedirectToIdentityProvider = ctx =>
+                    {
+                        ctx.ProtocolMessage.Prompt = "login";
+                        return Task.CompletedTask;
+                    }
+                }
             };
 
-            services.AddOidc(oidcOptions, cookieOption => {
-                // explicitly set the cookie lifetime to 10 minutes which will suppress default behavior of session cookie lifetime
-                // which allows tenant to be able to sign out independently of other tenants
-                // cookieOption.ApplySlidingLifetime(TimeSpan.FromMinutes(10));
-            })
-            .AddMultitenantAuthentication();
+            services.AddDistributedMemoryCache();
+
+            services.AddTicketStoreDistributedCacheOptions();
+
+            services.AddCookieAuthenticationOptions(o =>
+            {
+                o.ApplySlidingLifetime(TimeSpan.FromSeconds(60), ctx => ctx.Request.Path.StartsWithSegments("/privacy"));
+                o.ApplyGlobalSessionLifetime();
+            }).AddGlobalSessionTicketStore();
+            
+            services.AddOidc(oidcOptions)
+                .AddMultitenantAuthentication();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider sp)
         {
             if (env.IsDevelopment())
             {
@@ -78,6 +82,7 @@ namespace DNV.OAuth.Multitenancy.Demo
             app.UseRouting();
             app.UseMultitenancy(path => path.StartsWithSegments("/api", StringComparison.OrdinalIgnoreCase)
                             || path.StartsWithSegments("/signin", StringComparison.OrdinalIgnoreCase)
+                            || path.StartsWithSegments("/privacy", StringComparison.OrdinalIgnoreCase)
                             || path.StartsWithSegments("/signout", StringComparison.OrdinalIgnoreCase)
                             || path.StartsWithSegments("/error", StringComparison.OrdinalIgnoreCase));
             app.UseAuthentication();
@@ -88,6 +93,12 @@ namespace DNV.OAuth.Multitenancy.Demo
                 endpoints.MapControllerRoute(
                     name: "error",
                     pattern: "/error", new { controller = "Home", action = "Error" });
+                endpoints.MapControllerRoute(
+                    name: "privacy",
+                    pattern: "{tenantAlias}/privacy", new { controller = "Home", action = "Privacy" });
+                endpoints.MapControllerRoute(
+                    name: "rootPrivacy",
+                    pattern: "/privacy", new { controller = "Home", action = "Privacy" });
                 endpoints.MapControllerRoute(
                     name: "signout",
                     pattern: "{tenantAlias}/signout", new { controller = "Home", action = "SignOut" });

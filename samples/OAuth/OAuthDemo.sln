@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNV.OAuth.Demo", "DNV.OAuth
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNV.OAuth.Multitenancy.Demo", "DNV.OAuth.Multitenancy.Demo\DNV.OAuth.Multitenancy.Demo.csproj", "{AE201D0F-AE89-47B2-B08E-DBA26350A152}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNV.OAuth.Web.Extensions", "..\..\..\SolutionPackage\src\OAuth\Web.Extensions\DNV.OAuth.Web.Extensions.csproj", "{CFF1A147-D8AF-48EE-BE8C-5C37CDFCDDA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNV.OAuth.Web", "..\..\..\SolutionPackage\src\OAuth\Web\DNV.OAuth.Web.csproj", "{090D01C4-0B8A-4904-8F8A-193D5B17D3F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{AE201D0F-AE89-47B2-B08E-DBA26350A152}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE201D0F-AE89-47B2-B08E-DBA26350A152}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE201D0F-AE89-47B2-B08E-DBA26350A152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF1A147-D8AF-48EE-BE8C-5C37CDFCDDA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF1A147-D8AF-48EE-BE8C-5C37CDFCDDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF1A147-D8AF-48EE-BE8C-5C37CDFCDDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF1A147-D8AF-48EE-BE8C-5C37CDFCDDA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{090D01C4-0B8A-4904-8F8A-193D5B17D3F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{090D01C4-0B8A-4904-8F8A-193D5B17D3F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{090D01C4-0B8A-4904-8F8A-193D5B17D3F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{090D01C4-0B8A-4904-8F8A-193D5B17D3F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

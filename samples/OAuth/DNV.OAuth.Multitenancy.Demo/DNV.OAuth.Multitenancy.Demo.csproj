@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DNV.OAuth.Web.Extensions" Version="1.10.0" />
+    <ProjectReference Include="..\..\..\..\SolutionPackage\src\OAuth\Web.Extensions\DNV.OAuth.Web.Extensions.csproj" />
+    <ProjectReference Include="..\..\..\..\SolutionPackage\src\OAuth\Web\DNV.OAuth.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>
