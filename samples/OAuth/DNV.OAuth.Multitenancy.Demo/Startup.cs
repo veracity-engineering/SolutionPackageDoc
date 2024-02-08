@@ -53,14 +53,14 @@ namespace DNV.OAuth.Multitenancy.Demo
 
             services.AddTicketStoreDistributedCacheOptions();
 
-            services.AddCookieAuthenticationOptions(o =>
+            services.AddGlobalSessionTicketStore();
+            
+            services.AddOidc(oidcOptions, o =>
             {
                 o.ApplySlidingLifetime(TimeSpan.FromSeconds(60), ctx => ctx.Request.Path.StartsWithSegments("/privacy"));
                 o.ApplyGlobalSessionLifetime();
-            }).AddGlobalSessionTicketStore();
-            
-            services.AddOidc(oidcOptions)
-                .AddMultitenantAuthentication();
+            })
+            .AddMultitenantAuthentication();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
