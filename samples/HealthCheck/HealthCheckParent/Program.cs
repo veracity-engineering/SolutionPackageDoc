@@ -1,5 +1,5 @@
+using DNV.Monitoring.HealthChecks.Service;
 using DNV.Monitoring.HealthChecks.VeracityStatus;
-using DNV.Monitoring.HealthChecks.VeracityStatus.Extensions;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,7 +16,8 @@ builder.Services.AddHttpClient();
 builder.Services.Configure<VeracityStatusHealthCheckOptions>(configuration.GetSection(nameof(VeracityStatusHealthCheckOptions)));
 var serviceProvider = builder.Services.BuildServiceProvider();
 var veracityStatusHealthCheckOptions = serviceProvider.GetService<IOptions<VeracityStatusHealthCheckOptions>>().Value;
-builder.Services.AddHealthChecks().AddVeracityHealthCheck(veracityStatusHealthCheckOptions);
+builder.Services.AddHealthChecks()
+	.AddServiceHealthCheck(new ServiceHealthCheckOptions { Uri = "https://localhost:7204/health" }, "Child Status");
 
 var app = builder.Build();
 
@@ -33,6 +34,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapVeracityHealthChecks("/health");
+app.MapVeracityHealthChecks("/health", veracityStatusHealthCheckOptions);
 
 app.Run();
