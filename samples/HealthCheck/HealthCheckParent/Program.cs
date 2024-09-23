@@ -1,4 +1,4 @@
-using DNV.Monitoring.HealthChecks.Service;
+using DNV.Monitoring.HealthChecks.ServiceHealthCheck;
 using DNV.Monitoring.HealthChecks.VeracityStatus;
 using Microsoft.Extensions.Options;
 
@@ -12,20 +12,23 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Begin: For health check
 builder.Services.AddHttpClient();
+builder.Services.AddHttpContextAccessor();
 builder.Services.Configure<VeracityStatusHealthCheckOptions>(configuration.GetSection(nameof(VeracityStatusHealthCheckOptions)));
 var serviceProvider = builder.Services.BuildServiceProvider();
 var veracityStatusHealthCheckOptions = serviceProvider.GetService<IOptions<VeracityStatusHealthCheckOptions>>().Value;
 builder.Services.AddHealthChecks()
-	.AddServiceHealthCheck(new ServiceHealthCheckOptions { Uri = "https://localhost:7204/health" }, "Child Status");
+    .AddServiceHealthCheck(new ServiceHealthCheckOptions { Uri = "https://localhost:7204/health" }, "Child Status");
+// End: For health check
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-	app.UseSwagger();
-	app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();

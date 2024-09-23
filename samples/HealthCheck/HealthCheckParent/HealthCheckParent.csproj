@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DNV.Monitoring.HealthChecks.Service" Version="1.0.1" />
-    <PackageReference Include="DNV.Monitoring.HealthChecks.VeracityStatus" Version="1.0.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="DNV.Monitoring.HealthChecks.ServiceHealthCheck" Version="1.1.0" />
+    <PackageReference Include="DNV.Monitoring.HealthChecks.VeracityStatus" Version="1.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.3" />
   </ItemGroup>
 
 </Project>
