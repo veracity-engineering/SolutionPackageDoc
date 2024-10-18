@@ -19,7 +19,7 @@ builder.Services.Configure<VeracityStatusHealthCheckOptions>(configuration.GetSe
 var serviceProvider = builder.Services.BuildServiceProvider();
 var veracityStatusHealthCheckOptions = serviceProvider.GetService<IOptions<VeracityStatusHealthCheckOptions>>().Value;
 builder.Services.AddHealthChecks()
-    .AddServiceHealthCheck(new ServiceHealthCheckOptions { Uri = "https://localhost:7204/health" }, "Child Status");
+    .AddServiceHealthCheck(new ServiceHealthCheckOptions { Uri = new Uri("https://localhost:7204/health") }, "Child Status");
 // End: For health check
 
 var app = builder.Build();
