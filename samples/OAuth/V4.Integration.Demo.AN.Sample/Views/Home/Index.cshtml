@@ -1,0 +1,35 @@
+﻿@using Veracity.Core.Api.V4.Responses
+@{
+    ViewData["Title"] = "Home Page";
+    var myinfo = ViewData["my_info"] as UserDetails2Response;
+
+    var tenantInfo = ViewData["my_tenant"] as TenantResponse;
+
+    var appInfo = ViewData["my_app"] as ApplicationResponse;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h4>Full Name: @myinfo.FirstName @myinfo.LastName</h4>
+    <h4>Name: @myinfo.Name</h4>
+    <h4>Email: @myinfo.Email</h4>
+    <h4>Tel: @myinfo.PhoneNumber</h4>
+    <h4>Id: @myinfo.UserId</h4>
+    <h4>Active: @myinfo.IsActivated</h4>
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Tenant Info</h1
+    <h4>Tenant Id: @tenantInfo.TenantId</h4>
+    <h4>Tenant Name: @tenantInfo.Name</h4>
+    <h4>Legal Entity Id: @tenantInfo.LegalEntityId</h4>
+    <h4>Legal Entity Name: @tenantInfo.LegalEntityName</h4>
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Application Info</h1>
+    <h4>Application Id: @appInfo.ApplicationId</h4>
+    <h4>Application Name: @appInfo.Name</h4>
+    <h4>Management Model: @appInfo.ManagementMode.ToString()</h4>
+    <h4>Is Production: @appInfo.Production</h4>
+</div>
