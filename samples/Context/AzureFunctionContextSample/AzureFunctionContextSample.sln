@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBusAzureFunction", "ServiceBusAzureFunction\ServiceBusAzureFunction.csproj", "{91F34943-B09A-4A43-8D2D-CA10508890A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpAzureFunction", "HttpAzureFunction\HttpAzureFunction.csproj", "{7529F996-91B9-44EA-97D4-280A04E8706E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNV.Context.AzureFunction", "..\..\..\..\..\src\SolutionPackage\src\Context\DNV.Context.AzureFunction\DNV.Context.AzureFunction.csproj", "{A9DB6166-0F06-4886-8323-96CFFD94F3C4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBusMessageSender", "ServiceBusMessageSender\ServiceBusMessageSender.csproj", "{B1E0BF0E-F3BA-4458-BF8E-95FCA110DADD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpClientContextSample", "HttpClientContextSample\HttpClientContextSample.csproj", "{886074BA-5119-4CEB-BC1C-C57C3CDD3397}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91F34943-B09A-4A43-8D2D-CA10508890A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F34943-B09A-4A43-8D2D-CA10508890A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F34943-B09A-4A43-8D2D-CA10508890A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F34943-B09A-4A43-8D2D-CA10508890A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7529F996-91B9-44EA-97D4-280A04E8706E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7529F996-91B9-44EA-97D4-280A04E8706E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7529F996-91B9-44EA-97D4-280A04E8706E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7529F996-91B9-44EA-97D4-280A04E8706E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9DB6166-0F06-4886-8323-96CFFD94F3C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9DB6166-0F06-4886-8323-96CFFD94F3C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9DB6166-0F06-4886-8323-96CFFD94F3C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9DB6166-0F06-4886-8323-96CFFD94F3C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1E0BF0E-F3BA-4458-BF8E-95FCA110DADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1E0BF0E-F3BA-4458-BF8E-95FCA110DADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1E0BF0E-F3BA-4458-BF8E-95FCA110DADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1E0BF0E-F3BA-4458-BF8E-95FCA110DADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{886074BA-5119-4CEB-BC1C-C57C3CDD3397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{886074BA-5119-4CEB-BC1C-C57C3CDD3397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{886074BA-5119-4CEB-BC1C-C57C3CDD3397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{886074BA-5119-4CEB-BC1C-C57C3CDD3397}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36DCDBC1-50BC-4CFC-A3C6-A465AFD809B9}
+	EndGlobalSection
+EndGlobal
