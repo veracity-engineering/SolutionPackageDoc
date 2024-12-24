@@ -37,7 +37,7 @@ services.AddAuthorizationBuilder()
 
 services.AddApiClientForUser<IServicesApiV3Client, ServicesApiV3Client>("ApiV3", o => configuration.Bind("Apis:ApiV3", o));
 
-services.AddSwagger(o => configuration.Bind("SwaggerOptions", o));
+services.AddSwagger(configuration, "Swagger", "Environment");
 
 var app = builder.Build();
 
@@ -46,6 +46,6 @@ app.UseAuthentication().UseAuthorization();
 
 app.MapDefaultControllerRoute();
 
-app.UseSwaggerWithUI(o => configuration.Bind("SwaggerOptions", o));
+app.UseSwaggerWithUI(configuration, "Swagger", "Environment");
 
 app.Run();

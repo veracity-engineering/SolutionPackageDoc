@@ -15,9 +15,9 @@ public class ApiClientTokenHandler : DelegatingHandler
 
 	public ApiClientTokenHandler(ITokenAcquisition tokenAcquisition, ApiClientAccessorType accessorType, ApiClientOptions options)
 	{
-		_tokenAcquisition = tokenAcquisition.IfNull(nameof(tokenAcquisition));
-		_options = options.IfNull(nameof(options));
-		options.Scope.IfNull(new ArgumentException("Scope is required"));
+		_tokenAcquisition = tokenAcquisition.ThrowIfNull(nameof(tokenAcquisition));
+		_options = options.ThrowIfNull(nameof(options));
+		options.Scope.ThrowIfNull(new ArgumentException("Scope is required"));
 		_accessorType = accessorType;
 	}
 

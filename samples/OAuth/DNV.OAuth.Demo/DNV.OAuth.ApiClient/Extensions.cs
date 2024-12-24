@@ -57,7 +57,7 @@ public static class Extensions
 			if (string.IsNullOrWhiteSpace(options.Scope))
 			{
 				var oauthOptions = sp.GetRequiredService<VeracityOAuthOptions>()
-					.IfNull(new InvalidOperationException($"Cannot found Scope for Api {apiName}"));
+					.ThrowIfNull(new InvalidOperationException($"Cannot found Scope for Api {apiName}"));
 				options.Scope = accessorType == ApiClientAccessorType.User
 					? oauthOptions.DefaultUserScope
 					: oauthOptions.DefaultAppScope;
