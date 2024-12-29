@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Web;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace DNV.OAuth.Demo.Controllers.Api
 {
 	[ApiController]
     [Route("api/[controller]")]
-	[Authorize(Policy = "Api")]
+	[Authorize(AuthenticationSchemes = "OAuth2")]
 	public class Api2Controller : ControllerBase
     {
         private readonly ITokenAcquisition _tokenAcquisition;
@@ -21,7 +22,6 @@ namespace DNV.OAuth.Demo.Controllers.Api
         }
 
         [HttpGet]
-        [Authorize]
         public async Task<IEnumerable<KeyValuePair<string, string>>> Get()
         {
             var scope = "https://dnvglb2cprod.onmicrosoft.com/83054ebf-1d7b-43f5-82ad-b2bde84d7b75/.default";

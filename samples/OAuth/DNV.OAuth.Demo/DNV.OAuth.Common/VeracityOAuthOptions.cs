@@ -26,6 +26,8 @@ public class VeracityOAuthOptions
 		"a4a8e726-c1cc-407c-83a0-4ce37f1ce130"
 	);
 
+	public const string LegacyInstance = "https://login.microsoftonline.com";
+
 	public VeracityEnvironment Environment { get; protected set; }
 	public string TenantId { get; protected set; }
 	public string TenantName { get; protected set; }
@@ -34,7 +36,7 @@ public class VeracityOAuthOptions
 	public string UserFlow { get; protected set; } = "b2c_1a_signinwithadfsidp";
 	public string Domain => $"{this.TenantName}.onmicrosoft.com";
 	public string Authority => $"https://{this.Instance}/tfp/{this.Domain}/{this.UserFlow}/v2.0";
-
+	public string LegacyAuthority => $"https://{LegacyInstance}/tfp/{this.Domain}/v2.0";
 	public string DefaultUserScope => $"https://{this.Domain}/{this.DefaultResourceId}/user_impersonation";
 	public string DefaultAppScope => $"https://{this.Domain}/{this.DefaultResourceId}/.default";
 

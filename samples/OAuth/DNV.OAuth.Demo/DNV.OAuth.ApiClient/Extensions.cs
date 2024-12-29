@@ -67,6 +67,7 @@ public static class Extensions
 			return new ApiClientTokenHandler(tokenAcquisition, accessorType, options);
 		});
 
+		// this part could be extracted to a Func<> parameter for user to customize the client
 		services.AddScoped<TClient>(sp =>
 		{
 			var httpClient = sp.GetRequiredService<IHttpClientFactory>()

@@ -14,11 +14,11 @@ public static class Extensions
 {
 	#region AddVeracityWebApp
 	public static MicrosoftIdentityWebAppAuthenticationBuilder AddVeracityWebApp(
-	this IServiceCollection services,
-	IConfigurationRoot configuration,
-	string configSectionName = Constants.AzureAd,
-	string environmentKey = "Environment"
-) => services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+		this IServiceCollection services,
+		IConfigurationRoot configuration,
+		string configSectionName = Constants.AzureAd,
+		string environmentKey = "Environment"
+	) => services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
 	.AddVeracityWebApp(configuration, configSectionName, environmentKey);
 
 	public static MicrosoftIdentityWebAppAuthenticationBuilder AddVeracityWebApp(
@@ -49,7 +49,10 @@ public static class Extensions
 		var oauthOptions = VeracityOAuthOptions.Get(environment);
 		builder.Services.AddSingleton<VeracityOAuthOptions>(oauthOptions);
 		return builder.AddMicrosoftIdentityWebApp(
-			o => oauthOptions.ConfigureIdentityOptions(o, configureMicrosoftIdentityOptions),
+			o =>
+			{
+				oauthOptions.ConfigureIdentityOptions(o, configureMicrosoftIdentityOptions);
+			},
 			configureCookieAuthenticationOptions
 		);
 	}
@@ -61,43 +64,47 @@ public static class Extensions
 		IConfigurationRoot configuration,
 		string configSectionName = Constants.AzureAd,
 		string environmentKey = "Environment",
-		string scheme = JwtBearerDefaults.AuthenticationScheme
+		string scheme = JwtBearerDefaults.AuthenticationScheme,
+		bool useLegacyEndpoint = false
 	) => services.AddAuthentication(scheme)
-		.AddVeracityWebApi(configuration, configSectionName, environmentKey, scheme);
+		.AddVeracityWebApi(configuration, configSectionName, environmentKey, scheme, useLegacyEndpoint);
 
 	public static MicrosoftIdentityWebApiAuthenticationBuilder AddVeracityWebApi(
 		this AuthenticationBuilder builder,
 		IConfigurationRoot configuration,
 		string configSectionName = Constants.AzureAd,
 		string environmentKey = "Environment",
-		string scheme = JwtBearerDefaults.AuthenticationScheme
+		string scheme = JwtBearerDefaults.AuthenticationScheme,
+		bool useLegacyEndpoint = false
 	)
 	{
 		var configSection = configuration.GetSection(configSectionName);
 		var environment = configuration.GetEnum<VeracityEnvironment>(environmentKey);
-		return builder.AddVeracityWebApi(configSection, environment, scheme);
+		return builder.AddVeracityWebApi(configSection, environment, scheme, useLegacyEndpoint);
 	}
 
 	public static MicrosoftIdentityWebApiAuthenticationBuilder AddVeracityWebApi(
 		this AuthenticationBuilder builder,
 		IConfigurationSection configuration,
 		VeracityEnvironment environment = VeracityEnvironment.Production,
-		string scheme = JwtBearerDefaults.AuthenticationScheme
-	) => builder.AddVeracityWebApi(configuration.Bind, configuration.Bind, environment, scheme);
+		string scheme = JwtBearerDefaults.AuthenticationScheme,
+		bool useLegacyEndpoint = false
+	) => builder.AddVeracityWebApi(configuration.Bind, configuration.Bind, environment, scheme, useLegacyEndpoint);
 
 	public static MicrosoftIdentityWebApiAuthenticationBuilder AddVeracityWebApi(
 		this AuthenticationBuilder builder,
 		Action<JwtBearerOptions> configureJwtBearerOptions,
 		Action<MicrosoftIdentityOptions> configureMicrosoftIdentityOptions,
 		VeracityEnvironment environment = VeracityEnvironment.Production,
-		string scheme = JwtBearerDefaults.AuthenticationScheme
+		string scheme = JwtBearerDefaults.AuthenticationScheme,
+		bool useLegacyEndpoint = false
 	)
 	{
 		var oauthOptions = VeracityOAuthOptions.Get(environment);
 		builder.Services.AddSingleton<VeracityOAuthOptions>(oauthOptions);
 		return builder.AddMicrosoftIdentityWebApi(
 			o => oauthOptions.ConfigureJwtOptions(o, configureJwtBearerOptions),
-			o => oauthOptions.ConfigureIdentityOptions(o, configureMicrosoftIdentityOptions),
+			o => oauthOptions.ConfigureIdentityOptions(o, configureMicrosoftIdentityOptions, useLegacyEndpoint),
 			scheme
 		);
 	}
@@ -105,13 +112,22 @@ public static class Extensions
 	public static void ConfigureIdentityOptions(
 		this VeracityOAuthOptions oauthOptions,
 		MicrosoftIdentityOptions options,
-		Action<MicrosoftIdentityOptions>? configureNext = null
+		Action<MicrosoftIdentityOptions>? configureNext = null,
+		bool useLegacyEndpoint = false
 	)
 	{
-		options.Instance ??= oauthOptions.Instance;
+		if (useLegacyEndpoint)
+		{
+			options.Instance ??= VeracityOAuthOptions.LegacyInstance;
+		}
+		else
+		{
+			options.Instance ??= oauthOptions.Instance;
+			options.SignUpSignInPolicyId ??= oauthOptions.UserFlow;
+		}
+
 		options.Domain ??= oauthOptions.Domain;
 		options.TenantId ??= oauthOptions.TenantId;
-		options.SignUpSignInPolicyId ??= oauthOptions.UserFlow;
 		options.Scope.Add(oauthOptions.DefaultUserScope);
 
 		configureNext?.Invoke(options);
