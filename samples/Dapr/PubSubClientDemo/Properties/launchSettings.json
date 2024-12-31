@@ -1,0 +1,27 @@
+﻿{
+    "profiles": {
+        "http": {
+            "commandName": "Project",
+            "dotnetRunMessages": true,
+            "launchBrowser": true,
+            "launchUrl": "swagger",
+            "applicationUrl": "http://localhost:5000",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        "dapr": {
+            "commandName": "Executable",
+            "executablePath": "dapr",
+            "commandLineArgs": "run --app-id demo --dapr-http-port 3501 --resources-path ./components --app-port 5000 -- dotnet run -lp http",
+            "workingDirectory": ".",
+            "nativeDebugging": true
+        },
+        "dapr.yaml": {
+            "commandName": "Executable",
+            "executablePath": "dapr",
+            "commandLineArgs": "run -f .",
+            "workingDirectory": "."
+        }
+    }
+}

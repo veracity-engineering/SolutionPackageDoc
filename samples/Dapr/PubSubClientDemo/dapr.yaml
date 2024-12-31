@@ -1,0 +1,12 @@
+﻿version: 1
+common:
+  resourcesPaths:
+  - ./components
+apps:
+- appID: demo
+  appDirPath: .
+  appPort: 5000
+  daprHTTPPort: 3501
+  command: ["dotnet", "run", "--urls=http://localhost:5000"]
+  daprdLogDestination: console
+

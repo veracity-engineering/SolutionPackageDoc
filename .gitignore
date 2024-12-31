@@ -5,3 +5,4 @@ docs/api/
 **/.vs/
 **/bin/
 **/obj/
+**/.dapr

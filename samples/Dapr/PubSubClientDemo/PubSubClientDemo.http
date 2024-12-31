@@ -1,0 +1,6 @@
+@PubSubClientDemo_HostAddress = http://localhost:5268
+
+GET {{PubSubClientDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
