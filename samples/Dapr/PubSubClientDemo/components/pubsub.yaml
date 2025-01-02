@@ -9,14 +9,29 @@ spec:
 
 ---
 
+# apiVersion: dapr.io/v1alpha1
+# kind: Component
+# metadata:
+#   name: pubsub2
+# spec:
+#   type: pubsub.in-memory
+#   version: v1
+#   metadata: []
+
 apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
   name: pubsub2
 spec:
-  type: pubsub.in-memory
+  type: pubsub.azure.servicebus.topics
   version: v1
-  metadata: []
+  metadata:
+  - name: connectionString
+    value: "<connectionString>"
+  - name: disableEntityManagement
+    value: false
+  - name: consumerID
+    value: demosub1         # subscription name in topic
 
 ---
 
