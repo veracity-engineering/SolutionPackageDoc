@@ -13,7 +13,7 @@ namespace DNV.OAuth.Demo.Controllers.Api
 {
 	[ApiController]
 	[Route("api/[controller]")]
-	[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+	[Authorize(AuthenticationSchemes = "Api1,Api2")]
 	public class Api1Controller : ControllerBase
 	{
 		private readonly ILogger<Api1Controller> _logger;
@@ -34,6 +34,7 @@ namespace DNV.OAuth.Demo.Controllers.Api
 		[HttpGet]
 		public async Task<IEnumerable<KeyValuePair<string, string>>> Get()
 		{
+			_logger.LogWarning("Api1");
 			var scope = _oauthOptions.DefaultAppScope;
 			var token = await _tokenAcquisition.GetAccessTokenForAppAsync(scope);
 			_logger.LogInformation("Token: {token}", token);

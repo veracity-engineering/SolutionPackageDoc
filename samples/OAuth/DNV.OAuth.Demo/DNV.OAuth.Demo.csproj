@@ -12,6 +12,7 @@
 	<ItemGroup>
 		<PackageReference Include="DNV.ApiClients.Veracity.Identity.PlatformApiV4.ApiClient" Version="1.0.10" />
 		<PackageReference Include="DNV.ApiClients.Veracity.Identity.ServicesApiV3.ApiClient" Version="1.0.10" />
+		<PackageReference Include="Hellang.Middleware.ProblemDetails" Version="6.5.1" />
 		<PackageReference Include="Microsoft.Identity.Web" Version="3.5.0" />
 		<PackageReference Include="Microsoft.Identity.Web.DownstreamApi" Version="3.5.0" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />

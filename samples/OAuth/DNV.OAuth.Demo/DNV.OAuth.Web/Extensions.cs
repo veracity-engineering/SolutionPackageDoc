@@ -1,12 +1,15 @@
-﻿using DNV.OAuth.Common;
+﻿using DNV.ApiClients.Veracity.Identity.ServicesApiV3.Models;
+using DNV.OAuth.Common;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Identity.Web;
 using System;
+using System.Threading.Tasks;
 
 namespace DNV.OAuth.Web;
 
@@ -139,8 +142,6 @@ public static class Extensions
 		Action<JwtBearerOptions>? configureNext = null
 	)
 	{
-		//options.Authority ??= oauthOptions.Authority;
-
 		configureNext?.Invoke(options);
 	}
 	#endregion
@@ -157,4 +158,10 @@ public static class Extensions
 
 		throw new ArgumentException($"Invalid value for {key}: {value}");
 	}
+
+	public static void SetAudiences(this IServiceCollection services, string scheme, string[] audiences)
+		=> services.Configure<JwtBearerOptions>(scheme, o =>
+		{
+			o.TokenValidationParameters.ValidAudiences ??= audiences;
+		});
 }

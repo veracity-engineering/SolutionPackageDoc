@@ -3,51 +3,93 @@ using DNV.ApiClients.Veracity.Identity.ServicesApiV3.Interfaces;
 using DNV.OAuth.ApiClient;
 using DNV.OAuth.Web;
 using DNV.Web.Swagger;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Logging;
+using System.Linq;
+using System.Threading.Tasks;
 
-var builder = WebApplication.CreateBuilder(args);
-var services = builder.Services;
-var configuration = builder.Configuration;
+internal class Program
+{
+	private static void Main(string[] args)
+	{
+		IdentityModelEventSource.ShowPII = true;
+		var builder = WebApplication.CreateBuilder(args);
+		var services = builder.Services;
+		var configuration = builder.Configuration;
 
-services.AddControllersWithViews();
+		services.AddControllersWithViews();
 
-//services.AddVeracityWebApp(configuration, "OAuth", "Environment")
-//	.EnableTokenAcquisitionToCallDownstreamApi()
-//	.AddDistributedTokenCaches();
-var authBuilder = services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme);
-authBuilder.AddVeracityWebApp(configuration, "OAuth", "Environment")
-	.EnableTokenAcquisitionToCallDownstreamApi()
-	.AddDistributedTokenCaches();
+		//services.AddVeracityWebApp(configuration, "OAuth", "Environment")
+		//	.EnableTokenAcquisitionToCallDownstreamApi()
+		//	.AddDistributedTokenCaches();
+		var authBuilder = services.AddAuthentication(Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectDefaults.AuthenticationScheme);
+		authBuilder.AddVeracityWebApp(configuration, "OAuth", "Environment")
+			.EnableTokenAcquisitionToCallDownstreamApi()
+			.AddDistributedTokenCaches();
 
-authBuilder.AddVeracityWebApi(configuration, "OAuth", "Environment");
-authBuilder.AddVeracityWebApi(configuration, "OAuth2", "Environment", "OAuth2", useLegacyEndpoint: true);
+		services.Configure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationScheme, o =>
+		{
+			//o.TokenHandler = new MyTokenHandler();
+		});
 
-//services.AddAuthorizationBuilder()
-//	.SetDefaultPolicy(new AuthorizationPolicyBuilder()
-//		.RequireAuthenticatedUser()
-//		.AddAuthenticationSchemes(OpenIdConnectDefaults.AuthenticationScheme)
-//		.Build()
-//	)
-//	.AddPolicy("Api", new AuthorizationPolicyBuilder()
-//		.RequireAuthenticatedUser()
-//		.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
-//		.Build()
-//	);
+		//services.Configure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationScheme, o =>
+		//{
+		//	o.UseSecurityTokenValidator = true;
+		//	o.SecurityTokenValidator = new MyTokenValidator();
+		//});
+		var audiences = configuration.GetSection("ApiSchemes")
+			.GetChildren()
+			.Select(x => x.GetSection("Audience")?.Value)
+			.Where(x => !string.IsNullOrWhiteSpace(x))
+			.Cast<string>()
+			.ToArray();
 
-services.AddApiClientForUser<IServicesApiV3Client, ServicesApiV3Client>("ApiV3", o => configuration.Bind("Apis:ApiV3", o));
+		authBuilder.AddVeracityWebApi(configuration, "ApiSchemes:Api1", "Environment", "Api1");
+		authBuilder.AddVeracityWebApi(configuration, "ApiSchemes:Api2", "Environment", "Api2");
 
-services.AddSwagger(configuration, "Swagger", "Environment");
+		services.Configure<JwtBearerOptions>("Api1", o =>
+		{
+			o.Events = new JwtBearerEvents
+			{
+				OnAuthenticationFailed = context =>
+				{
+					return Task.CompletedTask;
+				}
+			};
+			//o.TokenValidationParameters.ValidAudiences ??= audiences;
+		});
 
-var app = builder.Build();
+		services.Configure<JwtBearerOptions>("Api2", o =>
+		{
+			o.Events = new JwtBearerEvents
+			{
+				OnAuthenticationFailed = context =>
+				{
+					return Task.CompletedTask;
+				}
+			};
+			//o.TokenValidationParameters.ValidAudiences ??= audiences;
+		});
 
-app.UseRouting();
-app.UseAuthentication().UseAuthorization();
+		services.AddProblemDetails();
 
-app.MapDefaultControllerRoute();
+		services.AddApiClientForUser<IServicesApiV3Client, ServicesApiV3Client>("ApiV3", o => configuration.Bind("Apis:ApiV3", o));
 
-app.UseSwaggerWithUI(configuration, "Swagger", "Environment");
+		services.AddSwagger(configuration, "Swagger", "Environment");
 
-app.Run();
+		var app = builder.Build();
+
+		app.UseRouting();
+		app.UseAuthentication().UseAuthorization();
+
+		app.MapDefaultControllerRoute();
+
+		app.UseSwaggerWithUI(configuration, "Swagger", "Environment");
+
+		app.Run();
+	}
+}

@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using DNV.OAuth.Common;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Microsoft.Identity.Web;
+using Microsoft.IdentityModel.JsonWebTokens;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,24 +12,34 @@ using System.Threading.Tasks;
 namespace DNV.OAuth.Demo.Controllers.Api
 {
 	[ApiController]
-    [Route("api/[controller]")]
-	[Authorize(AuthenticationSchemes = "OAuth2")]
+	[Route("api/[controller]")]
+	[Authorize(AuthenticationSchemes = "Api1,Api2")]
 	public class Api2Controller : ControllerBase
-    {
-        private readonly ITokenAcquisition _tokenAcquisition;
+	{
+		private readonly ILogger<Api1Controller> _logger;
+		private readonly ITokenAcquisition _tokenAcquisition;
+		private readonly VeracityOAuthOptions _oauthOptions;
 
-        public Api2Controller(ITokenAcquisition tokenAcquisition)
-        {
-            _tokenAcquisition = tokenAcquisition;
+		public Api2Controller(
+			ILogger<Api1Controller> logger,
+			ITokenAcquisition tokenAcquisition,
+			VeracityOAuthOptions oauthOptions
+		)
+		{
+			_logger = logger;
+			_tokenAcquisition = tokenAcquisition;
+			_oauthOptions = oauthOptions;
+		}
 
-        }
-
-        [HttpGet]
-        public async Task<IEnumerable<KeyValuePair<string, string>>> Get()
-        {
-            var scope = "https://dnvglb2cprod.onmicrosoft.com/83054ebf-1d7b-43f5-82ad-b2bde84d7b75/.default";
-            var token = await _tokenAcquisition.GetAccessTokenForAppAsync(scope);
-            return this.User.Claims.Select(c => new KeyValuePair<string, string>(c.Type, c.Value));
-        }
-    }
+		[HttpGet]
+		public async Task<IEnumerable<KeyValuePair<string, string>>> Get()
+		{
+			_logger.LogWarning("Api2");
+			var scope = _oauthOptions.DefaultAppScope;
+			var token = await _tokenAcquisition.GetAccessTokenForAppAsync(scope);
+			_logger.LogInformation("Token: {token}", token);
+			var jwt = new JsonWebToken(token);
+			return jwt.Claims.Select(c => new KeyValuePair<string, string>(c.Type, c.Value));
+		}
+	}
 }
