@@ -1,21 +1,41 @@
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
 
-namespace DNV.OAuth.Demo
-{
-	public class Program
-	{
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
+using DNV.OAuth.Web;
+using DNV.Web.Swagger;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
-}
+var builder = WebApplication.CreateBuilder(args);
+var services = builder.Services;
+var configuration = builder.Configuration;
+
+var oidcOptions = configuration.GetSection("OAuth").Get<OidcOptions>();
+
+services.AddOidc(oidcOptions)
+	.AddJwt(configuration.GetSection("JwtOptions").GetChildren());
+
+services.AddControllersWithViews();
+
+// add swagger generation and swagger UI with authentication feature
+services.AddSwagger(o => configuration.Bind("SwaggerOptions", o));
+
+
+
+
+
+
+var app = builder.Build();
+
+
+app.UseDeveloperExceptionPage();
+
+app.UseHttpsRedirection().UseRouting();
+app.UseAuthentication().UseAuthorization();
+
+app.MapDefaultControllerRoute();
+
+
+app.UseSwaggerWithUI(o => configuration.Bind("SwaggerOptions", o));
+
+
+app.Run();
