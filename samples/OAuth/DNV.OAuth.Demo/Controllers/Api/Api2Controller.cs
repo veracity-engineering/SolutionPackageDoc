@@ -35,6 +35,7 @@ namespace DNV.OAuth.Demo.Controllers.Api
 		public async Task<IEnumerable<KeyValuePair<string, string>>> Get()
 		{
 			_logger.LogWarning("Api2");
+			return [];
 			var scope = _oauthOptions.DefaultAppScope;
 			var token = await _tokenAcquisition.GetAccessTokenForAppAsync(scope);
 			_logger.LogInformation("Token: {token}", token);
