@@ -1,0 +1,97 @@
+# What it does?
+Provides infrastructure-level health checks for ASP.NET Core applications, including support for downstream service checks and Veracity-compatible status reporting.
+
+# Who should use it?
+Backend developers working with ASP.NET Core services that require health monitoring, especially those integrating with Veracity or using API Management.
+
+# Business value
+Improves system reliability and observability by enabling early detection of issues, supporting secure deployments, and integrating with monitoring tools like Veracity and Azure.
+
+# Key Features
+- **ServiceHealthCheck**: Checks the downstream services to collect dependency status using configurable HTTP methods and headers.
+- **VeracityStatus Adapter**: Converts standard health check results into Veracity-compatible format for unified monitoring.
+
+# When to Use This Package
+✅ **Use when you want to**:
+- Return more detailed service information than the default health check response.
+- Monitor services that have been moved from public internet to private vNet environments, where standard probes cannot reach.
+- Handle cyclic dependencies between services that may block default URI-based health checks.
+- Support API Management (APIM) scenarios by allowing the use of subscription keys to access protected endpoints.
+- Expose health status in Veracity-compatible format.
+- Provide custom health check logic with support for degraded and unhealthy states.
+
+❌ **Don't use when**:
+- You only need basic liveness or readiness checks without external dependencies.
+- Your service does not require integration with Veracity or custom health reporting.
+Then better switch to 3rd party library e.g. https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks
+
+# Quick Start
+## Installation
+Download:
+- DNV.Monitoring.HealthChecks.ServiceHealthCheck
+- DNV.Monitoring.HealthChecks.VeracityStatus
+
+## Basic Usage Example
+*(Example not provided)*
+
+# Dependencies & Requirements
+- **.NET Version**: ??
+- **Key Dependencies**: ??
+
+# Configuration
+```csharp
+
+builder.Services.AddHttpClient();
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddHealthChecks()
+    .AddServiceHealthCheck(new ServiceHealthCheckOptions 
+    { 
+        Uri = "https://localhost:7204/health"
+    }, "Child Node");
+
+app.MapVeracityHealthChecks("/health", new VeracityStatusHealthCheckOptions
+{
+    ServiceId = "0216F707-0772-4A36-A1B9-3923128B45E7",
+    ReleaseId = "v1.30",
+    Version = "1.5",
+    Description = "Parent Service",
+});
+```
+## ServiceHealthCheck
+
+| Option           | Is required?     | Description                                                                 |
+|------------------|----------|-----------------------------------------------------------------------------|
+| `Uri`     |    | Downstream service URL.                                                     |
+| `HttpMethod`     |    | HTTP method to use (e.g., GET or POST).                                     |
+| `SubscriptionKey`|    | API key if the service is behind API Management.                            |
+| `Healthy`        |  | Function to determine if the HTTP response should be treated as healthy.    |
+| `Degraded`       |  | Function to determine if the HTTP response should be treated as degraded.   |
+| `Unhealthy`      |  | Function to determine if the HTTP response should be treated as unhealthy.  |
+
+## VeracityStatus
+
+| Option        | Is required?     | Description                                                                 |
+|---------------|----------|-----------------------------------------------------------------------------|
+| `Status`      |    | Veracity status. Accepts `Pass` (healthy), `Warn` (degraded), `Fail` (unhealthy). |
+| `Duration`    |  | Duration of the health check execution.                                     |
+| `ServiceId`   |    | Identifier for the service (e.g., `identityApi`, `V3`).                      |
+| `ReleaseId`   |    | Release ID of the service.                                                  |
+| `Version`     |    | Public version of the service.                                              |
+| `Description` |    | Human-friendly description of the service.                                  |
+| `Message`     |    | Error message in human-readable form.                                       |
+| `SupportCode` |    | Code used by Veracity support.                                              |
+| `SubCode`     |    | More detailed error code.                                                   |
+| `Tags`        |     | Array of tags associated with the service.                                  |
+
+
+# Common Use Cases
+## Demo project
+https://github.com/veracity-engineering/SolutionPackageDoc/tree/master/samples/HealthCheck ? 
+
+
+# Troubleshooting
+| Problem | Cause | Solution |
+|--------|-------|----------|
+| Health check endpoint not reachable | Service behind vNet or APIM | Use SubscriptionKey and ensure routing is configured |
+| Health check always returns unhealthy | Incorrect evaluation logic | Review Healthy, Degraded, Unhealthy functions |
