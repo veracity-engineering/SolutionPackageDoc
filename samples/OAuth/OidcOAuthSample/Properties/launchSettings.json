@@ -16,13 +16,13 @@
             },
             "applicationUrl": "https://localhost:44301"
         },
-        "OidcOAuthSample": {
-            "commandName": "Project",
-            "launchBrowser": true,
-            "environmentVariables": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
-            },
-            "applicationUrl": "https://localhost:5001"
-        }
+      "OidcOAuthSample": {
+        "commandName": "Project",
+        "launchBrowser": true,
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        },
+        "applicationUrl": "https://localhost:7109"
+      }
     }
 }

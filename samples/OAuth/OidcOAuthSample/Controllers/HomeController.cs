@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using DNV.OAuth.Web.Extensions.Mfa;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -16,7 +17,16 @@ namespace OidcOAuthSample.Controllers
 		[Authorize]
 		public IActionResult SignIn()
 		{
-			return View();
+            var returnUrl = "https://www.bing.com";
+            if (HttpContext.SignedInWithMfa())
+            {
+                return Redirect(returnUrl);
+            }
+            else
+            {
+                HttpContext.ChallengeForMfaAsync(returnUrl);
+                return NoContent();
+            }
 		}
 
 		public async Task<IActionResult> SignOut()

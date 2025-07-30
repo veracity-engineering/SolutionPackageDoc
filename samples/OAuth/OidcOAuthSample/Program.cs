@@ -15,6 +15,6 @@ namespace OidcOAuthSample
 				.ConfigureWebHostDefaults(webBuilder =>
 				{
 					webBuilder.UseStartup<Startup>();
-				});
+                });
 	}
 }
