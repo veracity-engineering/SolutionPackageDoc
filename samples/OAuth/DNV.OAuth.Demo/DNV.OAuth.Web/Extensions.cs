@@ -107,7 +107,12 @@ public static class Extensions
 		builder.Services.AddSingleton<VeracityOAuthOptions>(oauthOptions);
 		return builder.AddMicrosoftIdentityWebApi(
 			o => oauthOptions.ConfigureJwtOptions(o, configureJwtBearerOptions),
-			o => oauthOptions.ConfigureIdentityOptions(o, configureMicrosoftIdentityOptions, useLegacyEndpoint),
+			o =>
+			{
+				// ClientId is required for MicrosoftIdentityOptions but not for JwtBearerOptions.
+				o.ClientId ??= Guid.Empty.ToString();
+				oauthOptions.ConfigureIdentityOptions(o, configureMicrosoftIdentityOptions, useLegacyEndpoint);
+			},
 			scheme
 		);
 	}

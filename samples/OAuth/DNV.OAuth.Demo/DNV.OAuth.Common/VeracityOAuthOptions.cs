@@ -35,8 +35,8 @@ public class VeracityOAuthOptions
 	public string DefaultResourceId { get; protected set; }
 	public string UserFlow { get; protected set; } = "b2c_1a_signinwithadfsidp";
 	public string Domain => $"{this.TenantName}.onmicrosoft.com";
-	public string Authority => $"https://{this.Instance}/tfp/{this.Domain}/{this.UserFlow}/v2.0";
-	public string LegacyAuthority => $"https://{LegacyInstance}/tfp/{this.Domain}/v2.0";
+	public string Authority => $"{this.Instance}/tfp/{this.Domain}/{this.UserFlow}/v2.0";
+	public string LegacyAuthority => $"{LegacyInstance}/tfp/{this.Domain}/v2.0";
 	public string DefaultUserScope => $"https://{this.Domain}/{this.DefaultResourceId}/user_impersonation";
 	public string DefaultAppScope => $"https://{this.Domain}/{this.DefaultResourceId}/.default";
 
