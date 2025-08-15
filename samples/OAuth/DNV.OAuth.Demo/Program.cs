@@ -13,7 +13,6 @@ using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Logging;
 using System;
 using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -28,18 +27,65 @@ internal class Program
 
 		services.AddControllersWithViews();
 
-		//services.AddVeracityWebApp(configuration, "OAuth", "Environment")
-		//	.EnableTokenAcquisitionToCallDownstreamApi()
-		//	.AddDistributedTokenCaches();
-		var authBuilder = services.AddAuthentication(Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectDefaults.AuthenticationScheme);
+		var authBuilder = services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme);
 		authBuilder.AddVeracityWebApp(configuration, "OAuth", "Environment")
 			.EnableTokenAcquisitionToCallDownstreamApi()
 			.AddDistributedTokenCaches();
 
-		services.Configure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationScheme, o =>
+		authBuilder.AddVeracityWebApi(configuration, "ApiSchemes:Api1", "Environment", Consts.Api1);
+		authBuilder.AddVeracityWebApi(configuration, "ApiSchemes:Api2", "Environment", Consts.Api2, useLegacyEndpoint: true);
+
+		services.AddProblemDetails();
+
+		services.AddApiClientForUser<IServicesApiV3Client, ServicesApiV3Client>("ApiV3", o => configuration.Bind("Apis:ApiV3", o));
+
+		services.AddSwagger(configuration, "Swagger", "Environment");
+
+		ExtraConfigure(builder);
+
+		var app = builder.Build();
+
+		//app.LoadJwtConfiguration()
+		//	.GetAwaiter()
+		//	.GetResult();
+
+		app.UseRouting();
+		app.UseAuthentication()
+			.UseAuthorization();
+
+		app.MapDefaultControllerRoute();
+
+		app.UseSwaggerWithUI(configuration, "Swagger", "Environment");
+
+		app.Run();
+	}
+
+	static void ExtraConfigure(WebApplicationBuilder builder)
+	{
+		var services = builder.Services;
+		var configuration = builder.Configuration;
+
+		var events = new JwtBearerEvents
 		{
-			//o.TokenHandler = new MyTokenHandler();
+			OnAuthenticationFailed = async context =>
+			{
+			},
+			OnTokenValidated = async context =>
+			{
+			}
+		};
+
+		services.Configure<JwtBearerOptions>(Consts.Api1, o =>
+		{
+			o.Events = events;
 		});
+
+		services.Configure<JwtBearerOptions>(Consts.Api2, o =>
+		{
+			o.Events = events;
+		});
+
+		return;
 
 		var audiences = configuration.GetSection("ApiSchemes")
 			.GetChildren()
@@ -48,8 +94,42 @@ internal class Program
 			.Cast<string>()
 			.ToArray();
 
-		authBuilder.AddVeracityWebApi(configuration, "ApiSchemes:Api1", "Environment", "Api1");
-		authBuilder.AddVeracityWebApi(configuration, "ApiSchemes:Api2", "Environment", "Api2", useLegacyEndpoint: true);
+		services.Configure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationScheme, o =>
+		{
+			//o.TokenHandler = new MyTokenHandler();
+		});
+
+		services.Configure<JwtBearerOptions>(Consts.Api1, o =>
+		{
+			o.TokenValidationParameters.LogValidationExceptions = false;
+			o.TokenValidationParameters.ValidAudiences ??= audiences;
+
+			o.ForwardDefaultSelector = GetIssuer;
+
+			o.Events = new JwtBearerEvents
+			{
+				OnAuthenticationFailed = context =>
+				{
+					return Task.CompletedTask;
+				}
+			};
+		});
+
+		services.Configure<JwtBearerOptions>(Consts.Api2, o =>
+		{
+			o.TokenValidationParameters.LogValidationExceptions = false;
+			o.TokenValidationParameters.ValidAudiences ??= audiences;
+
+			o.ForwardDefaultSelector = GetIssuer;
+
+			o.Events = new JwtBearerEvents
+			{
+				OnAuthenticationFailed = context =>
+				{
+					return Task.CompletedTask;
+				}
+			};
+		});
 
 		static string? GetIssuer(HttpContext context)
 		{
@@ -68,62 +148,13 @@ internal class Program
 
 			var issuers = new Dictionary<string, string>
 			{
-				{ "https://login.veracity.com/a68572e3-63ce-4bc1-acdc-b64943502e9d/v2.0/", "Api1" },
-				{ "https://login.microsoftonline.com/a68572e3-63ce-4bc1-acdc-b64943502e9d/v2.0", "Api2" }
+				{ "https://login.veracity.com/a68572e3-63ce-4bc1-acdc-b64943502e9d/v2.0/", Consts.Api1 },
+				{ "https://login.microsoftonline.com/a68572e3-63ce-4bc1-acdc-b64943502e9d/v2.0", Consts.Api2 }
 			};
 
 			var jwt = new JsonWebToken(value["Bearer ".Length..]);
 			issuers.TryGetValue(jwt.Issuer, out var issuer);
 			return issuer;
 		}
-
-		services.Configure<JwtBearerOptions>("Api1", o =>
-		{
-			o.TokenValidationParameters.LogValidationExceptions = false;
-			o.TokenValidationParameters.ValidAudiences ??= audiences;
-
-			o.ForwardDefaultSelector = GetIssuer;
-
-			o.Events = new JwtBearerEvents
-			{
-				OnAuthenticationFailed = context =>
-				{
-					return Task.CompletedTask;
-				}
-			};
-		});
-
-		services.Configure<JwtBearerOptions>("Api2", o =>
-		{
-			o.TokenValidationParameters.LogValidationExceptions = false;
-			o.TokenValidationParameters.ValidAudiences ??= audiences;
-
-			o.ForwardDefaultSelector = GetIssuer;
-
-			o.Events = new JwtBearerEvents
-			{
-				OnAuthenticationFailed = context =>
-				{
-					return Task.CompletedTask;
-				}
-			};
-		});
-
-		services.AddProblemDetails();
-
-		services.AddApiClientForUser<IServicesApiV3Client, ServicesApiV3Client>("ApiV3", o => configuration.Bind("Apis:ApiV3", o));
-
-		services.AddSwagger(configuration, "Swagger", "Environment");
-
-		var app = builder.Build();
-
-		app.UseRouting();
-		app.UseAuthentication().UseAuthorization();
-
-		app.MapDefaultControllerRoute();
-
-		app.UseSwaggerWithUI(configuration, "Swagger", "Environment");
-
-		app.Run();
 	}
 }

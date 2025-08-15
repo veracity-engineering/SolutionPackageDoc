@@ -1,5 +1,4 @@
 ﻿using DNV.OAuth.Common;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -13,7 +12,7 @@ namespace DNV.OAuth.Demo.Controllers.Api
 {
 	[ApiController]
 	[Route("api/[controller]")]
-	[Authorize(AuthenticationSchemes = "Api1,Api2")]
+	[Authorize(AuthenticationSchemes = Consts.Api2)]
 	public class Api2Controller : ControllerBase
 	{
 		private readonly ILogger<Api1Controller> _logger;
@@ -35,9 +34,8 @@ namespace DNV.OAuth.Demo.Controllers.Api
 		public async Task<IEnumerable<KeyValuePair<string, string>>> Get()
 		{
 			_logger.LogWarning("Api2");
-			return [];
-			var scope = _oauthOptions.DefaultAppScope;
-			var token = await _tokenAcquisition.GetAccessTokenForAppAsync(scope);
+			return this.User.Claims.ToDictionary(x => x.Type, x => x.Value);
+			var token = await _tokenAcquisition.GetAccessTokenForAppAsync(_oauthOptions.DefaultAppScope);
 			_logger.LogInformation("Token: {token}", token);
 			var jwt = new JsonWebToken(token);
 			return jwt.Claims.Select(c => new KeyValuePair<string, string>(c.Type, c.Value));
