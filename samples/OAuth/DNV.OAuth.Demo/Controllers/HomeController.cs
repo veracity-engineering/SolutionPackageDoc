@@ -15,32 +15,35 @@ namespace DNV.OAuth.Demo.Controllers;
 [Authorize(AuthenticationSchemes = OpenIdConnectDefaults.AuthenticationScheme)]
 public class HomeController : Controller
 {
+	private readonly ILogger<HomeController> _logger;
 	private readonly ITokenAcquisition _tokenAcquisition;
 	private readonly VeracityOAuthOptions _oauthOptions;
-	private readonly IServicesApiV3Client _apiV4Client;
+	private readonly IServicesApiV3Client _apiV3Client;
 
 	public HomeController(
+		ILogger<HomeController> logger,
 		ITokenAcquisition tokenAcquisition,
 		VeracityOAuthOptions oauthOptions,
 		IServicesApiV3Client apiV4Client
 	)
 	{
+		_logger = logger;
 		_tokenAcquisition = tokenAcquisition;
 		_oauthOptions = oauthOptions;
-		_apiV4Client = apiV4Client;
+		_apiV3Client = apiV4Client;
 	}
 
 	public async Task<IActionResult> Index()
 	{
-		var logger = this.HttpContext.RequestServices.GetRequiredService<ILogger<HomeController>>();
 		var token = await _tokenAcquisition.GetAccessTokenForUserAsync([_oauthOptions.DefaultUserScope]);
-		logger.LogInformation("User Token: {token}", token);
+		_logger.LogInformation("User Token: {token}", token);
 
 		token = await _tokenAcquisition.GetAccessTokenForAppAsync(_oauthOptions.DefaultAppScope);
-		logger.LogInformation("App Token: {token}", token);
+		_logger.LogInformation("App Token: {token}", token);
 
-		var info = await _apiV4Client.My.InfoAsync();
-		logger.LogInformation("MyInfo: {info}", JsonSerializer.Serialize(info));
+		var myServices = await _apiV3Client.My.MyServicesAsync();
+		this.ViewBag.Services = myServices;
+		_logger.LogInformation("My Services: {services}", JsonSerializer.Serialize(myServices));
 		return this.View();
 	}
 

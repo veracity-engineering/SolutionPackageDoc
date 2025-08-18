@@ -3,7 +3,7 @@
   "profiles": {
     "DNV.OAuth.Demo": {
       "commandName": "Project",
-      //"launchBrowser": true,
+      "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

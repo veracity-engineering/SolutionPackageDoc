@@ -13,11 +13,13 @@
 		<PackageReference Include="DNV.ApiClients.Veracity.Identity.PlatformApiV4.ApiClient" Version="1.0.10" />
 		<PackageReference Include="DNV.ApiClients.Veracity.Identity.ServicesApiV3.ApiClient" Version="1.0.10" />
 		<PackageReference Include="Hellang.Middleware.ProblemDetails" Version="6.5.1" />
+		<PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.19" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\..\..\..\SolutionPackage\src\OAuth\v2\ApiClient\DNV.OAuth.ApiClient.csproj" />
+	  <ProjectReference Include="..\..\..\..\SolutionPackage\src\OAuth\v2\Web.Extensions\DNV.OAuth.Web.Extensions.csproj" />
 	  <ProjectReference Include="..\..\..\..\SolutionPackage\src\OAuth\v2\Web\DNV.OAuth.Web.csproj" />
 	</ItemGroup>
 

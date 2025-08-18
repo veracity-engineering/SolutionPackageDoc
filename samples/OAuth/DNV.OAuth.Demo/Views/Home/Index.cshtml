@@ -23,6 +23,15 @@
 		}
 	</dl>
 
+	<h2>Services</h2>
+	<dl>
+		@foreach (var service in this.ViewBag.Services)
+		{
+			<dt><strong>@service.Name</strong></dt>
+			<dd>@service.Id</dd>
+		}
+	</dl>
+
 	<h2>Account</h2>
 	@if (account != null)
 	{
