@@ -11,7 +11,7 @@
 		"daprd": {
 			"commandName": "Executable",
 			"executablePath": "daprd.exe",
-			"commandLineArgs": "--app-id=pubsubdemo --app-port=5000 --dapr-http-port=3501 --resources-path=components --enable-mtls=false --enable-metrics=false",
+			"commandLineArgs": "--app-id=pubsubdemo --app-port=5000 --dapr-http-port=3500 --resources-path=components --enable-mtls=false --enable-metrics=false",
 			"workingDirectory": "$(ProjectDir)",
 			"environmentVariables": {
 				"ASPNETCORE_ENVIRONMENT": "Development"

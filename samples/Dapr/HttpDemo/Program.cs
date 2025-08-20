@@ -5,16 +5,19 @@ var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
 var configuration = builder.Configuration;
 
-var mockServer = "https://5692b783-d4d9-45a7-8dca-f49c30f31442.mock.pstmn.io";
-var clientName = "DAPR_CLIENT";
+var mockServer = "https://cuteribs.requestcatcher.com";
+var clientName = nameof(DefaultDaprHttpClient);// "DAPR_CLIENT";
 
-services.AddHttpClient(clientName)
-	.AddHttpMessageHandler(() => new TestHandler());
+services.AddHttpClient<DefaultDaprHttpClient>(clientName, x =>
+{
+	x.DefaultRequestHeaders.TryAddWithoutValidation("================= Your HttpClient is injected =================", "Injected");
+	Console.WriteLine("================= Your HttpClient is injected =================");
+}).AddHttpMessageHandler(() => new TestHandler());
 
 services.AddTransient<DaprHttpClient>(sp =>
 {
 	var httpClientFactory = sp.GetRequiredService<IHttpClientFactory>();
-	return new DefaultDaprHttpClient(httpClientFactory.CreateClient(clientName), new() { HttpPort = 3501 });
+	return new DefaultDaprHttpClient(httpClientFactory.CreateClient(clientName), new() { HttpPort = 3500 });
 });
 
 var app = builder.Build();
@@ -42,7 +45,7 @@ public class TestHandler : DelegatingHandler
 	protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
 	{
 		request.Headers.TryAddWithoutValidation("dapr-client", "default dapr http client");
-
+		request.RequestUri = new(request.RequestUri!.ToString() + "?param1=abc");
 		return base.SendAsync(request, cancellationToken);
 	}
 }
