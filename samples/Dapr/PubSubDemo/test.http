@@ -1,0 +1,21 @@
+@baseUrl = http://localhost:5000
+
+GET http://localhost:3501/v1.0/metadata
+
+### httppub
+
+POST {{baseUrl}}/httppub
+Content-Type: application/json
+
+{
+	"Message": "Hello, World!"
+}
+
+### sdkpub
+
+POST {{baseUrl}}/sdkpub
+Content-Type: application/json
+
+{
+	"Message": "Hello, World!"
+}
