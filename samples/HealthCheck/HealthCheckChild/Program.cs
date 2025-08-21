@@ -10,7 +10,13 @@ var configuration = builder.Configuration;
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    var filePath = Path.Combine(AppContext.BaseDirectory, "HealthCheckChild.xml");
+    c.IncludeXmlComments(filePath);
+    var filePath2 = Path.Combine(AppContext.BaseDirectory, "DNV.Monitoring.HealthChecks.VeracityStatus.xml");
+    c.IncludeXmlComments(filePath2);
+});
 
 // Begin: For health check
 builder.Services.AddHttpClient();

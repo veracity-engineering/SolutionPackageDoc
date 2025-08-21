@@ -4,12 +4,26 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+    <DocumentationFile>obj\Debug\net8.0\HealthCheckChild.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AspNetCore.HealthChecks.Uris" Version="8.0.1" />
-    <PackageReference Include="DNV.Monitoring.HealthChecks.VeracityStatus" Version="1.1.3" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+    <PackageReference Include="DNV.Monitoring.HealthChecks.VeracityStatus" Version="1.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
   </ItemGroup>
+
+  <Target Name="_ResolveCopyLocalNuGetPackagePdbsAndXml" Condition="$(CopyLocalLockFileAssemblies) == true" AfterTargets="ResolveReferences">
+    <ItemGroup>
+      <ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->'%(RootDir)%(Directory)%(Filename).pdb')" Condition="'%(ReferenceCopyLocalPaths.NuGetPackageId)' != ''&#xD;&#xA;                    and Exists('%(RootDir)%(Directory)%(Filename).pdb')" />
+      <ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->'%(RootDir)%(Directory)%(Filename).xml')" Condition="'%(ReferenceCopyLocalPaths.NuGetPackageId)' != ''&#xD;&#xA;                    and Exists('%(RootDir)%(Directory)%(Filename).xml')" />
+    </ItemGroup>
+  </Target>
 
 </Project>
