@@ -37,6 +37,16 @@ app.MapPost("/httppub", async (IDaprPubSubClientFactory factory, [FromBody] obje
 	await client.PublishAsync(message, metadata);
 });
 
+app.MapPost("/httppubs", async (IDaprPubSubClientFactory factory, [FromBody] IEnumerable<object> messages) =>
+{
+	var metadata = new Dictionary<string, string>
+	{
+		{ "pubMeta", "pub value" }
+	};
+	var client = factory.CreateClient(clientName);
+	await client.BulkPublishAsync(messages, metadata);
+});
+
 app.MapPost("/sdkpub", async ([FromBody] object message) =>
 {
 	var metadata = new Dictionary<string, string>
@@ -57,7 +67,7 @@ app.MapPost("/sub", (HttpContext context, object message) =>
 
 		foreach (var header in headers)
 		{
-			Console.WriteLine($"{header.Key}: {header.Value}");
+			Console.WriteLine($"  >>  {header.Key}: {header.Value}");
 		}
 
 		Console.WriteLine(message);

@@ -11,6 +11,17 @@ Content-Type: application/json
 	"Message": "Hello, World!"
 }
 
+### httppubs
+
+POST {{baseUrl}}/httppubs
+Content-Type: application/json
+
+[{
+	"Message": "Hello, World one"
+},{
+	"Message": "Hello, World two"
+}]
+
 ### sdkpub
 
 POST {{baseUrl}}/sdkpub
