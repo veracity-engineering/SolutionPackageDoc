@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="HttpDemo/HttpDemo.csproj" />
+  <Project Path="PubSubDemo/PubSubDemo.csproj" />
+</Solution>
