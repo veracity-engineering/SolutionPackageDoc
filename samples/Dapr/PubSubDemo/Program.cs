@@ -49,11 +49,9 @@ app.MapPost("/sdkpub", async ([FromBody] object message) =>
 	await client.PublishEventAsync("pubsub", "testtopic", message, metadata);
 });
 
-app.MapPost(
-	"/sub",
-	(HttpContext context, object message) =>
+app.MapPost("/sub", (HttpContext context, object message) =>
 	{
-		Console.WriteLine($"============================= Received message =============================");
+		Console.WriteLine($"============================= Receive message =============================");
 
 		var headers = context.Request.Headers;
 
@@ -64,8 +62,8 @@ app.MapPost(
 
 		Console.WriteLine(message);
 		return Results.Ok();
-	}
-).WithTopic("pubsub", "testtopic");
+	})
+	.WithTopic("pubsub", "testtopic");
 
 app.Run();
 

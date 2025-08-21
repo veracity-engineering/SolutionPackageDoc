@@ -34,7 +34,10 @@ app.MapPost("/dogs", (DaprHttpClient daprHttpClient, [FromBody] object breed) =>
 
 app.MapPost("/pubDog", (DaprHttpClient daprHttpClient, [FromBody] object dog) =>
 {
-	var metadata = new Dictionary<string, string> { { "pubMeta", "pub value" } };
+	var metadata = new Dictionary<string, string>
+	{
+		{ "pubMeta", "pub value" }
+	};
 	return daprHttpClient.PublishEventAsync("pubsub", "dogtopic", dog, metadata);
 });
 
@@ -45,7 +48,9 @@ public class TestHandler : DelegatingHandler
 	protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
 	{
 		request.Headers.TryAddWithoutValidation("dapr-client", "default dapr http client");
-		request.RequestUri = new(request.RequestUri!.ToString() + "?param1=abc");
+		var uri = request.RequestUri?.OriginalString ?? "";
+		uri += (uri.Contains('?') ? "&" : "?") + "param1=abc";
+		request.RequestUri = new(uri);
 		return base.SendAsync(request, cancellationToken);
 	}
 }
