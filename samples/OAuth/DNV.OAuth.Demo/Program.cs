@@ -21,11 +21,8 @@ using Microsoft.IdentityModel.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 
-//HttpClient.DefaultProxy = new WebProxy("http://localhost:8000");
 IdentityModelEventSource.ShowPII = true;
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
@@ -46,6 +43,8 @@ authBuilder.AddVeracityWebApp(
 	.EnableTokenAcquisitionToCallDownstreamApi()
 	.AddDistributedTokenCaches();
 
+//services.AddStackExchangeRedisCache(o => o.Configuration = "localhost");
+
 authBuilder.AddVeracityWebApi(configuration, "ApiSchemes:Api1", "Environment", Consts.Api1);
 authBuilder.AddVeracityWebApi(configuration, "ApiSchemes:Api2", "Environment", Consts.Api2, useLegacyEndpoint: true);
 
@@ -58,9 +57,12 @@ authBuilder.AddMultitenantAuthentication()
 
 services.AddApiClientForUser<IServicesApiV3Client, ServicesApiV3Client>(
 	"ApiV3",
-	o => configuration.Bind("Apis:ApiV3", o),
-	serviceLifetime: ServiceLifetime.Singleton
+	o => configuration.Bind("Apis:ApiV3", o)
 );
+//services.AddApiClient<IServicesApiV3Client, ServicesApiV3Client>(
+//	"ApiV3",
+//	o => configuration.Bind("Apis:ApiV3", o)
+//).AddWebApiAuthHandler(ApiClientUserType.User, o => configuration.Bind("Apis:ApiV3", o));
 
 services.AddSwagger(configuration, "Swagger", "Environment");
 

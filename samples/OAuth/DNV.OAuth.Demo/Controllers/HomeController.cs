@@ -1,6 +1,7 @@
 ﻿using DNV.ApiClients.Veracity.Identity.ServicesApiV3;
 using DNV.ApiClients.Veracity.Identity.ServicesApiV3.Interfaces;
 using DNV.OAuth.Common;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -36,19 +37,21 @@ public class HomeController : Controller
 	public async Task<IActionResult> Index()
 	{
 		var token = await _tokenAcquisition.GetAccessTokenForUserAsync([_oauthOptions.DefaultUserScope]);
-		_logger.LogInformation("User Token: {token}", token);
+		//_logger.LogInformation("User Token: {token}", token);
 
 		token = await _tokenAcquisition.GetAccessTokenForAppAsync(_oauthOptions.DefaultAppScope);
-		_logger.LogInformation("App Token: {token}", token);
+		//_logger.LogInformation("App Token: {token}", token);
 
 		var myServices = await _apiV3Client.My.MyServicesAsync();
 		this.ViewBag.Services = myServices;
-		_logger.LogInformation("My Services: {services}", JsonSerializer.Serialize(myServices));
+		//_logger.LogInformation("My Services: {services}", JsonSerializer.Serialize(myServices));
 		return this.View();
 	}
 
-	public IActionResult Signout()
+	[HttpPost("signout")]
+	public async Task<IActionResult> Signout()
 	{
-		return this.SignOut();
+		await this.HttpContext.SignOutAsync();
+		return this.Redirect(_oauthOptions.SignoutUrl);
 	}
 }
