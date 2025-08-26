@@ -1,4 +1,4 @@
-using DNV.Dapr.Http;
+using DNV.Dapr.Common;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,39 +6,35 @@ var services = builder.Services;
 var configuration = builder.Configuration;
 
 var mockServer = "https://cuteribs.requestcatcher.com";
-var clientName = nameof(DefaultDaprHttpClient);// "DAPR_CLIENT";
+var clientName = "DAPR_CLIENT";
 
-services.AddHttpClient<DefaultDaprHttpClient>(clientName, x =>
-{
-	x.DefaultRequestHeaders.TryAddWithoutValidation("================= Your HttpClient is injected =================", "Injected");
-	Console.WriteLine("================= Your HttpClient is injected =================");
-}).AddHttpMessageHandler(() => new TestHandler());
-
-services.AddTransient<DaprHttpClient>(sp =>
-{
-	var httpClientFactory = sp.GetRequiredService<IHttpClientFactory>();
-	return new DefaultDaprHttpClient(httpClientFactory.CreateClient(clientName), new() { HttpPort = 3500 });
-});
+services.AddHttpClient(
+	clientName, 
+	x =>
+	{
+		x.DefaultRequestHeaders.TryAddWithoutValidation(
+			"InjectedHeader", "================= Your HttpClient is injected ================="
+		);
+		Console.WriteLine("================= Your HttpClient is injected =================");
+	})
+	.AddHttpMessageHandler(() => new ServiceInvocationHandler(mockServer, 3501))
+	.AddHttpMessageHandler(() => new TestHandler());
 
 var app = builder.Build();
 
-app.MapGet("/dogs", (DaprHttpClient daprHttpClient) =>
+app.MapGet("/dogs", (IHttpClientFactory factory) =>
 {
-	return daprHttpClient.InvokeMethodAsync<string>("GET", mockServer, "dogs");
+	var req = new HttpRequestMessage(HttpMethod.Get, "http://fake.example.com/dogs");
+	return factory.CreateClient(clientName).SendAsync(req);
 });
 
-app.MapPost("/dogs", (DaprHttpClient daprHttpClient, [FromBody] object breed) =>
+app.MapPost("/dogs", (IHttpClientFactory factory, [FromBody] object breed) =>
 {
-	return daprHttpClient.InvokeMethodAsync<string>("POST", mockServer, "dogs", breed);
-});
-
-app.MapPost("/pubDog", (DaprHttpClient daprHttpClient, [FromBody] object dog) =>
-{
-	var metadata = new Dictionary<string, string>
+	var req = new HttpRequestMessage(HttpMethod.Post, "http://localhost:5000/dogs")
 	{
-		{ "pubMeta", "pub value" }
+		Content = JsonContent.Create(breed)
 	};
-	return daprHttpClient.PublishEventAsync("pubsub", "dogtopic", dog, metadata);
+	return factory.CreateClient(clientName).SendAsync(req);
 });
 
 app.Run();

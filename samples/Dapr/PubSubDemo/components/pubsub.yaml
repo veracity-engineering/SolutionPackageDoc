@@ -3,18 +3,14 @@ kind: Component
 metadata:
   name: pubsub
 spec:
-  type: pubsub.redis
-  version: v1
-  metadata:
-  - name: redisHost
-    value: localhost:6379
-  - name: redisPassword
-    value: ""
-  # type: pubsub.azure.servicebus.topics
+  # type: pubsub.redis
   # version: v1
   # metadata:
-  # - name: namespaceName
-  #   value: dev-vdp-common-sbsn-01-weu.servicebus.windows.net
-  # - name: consumerID
-  #   value: pubsubdemo
+  # - name: redisHost
+  #   value: localhost:6379
+  # - name: redisPassword
+  #   value: ""
+  type: pubsub.in-memory2
+  version: v1
+  metadata: []
 

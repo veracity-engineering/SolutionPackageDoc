@@ -16,10 +16,10 @@ services.AddDaprPubSubClient(
 	clientName,
 	o =>
 	{
+		o.HttpPort = 3501;
 		o.PubSubName = "pubsub";
 		o.TopicName = "testtopic";
-	},
-	o => o.HttpPort = 3501
+	}
 );
 
 var app = builder.Build();
