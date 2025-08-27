@@ -5,10 +5,8 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Identity.Web;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace DNV.OAuth.Demo.Controllers;
@@ -49,9 +47,11 @@ public class HomeController : Controller
 	}
 
 	[HttpPost("signout")]
-	public async Task<IActionResult> Signout()
+	public Task Signout()
 	{
-		await this.HttpContext.SignOutAsync();
-		return this.Redirect(_oauthOptions.SignoutUrl);
+		var signoutUrl = _oauthOptions.SignoutUrl + "?redirectUri=https://localhost:5001";
+		return this.HttpContext.SignOutAsync(
+			new AuthenticationProperties { RedirectUri = signoutUrl }
+		);
 	}
 }
