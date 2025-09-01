@@ -9,7 +9,7 @@ var mockServer = "https://cuteribs.requestcatcher.com";
 var clientName = "DAPR_CLIENT";
 
 services.AddHttpClient(
-	clientName, 
+	clientName,
 	x =>
 	{
 		x.DefaultRequestHeaders.TryAddWithoutValidation(

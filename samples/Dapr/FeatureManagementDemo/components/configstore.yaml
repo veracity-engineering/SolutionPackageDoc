@@ -1,0 +1,19 @@
+﻿apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: configstore
+spec:
+  type: configuration.redis
+  version: v1
+  metadata:
+  - name: redisHost
+    value: localhost:6379
+  - name: redisPassword
+    value: ""
+  # type: configuration.azure.appconfig
+  # version: v1
+  # metadata:
+  # - name: host
+  #   value: https://dev-vdp-common-appcs-01-weu.azconfig.io
+
+

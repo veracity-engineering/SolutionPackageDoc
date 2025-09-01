@@ -8,12 +8,11 @@
 
 	<ItemGroup>
 		<PackageReference Include="Dapr.AspNetCore" Version="1.15.4" />
-		<PackageReference Include="Dapr.Client" Version="1.15.4" />
-		<!--<PackageReference Include="DNV.Dapr.PubSub" Version="2.1.0-preview.1756370241" />-->
+		<PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="4.3.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\..\SolutionPackage\src\Dapr\PubSub\DNV.Dapr.PubSub.csproj" />
+	  <ProjectReference Include="..\..\..\..\SolutionPackage\src\Dapr\FeatureManagement\DNV.Dapr.FeatureManagement.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
 using Dapr.Client;
+using DNV.Dapr.Common;
 using DNV.Dapr.PubSub;
 using DNV.Dapr.PubSub.Abstractions;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +9,7 @@ var services = builder.Services;
 var configuration = builder.Configuration;
 
 var clientName = "PUBSUB_CLIENT";
+var (pubsubName, topicName) = ("pubsub", "testtopic");
 
 services.AddHttpClient(clientName)
 	.AddHttpMessageHandler(() => new PubSubHandler());
@@ -18,7 +20,7 @@ services.AddDaprPubSubClient(
 	{
 		o.HttpPort = 3501;
 		o.PubSubName = "pubsub";
-		o.TopicName = "testtopic";
+		o.TopicName = topicName;
 	}
 );
 
@@ -56,7 +58,7 @@ app.MapPost("/sdkpub", async ([FromBody] object message) =>
 	var client = new DaprClientBuilder()
 		.UseHttpEndpoint("http://localhost:3501")
 		.Build();
-	await client.PublishEventAsync("pubsub", "testtopic", message, metadata);
+	await client.PublishEventAsync(pubsubName, topicName, message, metadata);
 });
 
 app.MapPost("/sub", (HttpContext context, object message) =>
@@ -73,7 +75,7 @@ app.MapPost("/sub", (HttpContext context, object message) =>
 		Console.WriteLine(message);
 		return Results.Ok();
 	})
-	.WithTopic("pubsub", "testtopic");
+	.WithTopic(pubsubName, topicName);
 
 app.Run();
 
@@ -82,12 +84,8 @@ public class PubSubHandler : DelegatingHandler
 {
 	protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
 	{
-		var uriBuilder = new UriBuilder(request.RequestUri!);
-		var query = System.Web.HttpUtility.ParseQueryString(uriBuilder.Query);
-		query["metadata.injectedMeta"] = "injected value";
-		uriBuilder.Query = query.ToString();
-		request.RequestUri = uriBuilder.Uri;
-
+		request.RequestUri = request.RequestUri!
+			.AppendQueryParam("injectedMeta", "injected value");
 		return base.SendAsync(request, cancellationToken);
 	}
 }

@@ -1,0 +1,26 @@
+@baseUrl = http://localhost:5000
+@daprUrl = http://localhost:3500
+
+### get
+
+GET {{daprUrl}}/v1.0/metadata
+
+### get
+
+GET {{daprUrl}}/v1.0/configuration/configstore?key=abc:*
+
+### get
+
+GET {{baseUrl}}/ff-all
+
+### sub
+
+GET {{baseUrl}}/ff-enabled
+
+### ff1
+
+GET {{baseUrl}}/ff-gate
+
+### ff2
+
+GET {{baseUrl}}/ff-unknown
