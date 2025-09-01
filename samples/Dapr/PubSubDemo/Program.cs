@@ -12,17 +12,17 @@ var clientName = "PUBSUB_CLIENT";
 var (pubsubName, topicName) = ("pubsub", "testtopic");
 
 services.AddHttpClient(clientName)
-	.AddHttpMessageHandler(() => new PubSubHandler());
+	.AddHttpMessageHandler(() => new ExtraMetadataHandler());
+//services.AddTransient<ExtraMetadataHandler>()
+//	.AddHttpClient(clientName)
+//	.AddHttpMessageHandler<ExtraMetadataHandler>();
 
-services.AddDaprPubSubClient(
-	clientName,
-	o =>
+services.AddDaprPubSubClient(clientName, o =>
 	{
 		o.HttpPort = 3501;
 		o.PubSubName = "pubsub";
 		o.TopicName = topicName;
-	}
-);
+	});
 
 var app = builder.Build();
 
@@ -80,7 +80,7 @@ app.MapPost("/sub", (HttpContext context, object message) =>
 app.Run();
 
 
-public class PubSubHandler : DelegatingHandler
+public class ExtraMetadataHandler : DelegatingHandler
 {
 	protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
 	{
