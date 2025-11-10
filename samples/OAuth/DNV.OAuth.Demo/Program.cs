@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Identity.Client;
@@ -68,7 +69,16 @@ services.AddSwagger(configuration, "Swagger", "Environment");
 
 ExtraConfigure(builder);
 
+// configure forwarded headers to work behind reverse proxy
+services.Configure<ForwardedHeadersOptions>(x =>
+{
+	x.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+});
+
 var app = builder.Build();
+
+// configure middleware to process forwarded headers just after building the app
+app.UseForwardedHeaders();
 
 app.Use(async (context, next) =>
 {
@@ -76,7 +86,7 @@ app.Use(async (context, next) =>
 	{
 		await next(context);
 	}
-	catch(MicrosoftIdentityWebChallengeUserException ex) when (ex.InnerException is MsalUiRequiredException)
+	catch (MicrosoftIdentityWebChallengeUserException ex) when (ex.InnerException is MsalUiRequiredException)
 	{
 		await context.ChallengeAsync();
 	}
@@ -105,6 +115,19 @@ static void ExtraConfigure(WebApplicationBuilder builder)
 {
 	var services = builder.Services;
 	var configuration = builder.Configuration;
+
+	services.Configure<OpenIdConnectOptions>(
+		OpenIdConnectDefaults.AuthenticationScheme,
+		o =>
+		{
+			o.Events ??= new OpenIdConnectEvents();
+			o.Events.OnRedirectToIdentityProvider = context =>
+			{
+				return Task.CompletedTask;
+			};
+		}
+	);
+
 
 	return;
 
